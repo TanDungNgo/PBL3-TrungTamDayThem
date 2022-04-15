@@ -41,5 +41,10 @@ namespace PBL3TrungTamDayThem
         {
             uC_Staff1.BringToFront();
         }
+
+        private void uC_Teacher1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
