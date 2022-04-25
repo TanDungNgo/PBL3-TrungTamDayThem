@@ -82,3 +82,24 @@ D:\Subjects\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDa
 D:\Subjects\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.CoreCompileInputs.cache
 D:\Subjects\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.exe
 D:\Subjects\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.pdb
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.exe.config
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.exe
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.pdb
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.AssemblyReference.cache
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormClass.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormLogin.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormMain.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormStaff.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormStudent.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormTeacher.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.Properties.Resources.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Bill.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Class.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Staff.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Student.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Teacher.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.GenerateResource.cache
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.exe
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.pdb
