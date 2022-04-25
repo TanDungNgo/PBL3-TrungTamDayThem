@@ -42,15 +42,15 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblED = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.lblIdSb = new System.Windows.Forms.Label();
             this.txbIdSb = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(164, 234);
+            this.dateTimePicker2.Location = new System.Drawing.Point(321, 385);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(245, 22);
@@ -60,7 +60,8 @@
             // 
             this.lblSD.AutoSize = true;
             this.lblSD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSD.Location = new System.Drawing.Point(20, 234);
+            this.lblSD.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblSD.Location = new System.Drawing.Point(191, 385);
             this.lblSD.Name = "lblSD";
             this.lblSD.Size = new System.Drawing.Size(124, 22);
             this.lblSD.TabIndex = 64;
@@ -68,17 +69,18 @@
             // 
             // txbAddress
             // 
-            this.txbAddress.Location = new System.Drawing.Point(578, 78);
+            this.txbAddress.Location = new System.Drawing.Point(384, 322);
             this.txbAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbAddress.Name = "txbAddress";
-            this.txbAddress.Size = new System.Drawing.Size(102, 22);
+            this.txbAddress.Size = new System.Drawing.Size(182, 22);
             this.txbAddress.TabIndex = 59;
             // 
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
             this.lblNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumber.Location = new System.Drawing.Point(391, 78);
+            this.lblNumber.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNumber.Location = new System.Drawing.Point(200, 322);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(178, 22);
             this.lblNumber.TabIndex = 58;
@@ -86,25 +88,26 @@
             // 
             // txbID_Stu
             // 
-            this.txbID_Stu.Location = new System.Drawing.Point(139, 78);
+            this.txbID_Stu.Location = new System.Drawing.Point(319, 106);
             this.txbID_Stu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbID_Stu.Name = "txbID_Stu";
-            this.txbID_Stu.Size = new System.Drawing.Size(201, 22);
+            this.txbID_Stu.Size = new System.Drawing.Size(247, 22);
             this.txbID_Stu.TabIndex = 54;
             // 
             // txbID
             // 
-            this.txbID.Location = new System.Drawing.Point(139, 27);
+            this.txbID.Location = new System.Drawing.Point(319, 55);
             this.txbID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbID.Name = "txbID";
-            this.txbID.Size = new System.Drawing.Size(201, 22);
+            this.txbID.Size = new System.Drawing.Size(247, 22);
             this.txbID.TabIndex = 53;
             // 
             // lblID_Stu
             // 
             this.lblID_Stu.AutoSize = true;
             this.lblID_Stu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID_Stu.Location = new System.Drawing.Point(20, 78);
+            this.lblID_Stu.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblID_Stu.Location = new System.Drawing.Point(200, 106);
             this.lblID_Stu.Name = "lblID_Stu";
             this.lblID_Stu.Size = new System.Drawing.Size(104, 22);
             this.lblID_Stu.TabIndex = 50;
@@ -114,7 +117,8 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(20, 26);
+            this.lblID.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblID.Location = new System.Drawing.Point(200, 54);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(36, 22);
             this.lblID.TabIndex = 49;
@@ -122,17 +126,18 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(139, 125);
+            this.textBox3.Location = new System.Drawing.Point(319, 159);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 22);
+            this.textBox3.Size = new System.Drawing.Size(247, 22);
             this.textBox3.TabIndex = 71;
             // 
             // lblID_Tea
             // 
             this.lblID_Tea.AutoSize = true;
             this.lblID_Tea.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID_Tea.Location = new System.Drawing.Point(20, 125);
+            this.lblID_Tea.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblID_Tea.Location = new System.Drawing.Point(200, 159);
             this.lblID_Tea.Name = "lblID_Tea";
             this.lblID_Tea.Size = new System.Drawing.Size(109, 22);
             this.lblID_Tea.TabIndex = 70;
@@ -140,17 +145,18 @@
             // 
             // txbStatus
             // 
-            this.txbStatus.Location = new System.Drawing.Point(139, 179);
+            this.txbStatus.Location = new System.Drawing.Point(319, 208);
             this.txbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbStatus.Name = "txbStatus";
-            this.txbStatus.Size = new System.Drawing.Size(201, 22);
+            this.txbStatus.Size = new System.Drawing.Size(247, 22);
             this.txbStatus.TabIndex = 73;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(20, 178);
+            this.lblStatus.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblStatus.Location = new System.Drawing.Point(200, 207);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(63, 22);
             this.lblStatus.TabIndex = 72;
@@ -158,7 +164,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(164, 297);
+            this.dateTimePicker1.Location = new System.Drawing.Point(321, 441);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(245, 22);
@@ -168,20 +174,40 @@
             // 
             this.lblED.AutoSize = true;
             this.lblED.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblED.Location = new System.Drawing.Point(20, 298);
+            this.lblED.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblED.Location = new System.Drawing.Point(191, 442);
             this.lblED.Name = "lblED";
             this.lblED.Size = new System.Drawing.Size(118, 22);
             this.lblED.TabIndex = 74;
             this.lblED.Text = "Ending_Date:";
             // 
+            // lblIdSb
+            // 
+            this.lblIdSb.AutoSize = true;
+            this.lblIdSb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdSb.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblIdSb.Location = new System.Drawing.Point(200, 264);
+            this.lblIdSb.Name = "lblIdSb";
+            this.lblIdSb.Size = new System.Drawing.Size(105, 22);
+            this.lblIdSb.TabIndex = 78;
+            this.lblIdSb.Text = "ID_Subject:";
+            // 
+            // txbIdSb
+            // 
+            this.txbIdSb.Location = new System.Drawing.Point(321, 265);
+            this.txbIdSb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbIdSb.Name = "txbIdSb";
+            this.txbIdSb.Size = new System.Drawing.Size(245, 22);
+            this.txbIdSb.TabIndex = 79;
+            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.Image = global::PBL3TrungTamDayThem.Properties.Resources.save;
-            this.btnSave.Location = new System.Drawing.Point(591, 285);
+            this.btnSave.Location = new System.Drawing.Point(445, 518);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(89, 34);
+            this.btnSave.Size = new System.Drawing.Size(107, 44);
             this.btnSave.TabIndex = 77;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -191,39 +217,21 @@
             // 
             this.btnReset.BackColor = System.Drawing.Color.White;
             this.btnReset.Image = global::PBL3TrungTamDayThem.Properties.Resources.recycle;
-            this.btnReset.Location = new System.Drawing.Point(479, 286);
+            this.btnReset.Location = new System.Drawing.Point(229, 518);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(90, 34);
+            this.btnReset.Size = new System.Drawing.Size(109, 44);
             this.btnReset.TabIndex = 76;
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
             // 
-            // lblIdSb
-            // 
-            this.lblIdSb.AutoSize = true;
-            this.lblIdSb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdSb.Location = new System.Drawing.Point(391, 27);
-            this.lblIdSb.Name = "lblIdSb";
-            this.lblIdSb.Size = new System.Drawing.Size(105, 22);
-            this.lblIdSb.TabIndex = 78;
-            this.lblIdSb.Text = "ID_Subject:";
-            // 
-            // txbIdSb
-            // 
-            this.txbIdSb.Location = new System.Drawing.Point(502, 28);
-            this.txbIdSb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txbIdSb.Name = "txbIdSb";
-            this.txbIdSb.Size = new System.Drawing.Size(178, 22);
-            this.txbIdSb.TabIndex = 79;
-            // 
             // FormClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(177)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(711, 360);
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.ClientSize = new System.Drawing.Size(797, 638);
             this.Controls.Add(this.txbIdSb);
             this.Controls.Add(this.lblIdSb);
             this.Controls.Add(this.btnSave);

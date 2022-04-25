@@ -56,17 +56,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(500, 199);
+            this.textBox1.Location = new System.Drawing.Point(281, 381);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 22);
+            this.textBox1.Size = new System.Drawing.Size(245, 22);
             this.textBox1.TabIndex = 34;
             // 
             // lblMail
             // 
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMail.Location = new System.Drawing.Point(409, 198);
+            this.lblMail.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblMail.Location = new System.Drawing.Point(153, 381);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(54, 22);
             this.lblMail.TabIndex = 33;
@@ -74,17 +75,18 @@
             // 
             // txbAddress
             // 
-            this.txbAddress.Location = new System.Drawing.Point(137, 249);
+            this.txbAddress.Location = new System.Drawing.Point(281, 269);
             this.txbAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbAddress.Name = "txbAddress";
-            this.txbAddress.Size = new System.Drawing.Size(201, 22);
+            this.txbAddress.Size = new System.Drawing.Size(245, 22);
             this.txbAddress.TabIndex = 32;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(28, 247);
+            this.lblAddress.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblAddress.Location = new System.Drawing.Point(153, 269);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(82, 22);
             this.lblAddress.TabIndex = 31;
@@ -92,17 +94,18 @@
             // 
             // txbPhone
             // 
-            this.txbPhone.Location = new System.Drawing.Point(137, 197);
+            this.txbPhone.Location = new System.Drawing.Point(281, 217);
             this.txbPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPhone.Name = "txbPhone";
-            this.txbPhone.Size = new System.Drawing.Size(201, 22);
+            this.txbPhone.Size = new System.Drawing.Size(245, 22);
             this.txbPhone.TabIndex = 30;
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(28, 195);
+            this.lblPhone.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPhone.Location = new System.Drawing.Point(155, 217);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(64, 22);
             this.lblPhone.TabIndex = 29;
@@ -110,7 +113,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(137, 139);
+            this.dateTimePicker1.Location = new System.Drawing.Point(281, 159);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(245, 22);
@@ -118,29 +121,30 @@
             // 
             // txbName
             // 
-            this.txbName.Location = new System.Drawing.Point(137, 78);
+            this.txbName.Location = new System.Drawing.Point(281, 101);
             this.txbName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(201, 22);
+            this.txbName.Size = new System.Drawing.Size(245, 22);
             this.txbName.TabIndex = 27;
             // 
             // txbID
             // 
-            this.txbID.Location = new System.Drawing.Point(137, 27);
+            this.txbID.Location = new System.Drawing.Point(281, 50);
             this.txbID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbID.Name = "txbID";
-            this.txbID.Size = new System.Drawing.Size(201, 22);
+            this.txbID.Size = new System.Drawing.Size(245, 22);
             this.txbID.TabIndex = 26;
             // 
             // gbGender
             // 
             this.gbGender.Controls.Add(this.rbFemale);
             this.gbGender.Controls.Add(this.rbMale);
-            this.gbGender.Location = new System.Drawing.Point(413, 26);
+            this.gbGender.ForeColor = System.Drawing.SystemColors.Control;
+            this.gbGender.Location = new System.Drawing.Point(559, 49);
             this.gbGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbGender.Name = "gbGender";
             this.gbGender.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbGender.Size = new System.Drawing.Size(235, 88);
+            this.gbGender.Size = new System.Drawing.Size(133, 92);
             this.gbGender.TabIndex = 25;
             this.gbGender.TabStop = false;
             this.gbGender.Text = "Gender";
@@ -148,10 +152,11 @@
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(31, 61);
+            this.rbFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemale.Location = new System.Drawing.Point(24, 56);
             this.rbFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(74, 20);
+            this.rbFemale.Size = new System.Drawing.Size(78, 22);
             this.rbFemale.TabIndex = 1;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
@@ -160,7 +165,7 @@
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(31, 30);
+            this.rbMale.Location = new System.Drawing.Point(24, 25);
             this.rbMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(58, 20);
@@ -173,7 +178,8 @@
             // 
             this.lblBD.AutoSize = true;
             this.lblBD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBD.Location = new System.Drawing.Point(28, 139);
+            this.lblBD.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblBD.Location = new System.Drawing.Point(153, 159);
             this.lblBD.Name = "lblBD";
             this.lblBD.Size = new System.Drawing.Size(88, 22);
             this.lblBD.TabIndex = 24;
@@ -183,7 +189,8 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(28, 78);
+            this.lblName.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblName.Location = new System.Drawing.Point(154, 101);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(62, 22);
             this.lblName.TabIndex = 23;
@@ -193,7 +200,8 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(28, 26);
+            this.lblID.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblID.Location = new System.Drawing.Point(155, 50);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(36, 22);
             this.lblID.TabIndex = 22;
@@ -201,7 +209,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(172, 302);
+            this.dateTimePicker2.Location = new System.Drawing.Point(281, 490);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(245, 22);
@@ -211,7 +219,8 @@
             // 
             this.lblSD.AutoSize = true;
             this.lblSD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSD.Location = new System.Drawing.Point(28, 301);
+            this.lblSD.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblSD.Location = new System.Drawing.Point(153, 489);
             this.lblSD.Name = "lblSD";
             this.lblSD.Size = new System.Drawing.Size(124, 22);
             this.lblSD.TabIndex = 43;
@@ -219,17 +228,18 @@
             // 
             // txbSalary
             // 
-            this.txbSalary.Location = new System.Drawing.Point(500, 251);
+            this.txbSalary.Location = new System.Drawing.Point(281, 434);
             this.txbSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbSalary.Name = "txbSalary";
-            this.txbSalary.Size = new System.Drawing.Size(201, 22);
+            this.txbSalary.Size = new System.Drawing.Size(245, 22);
             this.txbSalary.TabIndex = 46;
             // 
             // lblSalary
             // 
             this.lblSalary.AutoSize = true;
             this.lblSalary.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalary.Location = new System.Drawing.Point(409, 250);
+            this.lblSalary.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblSalary.Location = new System.Drawing.Point(153, 434);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(67, 22);
             this.lblSalary.TabIndex = 45;
@@ -237,17 +247,18 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(500, 139);
+            this.textBox2.Location = new System.Drawing.Point(281, 324);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(201, 22);
+            this.textBox2.Size = new System.Drawing.Size(245, 22);
             this.textBox2.TabIndex = 48;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(409, 139);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(153, 324);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 22);
             this.label1.TabIndex = 47;
@@ -257,10 +268,10 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.Image = global::PBL3TrungTamDayThem.Properties.Resources.save;
-            this.btnSave.Location = new System.Drawing.Point(612, 290);
+            this.btnSave.Location = new System.Drawing.Point(483, 553);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(89, 47);
+            this.btnSave.Size = new System.Drawing.Size(99, 47);
             this.btnSave.TabIndex = 50;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -270,10 +281,10 @@
             // 
             this.btnReset.BackColor = System.Drawing.Color.White;
             this.btnReset.Image = global::PBL3TrungTamDayThem.Properties.Resources.recycle;
-            this.btnReset.Location = new System.Drawing.Point(500, 289);
+            this.btnReset.Location = new System.Drawing.Point(227, 553);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(90, 47);
+            this.btnReset.Size = new System.Drawing.Size(101, 47);
             this.btnReset.TabIndex = 49;
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -283,8 +294,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(177)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(711, 360);
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.ClientSize = new System.Drawing.Size(797, 638);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.textBox2);

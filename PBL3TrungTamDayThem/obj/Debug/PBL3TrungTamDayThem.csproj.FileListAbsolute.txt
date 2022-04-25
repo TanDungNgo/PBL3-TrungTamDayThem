@@ -103,3 +103,28 @@ C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\ob
 C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.CoreCompileInputs.cache
 C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.exe
 C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.pdb
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Statistic.resources
+C:\Users\DELL\OneDrive\Máy tính\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Home.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.exe.config
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.exe
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.pdb
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.AssemblyReference.cache
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.SuggestedBindingRedirects.cache
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormClass.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormLogin.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormMain.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormStaff.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormStudent.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.FormTeacher.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.Properties.Resources.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Bill.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Class.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Home.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Staff.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Statistic.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Student.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.UC_Teacher.resources
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.GenerateResource.cache
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.CoreCompileInputs.cache
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.exe
+D:\Subjects\PBL3\PBL3-TrungTamDayThemDPT\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.pdb

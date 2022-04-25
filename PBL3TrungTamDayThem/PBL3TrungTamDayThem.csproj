@@ -96,11 +96,23 @@
     <Compile Include="UC_Class.Designer.cs">
       <DependentUpon>UC_Class.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Home.Designer.cs">
+      <DependentUpon>UC_Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Staff.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_Staff.Designer.cs">
       <DependentUpon>UC_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Statistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Statistic.Designer.cs">
+      <DependentUpon>UC_Statistic.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Student.cs">
       <SubType>UserControl</SubType>
@@ -148,8 +160,14 @@
     <EmbeddedResource Include="UC_Class.resx">
       <DependentUpon>UC_Class.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Home.resx">
+      <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Staff.resx">
       <DependentUpon>UC_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Statistic.resx">
+      <DependentUpon>UC_Statistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Student.resx">
       <DependentUpon>UC_Student.cs</DependentUpon>
@@ -253,6 +271,123 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\546-1586955437-2173-1587007302-9641-1588750107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Importance-of-Studying-From-Home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Importance-of-Studying-From-Home1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reading-book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\persons-in-a-class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\278491886_567960264484294_2402230928146914470_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\278485768_1925893120939273_4445911401305121_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\278399923_712022959989578_715087093525637110_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\546-1586955437-2173-1587007302-9641-15887501071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selfcareguide-02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\262095404_933351724242309_4656704611294709992_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg87 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faq-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

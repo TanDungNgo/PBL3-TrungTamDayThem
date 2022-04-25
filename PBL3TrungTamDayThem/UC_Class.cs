@@ -22,5 +22,10 @@ namespace PBL3TrungTamDayThem
             FormClass frm = new FormClass();    
             frm.ShowDialog();
         }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
