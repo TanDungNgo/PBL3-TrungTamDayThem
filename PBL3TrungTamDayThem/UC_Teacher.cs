@@ -1,4 +1,5 @@
 ﻿using PBL3TrungTamDayThem.DAO;
+using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace PBL3TrungTamDayThem
         {
             InitializeComponent();
         }
-
+        private Teacher teacher = new Teacher();
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormTeacher frm = new FormTeacher();
@@ -74,9 +75,6 @@ namespace PBL3TrungTamDayThem
             if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
             {
                 DataProvider dataProvider = new DataProvider();
-                string cnnSTR = @"Data Source=DELL\SQLEXPRESS;Initial Catalog=TrungTamDayThem;Integrated Security=True";
-                SqlConnection cnn = new SqlConnection(cnnSTR);
-                cnn.Open();
                 try
                 {
                     string magv = null;
@@ -86,10 +84,7 @@ namespace PBL3TrungTamDayThem
                         magv = data[0].Cells["MaGV"].Value.ToString();
                     }
                     string query = "Delete from GIAO_VIEN where MaGV = '" + magv + "'";
-                    SqlCommand cmd = new SqlCommand(query, cnn);
-                    int ret = cmd.ExecuteNonQuery();
-                    //dataProvider.ExecuteQuery(query);
-                    //MessageBox.Show(dataProvider.ExecuteNonQuery(query).ToString());
+                    int ret = dataProvider.ExecuteNonQuery(query);
                     if (ret > 0)
                     {
                         dgvTeacher.DataSource = GetTeacher_ByEx();
@@ -103,7 +98,6 @@ namespace PBL3TrungTamDayThem
                 {
                     MessageBox.Show(ex.Message);
                 }
-                cnn.Close();
             }    
         }
 
@@ -112,12 +106,17 @@ namespace PBL3TrungTamDayThem
             GetCBB();
             cbbExpertise.Text = "All";
         }
-        public string MaGV;
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            //FormTeacher f = new FormTeacher();
-            //f.ShowDialog();
-            MessageBox.Show(MaGV);
+            if (teacher.ID == null)
+            {
+                MessageBox.Show("Chưa chọn giáo viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
+            else
+            {
+                FormTeacher f = new FormTeacher(teacher);
+                f.ShowDialog();
+            }    
         }
 
         private void dgvTeacher_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -125,7 +124,16 @@ namespace PBL3TrungTamDayThem
             DataGridViewSelectedRowCollection data = dgvTeacher.SelectedRows;
             if (data.Count == 1)
             {
-                MaGV = data[0].Cells["MaGV"].Value.ToString();
+                teacher.ID = data[0].Cells["MaGV"].Value.ToString();
+                teacher.Name = data[0].Cells["HoTenGV"].Value.ToString();
+                teacher.Address = data[0].Cells["DiaChi"].Value.ToString();
+                teacher.Phone = data[0].Cells["SDT"].Value.ToString();
+                teacher.Mail = data[0].Cells["Email"].Value.ToString();
+                teacher.Salary = data[0].Cells["Luong"].Value.ToString();
+                teacher.Expertise = data[0].Cells["ChuyenMon"].Value.ToString();
+                teacher.Level = data[0].Cells["TrinhDo"].Value.ToString();
+                teacher.Gender = (bool)data[0].Cells["GioiTinh"].Value;
+                teacher.BirthDay = data[0].Cells["NgaySinh"].Value.ToString();
             }
         }
     }

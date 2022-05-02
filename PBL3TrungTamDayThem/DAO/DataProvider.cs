@@ -23,16 +23,23 @@ namespace PBL3TrungTamDayThem.DAO
             cnn.Close();
             return data;
         }
-
         public int ExecuteNonQuery(string query)
         {
-            int data = 0;
             SqlConnection cnn = new SqlConnection(cnnSTR);
             cnn.Open();
             SqlCommand cmd = new SqlCommand(query, cnn);
-            cmd.ExecuteNonQuery();
+            int ret = cmd.ExecuteNonQuery();
             cnn.Close();
-            return data;
+            return ret;
+        }
+        public int ExecuteScalar(string query)
+        {
+            SqlConnection cnn = new SqlConnection(cnnSTR);
+            cnn.Open();
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            int check = (int)cmd.ExecuteScalar();
+            cnn.Close();
+            return check;
         }
     }
 }

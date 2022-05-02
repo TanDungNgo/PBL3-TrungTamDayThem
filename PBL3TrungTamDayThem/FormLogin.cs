@@ -34,7 +34,7 @@ namespace PBL3TrungTamDayThem
             {
                 try
                 {
-                    String cnnStr = @"Data Source=DELL\SQLEXPRESS;Initial Catalog=TrungTamDayThem;Integrated Security=True";
+                    String cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=TrungTamDayThem;Integrated Security=True";
                     SqlConnection cnn = new SqlConnection(cnnStr);
                     cnn.Open();
                     string query = "select * from ACCOUNT where UserName = '" + UserName + "' and Pass = '" + Pass + "'";
