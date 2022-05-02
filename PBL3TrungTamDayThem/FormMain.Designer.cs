@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.pnlLeft = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.flpnlButton = new System.Windows.Forms.FlowLayoutPanel();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnTeacher = new System.Windows.Forms.Button();
@@ -39,46 +39,52 @@
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnl_rightMenu = new System.Windows.Forms.Panel();
+            this.lblName = new System.Windows.Forms.Label();
+            this.ptbLogo = new System.Windows.Forms.PictureBox();
+            this.pnl_leftMenu = new System.Windows.Forms.Panel();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btn_Min = new System.Windows.Forms.Button();
-            this.lblName = new System.Windows.Forms.Label();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.pnlTopRight = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.ptbAcc = new System.Windows.Forms.PictureBox();
+            this.pnl_header2 = new System.Windows.Forms.Panel();
+            this.btn_user = new System.Windows.Forms.Button();
+            this.pnl_header3 = new System.Windows.Forms.Panel();
             this.ptbHeader = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
+            this.pnl_header1 = new System.Windows.Forms.Panel();
+            this.btn_Mini = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.pnlhl = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
-            this.uC_Home1 = new PBL3TrungTamDayThem.UC_Home();
-            this.uC_Teacher1 = new PBL3TrungTamDayThem.UC_Teacher();
-            this.pnlTopRight2 = new System.Windows.Forms.Panel();
-            this.pnlLeft.SuspendLayout();
+            this.pnl_user = new System.Windows.Forms.Panel();
+            this.btn_Logout = new System.Windows.Forms.Button();
+            this.btn_ThongTin = new System.Windows.Forms.Button();
+            this.pnlMenu.SuspendLayout();
             this.flpnlButton.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnl_rightMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
+            this.pnl_leftMenu.SuspendLayout();
             this.pnlTop.SuspendLayout();
-            this.pnlTopRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAcc)).BeginInit();
+            this.pnl_header2.SuspendLayout();
+            this.pnl_header3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHeader)).BeginInit();
+            this.pnl_header1.SuspendLayout();
             this.pnlCenter.SuspendLayout();
-            this.pnlTopRight2.SuspendLayout();
+            this.pnl_user.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlLeft
+            // pnlMenu
             // 
-            this.pnlLeft.Controls.Add(this.flpnlButton);
-            this.pnlLeft.Controls.Add(this.pnlLogo);
-            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(300, 709);
-            this.pnlLeft.TabIndex = 0;
+            this.pnlMenu.Controls.Add(this.flpnlButton);
+            this.pnlMenu.Controls.Add(this.pnlLogo);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(300, 723);
+            this.pnlMenu.TabIndex = 0;
             // 
             // flpnlButton
             // 
@@ -94,7 +100,7 @@
             this.flpnlButton.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flpnlButton.Location = new System.Drawing.Point(0, 105);
             this.flpnlButton.Name = "flpnlButton";
-            this.flpnlButton.Size = new System.Drawing.Size(300, 604);
+            this.flpnlButton.Size = new System.Drawing.Size(300, 618);
             this.flpnlButton.TabIndex = 9;
             // 
             // btnHome
@@ -233,9 +239,9 @@
             // pnlLogo
             // 
             this.pnlLogo.BackColor = System.Drawing.Color.Teal;
-            this.pnlLogo.Controls.Add(this.picLogo);
-            this.pnlLogo.Controls.Add(this.panel2);
-            this.pnlLogo.Controls.Add(this.lblName);
+            this.pnlLogo.Controls.Add(this.pnl_rightMenu);
+            this.pnlLogo.Controls.Add(this.ptbLogo);
+            this.pnlLogo.Controls.Add(this.pnl_leftMenu);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -243,27 +249,48 @@
             this.pnlLogo.Size = new System.Drawing.Size(300, 105);
             this.pnlLogo.TabIndex = 2;
             // 
-            // picLogo
+            // pnl_rightMenu
             // 
-            this.picLogo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picLogo.Image = global::PBL3TrungTamDayThem.Properties.Resources._278399923_712022959989578_715087093525637110_n;
-            this.picLogo.Location = new System.Drawing.Point(63, 0);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(98, 105);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 3;
-            this.picLogo.TabStop = false;
+            this.pnl_rightMenu.Controls.Add(this.lblName);
+            this.pnl_rightMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_rightMenu.Location = new System.Drawing.Point(161, 0);
+            this.pnl_rightMenu.Name = "pnl_rightMenu";
+            this.pnl_rightMenu.Size = new System.Drawing.Size(139, 105);
+            this.pnl_rightMenu.TabIndex = 6;
             // 
-            // panel2
+            // lblName
             // 
-            this.panel2.Controls.Add(this.btnHelp);
-            this.panel2.Controls.Add(this.btn_Min);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(63, 105);
-            this.panel2.TabIndex = 5;
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Teal;
+            this.lblName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblName.Location = new System.Drawing.Point(1, 35);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(136, 46);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "TRUNG TÂM \r\n DẠY THÊM";
+            // 
+            // ptbLogo
+            // 
+            this.ptbLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ptbLogo.Image = global::PBL3TrungTamDayThem.Properties.Resources._278399923_712022959989578_715087093525637110_n;
+            this.ptbLogo.Location = new System.Drawing.Point(63, 0);
+            this.ptbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptbLogo.Name = "ptbLogo";
+            this.ptbLogo.Size = new System.Drawing.Size(98, 105);
+            this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbLogo.TabIndex = 3;
+            this.ptbLogo.TabStop = false;
+            // 
+            // pnl_leftMenu
+            // 
+            this.pnl_leftMenu.Controls.Add(this.btnHelp);
+            this.pnl_leftMenu.Controls.Add(this.btn_Min);
+            this.pnl_leftMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_leftMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnl_leftMenu.Name = "pnl_leftMenu";
+            this.pnl_leftMenu.Size = new System.Drawing.Size(63, 105);
+            this.pnl_leftMenu.TabIndex = 5;
             // 
             // btnHelp
             // 
@@ -296,86 +323,59 @@
             this.btn_Min.UseVisualStyleBackColor = false;
             this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
             // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.Teal;
-            this.lblName.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblName.Location = new System.Drawing.Point(159, 20);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(141, 48);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "TRUNG TÂM \r\n DẠY THÊM";
-            // 
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.Wheat;
             this.pnlTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnlTop.Controls.Add(this.pnlTopRight2);
-            this.pnlTop.Controls.Add(this.pnlTopRight);
-            this.pnlTop.Controls.Add(this.ptbHeader);
-            this.pnlTop.Controls.Add(this.lblHeader);
+            this.pnlTop.Controls.Add(this.pnl_header2);
+            this.pnlTop.Controls.Add(this.pnl_header1);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(300, 0);
             this.pnlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(907, 100);
+            this.pnlTop.Size = new System.Drawing.Size(900, 100);
             this.pnlTop.TabIndex = 1;
             // 
-            // pnlTopRight
+            // pnl_header2
             // 
-            this.pnlTopRight.Controls.Add(this.btnLogout);
-            this.pnlTopRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlTopRight.Location = new System.Drawing.Point(782, 0);
-            this.pnlTopRight.Name = "pnlTopRight";
-            this.pnlTopRight.Size = new System.Drawing.Size(125, 100);
-            this.pnlTopRight.TabIndex = 4;
+            this.pnl_header2.Controls.Add(this.btn_user);
+            this.pnl_header2.Controls.Add(this.pnl_header3);
+            this.pnl_header2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_header2.Location = new System.Drawing.Point(0, 35);
+            this.pnl_header2.Name = "pnl_header2";
+            this.pnl_header2.Size = new System.Drawing.Size(900, 65);
+            this.pnl_header2.TabIndex = 5;
             // 
-            // btnLogout
+            // btn_user
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Image = global::PBL3TrungTamDayThem.Properties.Resources.logout__1_;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 0);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(125, 100);
-            this.btnLogout.TabIndex = 4;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            this.btnLogout.MouseLeave += new System.EventHandler(this.btnLogout_MouseLeave);
-            this.btnLogout.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnLogout_MouseMove);
+            this.btn_user.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_user.FlatAppearance.BorderSize = 0;
+            this.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_user.Image = global::PBL3TrungTamDayThem.Properties.Resources.user1;
+            this.btn_user.Location = new System.Drawing.Point(617, 0);
+            this.btn_user.Name = "btn_user";
+            this.btn_user.Size = new System.Drawing.Size(283, 65);
+            this.btn_user.TabIndex = 4;
+            this.btn_user.Text = "User_Name    ﹀";
+            this.btn_user.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_user.UseVisualStyleBackColor = true;
+            this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
             // 
-            // lblUserName
+            // pnl_header3
             // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(88, 39);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(151, 32);
-            this.lblUserName.TabIndex = 3;
-            this.lblUserName.Text = "User_Name";
-            // 
-            // ptbAcc
-            // 
-            this.ptbAcc.Image = global::PBL3TrungTamDayThem.Properties.Resources.user__2_;
-            this.ptbAcc.Location = new System.Drawing.Point(33, 15);
-            this.ptbAcc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ptbAcc.Name = "ptbAcc";
-            this.ptbAcc.Size = new System.Drawing.Size(48, 66);
-            this.ptbAcc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbAcc.TabIndex = 2;
-            this.ptbAcc.TabStop = false;
+            this.pnl_header3.Controls.Add(this.ptbHeader);
+            this.pnl_header3.Controls.Add(this.lblHeader);
+            this.pnl_header3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_header3.Location = new System.Drawing.Point(0, 0);
+            this.pnl_header3.Name = "pnl_header3";
+            this.pnl_header3.Size = new System.Drawing.Size(309, 65);
+            this.pnl_header3.TabIndex = 1;
             // 
             // ptbHeader
             // 
             this.ptbHeader.Image = global::PBL3TrungTamDayThem.Properties.Resources.home__1_;
-            this.ptbHeader.Location = new System.Drawing.Point(19, 15);
+            this.ptbHeader.Location = new System.Drawing.Point(0, 1);
             this.ptbHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ptbHeader.Name = "ptbHeader";
             this.ptbHeader.Size = new System.Drawing.Size(87, 62);
@@ -387,11 +387,66 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.Location = new System.Drawing.Point(112, 26);
+            this.lblHeader.Location = new System.Drawing.Point(93, 12);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(204, 45);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Trang Chủ";
+            // 
+            // pnl_header1
+            // 
+            this.pnl_header1.Controls.Add(this.btn_Mini);
+            this.pnl_header1.Controls.Add(this.btn_Max);
+            this.pnl_header1.Controls.Add(this.btn_Exit);
+            this.pnl_header1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_header1.Location = new System.Drawing.Point(0, 0);
+            this.pnl_header1.Name = "pnl_header1";
+            this.pnl_header1.Size = new System.Drawing.Size(900, 35);
+            this.pnl_header1.TabIndex = 4;
+            // 
+            // btn_Mini
+            // 
+            this.btn_Mini.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Mini.FlatAppearance.BorderSize = 0;
+            this.btn_Mini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Mini.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mini.Location = new System.Drawing.Point(720, 0);
+            this.btn_Mini.Name = "btn_Mini";
+            this.btn_Mini.Size = new System.Drawing.Size(60, 35);
+            this.btn_Mini.TabIndex = 2;
+            this.btn_Mini.Text = "‒ ";
+            this.btn_Mini.UseVisualStyleBackColor = true;
+            this.btn_Mini.Click += new System.EventHandler(this.btn_Mini_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Max.Location = new System.Drawing.Point(780, 0);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(60, 35);
+            this.btn_Max.TabIndex = 1;
+            this.btn_Max.Text = "□";
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Exit.FlatAppearance.BorderSize = 0;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.Location = new System.Drawing.Point(840, 0);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(60, 35);
+            this.btn_Exit.TabIndex = 0;
+            this.btn_Exit.Text = "X";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            this.btn_Exit.MouseLeave += new System.EventHandler(this.btn_Exit_MouseLeave);
+            this.btn_Exit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Exit_MouseMove);
             // 
             // pnlhl
             // 
@@ -399,90 +454,99 @@
             this.pnlhl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlhl.Location = new System.Drawing.Point(300, 100);
             this.pnlhl.Name = "pnlhl";
-            this.pnlhl.Size = new System.Drawing.Size(907, 5);
+            this.pnlhl.Size = new System.Drawing.Size(900, 5);
             this.pnlhl.TabIndex = 3;
             // 
             // pnlCenter
             // 
             this.pnlCenter.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnlCenter.Controls.Add(this.uC_Home1);
-            this.pnlCenter.Controls.Add(this.uC_Teacher1);
+            this.pnlCenter.Controls.Add(this.pnl_user);
             this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCenter.Location = new System.Drawing.Point(300, 100);
             this.pnlCenter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(907, 609);
+            this.pnlCenter.Size = new System.Drawing.Size(900, 623);
             this.pnlCenter.TabIndex = 2;
             // 
-            // uC_Home1
+            // pnl_user
             // 
-            this.uC_Home1.BackColor = System.Drawing.Color.Teal;
-            this.uC_Home1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_Home1.BackgroundImage")));
-            this.uC_Home1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.uC_Home1.Location = new System.Drawing.Point(0, 4);
-            this.uC_Home1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.uC_Home1.Name = "uC_Home1";
-            this.uC_Home1.Size = new System.Drawing.Size(907, 609);
-            this.uC_Home1.TabIndex = 1;
+            this.pnl_user.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_user.BackColor = System.Drawing.Color.Wheat;
+            this.pnl_user.Controls.Add(this.btn_Logout);
+            this.pnl_user.Controls.Add(this.btn_ThongTin);
+            this.pnl_user.Location = new System.Drawing.Point(614, 7);
+            this.pnl_user.Name = "pnl_user";
+            this.pnl_user.Size = new System.Drawing.Size(283, 100);
+            this.pnl_user.TabIndex = 5;
+            this.pnl_user.Visible = false;
             // 
-            // uC_Teacher1
+            // btn_Logout
             // 
-            this.uC_Teacher1.BackColor = System.Drawing.Color.Teal;
-            this.uC_Teacher1.Location = new System.Drawing.Point(0, 5);
-            this.uC_Teacher1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_Teacher1.Name = "uC_Teacher1";
-            this.uC_Teacher1.Size = new System.Drawing.Size(907, 609);
-            this.uC_Teacher1.TabIndex = 0;
+            this.btn_Logout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Logout.FlatAppearance.BorderSize = 0;
+            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Logout.Image = global::PBL3TrungTamDayThem.Properties.Resources.logout__1_;
+            this.btn_Logout.Location = new System.Drawing.Point(0, 51);
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Size = new System.Drawing.Size(283, 51);
+            this.btn_Logout.TabIndex = 1;
+            this.btn_Logout.Text = "Đăng xuất";
+            this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Logout.UseVisualStyleBackColor = true;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
-            // pnlTopRight2
+            // btn_ThongTin
             // 
-            this.pnlTopRight2.Controls.Add(this.ptbAcc);
-            this.pnlTopRight2.Controls.Add(this.lblUserName);
-            this.pnlTopRight2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlTopRight2.Location = new System.Drawing.Point(532, 0);
-            this.pnlTopRight2.Name = "pnlTopRight2";
-            this.pnlTopRight2.Size = new System.Drawing.Size(250, 100);
-            this.pnlTopRight2.TabIndex = 5;
+            this.btn_ThongTin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ThongTin.FlatAppearance.BorderSize = 0;
+            this.btn_ThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThongTin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongTin.Location = new System.Drawing.Point(0, 0);
+            this.btn_ThongTin.Name = "btn_ThongTin";
+            this.btn_ThongTin.Size = new System.Drawing.Size(283, 51);
+            this.btn_ThongTin.TabIndex = 0;
+            this.btn_ThongTin.Text = "Thông tin người dùng";
+            this.btn_ThongTin.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 709);
+            this.ClientSize = new System.Drawing.Size(1200, 723);
             this.Controls.Add(this.pnlhl);
             this.Controls.Add(this.pnlCenter);
             this.Controls.Add(this.pnlTop);
-            this.Controls.Add(this.pnlLeft);
+            this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Trung Tâm Dạy Thêm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
-            this.pnlLeft.ResumeLayout(false);
+            this.pnlMenu.ResumeLayout(false);
             this.flpnlButton.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
-            this.pnlLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.pnl_rightMenu.ResumeLayout(false);
+            this.pnl_rightMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
+            this.pnl_leftMenu.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
-            this.pnlTop.PerformLayout();
-            this.pnlTopRight.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAcc)).EndInit();
+            this.pnl_header2.ResumeLayout(false);
+            this.pnl_header3.ResumeLayout(false);
+            this.pnl_header3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHeader)).EndInit();
+            this.pnl_header1.ResumeLayout(false);
             this.pnlCenter.ResumeLayout(false);
-            this.pnlTopRight2.ResumeLayout(false);
-            this.pnlTopRight2.PerformLayout();
+            this.pnl_user.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlLeft;
+        private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnStaff;
         private System.Windows.Forms.Button btnClass;
@@ -493,21 +557,25 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnStatistic;
         private System.Windows.Forms.PictureBox ptbHeader;
-        private System.Windows.Forms.PictureBox ptbAcc;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Button btn_Min;
         private System.Windows.Forms.FlowLayoutPanel flpnlButton;
         private System.Windows.Forms.Panel pnlhl;
         private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.Panel pnlTopRight;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnl_leftMenu;
         private System.Windows.Forms.Panel pnlCenter;
-        private UC_Teacher uC_Teacher1;
-        private UC_Home uC_Home1;
-        private System.Windows.Forms.Panel pnlTopRight2;
+        private System.Windows.Forms.Panel pnl_header2;
+        private System.Windows.Forms.Panel pnl_header3;
+        private System.Windows.Forms.Panel pnl_header1;
+        private System.Windows.Forms.Button btn_Max;
+        private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.Button btn_Mini;
+        private System.Windows.Forms.Button btn_user;
+        private System.Windows.Forms.Panel pnl_user;
+        private System.Windows.Forms.Button btn_Logout;
+        private System.Windows.Forms.Button btn_ThongTin;
+        private System.Windows.Forms.Panel pnl_rightMenu;
     }
 }

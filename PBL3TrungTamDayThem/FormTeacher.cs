@@ -17,7 +17,12 @@ namespace PBL3TrungTamDayThem
         {
             InitializeComponent();
         }
-
+        public delegate string Mydel(string s);
+        public Mydel d { get; set; }
+        public void GetMaGV()
+        {
+            
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             string cnnSTR = @"Data Source=DELL\SQLEXPRESS;Initial Catalog=TrungTamDayThem;Integrated Security=True";
@@ -33,11 +38,11 @@ namespace PBL3TrungTamDayThem
                 cmd.Parameters.Add("@magv", SqlDbType.VarChar).Value = txbID.Text;
                 cmd.Parameters.Add("@hotengv", SqlDbType.NVarChar).Value = txbName.Text;
                 cmd.Parameters.Add("@ngaysinh", SqlDbType.Date).Value = dtpBD.Text;
-                cmd.Parameters.Add("@gioitinh", SqlDbType.Bit).Value = rbFemale.Checked;
+                cmd.Parameters.Add("@gioitinh", SqlDbType.Bit).Value = rbMale.Checked;
                 cmd.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = txbAddress.Text;
                 cmd.Parameters.Add("@chuyenmon", SqlDbType.NVarChar).Value = txbExpertise.Text;
                 cmd.Parameters.Add("@trinhdo", SqlDbType.NVarChar).Value = cbbLevel.Text;
-                cmd.Parameters.Add("@sdt", SqlDbType.VarChar).Value = txtSalary.Text;
+                cmd.Parameters.Add("@sdt", SqlDbType.VarChar).Value = txtPhone.Text;
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = txtMail.Text;
                 cmd.Parameters.Add("@luong", SqlDbType.Float).Value = txtSalary.Text;
 
@@ -71,8 +76,7 @@ namespace PBL3TrungTamDayThem
         {
             txbID.Text = "";
             txbName.Text = "";
-      
-            txbPhone.Text = "";
+            txtPhone.Text = "";
             txbAddress.Text = "";
             txtMail.Text = "";
             cbbLevel.Text = "";

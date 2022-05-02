@@ -38,7 +38,7 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.dtpBD = new System.Windows.Forms.DateTimePicker();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.txbPhone = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.txtMail = new System.Windows.Forms.TextBox();
@@ -162,13 +162,13 @@
             this.lblPhone.TabIndex = 7;
             this.lblPhone.Text = "Phone:";
             // 
-            // txbPhone
+            // txtPhone
             // 
-            this.txbPhone.Location = new System.Drawing.Point(308, 265);
-            this.txbPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txbPhone.Name = "txbPhone";
-            this.txbPhone.Size = new System.Drawing.Size(275, 26);
-            this.txbPhone.TabIndex = 8;
+            this.txtPhone.Location = new System.Drawing.Point(308, 265);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(275, 26);
+            this.txtPhone.TabIndex = 8;
             // 
             // txbAddress
             // 
@@ -243,6 +243,7 @@
             // 
             // cbbLevel
             // 
+            this.cbbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLevel.FormattingEnabled = true;
             this.cbbLevel.Items.AddRange(new object[] {
             "Cử nhân",
@@ -267,7 +268,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.Image = global::PBL3TrungTamDayThem.Properties.Resources.save;
-            this.btnSave.Location = new System.Drawing.Point(570, 691);
+            this.btnSave.Location = new System.Drawing.Point(580, 663);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(107, 60);
@@ -283,7 +284,7 @@
             // 
             this.btnReset.BackColor = System.Drawing.Color.White;
             this.btnReset.Image = global::PBL3TrungTamDayThem.Properties.Resources.recycle;
-            this.btnReset.Location = new System.Drawing.Point(372, 691);
+            this.btnReset.Location = new System.Drawing.Point(372, 663);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(112, 60);
@@ -307,7 +308,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Image = global::PBL3TrungTamDayThem.Properties.Resources.logout__1_;
-            this.btnBack.Location = new System.Drawing.Point(162, 691);
+            this.btnBack.Location = new System.Drawing.Point(162, 663);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(112, 60);
@@ -324,7 +325,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(897, 798);
+            this.ClientSize = new System.Drawing.Size(879, 798);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.btnSave);
@@ -338,7 +339,7 @@
             this.Controls.Add(this.lblMail);
             this.Controls.Add(this.txbAddress);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.txbPhone);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.dtpBD);
             this.Controls.Add(this.txbName);
@@ -370,7 +371,7 @@
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.DateTimePicker dtpBD;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.TextBox txbPhone;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txbAddress;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtMail;

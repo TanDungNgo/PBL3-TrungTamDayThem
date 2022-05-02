@@ -66,8 +66,9 @@
             this.dgvTeacher.Name = "dgvTeacher";
             this.dgvTeacher.RowHeadersWidth = 62;
             this.dgvTeacher.RowTemplate.Height = 28;
-            this.dgvTeacher.Size = new System.Drawing.Size(907, 549);
+            this.dgvTeacher.Size = new System.Drawing.Size(907, 403);
             this.dgvTeacher.TabIndex = 0;
+            this.dgvTeacher.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTeacher_RowHeaderMouseClick);
             // 
             // txtName
             // 
@@ -100,6 +101,7 @@
             // 
             // cbbExpertise
             // 
+            this.cbbExpertise.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbExpertise.FormattingEnabled = true;
             this.cbbExpertise.Location = new System.Drawing.Point(95, 81);
             this.cbbExpertise.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -120,6 +122,7 @@
             // 
             // cbbSort
             // 
+            this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.FormattingEnabled = true;
             this.cbbSort.Location = new System.Drawing.Point(95, 31);
             this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -157,20 +160,21 @@
             this.btnEdit.Location = new System.Drawing.Point(173, 21);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(120, 40);
+            this.btnEdit.Size = new System.Drawing.Size(118, 50);
             this.btnEdit.TabIndex = 26;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::PBL3TrungTamDayThem.Properties.Resources.search_icon1;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(71, 76);
+            this.btnSearch.Location = new System.Drawing.Point(7, 76);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(105, 40);
+            this.btnSearch.Size = new System.Drawing.Size(129, 49);
             this.btnSearch.TabIndex = 35;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -183,7 +187,7 @@
             this.btnShow.Location = new System.Drawing.Point(173, 85);
             this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(120, 40);
+            this.btnShow.Size = new System.Drawing.Size(118, 50);
             this.btnShow.TabIndex = 29;
             this.btnShow.Text = "Show";
             this.btnShow.UseVisualStyleBackColor = false;
@@ -197,10 +201,11 @@
             this.btnDel.Location = new System.Drawing.Point(20, 85);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(118, 40);
+            this.btnDel.Size = new System.Drawing.Size(118, 50);
             this.btnDel.TabIndex = 25;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnAdd
             // 
@@ -210,7 +215,7 @@
             this.btnAdd.Location = new System.Drawing.Point(20, 22);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(118, 40);
+            this.btnAdd.Size = new System.Drawing.Size(118, 50);
             this.btnAdd.TabIndex = 24;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -220,9 +225,9 @@
             // 
             this.pnlBottom.Controls.Add(this.dgvTeacher);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 60);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 206);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(907, 549);
+            this.pnlBottom.Size = new System.Drawing.Size(907, 403);
             this.pnlBottom.TabIndex = 38;
             // 
             // pnlCenter
@@ -243,9 +248,9 @@
             this.pnlCenter2.Controls.Add(this.cbbExpertise);
             this.pnlCenter2.Controls.Add(this.cbbSort);
             this.pnlCenter2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCenter2.Location = new System.Drawing.Point(316, 0);
+            this.pnlCenter2.Location = new System.Drawing.Point(299, 0);
             this.pnlCenter2.Name = "pnlCenter2";
-            this.pnlCenter2.Size = new System.Drawing.Size(289, 149);
+            this.pnlCenter2.Size = new System.Drawing.Size(291, 149);
             this.pnlCenter2.TabIndex = 2;
             // 
             // pnlRight
@@ -254,9 +259,9 @@
             this.pnlRight.Controls.Add(this.btnSearch);
             this.pnlRight.Controls.Add(this.txtName);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(605, 0);
+            this.pnlRight.Location = new System.Drawing.Point(590, 0);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(302, 149);
+            this.pnlRight.Size = new System.Drawing.Size(317, 149);
             this.pnlRight.TabIndex = 1;
             // 
             // pnlLeft
@@ -268,7 +273,7 @@
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(316, 149);
+            this.pnlLeft.Size = new System.Drawing.Size(299, 149);
             this.pnlLeft.TabIndex = 0;
             // 
             // UC_Teacher
@@ -282,6 +287,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Teacher";
             this.Size = new System.Drawing.Size(907, 609);
+            this.Load += new System.EventHandler(this.UC_Teacher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();

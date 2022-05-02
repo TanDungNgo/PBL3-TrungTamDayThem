@@ -61,12 +61,6 @@ namespace PBL3TrungTamDayThem
                 }
             }
         }
-
-        private void FormLogin_FormClosing_1(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning) != System.Windows.Forms.DialogResult.OK)
-                e.Cancel = true;
-        }
         private void btn_Login_MouseMove(object sender, MouseEventArgs e)
         {
             btn_Login.BackColor = Color.MediumSeaGreen;

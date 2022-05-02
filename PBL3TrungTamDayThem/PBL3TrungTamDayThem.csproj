@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="FormClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,6 +389,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\faq-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+    <Folder Include="GUI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -129,11 +129,11 @@
             this.lbl_Header.AutoSize = true;
             this.lbl_Header.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_Header.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(4)));
-            this.lbl_Header.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Header.Location = new System.Drawing.Point(273, 60);
+            this.lbl_Header.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Header.ForeColor = System.Drawing.Color.White;
+            this.lbl_Header.Location = new System.Drawing.Point(285, 61);
             this.lbl_Header.Name = "lbl_Header";
-            this.lbl_Header.Size = new System.Drawing.Size(720, 114);
+            this.lbl_Header.Size = new System.Drawing.Size(678, 112);
             this.lbl_Header.TabIndex = 1;
             this.lbl_Header.Text = "Đăng Nhập Hệ Thống \r\nQuản Lý Trung Tâm Dạy Thêm";
             this.lbl_Header.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -192,7 +192,6 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập Hệ Thống";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing_1);
             this.pnlCenter.ResumeLayout(false);
             this.pnlCenter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
