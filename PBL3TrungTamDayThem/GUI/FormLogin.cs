@@ -1,15 +1,17 @@
-﻿using System;
+﻿using PBL3TrungTamDayThem.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
     public partial class FormLogin : Form
     {
@@ -17,7 +19,6 @@ namespace PBL3TrungTamDayThem
         {
             InitializeComponent();
         }
-
         private void btn_Login_Click(object sender, EventArgs e)
         {
             string UserName = txt_User.Text;
@@ -42,7 +43,7 @@ namespace PBL3TrungTamDayThem
                     SqlDataReader dt = cmd.ExecuteReader();
                     if (dt.Read())
                     {
-                        FormMain frmMain = new FormMain();
+                        FormMain frmMain = new FormMain(txt_User.Text);
                         this.Hide();
                         frmMain.ShowDialog();
                         txt_Pass.Text = "";
@@ -68,7 +69,7 @@ namespace PBL3TrungTamDayThem
 
         private void btn_Login_MouseLeave(object sender, EventArgs e)
         {
-            btn_Login.BackColor = Color.DimGray;
+            btn_Login.BackColor = Color.LightGray;
         }
 
         private void btn_Exit_MouseMove(object sender, MouseEventArgs e)
@@ -78,13 +79,12 @@ namespace PBL3TrungTamDayThem
 
         private void btn_Exit_MouseLeave(object sender, EventArgs e)
         {
-            btn_Exit.BackColor = Color.DimGray;
+            btn_Exit.BackColor = Color.LightGray;
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }

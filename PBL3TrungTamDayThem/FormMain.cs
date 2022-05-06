@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3TrungTamDayThem.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace PBL3TrungTamDayThem
 {
     public partial class FormMain : Form
     {
+        private string _Username;
+        private Form FormNow;
         public FormMain()
         {
             InitializeComponent();
+        }
+        public FormMain(string Username)
+        {
+            InitializeComponent();
+            this._Username = Username;
         }
         private UserControl currentUC;
         private void OpenUC(UserControl UC)
@@ -38,6 +46,10 @@ namespace PBL3TrungTamDayThem
         private void FormMain_Load(object sender, EventArgs e)
         {
             btnHome.PerformClick();
+            DataProvider dataProvider = new DataProvider();
+            string query = "Select DisplayName from ACCOUNT where UserName = '" + this._Username + "'";
+            DataRow dr = dataProvider.ExecuteQuery(query).Rows[0];
+            btn_user.Text = dr["DisplayName"].ToString() + " ﹀";
             foreach (Control item in flpnlButton.Controls)
                 item.Width = flpnlButton.Width;
         }

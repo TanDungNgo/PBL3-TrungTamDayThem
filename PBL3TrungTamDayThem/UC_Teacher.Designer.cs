@@ -30,7 +30,6 @@
         {
             this.dgvTeacher = new System.Windows.Forms.DataGridView();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
             this.lblHeader = new System.Windows.Forms.Label();
             this.cbbExpertise = new System.Windows.Forms.ComboBox();
             this.lblExpertise = new System.Windows.Forms.Label();
@@ -58,7 +57,8 @@
             // 
             // dgvTeacher
             // 
-            this.dgvTeacher.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.dgvTeacher.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTeacher.BackgroundColor = System.Drawing.Color.White;
             this.dgvTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTeacher.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTeacher.Location = new System.Drawing.Point(0, 0);
@@ -72,22 +72,12 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(71, 36);
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(7, 30);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(227, 26);
+            this.txtName.Size = new System.Drawing.Size(291, 30);
             this.txtName.TabIndex = 34;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblName.Location = new System.Drawing.Point(3, 40);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(62, 22);
-            this.lblName.TabIndex = 33;
-            this.lblName.Text = "Name:";
             // 
             // lblHeader
             // 
@@ -171,7 +161,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::PBL3TrungTamDayThem.Properties.Resources.search_icon1;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(7, 76);
+            this.btnSearch.Location = new System.Drawing.Point(84, 70);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(129, 49);
@@ -255,7 +245,6 @@
             // 
             // pnlRight
             // 
-            this.pnlRight.Controls.Add(this.lblName);
             this.pnlRight.Controls.Add(this.btnSearch);
             this.pnlRight.Controls.Add(this.txtName);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
@@ -307,7 +296,6 @@
         private System.Windows.Forms.DataGridView dgvTeacher;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.ComboBox cbbExpertise;
         private System.Windows.Forms.Label lblExpertise;

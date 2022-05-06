@@ -63,16 +63,6 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _262095404_933351724242309_4656704611294709992_n {
-            get {
-                object obj = ResourceManager.GetObject("262095404_933351724242309_4656704611294709992_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _278399923_712022959989578_715087093525637110_n {
             get {
                 object obj = ResourceManager.GetObject("278399923_712022959989578_715087093525637110_n", resourceCulture);
@@ -93,46 +83,6 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _278491886_567960264484294_2402230928146914470_n {
-            get {
-                object obj = ResourceManager.GetObject("278491886_567960264484294_2402230928146914470_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _546_1586955437_2173_1587007302_9641_1588750107 {
-            get {
-                object obj = ResourceManager.GetObject("546-1586955437-2173-1587007302-9641-1588750107", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _546_1586955437_2173_1587007302_9641_15887501071 {
-            get {
-                object obj = ResourceManager.GetObject("546-1586955437-2173-1587007302-9641-15887501071", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap add_icon {
-            get {
-                object obj = ResourceManager.GetObject("add-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap add_icon1 {
             get {
                 object obj = ResourceManager.GetObject("add-icon1", resourceCulture);
@@ -143,39 +93,9 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap analytics {
+        internal static System.Drawing.Bitmap backgroundlogin {
             get {
-                object obj = ResourceManager.GetObject("analytics", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap analytics__1_ {
-            get {
-                object obj = ResourceManager.GetObject("analytics (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap analytics__2_ {
-            get {
-                object obj = ResourceManager.GetObject("analytics (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Apps_preferences_contact_list_icon {
-            get {
-                object obj = ResourceManager.GetObject("Apps-preferences-contact-list-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("backgroundlogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,49 +143,9 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap class_icon {
-            get {
-                object obj = ResourceManager.GetObject("class-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap delete_icon {
-            get {
-                object obj = ResourceManager.GetObject("delete-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap delete_icon1 {
             get {
                 object obj = ResourceManager.GetObject("delete-icon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap delete_icon2 {
-            get {
-                object obj = ResourceManager.GetObject("delete-icon2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap DPT_logo {
-            get {
-                object obj = ResourceManager.GetObject("DPT-logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,16 +186,6 @@ namespace PBL3TrungTamDayThem.Properties {
         internal static System.Drawing.Bitmap faq_icon {
             get {
                 object obj = ResourceManager.GetObject("faq-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap graph {
-            get {
-                object obj = ResourceManager.GetObject("graph", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,29 +293,9 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap password {
-            get {
-                object obj = ResourceManager.GetObject("password", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap persons_in_a_class {
             get {
                 object obj = ResourceManager.GetObject("persons-in-a-class", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pie_chart {
-            get {
-                object obj = ResourceManager.GetObject("pie-chart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -513,16 +363,6 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap selfcareguide_02 {
-            get {
-                object obj = ResourceManager.GetObject("selfcareguide-02", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap settings {
             get {
                 object obj = ResourceManager.GetObject("settings", resourceCulture);
@@ -536,16 +376,6 @@ namespace PBL3TrungTamDayThem.Properties {
         internal static System.Drawing.Bitmap settings1 {
             get {
                 object obj = ResourceManager.GetObject("settings1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap show {
-            get {
-                object obj = ResourceManager.GetObject("show", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -573,39 +403,9 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap staff_icon {
-            get {
-                object obj = ResourceManager.GetObject("staff-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap statistic {
             get {
                 object obj = ResourceManager.GetObject("statistic", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap statistics {
-            get {
-                object obj = ResourceManager.GetObject("statistics", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap statistics__1_ {
-            get {
-                object obj = ResourceManager.GetObject("statistics (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -623,39 +423,9 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap student_icon_1_ {
-            get {
-                object obj = ResourceManager.GetObject("student-icon(1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap teacher {
             get {
                 object obj = ResourceManager.GetObject("teacher", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap teacher_icon {
-            get {
-                object obj = ResourceManager.GetObject("teacher-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap user {
-            get {
-                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -686,36 +456,6 @@ namespace PBL3TrungTamDayThem.Properties {
         internal static System.Drawing.Bitmap user__3_ {
             get {
                 object obj = ResourceManager.GetObject("user (3)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap User_Delete_icon {
-            get {
-                object obj = ResourceManager.GetObject("User-Delete-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap User_Delete_icon__1_ {
-            get {
-                object obj = ResourceManager.GetObject("User-Delete-icon (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap user_edit_icon {
-            get {
-                object obj = ResourceManager.GetObject("user-edit-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
