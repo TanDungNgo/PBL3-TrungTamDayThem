@@ -1,4 +1,6 @@
-﻿using PBL3TrungTamDayThem.DAO;
+﻿using PBL3TrungTamDayThem.DAL;
+using PBL3TrungTamDayThem.DAO;
+using PBL3TrungTamDayThem.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,19 +21,15 @@ namespace PBL3TrungTamDayThem
         {
             InitializeComponent();
         }
+        private UC_Teacher uC_Teacher = new UC_Teacher();
+        private UC_Student uC_Student = new UC_Student();
         public FormMain(string Username)
         {
             InitializeComponent();
             this._Username = Username;
         }
-        private UserControl currentUC;
         private void OpenUC(UserControl UC)
         {
-            if (currentUC != null)
-            {
-                currentUC.Dispose();
-            }    
-            currentUC = UC;
             UC.Dock = DockStyle.Fill;
             pnlCenter.Controls.Add(UC);
             pnlCenter.Tag = UC;
@@ -71,14 +69,14 @@ namespace PBL3TrungTamDayThem
         {
             ResetColorButton();
             GetFromButton(btnTeacher);
-            OpenUC(new UC_Teacher());
+            OpenUC(uC_Teacher);
         }
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
             ResetColorButton();
             GetFromButton(btnStudent);
-            OpenUC(new UC_Student());
+            OpenUC(uC_Student);
         }
         
         private void btnClass_Click(object sender, EventArgs e)
@@ -176,6 +174,12 @@ namespace PBL3TrungTamDayThem
         {
             if (MessageBox.Show("Bạn có thật sự muốn đăng suất ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                 this.Close();
+        }
+
+        private void btn_ThongTin_Click(object sender, EventArgs e)
+        {
+            FormUser f = new FormUser();
+            f.ShowDialog();
         }
     }
 }

@@ -46,7 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="BLL\BLL_QLGV.cs" />
+    <Compile Include="BLL\BLL_QLHV.cs" />
+    <Compile Include="DAL\DAL_QLHV.cs" />
+    <Compile Include="DAL\DAL_QLLH.cs" />
+    <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\DAL_QLGV.cs" />
+    <Compile Include="DTO\CBBItem.cs" />
+    <Compile Include="DTO\Class.cs" />
+    <Compile Include="DTO\Student.cs" />
     <Compile Include="DTO\Teacher.cs" />
     <Compile Include="FormClass.cs">
       <SubType>Form</SubType>
@@ -66,12 +74,6 @@
     <Compile Include="FormStaff.Designer.cs">
       <DependentUpon>FormStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormStudent.Designer.cs">
-      <DependentUpon>FormStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +91,12 @@
     </Compile>
     <Compile Include="GUI\FormStudent.Designer.cs">
       <DependentUpon>FormStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,14 +151,17 @@
     <EmbeddedResource Include="FormStaff.resx">
       <DependentUpon>FormStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormStudent.resx">
-      <DependentUpon>FormStudent.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormTeacher.resx">
       <DependentUpon>FormTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormStudent.resx">
+      <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -197,49 +208,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\password.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\add-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete-icon2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\User-Delete-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\User-Delete-icon %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\search-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user-edit-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Apps-preferences-contact-list-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\teacher-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\class-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\staff-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bill-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\student-icon%281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit-icon.png" />
@@ -263,12 +241,6 @@
     <None Include="Resources\Printer-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DPT-logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\enter.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\enter %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -279,27 +251,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\analytics.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\analytics %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\analytics %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pie-chart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\statistics.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\statistics %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\graph.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\546-1586955437-2173-1587007302-9641-1588750107.png" />
@@ -338,9 +289,6 @@
     <None Include="Resources\statistic.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\278491886_567960264484294_2402230928146914470_n.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\278485768_1925893120939273_4445911401305121_n.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -351,9 +299,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\546-1586955437-2173-1587007302-9641-15887501071.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\selfcareguide-02.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user1.png" />
@@ -381,9 +326,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\262095404_933351724242309_4656704611294709992_n.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user %283%29.png" />

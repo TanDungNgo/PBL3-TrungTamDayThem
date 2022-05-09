@@ -8,26 +8,26 @@ namespace PBL3TrungTamDayThem.DTO
 {
     public class Teacher
     {
-        private string _ID;
-        private string _Name;
-        private string _BirthDay;
-        private bool _Gender;
-        private string _Phone;
-        private string _Address;
-        private string _Mail;
-        private string _Level;
-        private string _Expertise;
-        private string _Salary;
+        private string _MaGV;
+        private string _HoTenGV;
+        private string _NgaySinh;
+        private string _GioiTinh;
+        private string _SDT;
+        private string _DiaChi;
+        private string _Email;
+        private string _TrinhDo;
+        private string _ChuyenMon;
+        private string _Luong;
 
-        public string Phone { get => _Phone; set => _Phone = value; }
-        public string Address { get => _Address; set => _Address = value; }
-        public string Mail { get => _Mail; set => _Mail = value; }
-        public string Level { get => _Level; set => _Level = value; }
-        public string Expertise { get => _Expertise; set => _Expertise = value; }
-        public string Salary { get => _Salary; set => _Salary = value; }
-        public string ID { get => _ID; set => _ID = value; }
-        public string Name { get => _Name; set => _Name = value; }
-        public string BirthDay { get => _BirthDay; set => _BirthDay = value; }
-        public bool Gender { get => _Gender; set => _Gender = value; }
+        public string MaGV { get => _MaGV; set => _MaGV = value; }
+        public string HoTenGV { get => _HoTenGV; set => _HoTenGV = value; }
+        public string NgaySinh { get => _NgaySinh; set => _NgaySinh = value; }
+        public string GioiTinh { get => _GioiTinh; set => _GioiTinh = value; }
+        public string SDT { get => _SDT; set => _SDT = value; }
+        public string DiaChi { get => _DiaChi; set => _DiaChi = value; }
+        public string Email { get => _Email; set => _Email = value; }
+        public string TrinhDo { get => _TrinhDo; set => _TrinhDo = value; }
+        public string ChuyenMon { get => _ChuyenMon; set => _ChuyenMon = value; }
+        public string Luong { get => _Luong; set => _Luong = value; }
     }
 }

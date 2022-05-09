@@ -19,7 +19,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             InitializeComponent();
         }
-        private void btn_Login_Click(object sender, EventArgs e)
+        private void Login()
         {
             string UserName = txt_User.Text;
             string Pass = txt_Pass.Text;
@@ -62,6 +62,10 @@ namespace PBL3TrungTamDayThem.GUI
                 }
             }
         }
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            Login();
+        }
         private void btn_Login_MouseMove(object sender, MouseEventArgs e)
         {
             btn_Login.BackColor = Color.MediumSeaGreen;
@@ -85,6 +89,25 @@ namespace PBL3TrungTamDayThem.GUI
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ckbpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbpass.Checked == true)
+            {
+                txt_Pass.UseSystemPasswordChar = false;
+            }    
+            else
+            {
+                txt_Pass.UseSystemPasswordChar = true;
+            }    
+        }
+        private void txt_Pass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                Login();
+            }
         }
     }
 }

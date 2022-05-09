@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pnlCenter = new System.Windows.Forms.Panel();
+            this.ckbpass = new System.Windows.Forms.CheckBox();
             this.txt_Pass = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_User = new System.Windows.Forms.TextBox();
@@ -45,6 +47,7 @@
             // 
             this.pnlCenter.BackColor = System.Drawing.Color.Transparent;
             this.pnlCenter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlCenter.Controls.Add(this.ckbpass);
             this.pnlCenter.Controls.Add(this.txt_Pass);
             this.pnlCenter.Controls.Add(this.pictureBox2);
             this.pnlCenter.Controls.Add(this.txt_User);
@@ -55,6 +58,16 @@
             this.pnlCenter.Size = new System.Drawing.Size(588, 179);
             this.pnlCenter.TabIndex = 0;
             // 
+            // ckbpass
+            // 
+            this.ckbpass.AutoSize = true;
+            this.ckbpass.Location = new System.Drawing.Point(517, 100);
+            this.ckbpass.Name = "ckbpass";
+            this.ckbpass.Size = new System.Drawing.Size(22, 21);
+            this.ckbpass.TabIndex = 6;
+            this.ckbpass.UseVisualStyleBackColor = true;
+            this.ckbpass.CheckedChanged += new System.EventHandler(this.ckbpass_CheckedChanged);
+            // 
             // txt_Pass
             // 
             this.txt_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -64,6 +77,7 @@
             this.txt_Pass.Size = new System.Drawing.Size(305, 35);
             this.txt_Pass.TabIndex = 3;
             this.txt_Pass.UseSystemPasswordChar = true;
+            this.txt_Pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Pass_KeyPress);
             // 
             // pictureBox2
             // 
@@ -163,6 +177,7 @@
             this.Controls.Add(this.pnlCenter);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -186,5 +201,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_Header;
+        private System.Windows.Forms.CheckBox ckbpass;
     }
 }

@@ -46,6 +46,8 @@
             this.pnlCenter2 = new System.Windows.Forms.Panel();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.pnlLeft = new System.Windows.Forms.Panel();
+            this.lblclass = new System.Windows.Forms.Label();
+            this.cbbclass = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -57,6 +59,8 @@
             // 
             // dgvTeacher
             // 
+            this.dgvTeacher.AllowUserToAddRows = false;
+            this.dgvTeacher.AllowUserToDeleteRows = false;
             this.dgvTeacher.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTeacher.BackgroundColor = System.Drawing.Color.White;
             this.dgvTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -64,6 +68,7 @@
             this.dgvTeacher.Location = new System.Drawing.Point(0, 0);
             this.dgvTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvTeacher.Name = "dgvTeacher";
+            this.dgvTeacher.ReadOnly = true;
             this.dgvTeacher.RowHeadersWidth = 62;
             this.dgvTeacher.RowTemplate.Height = 28;
             this.dgvTeacher.Size = new System.Drawing.Size(907, 403);
@@ -93,7 +98,7 @@
             // 
             this.cbbExpertise.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbExpertise.FormattingEnabled = true;
-            this.cbbExpertise.Location = new System.Drawing.Point(95, 81);
+            this.cbbExpertise.Location = new System.Drawing.Point(97, 61);
             this.cbbExpertise.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbExpertise.Name = "cbbExpertise";
             this.cbbExpertise.Size = new System.Drawing.Size(173, 28);
@@ -104,7 +109,7 @@
             this.lblExpertise.AutoSize = true;
             this.lblExpertise.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpertise.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblExpertise.Location = new System.Drawing.Point(2, 85);
+            this.lblExpertise.Location = new System.Drawing.Point(4, 65);
             this.lblExpertise.Name = "lblExpertise";
             this.lblExpertise.Size = new System.Drawing.Size(91, 22);
             this.lblExpertise.TabIndex = 30;
@@ -114,7 +119,7 @@
             // 
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(95, 31);
+            this.cbbSort.Location = new System.Drawing.Point(97, 11);
             this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Size = new System.Drawing.Size(173, 28);
@@ -125,7 +130,7 @@
             this.lblSort.AutoSize = true;
             this.lblSort.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSort.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSort.Location = new System.Drawing.Point(17, 31);
+            this.lblSort.Location = new System.Drawing.Point(19, 11);
             this.lblSort.Name = "lblSort";
             this.lblSort.Size = new System.Drawing.Size(49, 22);
             this.lblSort.TabIndex = 27;
@@ -168,6 +173,7 @@
             this.btnSearch.TabIndex = 35;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnShow
             // 
@@ -233,6 +239,8 @@
             // 
             // pnlCenter2
             // 
+            this.pnlCenter2.Controls.Add(this.lblclass);
+            this.pnlCenter2.Controls.Add(this.cbbclass);
             this.pnlCenter2.Controls.Add(this.lblSort);
             this.pnlCenter2.Controls.Add(this.lblExpertise);
             this.pnlCenter2.Controls.Add(this.cbbExpertise);
@@ -264,6 +272,27 @@
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(299, 149);
             this.pnlLeft.TabIndex = 0;
+            // 
+            // lblclass
+            // 
+            this.lblclass.AutoSize = true;
+            this.lblclass.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblclass.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblclass.Location = new System.Drawing.Point(19, 115);
+            this.lblclass.Name = "lblclass";
+            this.lblclass.Size = new System.Drawing.Size(60, 22);
+            this.lblclass.TabIndex = 32;
+            this.lblclass.Text = "Class:";
+            // 
+            // cbbclass
+            // 
+            this.cbbclass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbclass.FormattingEnabled = true;
+            this.cbbclass.Location = new System.Drawing.Point(99, 109);
+            this.cbbclass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbclass.Name = "cbbclass";
+            this.cbbclass.Size = new System.Drawing.Size(173, 28);
+            this.cbbclass.TabIndex = 33;
             // 
             // UC_Teacher
             // 
@@ -311,5 +340,7 @@
         private System.Windows.Forms.Panel pnlRight;
         private System.Windows.Forms.Panel pnlLeft;
         private System.Windows.Forms.Panel pnlCenter2;
+        private System.Windows.Forms.Label lblclass;
+        private System.Windows.Forms.ComboBox cbbclass;
     }
 }

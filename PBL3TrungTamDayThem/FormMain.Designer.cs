@@ -476,7 +476,7 @@
             this.pnl_user.Controls.Add(this.btn_ThongTin);
             this.pnl_user.Location = new System.Drawing.Point(614, 7);
             this.pnl_user.Name = "pnl_user";
-            this.pnl_user.Size = new System.Drawing.Size(283, 100);
+            this.pnl_user.Size = new System.Drawing.Size(283, 119);
             this.pnl_user.TabIndex = 5;
             this.pnl_user.Visible = false;
             // 
@@ -487,12 +487,14 @@
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Logout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Logout.Image = global::PBL3TrungTamDayThem.Properties.Resources.logout__1_;
-            this.btn_Logout.Location = new System.Drawing.Point(0, 51);
+            this.btn_Logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Logout.Location = new System.Drawing.Point(0, 60);
             this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(283, 51);
+            this.btn_Logout.Size = new System.Drawing.Size(283, 60);
             this.btn_Logout.TabIndex = 1;
             this.btn_Logout.Text = "Đăng xuất";
-            this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_Logout.UseVisualStyleBackColor = true;
             this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
@@ -502,12 +504,16 @@
             this.btn_ThongTin.FlatAppearance.BorderSize = 0;
             this.btn_ThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ThongTin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongTin.Image = global::PBL3TrungTamDayThem.Properties.Resources.user__3_;
             this.btn_ThongTin.Location = new System.Drawing.Point(0, 0);
             this.btn_ThongTin.Name = "btn_ThongTin";
-            this.btn_ThongTin.Size = new System.Drawing.Size(283, 51);
+            this.btn_ThongTin.Size = new System.Drawing.Size(283, 60);
             this.btn_ThongTin.TabIndex = 0;
             this.btn_ThongTin.Text = "Thông tin người dùng";
+            this.btn_ThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ThongTin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_ThongTin.UseVisualStyleBackColor = true;
+            this.btn_ThongTin.Click += new System.EventHandler(this.btn_ThongTin_Click);
             // 
             // FormMain
             // 

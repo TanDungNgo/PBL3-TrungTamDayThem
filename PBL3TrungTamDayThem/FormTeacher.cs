@@ -123,16 +123,16 @@ namespace PBL3TrungTamDayThem
 
         private void FormTeacher_Load(object sender, EventArgs e)
         {
-            txtID.Text = this._teacher.ID;
-            txtName.Text= this._teacher.Name;
-            txtPhone.Text= this._teacher.Phone;
-            txtAddress.Text= this._teacher.Address;
-            txtMail.Text= this._teacher.Mail;
-            txtSalary.Text= this._teacher.Salary;
-            txtExpertise.Text= this._teacher.Expertise;
-            cbbLevel.Text= this._teacher.Level;
-            dtpBD.Text = this._teacher.BirthDay;
-            if (this._teacher.Gender == true)
+            txtID.Text = this._teacher.MaGV;
+            txtName.Text= this._teacher.HoTenGV;
+            txtPhone.Text= this._teacher.SDT;
+            txtAddress.Text= this._teacher.DiaChi;
+            txtMail.Text= this._teacher.Email;
+            txtSalary.Text= this._teacher.Luong;
+            txtExpertise.Text= this._teacher.ChuyenMon;
+            cbbLevel.Text= this._teacher.TrinhDo;
+            dtpBD.Text = this._teacher.NgaySinh;
+            if (this._teacher.GioiTinh == "Nam")
             {
                 rbMale.Checked = true;
             }    

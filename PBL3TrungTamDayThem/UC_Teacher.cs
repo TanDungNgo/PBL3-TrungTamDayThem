@@ -1,4 +1,6 @@
-﻿using PBL3TrungTamDayThem.DAO;
+﻿using PBL3TrungTamDayThem.BLL;
+using PBL3TrungTamDayThem.DAL;
+using PBL3TrungTamDayThem.DAO;
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
@@ -24,7 +26,7 @@ namespace PBL3TrungTamDayThem
         {
             FormTeacher frm = new FormTeacher();
             frm.ShowDialog();
-            GetCBB();
+            SetCBB();
         }
         public List<string> Get_Expertise()
         {
@@ -39,7 +41,7 @@ namespace PBL3TrungTamDayThem
             }
             return expertise;
         }
-        public void GetCBB()
+        public void SetCBB()
         {
             if (cbbExpertise != null)
             {
@@ -88,7 +90,7 @@ namespace PBL3TrungTamDayThem
                     if (ret > 0)
                     {
                         dgvTeacher.DataSource = GetTeacher_ByEx();
-                        GetCBB();
+                        SetCBB();
                         MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
@@ -103,12 +105,12 @@ namespace PBL3TrungTamDayThem
 
         private void UC_Teacher_Load(object sender, EventArgs e)
         {
-            GetCBB();
+            SetCBB();
             cbbExpertise.Text = "All";
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (teacher.ID == null)
+            if (teacher.MaGV == null)
             {
                 MessageBox.Show("Chưa chọn giáo viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }    
@@ -124,17 +126,25 @@ namespace PBL3TrungTamDayThem
             DataGridViewSelectedRowCollection data = dgvTeacher.SelectedRows;
             if (data.Count == 1)
             {
-                teacher.ID = data[0].Cells["MaGV"].Value.ToString();
-                teacher.Name = data[0].Cells["HoTenGV"].Value.ToString();
-                teacher.Address = data[0].Cells["DiaChi"].Value.ToString();
-                teacher.Phone = data[0].Cells["SDT"].Value.ToString();
-                teacher.Mail = data[0].Cells["Email"].Value.ToString();
-                teacher.Salary = data[0].Cells["Luong"].Value.ToString();
-                teacher.Expertise = data[0].Cells["ChuyenMon"].Value.ToString();
-                teacher.Level = data[0].Cells["TrinhDo"].Value.ToString();
-                teacher.Gender = (bool)data[0].Cells["GioiTinh"].Value;
-                teacher.BirthDay = data[0].Cells["NgaySinh"].Value.ToString();
+                teacher.MaGV = data[0].Cells["MaGV"].Value.ToString();
+                teacher.HoTenGV = data[0].Cells["HoTenGV"].Value.ToString();
+                teacher.DiaChi = data[0].Cells["DiaChi"].Value.ToString();
+                teacher.SDT = data[0].Cells["SDT"].Value.ToString();
+                teacher.Email = data[0].Cells["Email"].Value.ToString();
+                teacher.Luong = data[0].Cells["Luong"].Value.ToString();
+                teacher.ChuyenMon = data[0].Cells["ChuyenMon"].Value.ToString();
+                teacher.TrinhDo = data[0].Cells["TrinhDo"].Value.ToString();
+                teacher.GioiTinh = data[0].Cells["GioiTinh"].Value.ToString();
+                teacher.NgaySinh = data[0].Cells["NgaySinh"].Value.ToString();
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            //String query = "Select * from GIAO_VIEN";
+            //string dk = "";
+
+            //dgvTeacher.DataSource = DAL_QLGV.Instance.GetAllTeacher();
         }
     }
 }
