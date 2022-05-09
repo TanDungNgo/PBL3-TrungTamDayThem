@@ -9,18 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
-    public partial class UC_Student : UserControl
+    public partial class UC_Staff : UserControl
     {
-        public UC_Student()
+        public UC_Staff()
         {
             InitializeComponent();
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FormStudent frm = new FormStudent();
+            FormStaff frm = new FormStaff();
             frm.ShowDialog();
         }
         public DataTable GetData(string query)
@@ -37,9 +36,10 @@ namespace PBL3TrungTamDayThem
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM dbo.HOC_VIEN";
-            dgv_Student.DataSource = GetData(query);
+            string query = "SELECT * FROM dbo.NHAN_VIEN";
+            dgvStaff.DataSource = GetData(query);
         }
+
 
     }
 }

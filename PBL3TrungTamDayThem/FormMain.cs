@@ -46,10 +46,10 @@ namespace PBL3TrungTamDayThem
         private void FormMain_Load(object sender, EventArgs e)
         {
             btnHome.PerformClick();
-            DataProvider dataProvider = new DataProvider();
-            string query = "Select DisplayName from ACCOUNT where UserName = '" + this._Username + "'";
-            DataRow dr = dataProvider.ExecuteQuery(query).Rows[0];
-            btn_user.Text = dr["DisplayName"].ToString() + " ﹀";
+            //dataprovider dataprovider = new dataprovider();
+            //string query = "select displayname from account where username = '" + this._username + "'";
+            //datarow dr = dataprovider.executequery(query).rows[0];
+            //btn_user.text = dr["displayname"].tostring() + " ﹀";
             foreach (Control item in flpnlButton.Controls)
                 item.Width = flpnlButton.Width;
         }

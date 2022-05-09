@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
     public partial class UC_Student : UserControl
     {
@@ -17,7 +17,6 @@ namespace PBL3TrungTamDayThem
         {
             InitializeComponent();
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormStudent frm = new FormStudent();
@@ -38,8 +37,7 @@ namespace PBL3TrungTamDayThem
         private void btnShow_Click(object sender, EventArgs e)
         {
             string query = "SELECT * FROM dbo.HOC_VIEN";
-            dgv_Student.DataSource = GetData(query);
+            dgvStudent.DataSource = GetData(query);
         }
-
     }
 }

@@ -90,6 +90,30 @@
     <Compile Include="GUI\FormStudent.Designer.cs">
       <DependentUpon>FormStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UC_Bill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UC_Bill.Designer.cs">
+      <DependentUpon>UC_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UC_Class.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UC_Class.Designer.cs">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UC_Staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UC_Staff.Designer.cs">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UC_Student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UC_Student.Designer.cs">
+      <DependentUpon>UC_Student.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC_Bill.cs">
@@ -151,6 +175,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Bill.resx">
+      <DependentUpon>UC_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Class.resx">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Staff.resx">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Student.resx">
+      <DependentUpon>UC_Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
