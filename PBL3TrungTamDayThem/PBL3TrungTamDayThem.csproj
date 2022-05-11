@@ -56,29 +56,11 @@
     <Compile Include="DTO\Class.cs" />
     <Compile Include="DTO\Student.cs" />
     <Compile Include="DTO\Teacher.cs" />
-    <Compile Include="FormClass.cs">
+    <Compile Include="GUI\FormClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClass.Designer.cs">
+    <Compile Include="GUI\FormClass.Designer.cs">
       <DependentUpon>FormClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormStaff.Designer.cs">
-      <DependentUpon>FormStaff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTeacher.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTeacher.Designer.cs">
-      <DependentUpon>FormTeacher.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormLogin.cs">
       <SubType>Form</SubType>
@@ -86,11 +68,29 @@
     <Compile Include="GUI\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormStaff.Designer.cs">
+      <DependentUpon>FormStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FormStudent.Designer.cs">
       <DependentUpon>FormStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormTeacher.Designer.cs">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormUser.cs">
       <SubType>Form</SubType>
@@ -142,6 +142,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="FormClass.resx">
       <DependentUpon>FormClass.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,8 +155,13 @@
     <EmbeddedResource Include="FormTeacher.resx">
       <DependentUpon>FormTeacher.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> a2cbfcc8fafdcbcc234d04249aaff9cb077462be
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
