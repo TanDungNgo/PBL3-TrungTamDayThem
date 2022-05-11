@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PBL3TrungTamDayThem.DAO
+namespace PBL3TrungTamDayThem.DAL
 {
     public  class DataProvider
     {

@@ -1,4 +1,5 @@
-﻿namespace PBL3TrungTamDayThem
+﻿namespace PBL3TrungTamDayThem.GUI
+
 {
     partial class UC_Class
     {

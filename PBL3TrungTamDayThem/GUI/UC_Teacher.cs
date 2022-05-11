@@ -1,6 +1,5 @@
 ﻿using PBL3TrungTamDayThem.BLL;
 using PBL3TrungTamDayThem.DAL;
-using PBL3TrungTamDayThem.DAO;
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
     public partial class UC_Teacher : UserControl
     {
@@ -58,13 +57,13 @@ namespace PBL3TrungTamDayThem
             {
                 string query = "SELECT * FROM GIAO_VIEN";
                 data = dataProvider.ExecuteQuery(query);
-            }  
+            }
             else
             {
                 string expertise = cbbExpertise.Text;
-                string query = "SELECT * FROM GIAO_VIEN where ChuyenMon = N'" + expertise +"'";
+                string query = "SELECT * FROM GIAO_VIEN where ChuyenMon = N'" + expertise + "'";
                 data = dataProvider.ExecuteQuery(query);
-            }    
+            }
             return data;
         }
         private void btnShow_Click(object sender, EventArgs e)
@@ -100,7 +99,7 @@ namespace PBL3TrungTamDayThem
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }    
+            }
         }
 
         private void UC_Teacher_Load(object sender, EventArgs e)
@@ -113,12 +112,12 @@ namespace PBL3TrungTamDayThem
             if (teacher.MaGV == null)
             {
                 MessageBox.Show("Chưa chọn giáo viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }    
+            }
             else
             {
                 FormTeacher f = new FormTeacher(teacher);
                 f.ShowDialog();
-            }    
+            }
         }
 
         private void dgvTeacher_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

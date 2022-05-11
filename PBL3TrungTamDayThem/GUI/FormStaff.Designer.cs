@@ -1,4 +1,4 @@
-﻿namespace PBL3TrungTamDayThem
+﻿namespace PBL3TrungTamDayThem.GUI
 {
     partial class FormStaff
     {
