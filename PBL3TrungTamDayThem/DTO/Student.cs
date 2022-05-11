@@ -10,17 +10,20 @@ namespace PBL3TrungTamDayThem.DTO
     {
         private string _MaHV;
         private string _HoTenHV;
-        private string _NgaySinh;
+        private DateTime _NgaySinh;
         private string _GioiTinh;
         private string _DiaChi;
         private string _SDT;
         private string _Email;
         private string _TinhTrang;
         private string _MaLH;
-
+        public Student()
+        {
+            this._NgaySinh = DateTime.Now;
+        }
         public string MaHV { get => _MaHV; set => _MaHV = value; }
         public string HoTenHV { get => _HoTenHV; set => _HoTenHV = value; }
-        public string NgaySinh { get => _NgaySinh; set => _NgaySinh = value; }
+        public DateTime NgaySinh { get => _NgaySinh; set => _NgaySinh = value; }
         public string GioiTinh { get => _GioiTinh; set => _GioiTinh = value; }
         public string DiaChi { get => _DiaChi; set => _DiaChi = value; }
         public string SDT { get => _SDT; set => _SDT = value; }

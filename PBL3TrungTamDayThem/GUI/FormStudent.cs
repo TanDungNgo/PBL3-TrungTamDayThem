@@ -32,7 +32,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             txtID.Text = this._student.MaHV;
             txtName.Text = this._student.HoTenHV;
-            //dtpBirthDay.Text = this._student.NgaySinh.ToString();
+            dtpBirthDay.Text = this._student.NgaySinh.ToString();
             txtAddress.Text = this._student.DiaChi;
             txtPhone.Text = this._student.SDT;
             txtMail.Text = this._student.Email;

@@ -60,7 +60,7 @@ namespace PBL3TrungTamDayThem.DAL
             {
                 MaHV = i["MaHV"].ToString(),
                 HoTenHV = i["HoTenHV"].ToString(),
-                NgaySinh = i["NgaySinh"].ToString(),
+                NgaySinh = (DateTime)i["NgaySinh"],
                 GioiTinh = ((bool)i["GioiTinh"] == true) ? "Nam" : "Nữ",
                 SDT = i["SDT"].ToString(),
                 DiaChi = i["DiaChi"].ToString(),

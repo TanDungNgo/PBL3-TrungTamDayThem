@@ -66,7 +66,7 @@ namespace PBL3TrungTamDayThem
                 student.SDT = data[0].Cells["SDT"].Value.ToString();
                 student.Email = data[0].Cells["Email"].Value.ToString();
                 student.GioiTinh = data[0].Cells["GioiTinh"].Value.ToString();
-                student.NgaySinh = data[0].Cells["NgaySinh"].Value.ToString();
+                student.NgaySinh = (DateTime)data[0].Cells["NgaySinh"].Value;
                 student.TinhTrang = data[0].Cells["TinhTrang"].Value.ToString();
                 student.MaLH = data[0].Cells["MaLH"].Value.ToString();
             }
