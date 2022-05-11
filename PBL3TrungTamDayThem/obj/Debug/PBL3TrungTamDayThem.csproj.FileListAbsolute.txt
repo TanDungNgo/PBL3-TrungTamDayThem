@@ -118,3 +118,4 @@ D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayTh
 D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.pdb
 D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.FormUser.resources
 D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.FormStudent.resources
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.FormMain.resources
