@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
     public partial class UC_Class : UserControl
     {
@@ -19,7 +19,7 @@ namespace PBL3TrungTamDayThem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FormClass frm = new FormClass();    
+            FormClass frm = new FormClass();
             frm.ShowDialog();
         }
 

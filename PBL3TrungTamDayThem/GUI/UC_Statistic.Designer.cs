@@ -1,4 +1,4 @@
-﻿namespace PBL3TrungTamDayThem
+﻿namespace PBL3TrungTamDayThem.GUI
 {
     partial class UC_Statistic
     {
@@ -42,14 +42,14 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1159, 48);
+            this.pnlHeader.Size = new System.Drawing.Size(806, 48);
             this.pnlHeader.TabIndex = 26;
             // 
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(458, 10);
+            this.lblHeader.Location = new System.Drawing.Point(332, 11);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(113, 26);
             this.lblHeader.TabIndex = 19;
@@ -64,7 +64,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Statistic";
-            this.Size = new System.Drawing.Size(1159, 972);
+            this.Size = new System.Drawing.Size(806, 487);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.ResumeLayout(false);

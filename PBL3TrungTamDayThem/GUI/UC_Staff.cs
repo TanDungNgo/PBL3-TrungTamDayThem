@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
     public partial class UC_Staff : UserControl
     {
@@ -17,7 +17,6 @@ namespace PBL3TrungTamDayThem
         {
             InitializeComponent();
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormStaff frm = new FormStaff();
@@ -40,5 +39,6 @@ namespace PBL3TrungTamDayThem
             string query = "SELECT * FROM dbo.NHAN_VIEN";
             dgv_Staff.DataSource = GetData(query);
         }
+
     }
 }

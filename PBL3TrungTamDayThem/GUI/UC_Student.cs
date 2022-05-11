@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
     public partial class UC_Student : UserControl
     {
@@ -21,7 +21,7 @@ namespace PBL3TrungTamDayThem
         {
             InitializeComponent();
         }
-        private Student student = new Student(); 
+        private Student student = new Student();
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormStudent frm = new FormStudent();
@@ -38,7 +38,7 @@ namespace PBL3TrungTamDayThem
             {
                 cbbclass.Items.Clear();
             }
-            cbbclass.Items.Add(new CBBItem { Value = "All"});
+            cbbclass.Items.Add(new CBBItem { Value = "All" });
             cbbclass.Items.AddRange(BLL_QLHV.Instance.GetListCBB().ToArray());
         }
 

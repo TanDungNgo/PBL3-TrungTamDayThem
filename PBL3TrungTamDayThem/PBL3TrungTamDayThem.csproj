@@ -98,50 +98,50 @@
     <Compile Include="GUI\FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UC_Bill.cs">
+    <Compile Include="GUI\UC_Bill.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Bill.Designer.cs">
+    <Compile Include="GUI\UC_Bill.Designer.cs">
       <DependentUpon>UC_Bill.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Class.cs">
+    <Compile Include="GUI\UC_Class.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Class.Designer.cs">
+    <Compile Include="GUI\UC_Class.Designer.cs">
       <DependentUpon>UC_Class.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Home.cs">
+    <Compile Include="GUI\UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Home.Designer.cs">
+    <Compile Include="GUI\UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Staff.cs">
+    <Compile Include="GUI\UC_Staff.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Staff.Designer.cs">
+    <Compile Include="GUI\UC_Staff.Designer.cs">
       <DependentUpon>UC_Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Statistic.cs">
+    <Compile Include="GUI\UC_Statistic.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Statistic.Designer.cs">
+    <Compile Include="GUI\UC_Statistic.Designer.cs">
       <DependentUpon>UC_Statistic.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Student.cs">
+    <Compile Include="GUI\UC_Student.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Student.Designer.cs">
+    <Compile Include="GUI\UC_Student.Designer.cs">
       <DependentUpon>UC_Student.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Teacher.cs">
+    <Compile Include="GUI\UC_Teacher.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Teacher.Designer.cs">
+    <Compile Include="GUI\UC_Teacher.Designer.cs">
       <DependentUpon>UC_Teacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormClass.resx">
       <DependentUpon>FormClass.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +163,15 @@
     <EmbeddedResource Include="GUI\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Bill.resx">
+      <DependentUpon>UC_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Class.resx">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Staff.resx">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -173,27 +182,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UC_Bill.resx">
-      <DependentUpon>UC_Bill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Class.resx">
-      <DependentUpon>UC_Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Home.resx">
-      <DependentUpon>UC_Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Staff.resx">
-      <DependentUpon>UC_Staff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Statistic.resx">
-      <DependentUpon>UC_Statistic.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Student.resx">
-      <DependentUpon>UC_Student.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Teacher.resx">
-      <DependentUpon>UC_Teacher.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
