@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
-    public partial class FormStudent : Form
+    public partial class FormMain : Form
     {
-        public FormStudent()
+        public FormMain()
         {
             InitializeComponent();
         }

@@ -1,4 +1,4 @@
-﻿namespace PBL3TrungTamDayThem
+﻿namespace PBL3TrungTamDayThem.GUI
 {
     partial class UC_Home
     {
@@ -93,7 +93,6 @@
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // UC_Home
             // 
@@ -106,7 +105,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UC_Home";
             this.Size = new System.Drawing.Size(907, 609);
-            this.Load += new System.EventHandler(this.UC_Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlCenter.ResumeLayout(false);

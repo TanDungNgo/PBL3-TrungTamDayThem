@@ -1,4 +1,4 @@
-﻿namespace PBL3TrungTamDayThem
+﻿namespace PBL3TrungTamDayThem.GUI
 {
     partial class FormMain
     {
@@ -120,7 +120,6 @@
             this.btnHome.Text = "Trang Chủ";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnTeacher
             // 
@@ -139,7 +138,6 @@
             this.btnTeacher.Text = "Giáo Viên";
             this.btnTeacher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTeacher.UseVisualStyleBackColor = false;
-            this.btnTeacher.Click += new System.EventHandler(this.btnTeacher_Click);
             // 
             // btnStudent
             // 
@@ -158,7 +156,6 @@
             this.btnStudent.Text = "Học Viên";
             this.btnStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStudent.UseVisualStyleBackColor = false;
-            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // btnClass
             // 
@@ -177,7 +174,6 @@
             this.btnClass.Text = "Lớp Học";
             this.btnClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClass.UseVisualStyleBackColor = false;
-            this.btnClass.Click += new System.EventHandler(this.btnClass_Click);
             // 
             // btnBill
             // 
@@ -196,7 +192,6 @@
             this.btnBill.Text = "Biên Lai";
             this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBill.UseVisualStyleBackColor = false;
-            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnStaff
             // 
@@ -215,7 +210,6 @@
             this.btnStaff.Text = "Nhân Viên";
             this.btnStaff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStaff.UseVisualStyleBackColor = false;
-            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnStatistic
             // 
@@ -234,7 +228,6 @@
             this.btnStatistic.Text = " Thống Kê";
             this.btnStatistic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistic.UseVisualStyleBackColor = false;
-            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // pnlLogo
             // 
@@ -306,7 +299,6 @@
             this.btnHelp.TabIndex = 4;
             this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHelp.UseVisualStyleBackColor = false;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btn_Min
             // 
@@ -321,7 +313,6 @@
             this.btn_Min.TabIndex = 0;
             this.btn_Min.Text = "☰";
             this.btn_Min.UseVisualStyleBackColor = false;
-            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
             // 
             // pnlTop
             // 
@@ -360,7 +351,6 @@
             this.btn_user.Text = "User_Name    ﹀";
             this.btn_user.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_user.UseVisualStyleBackColor = true;
-            this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
             // 
             // pnl_header3
             // 
@@ -416,7 +406,6 @@
             this.btn_Mini.TabIndex = 2;
             this.btn_Mini.Text = "‒ ";
             this.btn_Mini.UseVisualStyleBackColor = true;
-            this.btn_Mini.Click += new System.EventHandler(this.btn_Mini_Click);
             // 
             // btn_Max
             // 
@@ -430,7 +419,6 @@
             this.btn_Max.TabIndex = 1;
             this.btn_Max.Text = "□";
             this.btn_Max.UseVisualStyleBackColor = true;
-            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // btn_Exit
             // 
@@ -444,9 +432,6 @@
             this.btn_Exit.TabIndex = 0;
             this.btn_Exit.Text = "X";
             this.btn_Exit.UseVisualStyleBackColor = true;
-            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
-            this.btn_Exit.MouseLeave += new System.EventHandler(this.btn_Exit_MouseLeave);
-            this.btn_Exit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Exit_MouseMove);
             // 
             // pnlhl
             // 
@@ -494,7 +479,6 @@
             this.btn_Logout.Text = "Đăng xuất";
             this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Logout.UseVisualStyleBackColor = true;
-            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
             // btn_ThongTin
             // 
@@ -524,7 +508,6 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Trung Tâm Dạy Thêm";
-            this.Load += new System.EventHandler(this.FormMain_Load);
             this.pnlMenu.ResumeLayout(false);
             this.flpnlButton.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);

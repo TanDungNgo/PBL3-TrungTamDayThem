@@ -1,4 +1,4 @@
-﻿namespace PBL3TrungTamDayThem
+﻿namespace PBL3TrungTamDayThem.GUI
 {
     partial class FormTeacher
     {
@@ -276,9 +276,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            this.btnSave.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
-            this.btnSave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseMove);
             // 
             // btnReset
             // 
@@ -292,9 +289,6 @@
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            this.btnReset.MouseLeave += new System.EventHandler(this.btnReset_MouseLeave);
-            this.btnReset.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReset_MouseMove);
             // 
             // txtSalary
             // 
@@ -316,9 +310,6 @@
             this.btnBack.Text = "Back";
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            this.btnBack.MouseLeave += new System.EventHandler(this.btnBack_MouseLeave);
-            this.btnBack.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnBack_MouseMove);
             // 
             // FormTeacher
             // 
@@ -353,7 +344,6 @@
             this.Name = "FormTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Giáo Viên";
-            this.Load += new System.EventHandler(this.FormTeacher_Load);
             this.gbGender.ResumeLayout(false);
             this.gbGender.PerformLayout();
             this.ResumeLayout(false);
