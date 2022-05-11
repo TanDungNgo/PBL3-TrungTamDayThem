@@ -1,4 +1,4 @@
-﻿using PBL3TrungTamDayThem.DAO;
+﻿using PBL3TrungTamDayThem.DAL;
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
     public partial class FormTeacher : Form
     {
@@ -55,8 +55,8 @@ namespace PBL3TrungTamDayThem
                 try
                 {
                     string query = "Update GIAO_VIEN set MaGV = '" + txtID.Text + "',HoTenGV = N'" + txtName.Text + "',NgaySinh = '" + dtpBD.Value +
-                                    "',GioiTinh = '" + rbMale.Checked + "',DiaChi = N'" + txtAddress.Text + "',ChuyenMon = N'" + txtExpertise.Text + 
-                                    "',TrinhDo = N'" + cbbLevel.Text + "',SDT ='" + txtPhone.Text + "',Email ='" + txtMail.Text + "',Luong ='" + txtSalary.Text + 
+                                    "',GioiTinh = '" + rbMale.Checked + "',DiaChi = N'" + txtAddress.Text + "',ChuyenMon = N'" + txtExpertise.Text +
+                                    "',TrinhDo = N'" + cbbLevel.Text + "',SDT ='" + txtPhone.Text + "',Email ='" + txtMail.Text + "',Luong ='" + txtSalary.Text +
                                     "' Where MaGV = '" + txtID.Text + "'";
                     int ret = dataProvider.ExecuteNonQuery(query);
                     if (ret > 0)
@@ -71,7 +71,7 @@ namespace PBL3TrungTamDayThem
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }    
+            }
         }
 
         private void btnSave_MouseMove(object sender, MouseEventArgs e)
@@ -124,18 +124,18 @@ namespace PBL3TrungTamDayThem
         private void FormTeacher_Load(object sender, EventArgs e)
         {
             txtID.Text = this._teacher.MaGV;
-            txtName.Text= this._teacher.HoTenGV;
-            txtPhone.Text= this._teacher.SDT;
-            txtAddress.Text= this._teacher.DiaChi;
-            txtMail.Text= this._teacher.Email;
-            txtSalary.Text= this._teacher.Luong;
-            txtExpertise.Text= this._teacher.ChuyenMon;
-            cbbLevel.Text= this._teacher.TrinhDo;
+            txtName.Text = this._teacher.HoTenGV;
+            txtPhone.Text = this._teacher.SDT;
+            txtAddress.Text = this._teacher.DiaChi;
+            txtMail.Text = this._teacher.Email;
+            txtSalary.Text = this._teacher.Luong;
+            txtExpertise.Text = this._teacher.ChuyenMon;
+            cbbLevel.Text = this._teacher.TrinhDo;
             dtpBD.Text = this._teacher.NgaySinh;
             if (this._teacher.GioiTinh == "Nam")
             {
                 rbMale.Checked = true;
-            }    
+            }
             else
                 rbFemale.Checked = true;
         }

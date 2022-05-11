@@ -1,5 +1,4 @@
-﻿using PBL3TrungTamDayThem.DAO;
-using PBL3TrungTamDayThem.DTO;
+﻿using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;

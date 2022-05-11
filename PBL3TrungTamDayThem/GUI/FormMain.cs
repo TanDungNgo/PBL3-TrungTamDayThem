@@ -1,5 +1,4 @@
 ﻿using PBL3TrungTamDayThem.DAL;
-using PBL3TrungTamDayThem.DAO;
 using PBL3TrungTamDayThem.GUI;
 using System;
 using System.Collections.Generic;
@@ -11,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3TrungTamDayThem
+namespace PBL3TrungTamDayThem.GUI
 {
     public partial class FormMain : Form
     {
@@ -56,7 +55,7 @@ namespace PBL3TrungTamDayThem
             foreach (Button item in flpnlButton.Controls)
             {
                 item.BackColor = Color.DarkGray;
-            }    
+            }
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -78,7 +77,7 @@ namespace PBL3TrungTamDayThem
             GetFromButton(btnStudent);
             OpenUC(uC_Student);
         }
-        
+
         private void btnClass_Click(object sender, EventArgs e)
         {
             ResetColorButton();
@@ -104,7 +103,7 @@ namespace PBL3TrungTamDayThem
         {
             ResetColorButton();
             GetFromButton(btnStatistic);
-            OpenUC(new UC_Statistic()); 
+            OpenUC(new UC_Statistic());
         }
         private void btn_Min_Click(object sender, EventArgs e)
         {
@@ -149,8 +148,8 @@ namespace PBL3TrungTamDayThem
             {
                 b.Width = pnlMenu.Width;
                 b.Height = pnlMenu.Height * 85 / 725;
-            } 
-                
+            }
+
         }
         private void btn_Mini_Click(object sender, EventArgs e)
         {
@@ -167,7 +166,7 @@ namespace PBL3TrungTamDayThem
             else
             {
                 pnl_user.Visible = false;
-            }    
+            }
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
