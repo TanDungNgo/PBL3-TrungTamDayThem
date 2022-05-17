@@ -16,7 +16,6 @@ namespace PBL3TrungTamDayThem.DTO
         private string _SDT;
         private string _Email;
         private string _TinhTrang;
-        private string _MaLH;
         public Student()
         {
             this._NgaySinh = DateTime.Now;
@@ -29,6 +28,5 @@ namespace PBL3TrungTamDayThem.DTO
         public string SDT { get => _SDT; set => _SDT = value; }
         public string Email { get => _Email; set => _Email = value; }
         public string TinhTrang { get => _TinhTrang; set => _TinhTrang = value; }
-        public string MaLH { get => _MaLH; set => _MaLH = value; }
     }
 }

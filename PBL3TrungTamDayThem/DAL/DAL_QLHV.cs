@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PBL3TrungTamDayThem.DAL
 {
@@ -53,6 +54,26 @@ namespace PBL3TrungTamDayThem.DAL
             }
             return data;
         }
+        public List<Student> GetStudentByClass(string lophoc)
+        {
+            List<Student> data = new List<Student>();
+            string query = "exec LayHocVienTheoLop = '" + lophoc + "'";
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetStudent(i));
+            }
+            return data;
+        }
+        public List<Student> GetStudentBySearch(string name)
+        {
+            List<Student> data = new List<Student>();
+            string query = "exec LayHocVienTheoTen @ten = N'%" + name + "%'";
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetStudent(i));
+            }
+            return data;
+        }
         public Student GetStudent(DataRow i)
         {
             return new Student
@@ -65,8 +86,26 @@ namespace PBL3TrungTamDayThem.DAL
                 DiaChi = i["DiaChi"].ToString(),
                 Email = i["Email"].ToString(),
                 TinhTrang = i["TinhTrang"].ToString(),
-                MaLH = i["MaLH"].ToString(),
             };
+        }
+        public int AddStudent(Student s)
+        {
+            string query = "Insert into HOC_VIEN values ('" + s.MaHV + "', N'" + s.HoTenHV + "','" + s.NgaySinh +
+                    "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email + "',N'" + s.TinhTrang +"')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+            
+        }
+        public int EditStudent(Student s)
+        {
+            string query = "Update HOC_VIEN set MaHV = '" + s.MaHV + "',HoTenHV = N'" + s.HoTenHV + "',NgaySinh = '" + s.NgaySinh +
+                                    "',GioiTinh = '" + s.GioiTinh + "',DiaChi = N'" + s.DiaChi + "',SDT ='" + s.SDT + "',Email ='" + s.Email + "',TinhTrang = N'" + s.TinhTrang +
+                                    "' Where MaHV = '" + s.MaHV + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteStudent(string MaHV)
+        {
+            string query = "Delete from  HOC_VIEN where MaHV = '" + MaHV + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

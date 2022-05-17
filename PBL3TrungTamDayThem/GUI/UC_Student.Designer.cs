@@ -32,7 +32,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblHeader = new System.Windows.Forms.Label();
             this.cbbSort = new System.Windows.Forms.ComboBox();
-            this.lblSort = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
@@ -40,12 +39,13 @@
             this.lblclass = new System.Windows.Forms.Label();
             this.cbbclass = new System.Windows.Forms.ComboBox();
             this.pnlRight = new System.Windows.Forms.Panel();
-            this.pnlLeft = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.pnlLeft = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
+            this.btnSort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -71,7 +71,6 @@
             this.dgvStudent.RowTemplate.Height = 28;
             this.dgvStudent.Size = new System.Drawing.Size(907, 403);
             this.dgvStudent.TabIndex = 0;
-            this.dgvStudent.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvStudent_RowHeaderMouseClick);
             // 
             // txtName
             // 
@@ -96,22 +95,11 @@
             // 
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(97, 35);
+            this.cbbSort.Location = new System.Drawing.Point(99, 30);
             this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Size = new System.Drawing.Size(173, 28);
             this.cbbSort.TabIndex = 28;
-            // 
-            // lblSort
-            // 
-            this.lblSort.AutoSize = true;
-            this.lblSort.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSort.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSort.Location = new System.Drawing.Point(19, 35);
-            this.lblSort.Name = "lblSort";
-            this.lblSort.Size = new System.Drawing.Size(49, 22);
-            this.lblSort.TabIndex = 27;
-            this.lblSort.Text = "Sort:";
             // 
             // pnlHeader
             // 
@@ -146,9 +134,9 @@
             // 
             // pnlCenter2
             // 
+            this.pnlCenter2.Controls.Add(this.btnSort);
             this.pnlCenter2.Controls.Add(this.lblclass);
             this.pnlCenter2.Controls.Add(this.cbbclass);
-            this.pnlCenter2.Controls.Add(this.lblSort);
             this.pnlCenter2.Controls.Add(this.cbbSort);
             this.pnlCenter2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCenter2.Location = new System.Drawing.Point(299, 0);
@@ -187,18 +175,6 @@
             this.pnlRight.Size = new System.Drawing.Size(317, 149);
             this.pnlRight.TabIndex = 1;
             // 
-            // pnlLeft
-            // 
-            this.pnlLeft.Controls.Add(this.btnAdd);
-            this.pnlLeft.Controls.Add(this.btnShow);
-            this.pnlLeft.Controls.Add(this.btnEdit);
-            this.pnlLeft.Controls.Add(this.btnDel);
-            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(299, 149);
-            this.pnlLeft.TabIndex = 0;
-            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.White;
@@ -211,6 +187,19 @@
             this.btnSearch.TabIndex = 35;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // pnlLeft
+            // 
+            this.pnlLeft.Controls.Add(this.btnAdd);
+            this.pnlLeft.Controls.Add(this.btnShow);
+            this.pnlLeft.Controls.Add(this.btnEdit);
+            this.pnlLeft.Controls.Add(this.btnDel);
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(299, 149);
+            this.pnlLeft.TabIndex = 0;
             // 
             // btnAdd
             // 
@@ -266,6 +255,20 @@
             this.btnDel.TabIndex = 25;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnSort
+            // 
+            this.btnSort.BackColor = System.Drawing.Color.White;
+            this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSort.Location = new System.Drawing.Point(6, 19);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(87, 49);
+            this.btnSort.TabIndex = 36;
+            this.btnSort.Text = "Sort";
+            this.btnSort.UseVisualStyleBackColor = false;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // UC_Student
             // 
@@ -301,7 +304,6 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.ComboBox cbbSort;
-        private System.Windows.Forms.Label lblSort;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnAdd;
@@ -313,5 +315,6 @@
         private System.Windows.Forms.Panel pnlCenter2;
         private System.Windows.Forms.Label lblclass;
         private System.Windows.Forms.ComboBox cbbclass;
+        private System.Windows.Forms.Button btnSort;
     }
 }

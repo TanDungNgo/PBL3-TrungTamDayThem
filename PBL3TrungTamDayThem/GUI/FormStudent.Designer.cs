@@ -48,8 +48,6 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.txtIDClass = new System.Windows.Forms.TextBox();
-            this.lblidclass = new System.Windows.Forms.Label();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -251,6 +249,7 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnReset
             // 
@@ -265,33 +264,12 @@
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
             // 
-            // txtIDClass
-            // 
-            this.txtIDClass.Location = new System.Drawing.Point(312, 560);
-            this.txtIDClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIDClass.Name = "txtIDClass";
-            this.txtIDClass.Size = new System.Drawing.Size(275, 26);
-            this.txtIDClass.TabIndex = 51;
-            // 
-            // lblidclass
-            // 
-            this.lblidclass.AutoSize = true;
-            this.lblidclass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidclass.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblidclass.Location = new System.Drawing.Point(200, 560);
-            this.lblidclass.Name = "lblidclass";
-            this.lblidclass.Size = new System.Drawing.Size(106, 27);
-            this.lblidclass.TabIndex = 50;
-            this.lblidclass.Text = "ID_Class:";
-            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(897, 798);
-            this.Controls.Add(this.txtIDClass);
-            this.Controls.Add(this.lblidclass);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnReset);
@@ -315,7 +293,7 @@
             this.Name = "FormStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Học Viên";
-            this.Load += new System.EventHandler(this.FormStudent_Load);
+            
             this.gbGender.ResumeLayout(false);
             this.gbGender.PerformLayout();
             this.ResumeLayout(false);
@@ -344,7 +322,5 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.TextBox txtIDClass;
-        private System.Windows.Forms.Label lblidclass;
     }
 }

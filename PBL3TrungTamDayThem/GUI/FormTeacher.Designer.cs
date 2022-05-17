@@ -48,10 +48,10 @@
             this.lblSalary = new System.Windows.Forms.Label();
             this.cbbLevel = new System.Windows.Forms.ComboBox();
             this.txtExpertise = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -264,6 +264,30 @@
             this.txtExpertise.Size = new System.Drawing.Size(275, 26);
             this.txtExpertise.TabIndex = 19;
             // 
+            // txtSalary
+            // 
+            this.txtSalary.Location = new System.Drawing.Point(310, 610);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(275, 26);
+            this.txtSalary.TabIndex = 22;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.Image = global::PBL3TrungTamDayThem.Properties.Resources.logout__1_;
+            this.btnBack.Location = new System.Drawing.Point(162, 663);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(112, 60);
+            this.btnBack.TabIndex = 23;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.MouseLeave += new System.EventHandler(this.btnBack_MouseLeave);
+            this.btnBack.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnBack_MouseMove);
+            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.White;
@@ -295,30 +319,6 @@
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             this.btnReset.MouseLeave += new System.EventHandler(this.btnReset_MouseLeave);
             this.btnReset.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReset_MouseMove);
-            // 
-            // txtSalary
-            // 
-            this.txtSalary.Location = new System.Drawing.Point(310, 610);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(275, 26);
-            this.txtSalary.TabIndex = 22;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.White;
-            this.btnBack.Image = global::PBL3TrungTamDayThem.Properties.Resources.logout__1_;
-            this.btnBack.Location = new System.Drawing.Point(162, 663);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(112, 60);
-            this.btnBack.TabIndex = 23;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            this.btnBack.MouseLeave += new System.EventHandler(this.btnBack_MouseLeave);
-            this.btnBack.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnBack_MouseMove);
             // 
             // FormTeacher
             // 

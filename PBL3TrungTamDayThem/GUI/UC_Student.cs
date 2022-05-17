@@ -21,15 +21,19 @@ namespace PBL3TrungTamDayThem.GUI
         {
             InitializeComponent();
         }
-        private Student student = new Student();
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormStudent frm = new FormStudent();
             frm.ShowDialog();
+            DGVShow();
+        }
+        private void DGVShow()
+        {
+            dgvStudent.DataSource = BLL_QLHV.Instance.GetListStudent(cbbclass.Text, null);
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            dgvStudent.DataSource = DAL_QLHV.Instance.GetAllStudent();
+            DGVShow();
         }
 
         private void UC_Student_Load(object sender, EventArgs e)
@@ -40,36 +44,61 @@ namespace PBL3TrungTamDayThem.GUI
             }
             cbbclass.Items.Add(new CBBItem { Value = "All" });
             cbbclass.Items.AddRange(BLL_QLHV.Instance.GetListCBB().ToArray());
+            cbbclass.Text = "All";
+            if (cbbSort != null)
+            {
+                cbbSort.Items.Clear();
+            }
+            cbbSort.Items.Add("HoTenHV");
+            cbbSort.Items.Add("NgaySinh");
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (student.MaHV == null)
+            DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
+            string MaHV = data[0].Cells["MaHV"].Value.ToString();
+            if (MaHV == null)
             {
                 MessageBox.Show("Chưa chọn học viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                FormStudent f = new FormStudent(student);
+                FormStudent f = new FormStudent(MaHV);
                 f.ShowDialog();
+                DGVShow();
             }
         }
 
-        private void dgvStudent_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            dgvStudent.DataSource = BLL_QLHV.Instance.GetListStudent(null, txtName.Text);
+            //dgvStudent.DataSource = DAL_QLHV.Instance.GetStudentBySearch(txtName.Text);
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
-            if (data.Count == 1)
+            string MaHV = data[0].Cells["MaHV"].Value.ToString();
+            if (MaHV == null)
             {
-                student.MaHV = data[0].Cells["MaHV"].Value.ToString();
-                student.HoTenHV = data[0].Cells["HoTenHV"].Value.ToString();
-                student.DiaChi = data[0].Cells["DiaChi"].Value.ToString();
-                student.SDT = data[0].Cells["SDT"].Value.ToString();
-                student.Email = data[0].Cells["Email"].Value.ToString();
-                student.GioiTinh = data[0].Cells["GioiTinh"].Value.ToString();
-                student.NgaySinh = (DateTime)data[0].Cells["NgaySinh"].Value;
-                student.TinhTrang = data[0].Cells["TinhTrang"].Value.ToString();
-                student.MaLH = data[0].Cells["MaLH"].Value.ToString();
+                MessageBox.Show("Chưa chọn học viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
+                {
+                    BLL_QLHV.Instance.Delete(MaHV);
+                    DGVShow();
+                }
+            }
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            List <Student> list = new List<Student>();  
+            list = BLL_QLHV.Instance.GetListStudent(cbbclass.Text, txtName.Text);
+            list.Sort(new PersonNameComparer());
+            dgvStudent.DataSource = list;
         }
     }
 }

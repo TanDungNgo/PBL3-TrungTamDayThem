@@ -54,6 +54,7 @@
     <Compile Include="DAL\DAL_QLGV.cs" />
     <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\Class.cs" />
+    <Compile Include="DTO\PersonNameComparer.cs" />
     <Compile Include="DTO\Student.cs" />
     <Compile Include="DTO\Teacher.cs" />
     <Compile Include="GUI\FormClass.cs">
@@ -151,8 +152,14 @@
     <EmbeddedResource Include="GUI\FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormTeacher.resx">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Student.resx">
+      <DependentUpon>UC_Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

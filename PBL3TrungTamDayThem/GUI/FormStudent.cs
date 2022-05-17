@@ -1,4 +1,6 @@
-﻿using PBL3TrungTamDayThem.DTO;
+﻿using PBL3TrungTamDayThem.BLL;
+using PBL3TrungTamDayThem.DAL;
+using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,37 +15,55 @@ namespace PBL3TrungTamDayThem.GUI
 {
     public partial class FormStudent : Form
     {
-        public FormStudent()
+        private string _MaHV;
+        public FormStudent(string MaHV = null)
         {
             InitializeComponent();
-        }
-        private Student _student = new Student();
-        public FormStudent(Student student)
-        {
-            InitializeComponent();
-            this._student = student;
+            this._MaHV = MaHV;
+            SetGUI();
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
+        }
+        public void SetGUI()
+        {
+            Student student = BLL_QLHV.Instance.GetHVByID(this._MaHV);
+            if (student != null)
+            {
+                txtID.Text = student.MaHV;
+                txtName.Text = student.HoTenHV;
+                dtpBirthDay.Text = student.NgaySinh.ToString();
+                txtAddress.Text = student.DiaChi;
+                txtPhone.Text = student.SDT;
+                txtMail.Text = student.Email;
+                txtStatus.Text = student.TinhTrang;
+                if (student.GioiTinh == "Nam")
+                {
+                    rbMale.Checked = true;
+                }
+                else
+                    rbFemale.Checked = true;
+            }    
         }
 
-        private void FormStudent_Load(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            txtID.Text = this._student.MaHV;
-            txtName.Text = this._student.HoTenHV;
-            dtpBirthDay.Text = this._student.NgaySinh.ToString();
-            txtAddress.Text = this._student.DiaChi;
-            txtPhone.Text = this._student.SDT;
-            txtMail.Text = this._student.Email;
-            txtStatus.Text = this._student.TinhTrang;
-            txtIDClass.Text = this._student.MaLH;
-            if (this._student.GioiTinh == "Nam")
+            Student s = new Student
             {
-                rbMale.Checked = true;
-            }   
-            else
-                rbFemale.Checked = true;
+                MaHV = txtID.Text,
+                HoTenHV = txtName.Text,
+                NgaySinh = dtpBirthDay.Value.Date,
+                DiaChi = txtAddress.Text,
+                SDT = txtPhone.Text,
+                Email = txtMail.Text,
+                TinhTrang = txtStatus.Text,
+                GioiTinh = rbMale.Checked.ToString(),
+            };
+            BLL_QLHV.Instance.ExecuteDB(s);
+            this.Dispose();
         }
+
+
     }
 }
