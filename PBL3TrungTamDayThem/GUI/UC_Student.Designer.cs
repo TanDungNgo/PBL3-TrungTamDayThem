@@ -36,6 +36,7 @@
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.pnlCenter2 = new System.Windows.Forms.Panel();
+            this.btnSort = new System.Windows.Forms.Button();
             this.lblclass = new System.Windows.Forms.Label();
             this.cbbclass = new System.Windows.Forms.ComboBox();
             this.pnlRight = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@
             this.btnShow = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
-            this.btnSort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -143,6 +143,19 @@
             this.pnlCenter2.Name = "pnlCenter2";
             this.pnlCenter2.Size = new System.Drawing.Size(291, 149);
             this.pnlCenter2.TabIndex = 2;
+            // 
+            // btnSort
+            // 
+            this.btnSort.BackColor = System.Drawing.Color.White;
+            this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSort.Location = new System.Drawing.Point(6, 21);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(87, 51);
+            this.btnSort.TabIndex = 36;
+            this.btnSort.Text = "Sort";
+            this.btnSort.UseVisualStyleBackColor = false;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // lblclass
             // 
@@ -256,19 +269,6 @@
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnSort
-            // 
-            this.btnSort.BackColor = System.Drawing.Color.White;
-            this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSort.Location = new System.Drawing.Point(6, 19);
-            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(87, 49);
-            this.btnSort.TabIndex = 36;
-            this.btnSort.Text = "Sort";
-            this.btnSort.UseVisualStyleBackColor = false;
-            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // UC_Student
             // 

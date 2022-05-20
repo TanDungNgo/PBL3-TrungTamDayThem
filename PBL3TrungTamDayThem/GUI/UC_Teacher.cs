@@ -27,6 +27,10 @@ namespace PBL3TrungTamDayThem.GUI
             frm.ShowDialog();
             SetCBB();
         }
+        void DGVShow()
+        {
+            dgvTeacher.DataSource = BLL_QLGV.Instance.GetListTeacher(cbbExpertise.Text, null);
+        }
         public List<string> Get_Expertise()
         {
             List<string> expertise = new List<string>();
@@ -68,7 +72,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            dgvTeacher.DataSource = GetTeacher_ByEx();
+            DGVShow();
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -109,33 +113,34 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (teacher.MaGV == null)
+            if (dgvTeacher.SelectedRows.Count > 0)
             {
-                MessageBox.Show("Chưa chọn giáo viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataGridViewSelectedRowCollection data = dgvTeacher.SelectedRows;
+                string MaGV = data[0].Cells["MaGV"].Value.ToString();
+                FormTeacher f = new FormTeacher(MaGV);
+                f.ShowDialog();
+                DGVShow();
             }
             else
-            {
-                FormTeacher f = new FormTeacher(teacher);
-                f.ShowDialog();
-            }
+                MessageBox.Show("Chưa chọn giáo viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dgvTeacher_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DataGridViewSelectedRowCollection data = dgvTeacher.SelectedRows;
-            if (data.Count == 1)
-            {
-                teacher.MaGV = data[0].Cells["MaGV"].Value.ToString();
-                teacher.HoTenGV = data[0].Cells["HoTenGV"].Value.ToString();
-                teacher.DiaChi = data[0].Cells["DiaChi"].Value.ToString();
-                teacher.SDT = data[0].Cells["SDT"].Value.ToString();
-                teacher.Email = data[0].Cells["Email"].Value.ToString();
-                teacher.Luong = data[0].Cells["Luong"].Value.ToString();
-                teacher.ChuyenMon = data[0].Cells["ChuyenMon"].Value.ToString();
-                teacher.TrinhDo = data[0].Cells["TrinhDo"].Value.ToString();
-                teacher.GioiTinh = data[0].Cells["GioiTinh"].Value.ToString();
-                teacher.NgaySinh = data[0].Cells["NgaySinh"].Value.ToString();
-            }
+            //DataGridViewSelectedRowCollection data = dgvTeacher.SelectedRows;
+            //if (data.Count == 1)
+            //{
+            //    teacher.MaGV = data[0].Cells["MaGV"].Value.ToString();
+            //    teacher.HoTenGV = data[0].Cells["HoTenGV"].Value.ToString();
+            //    teacher.DiaChi = data[0].Cells["DiaChi"].Value.ToString();
+            //    teacher.SDT = data[0].Cells["SDT"].Value.ToString();
+            //    teacher.Email = data[0].Cells["Email"].Value.ToString();
+            //    teacher.Luong = data[0].Cells["Luong"].Value.ToString();
+            //    teacher.ChuyenMon = data[0].Cells["ChuyenMon"].Value.ToString();
+            //    teacher.TrinhDo = data[0].Cells["TrinhDo"].Value.ToString();
+            //    teacher.GioiTinh = data[0].Cells["GioiTinh"].Value.ToString();
+            //    teacher.NgaySinh = data[0].Cells["NgaySinh"].Value.ToString();
+            //}
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

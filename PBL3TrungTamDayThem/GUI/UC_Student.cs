@@ -55,18 +55,21 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
-            string MaHV = data[0].Cells["MaHV"].Value.ToString();
-            if (MaHV == null)
+            if (dgvStudent.SelectedRows.Count > 0)
             {
-                MessageBox.Show("Chưa chọn học viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                FormStudent f = new FormStudent(MaHV);
-                f.ShowDialog();
-                DGVShow();
-            }
+                DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
+                string MaHV = data[0].Cells["MaHV"].Value.ToString();
+                if (MaHV == null)
+                {
+                    MessageBox.Show("Chưa chọn học viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    FormStudent f = new FormStudent(MaHV);
+                    f.ShowDialog();
+                    DGVShow();
+                }
+            }   
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -77,17 +80,30 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
-            string MaHV = data[0].Cells["MaHV"].Value.ToString();
-            if (MaHV == null)
+            //DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
+            //string MaHV = data[0].Cells["MaHV"].Value.ToString();
+            //if (MaHV == null)
+            //{
+            //    MessageBox.Show("Chưa chọn học viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //else
+            //{
+            //    if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
+            //    {
+            //        BLL_QLHV.Instance.DeleteStudent(MaHV);
+            //        DGVShow();
+            //    }
+            //}
+            if (dgvStudent.SelectedRows.Count > 0)
             {
-                MessageBox.Show("Chưa chọn học viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
+                List<string> LMaHV = new List<string>();
+                foreach (DataGridViewRow row in dgvStudent.SelectedRows)
+                {
+                    LMaHV.Add(row.Cells["MaHV"].Value.ToString());
+                }
                 if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                 {
-                    BLL_QLHV.Instance.Delete(MaHV);
+                    BLL_QLHV.Instance.DeleteStudent(LMaHV);
                     DGVShow();
                 }
             }

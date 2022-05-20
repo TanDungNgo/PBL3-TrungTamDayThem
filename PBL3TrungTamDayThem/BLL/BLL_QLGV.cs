@@ -35,5 +35,31 @@ namespace PBL3TrungTamDayThem.BLL
             }
             return data;
         }
+        public List<Teacher> GetListTeacher(string lophoc, string search)
+        {
+            List<Teacher> data = new List<Teacher>();
+            //if (search != null)
+            //{
+            //    data = DAL_QLGV.Instance.GetAllTeacher();
+            if (search == null && lophoc == "All")
+            {
+                data = DAL_QLGV.Instance.GetAllTeacher();
+                }
+            //if (lophoc != "All")
+            //{
+            //    data = DAL_QLHV.Instance.GetStudentByClass(lophoc);
+            //}
+            return data;
+        }
+        public Teacher GetGVByID(string MaGV)
+        {
+            Teacher teacher = null;
+            foreach (Teacher i in DAL_QLGV.Instance.GetAllTeacher())
+            {
+                if (i.MaGV == MaGV)
+                    teacher = i;
+            }
+            return teacher;
+        }
     }
 }

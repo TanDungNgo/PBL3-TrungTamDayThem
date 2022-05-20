@@ -46,15 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_QLBL.cs" />
     <Compile Include="BLL\BLL_QLGV.cs" />
     <Compile Include="BLL\BLL_QLHV.cs" />
+    <Compile Include="BLL\BLL_QLNV.cs" />
+    <Compile Include="DAL\DAL_QLBL.cs" />
     <Compile Include="DAL\DAL_QLHV.cs" />
     <Compile Include="DAL\DAL_QLLH.cs" />
+    <Compile Include="DAL\DAL_QLNV.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\DAL_QLGV.cs" />
     <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\Class.cs" />
     <Compile Include="DTO\PersonNameComparer.cs" />
+    <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Student.cs" />
     <Compile Include="DTO\Teacher.cs" />
     <Compile Include="GUI\FormClass.cs">
@@ -157,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Bill.resx">
+      <DependentUpon>UC_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Staff.resx">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UC_Student.resx">
       <DependentUpon>UC_Student.cs</DependentUpon>
@@ -318,6 +329,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backgroundlogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="File\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

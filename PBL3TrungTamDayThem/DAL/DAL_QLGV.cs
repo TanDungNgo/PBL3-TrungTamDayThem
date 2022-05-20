@@ -59,8 +59,8 @@ namespace PBL3TrungTamDayThem.DAL
             {
                 MaGV = i["MaGV"].ToString(),
                 HoTenGV = i["HoTenGV"].ToString(),
-                NgaySinh = i["NgaySinh"].ToString(),
-                GioiTinh = "Nam",
+                NgaySinh = (DateTime)i["NgaySinh"],
+                GioiTinh = ((bool)i["GioiTinh"] == true) ? "Nam" : "Nữ",
                 SDT = i["SDT"].ToString(),
                 DiaChi = i["DiaChi"].ToString(),
                 Email = i["Email"].ToString(),
@@ -69,6 +69,22 @@ namespace PBL3TrungTamDayThem.DAL
                 Luong = i["Luong"].ToString()
 
             };
+        }
+        public int AddTeacher(Teacher t)
+        {
+            string query = "";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+
+        }
+        public int EditStudent(Teacher t)
+        {
+            string query = "";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteStudent(string MaGV)
+        {
+            string query = "Delete from  GIAO_VIEN where MaGV = '" + MaGV + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

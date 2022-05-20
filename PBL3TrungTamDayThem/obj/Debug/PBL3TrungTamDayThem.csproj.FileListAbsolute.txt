@@ -121,3 +121,5 @@ D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayTh
 D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.FormMain.resources
 D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.UC_Student.resources
 D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.FormTeacher.resources
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.UC_Bill.resources
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.UC_Staff.resources

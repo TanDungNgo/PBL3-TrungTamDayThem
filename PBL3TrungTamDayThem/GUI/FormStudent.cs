@@ -37,7 +37,6 @@ namespace PBL3TrungTamDayThem.GUI
                 txtAddress.Text = student.DiaChi;
                 txtPhone.Text = student.SDT;
                 txtMail.Text = student.Email;
-                txtStatus.Text = student.TinhTrang;
                 if (student.GioiTinh == "Nam")
                 {
                     rbMale.Checked = true;
@@ -57,13 +56,15 @@ namespace PBL3TrungTamDayThem.GUI
                 DiaChi = txtAddress.Text,
                 SDT = txtPhone.Text,
                 Email = txtMail.Text,
-                TinhTrang = txtStatus.Text,
                 GioiTinh = rbMale.Checked.ToString(),
             };
             BLL_QLHV.Instance.ExecuteDB(s);
             this.Dispose();
         }
 
-
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

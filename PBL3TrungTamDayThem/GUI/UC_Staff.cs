@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3TrungTamDayThem.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,10 +36,10 @@ namespace PBL3TrungTamDayThem.GUI
             cnn.Close();
             return data;
         }
+
         private void btnShow_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM dbo.NHAN_VIEN";
-            dgv_Staff.DataSource = GetData(query);
+            dgv_Staff.DataSource = DAL_QLNV.Instance.GetAllStaff();
         }
     }
 }

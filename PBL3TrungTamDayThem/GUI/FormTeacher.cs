@@ -1,4 +1,5 @@
-﻿using PBL3TrungTamDayThem.DAL;
+﻿using PBL3TrungTamDayThem.BLL;
+using PBL3TrungTamDayThem.DAL;
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
@@ -15,15 +16,12 @@ namespace PBL3TrungTamDayThem.GUI
 {
     public partial class FormTeacher : Form
     {
-        private Teacher _teacher = new Teacher();
-        public FormTeacher()
+        private string _MaGV;
+        public FormTeacher(string MaGV = null)
         {
             InitializeComponent();
-        }
-        public FormTeacher(Teacher teacher)
-        {
-            InitializeComponent();
-            this._teacher = teacher;
+            this._MaGV = MaGV;
+            SetGUI();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -121,23 +119,27 @@ namespace PBL3TrungTamDayThem.GUI
             this.Close();
         }
 
-        private void FormTeacher_Load(object sender, EventArgs e)
+        private void SetGUI()
         {
-            txtID.Text = this._teacher.MaGV;
-            txtName.Text = this._teacher.HoTenGV;
-            txtPhone.Text = this._teacher.SDT;
-            txtAddress.Text = this._teacher.DiaChi;
-            txtMail.Text = this._teacher.Email;
-            txtSalary.Text = this._teacher.Luong;
-            txtExpertise.Text = this._teacher.ChuyenMon;
-            cbbLevel.Text = this._teacher.TrinhDo;
-            dtpBD.Text = this._teacher.NgaySinh;
-            if (this._teacher.GioiTinh == "Nam")
+            Teacher teacher = BLL_QLGV.Instance.GetGVByID(this._MaGV);
+            if (teacher != null)
             {
-                rbMale.Checked = true;
-            }
-            else
-                rbFemale.Checked = true;
+                txtID.Text = teacher.MaGV;
+                txtName.Text = teacher.HoTenGV;
+                txtPhone.Text = teacher.SDT;
+                txtAddress.Text = teacher.DiaChi;
+                txtMail.Text = teacher.Email;
+                txtSalary.Text = teacher.Luong;
+                txtExpertise.Text = teacher.ChuyenMon;
+                cbbLevel.Text = teacher.TrinhDo;
+                dtpBD.Text = teacher.NgaySinh.ToString();
+                if (teacher.GioiTinh == "Nam")
+                {
+                    rbMale.Checked = true;
+                }
+                else
+                    rbFemale.Checked = true;
+            }    
         }
     }
 }

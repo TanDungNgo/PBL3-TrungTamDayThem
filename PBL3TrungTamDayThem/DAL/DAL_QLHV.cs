@@ -57,7 +57,7 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> GetStudentByClass(string lophoc)
         {
             List<Student> data = new List<Student>();
-            string query = "exec LayHocVienTheoLop = '" + lophoc + "'";
+            string query = "exec LayHocVienTheoLop @lop = '" + lophoc + "'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
@@ -85,20 +85,19 @@ namespace PBL3TrungTamDayThem.DAL
                 SDT = i["SDT"].ToString(),
                 DiaChi = i["DiaChi"].ToString(),
                 Email = i["Email"].ToString(),
-                TinhTrang = i["TinhTrang"].ToString(),
             };
         }
         public int AddStudent(Student s)
         {
             string query = "Insert into HOC_VIEN values ('" + s.MaHV + "', N'" + s.HoTenHV + "','" + s.NgaySinh +
-                    "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email + "',N'" + s.TinhTrang +"')";
+                    "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email +"')";
             return DataProvider.Instance.ExecuteNonQuery(query);
             
         }
         public int EditStudent(Student s)
         {
             string query = "Update HOC_VIEN set MaHV = '" + s.MaHV + "',HoTenHV = N'" + s.HoTenHV + "',NgaySinh = '" + s.NgaySinh +
-                                    "',GioiTinh = '" + s.GioiTinh + "',DiaChi = N'" + s.DiaChi + "',SDT ='" + s.SDT + "',Email ='" + s.Email + "',TinhTrang = N'" + s.TinhTrang +
+                                    "',GioiTinh = '" + s.GioiTinh + "',DiaChi = N'" + s.DiaChi + "',SDT ='" + s.SDT + "',Email ='" + s.Email +
                                     "' Where MaHV = '" + s.MaHV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }

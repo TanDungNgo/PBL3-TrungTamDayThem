@@ -353,7 +353,6 @@
             this.Name = "FormTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Giáo Viên";
-            this.Load += new System.EventHandler(this.FormTeacher_Load);
             this.gbGender.ResumeLayout(false);
             this.gbGender.PerformLayout();
             this.ResumeLayout(false);
