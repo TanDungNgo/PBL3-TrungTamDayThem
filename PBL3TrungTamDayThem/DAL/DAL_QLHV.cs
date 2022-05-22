@@ -90,9 +90,9 @@ namespace PBL3TrungTamDayThem.DAL
         public int AddStudent(Student s)
         {
             string query = "Insert into HOC_VIEN values ('" + s.MaHV + "', N'" + s.HoTenHV + "','" + s.NgaySinh +
-                    "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email +"')";
+                    "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
-            
+
         }
         public int EditStudent(Student s)
         {
@@ -105,6 +105,16 @@ namespace PBL3TrungTamDayThem.DAL
         {
             string query = "Delete from  HOC_VIEN where MaHV = '" + MaHV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public List<Student> SortListStudent(string s)
+        {
+            List<Student> data = new List<Student>();
+            string query = "Select * from HOC_VIEN ORDER BY " + s;
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetStudent(i));
+            }
+            return data;
         }
     }
 }

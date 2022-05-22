@@ -99,6 +99,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSort_Click(object sender, EventArgs e)
         {
+            dgvStudent.DataSource = BLL_QLHV.Instance.SortListStudent(cbbSort.Text);
         }
     }
 }

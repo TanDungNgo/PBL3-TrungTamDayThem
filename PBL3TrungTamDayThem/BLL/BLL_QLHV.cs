@@ -96,5 +96,11 @@ namespace PBL3TrungTamDayThem.BLL
                     MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }    
         }
+        public List<Student> SortListStudent(string s)
+        {
+            List<Student> data = new List<Student>();
+            data = DAL_QLHV.Instance.SortListStudent(s);
+            return data;
+        }
     }
 }

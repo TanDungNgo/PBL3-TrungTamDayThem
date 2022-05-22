@@ -128,7 +128,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btn_Exit_MouseLeave(object sender, EventArgs e)
         {
-            btn_Exit.BackColor = Color.Wheat;
+            btn_Exit.BackColor = Color.White;
         }
         private void btn_Max_Click(object sender, EventArgs e)
         {

@@ -8,6 +8,7 @@ namespace PBL3TrungTamDayThem.DTO
 {
     public class Staff
     {
+
         private string _MaNV;
         private string _HoTenNV;
         private DateTime _NgaySinh;
@@ -17,14 +18,13 @@ namespace PBL3TrungTamDayThem.DTO
         private string _Email;
         private string _ChucVu;
         private DateTime _NgayVaoLam;
-        private float _Luong;
+        private int _Luong;
 
         public Staff()
         {
             this._NgaySinh = DateTime.Now;
             this._NgayVaoLam = DateTime.Now;
         }
-
         public string MaNV { get => _MaNV; set => _MaNV = value; }
         public string HoTenNV { get => _HoTenNV; set => _HoTenNV = value; }
         public DateTime NgaySinh { get => _NgaySinh; set => _NgaySinh = value; }
@@ -34,7 +34,8 @@ namespace PBL3TrungTamDayThem.DTO
         public string Email { get => _Email; set => _Email = value; }
         public string ChucVu { get => _ChucVu; set => _ChucVu = value; }
         public DateTime NgayVaoLam { get => _NgayVaoLam; set => _NgayVaoLam = value; }
-        public float Luong { get => _Luong; set => _Luong = value; }
+        public int Luong { get => _Luong; set => _Luong = value; }
+
 
     }
 }
