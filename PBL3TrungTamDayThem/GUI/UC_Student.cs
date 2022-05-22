@@ -27,6 +27,7 @@ namespace PBL3TrungTamDayThem.GUI
             FormStudent frm = new FormStudent();
             frm.ShowDialog();
             DGVShow();
+            SetGUI();
         }
         private void DGVShow()
         {
@@ -50,11 +51,13 @@ namespace PBL3TrungTamDayThem.GUI
             }
             cbbSort.Items.Add("HoTenHV");
             cbbSort.Items.Add("NgaySinh");
+            
         }
         void SetGUI()
         {
             SetCBB();
             cbbClass.Text = "All";
+            cbbSort.Text = "HoTenHV";
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -71,6 +74,7 @@ namespace PBL3TrungTamDayThem.GUI
                     FormStudent f = new FormStudent(MaHV);
                     f.ShowDialog();
                     DGVShow();
+                    SetGUI();
                 }
             }   
         }
@@ -93,6 +97,7 @@ namespace PBL3TrungTamDayThem.GUI
                 {
                     BLL_QLHV.Instance.DeleteStudent(LMaHV);
                     DGVShow();
+                    SetGUI();
                 }
             }
         }

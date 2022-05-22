@@ -49,6 +49,7 @@
     <Compile Include="BLL\BLL_QLBL.cs" />
     <Compile Include="BLL\BLL_QLGV.cs" />
     <Compile Include="BLL\BLL_QLHV.cs" />
+    <Compile Include="BLL\BLL_QLLH.cs" />
     <Compile Include="BLL\BLL_QLNV.cs" />
     <Compile Include="BLL\BLL_User.cs" />
     <Compile Include="DAL\DAL_QLBL.cs" />

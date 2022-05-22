@@ -25,7 +25,6 @@ namespace PBL3TrungTamDayThem.BLL
         }
         private BLL_QLGV()
         {
-
         }
 
         public List<string> GetListCBB()

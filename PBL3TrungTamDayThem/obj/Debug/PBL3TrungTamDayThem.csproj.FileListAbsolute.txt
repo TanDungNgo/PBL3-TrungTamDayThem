@@ -172,3 +172,8 @@ C:\Users\tandu\Downloads\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3
 C:\Users\tandu\Downloads\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.CoreCompileInputs.cache
 C:\Users\tandu\Downloads\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.exe
 C:\Users\tandu\Downloads\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.pdb
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.FormClass.resources
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.FormStaff.resources
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.UC_Class.resources
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.UC_Home.resources
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.UC_Statistic.resources
