@@ -51,6 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,9 +70,9 @@
             this.lblMail.ForeColor = System.Drawing.SystemColors.Control;
             this.lblMail.Location = new System.Drawing.Point(153, 381);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(54, 22);
+            this.lblMail.Size = new System.Drawing.Size(63, 22);
             this.lblMail.TabIndex = 33;
-            this.lblMail.Text = "Mail:";
+            this.lblMail.Text = "Email:";
             // 
             // txbAddress
             // 
@@ -88,9 +89,9 @@
             this.lblAddress.ForeColor = System.Drawing.SystemColors.Control;
             this.lblAddress.Location = new System.Drawing.Point(153, 269);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(82, 22);
+            this.lblAddress.Size = new System.Drawing.Size(74, 22);
             this.lblAddress.TabIndex = 31;
-            this.lblAddress.Text = "Address:";
+            this.lblAddress.Text = "Địa chỉ:";
             // 
             // txbPhone
             // 
@@ -105,11 +106,11 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPhone.Location = new System.Drawing.Point(155, 217);
+            this.lblPhone.Location = new System.Drawing.Point(153, 217);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(64, 22);
+            this.lblPhone.Size = new System.Drawing.Size(120, 22);
             this.lblPhone.TabIndex = 29;
-            this.lblPhone.Text = "Phone:";
+            this.lblPhone.Text = "Số điện thoại:";
             // 
             // dateTimePicker1
             // 
@@ -139,6 +140,7 @@
             // 
             this.gbGender.Controls.Add(this.rbFemale);
             this.gbGender.Controls.Add(this.rbMale);
+            this.gbGender.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbGender.ForeColor = System.Drawing.SystemColors.Control;
             this.gbGender.Location = new System.Drawing.Point(559, 49);
             this.gbGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -147,31 +149,32 @@
             this.gbGender.Size = new System.Drawing.Size(133, 92);
             this.gbGender.TabIndex = 25;
             this.gbGender.TabStop = false;
-            this.gbGender.Text = "Gender";
+            this.gbGender.Text = "Giới tính";
             // 
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemale.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbFemale.Location = new System.Drawing.Point(24, 56);
             this.rbFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(78, 22);
+            this.rbFemale.Size = new System.Drawing.Size(53, 24);
             this.rbFemale.TabIndex = 1;
             this.rbFemale.TabStop = true;
-            this.rbFemale.Text = "Female";
+            this.rbFemale.Text = "Nữ";
             this.rbFemale.UseVisualStyleBackColor = true;
             // 
             // rbMale
             // 
             this.rbMale.AutoSize = true;
+            this.rbMale.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMale.Location = new System.Drawing.Point(24, 25);
             this.rbMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(58, 20);
+            this.rbMale.Size = new System.Drawing.Size(65, 24);
             this.rbMale.TabIndex = 0;
             this.rbMale.TabStop = true;
-            this.rbMale.Text = "Male";
+            this.rbMale.Text = "Nam";
             this.rbMale.UseVisualStyleBackColor = true;
             // 
             // lblBD
@@ -181,9 +184,9 @@
             this.lblBD.ForeColor = System.Drawing.SystemColors.Control;
             this.lblBD.Location = new System.Drawing.Point(153, 159);
             this.lblBD.Name = "lblBD";
-            this.lblBD.Size = new System.Drawing.Size(88, 22);
+            this.lblBD.Size = new System.Drawing.Size(94, 22);
             this.lblBD.TabIndex = 24;
-            this.lblBD.Text = "BirthDay:";
+            this.lblBD.Text = "Ngày sinh:";
             // 
             // lblName
             // 
@@ -192,9 +195,9 @@
             this.lblName.ForeColor = System.Drawing.SystemColors.Control;
             this.lblName.Location = new System.Drawing.Point(154, 101);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(62, 22);
+            this.lblName.Size = new System.Drawing.Size(126, 22);
             this.lblName.TabIndex = 23;
-            this.lblName.Text = "Name:";
+            this.lblName.Text = "Tên nhân viên:";
             // 
             // lblID
             // 
@@ -203,9 +206,9 @@
             this.lblID.ForeColor = System.Drawing.SystemColors.Control;
             this.lblID.Location = new System.Drawing.Point(155, 50);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(36, 22);
+            this.lblID.Size = new System.Drawing.Size(122, 22);
             this.lblID.TabIndex = 22;
-            this.lblID.Text = "ID:";
+            this.lblID.Text = "Mã nhân viên:";
             // 
             // dateTimePicker2
             // 
@@ -222,9 +225,9 @@
             this.lblSD.ForeColor = System.Drawing.SystemColors.Control;
             this.lblSD.Location = new System.Drawing.Point(153, 489);
             this.lblSD.Name = "lblSD";
-            this.lblSD.Size = new System.Drawing.Size(124, 22);
+            this.lblSD.Size = new System.Drawing.Size(125, 22);
             this.lblSD.TabIndex = 43;
-            this.lblSD.Text = "Starting_Date:";
+            this.lblSD.Text = "Ngày vào làm:";
             // 
             // txbSalary
             // 
@@ -243,7 +246,7 @@
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(67, 22);
             this.lblSalary.TabIndex = 45;
-            this.lblSalary.Text = "Salary:";
+            this.lblSalary.Text = "Lương:";
             // 
             // textBox2
             // 
@@ -260,42 +263,62 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(153, 324);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 22);
+            this.label1.Size = new System.Drawing.Size(82, 22);
             this.label1.TabIndex = 47;
-            this.label1.Text = "Position:";
+            this.label1.Text = "Chức vụ:";
             // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.White;
-            this.btnSave.Image = global::PBL3TrungTamDayThem.Properties.Resources.save;
-            this.btnSave.Location = new System.Drawing.Point(483, 553);
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.btnSave.Image = global::PBL3TrungTamDayThem.Properties.Resources.save1;
+            this.btnSave.Location = new System.Drawing.Point(516, 550);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(99, 47);
+            this.btnSave.Size = new System.Drawing.Size(125, 45);
             this.btnSave.TabIndex = 50;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "   Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.White;
-            this.btnReset.Image = global::PBL3TrungTamDayThem.Properties.Resources.recycle;
-            this.btnReset.Location = new System.Drawing.Point(227, 553);
+            this.btnReset.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.btnReset.Image = global::PBL3TrungTamDayThem.Properties.Resources.reload;
+            this.btnReset.Location = new System.Drawing.Point(335, 550);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(101, 47);
+            this.btnReset.Size = new System.Drawing.Size(125, 45);
             this.btnReset.TabIndex = 49;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "  Đặt lại";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.button1.Image = global::PBL3TrungTamDayThem.Properties.Resources._return;
+            this.button1.Location = new System.Drawing.Point(159, 550);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 45);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "  Thoát";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FormStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(797, 638);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.textBox2);
@@ -317,6 +340,7 @@
             this.Controls.Add(this.lblBD);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblID);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -352,5 +376,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button button1;
     }
 }

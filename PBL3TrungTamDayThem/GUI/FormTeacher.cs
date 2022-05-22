@@ -112,5 +112,6 @@ namespace PBL3TrungTamDayThem.GUI
                     rbFemale.Checked = true;
             }    
         }
+
     }
 }

@@ -38,7 +38,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             lblHeader.Text = b.Text;
             ptbHeader.Image = b.Image;
-            b.BackColor = Color.Teal;
+            b.BackColor = Color.FromArgb(0, 40, 90);
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
@@ -54,7 +54,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             foreach (Button item in flpnlButton.Controls)
             {
-                item.BackColor = Color.DarkGray;
+                item.BackColor = Color.FromArgb(0, 60, 130);
             }
         }
         private void btnHome_Click(object sender, EventArgs e)

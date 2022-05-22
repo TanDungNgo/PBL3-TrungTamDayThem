@@ -149,11 +149,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FormClass.resx">
+      <DependentUpon>FormClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormStaff.resx">
+      <DependentUpon>FormStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
@@ -167,8 +173,17 @@
     <EmbeddedResource Include="GUI\UC_Bill.resx">
       <DependentUpon>UC_Bill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Class.resx">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Home.resx">
+      <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UC_Staff.resx">
       <DependentUpon>UC_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Statistic.resx">
+      <DependentUpon>UC_Statistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UC_Student.resx">
       <DependentUpon>UC_Student.cs</DependentUpon>
@@ -336,6 +351,66 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="File\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reading-book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\persons-in-a-class1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics-bars-graphic-educational-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,5 +16,6 @@ namespace PBL3TrungTamDayThem.GUI
         {
             InitializeComponent();
         }
+
     }
 }

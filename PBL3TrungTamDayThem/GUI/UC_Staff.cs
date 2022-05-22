@@ -41,5 +41,6 @@ namespace PBL3TrungTamDayThem.GUI
         {
             dgv_Staff.DataSource = DAL_QLNV.Instance.GetAllStaff();
         }
+
     }
 }
