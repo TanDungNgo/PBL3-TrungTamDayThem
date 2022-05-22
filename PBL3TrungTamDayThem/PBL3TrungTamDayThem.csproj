@@ -50,18 +50,19 @@
     <Compile Include="BLL\BLL_QLGV.cs" />
     <Compile Include="BLL\BLL_QLHV.cs" />
     <Compile Include="BLL\BLL_QLNV.cs" />
+    <Compile Include="BLL\BLL_User.cs" />
     <Compile Include="DAL\DAL_QLBL.cs" />
     <Compile Include="DAL\DAL_QLHV.cs" />
     <Compile Include="DAL\DAL_QLLH.cs" />
     <Compile Include="DAL\DAL_QLNV.cs" />
+    <Compile Include="DAL\DAL_User.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\DAL_QLGV.cs" />
-    <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\Class.cs" />
-    <Compile Include="DTO\PersonNameComparer.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Student.cs" />
     <Compile Include="DTO\Teacher.cs" />
+    <Compile Include="DTO\User.cs" />
     <Compile Include="GUI\FormClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UC_Student.resx">
       <DependentUpon>UC_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UC_Teacher.resx">
+      <DependentUpon>UC_Teacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

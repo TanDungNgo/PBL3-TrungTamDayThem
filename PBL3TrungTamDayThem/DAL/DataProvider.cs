@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3TrungTamDayThem.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -68,6 +69,21 @@ namespace PBL3TrungTamDayThem.DAL
             int check = (int)cmd.ExecuteScalar();
             cnn.Close();
             return check;
+        }
+        public void Command(User user, string query)
+        {
+            using (SqlConnection cnn = new SqlConnection(cnnSTR))
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                cmd.Parameters.Add("@MaNV", user.MaNV);
+                cmd.Parameters.Add("@Username", user.Username);
+                cmd.Parameters.Add("@Pass", user.Pass);
+                cmd.Parameters.Add("@DisplayName", user.DisplayName);
+                cmd.Parameters.Add("@PhanQuyen", user.PhanQuyen);
+                cmd.Parameters.Add("@Anh", user.Anh);
+                cnn.Close();
+            }
         }
     }
 }

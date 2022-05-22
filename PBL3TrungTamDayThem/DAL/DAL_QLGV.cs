@@ -25,28 +25,39 @@ namespace PBL3TrungTamDayThem.DAL
         {
 
         }
-        public List<Class> GetAllClass()
+        public DataTable GetAllExpertise()
         {
-            List<Class> data = new List<Class>();
-            string query = "Select * from LOP_HOC";
-            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
-            {
-                data.Add(GetClass(i));
-            }
-            return data;
-        }
-
-        public Class GetClass(DataRow i)
-        {
-            return new Class
-            {
-                MaLH = i["MaLH"].ToString()
-            };
+            string query = "Select ChuyenMon from GIAO_VIEN ";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
         public List<Teacher> GetAllTeacher()
         {
             List<Teacher> data = new List<Teacher>();
             string query = "Select * from GIAO_VIEN";
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetTeacher(i));
+            }
+            return data;
+        }
+        public List<Teacher> GetTeacherByEx(string chuyenmon)
+        {
+            List<Teacher> data = new List<Teacher>();
+            string query = "Select * from GIAO_VIEN where ChuyenMon = N'" + chuyenmon + "'";
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetTeacher(i));
+            }
+            return data;
+        }
+        public List<Teacher> GetTeacherBySearch(string chuyenmon, string name)
+        {
+            List<Teacher> data = new List<Teacher>();
+            string query = "";
+            if (chuyenmon == "All")
+                query = "Select * from GIAO_VIEN where HoTenGV like N'%" + name + "%'";
+            else
+                query = "Select * from GIAO_VIEN where HoTenGV like N'%" + name + "%' and ChuyenMon = N'" + chuyenmon + "'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetTeacher(i));
@@ -72,19 +83,34 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public int AddTeacher(Teacher t)
         {
-            string query = "";
+            string query = "Insert into GIAO_VIEN values ('" +t.MaGV + "',N'" + t.HoTenGV + "','" + t.NgaySinh + "','" + t.GioiTinh + "',N'" + t.DiaChi +
+                                    "',N'" + t.ChuyenMon + "',N'" + t.TrinhDo + "','" + t.SDT + "','" + t.Email + "','" + t.Luong + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
 
         }
-        public int EditStudent(Teacher t)
+        public int EditTeacher(Teacher t)
         {
-            string query = "";
+            string query = "Update GIAO_VIEN set MaGV = '" + t.MaGV + "',HoTenGV = N'" + t.HoTenGV + "',NgaySinh = '" + t.NgaySinh +
+                                    "',GioiTinh = '" + t.GioiTinh + "',DiaChi = N'" + t.DiaChi + "',ChuyenMon = N'" + t.ChuyenMon +
+                                    "',TrinhDo = N'" + t.TrinhDo + "',SDT ='" + t.SDT + "',Email ='" + t.Email + "',Luong ='" + t.Luong +
+                                    "' Where MaGV = '" + t.MaGV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
-        public int DeleteStudent(string MaGV)
+        public int DeleteTeacher(string MaGV)
         {
             string query = "Delete from  GIAO_VIEN where MaGV = '" + MaGV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+        public List<Teacher> SortListTeacher(string s)
+        {
+            List<Teacher> data = new List<Teacher>();
+            string query = "Select * from GIAO_VIEN ORDER BY " + s;
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetTeacher(i));
+            }
+            return data;
         }
     }
 }

@@ -28,12 +28,12 @@ namespace PBL3TrungTamDayThem.BLL
 
         }
 
-        public List<CBBItem> GetListCBB()
+        public List<string> GetListCBB()
         {
-            List<CBBItem> data = new List<CBBItem>();
+            List<string> data = new List<string>();
             foreach (Class i in DAL_QLHV.Instance.GetAllClass())
             {
-                data.Add(new CBBItem { Value = i.MaLH });
+                data.Add(i.MaLH);
             }
             return data;
         }
@@ -49,10 +49,10 @@ namespace PBL3TrungTamDayThem.BLL
             {
                 data = DAL_QLHV.Instance.GetAllStudent();
             }
-            //if (lophoc != "All")
-            //{
-            //    data = DAL_QLHV.Instance.GetStudentByClass(lophoc);
-            //}
+            if (lophoc != "All")
+            {
+                data = DAL_QLHV.Instance.GetStudentByClass(lophoc);
+            }
             return data;
         }
         public Student GetHVByID(string MaHV)

@@ -25,51 +25,21 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            DataProvider dataProvider = new DataProvider();
-            int check = dataProvider.ExecuteScalar("Select count(*) from GIAO_VIEN where MaGV = '" + txtID.Text + "'");
-            if (check == 0)
+            Teacher teacher = new Teacher
             {
-                try
-                {
-                    string query = "Insert into GIAO_VIEN(MaGV, HoTenGV, NgaySinh, GioiTinh, DiaChi, ChuyenMon, TrinhDo, SDT, Email, Luong)" +
-                                    "values ('" + txtID.Text + "',N'" + txtName.Text + "','" + dtpBD.Value + "','" + rbMale.Checked + "',N'" + txtAddress.Text +
-                                    "',N'" + txtExpertise.Text + "',N'" + cbbLevel.Text + "','" + txtPhone.Text + "','" + txtMail.Text + "','" + txtSalary.Text + "')";
-                    int ret = dataProvider.ExecuteNonQuery(query);
-                    if (ret > 0)
-                    {
-                        MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                try
-                {
-                    string query = "Update GIAO_VIEN set MaGV = '" + txtID.Text + "',HoTenGV = N'" + txtName.Text + "',NgaySinh = '" + dtpBD.Value +
-                                    "',GioiTinh = '" + rbMale.Checked + "',DiaChi = N'" + txtAddress.Text + "',ChuyenMon = N'" + txtExpertise.Text +
-                                    "',TrinhDo = N'" + cbbLevel.Text + "',SDT ='" + txtPhone.Text + "',Email ='" + txtMail.Text + "',Luong ='" + txtSalary.Text +
-                                    "' Where MaGV = '" + txtID.Text + "'";
-                    int ret = dataProvider.ExecuteNonQuery(query);
-                    if (ret > 0)
-                    {
-                        MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Cập nhật thất bại thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
+                MaGV = txtID.Text,
+                HoTenGV = txtName.Text,
+                NgaySinh = dtpBD.Value.Date,
+                DiaChi = txtAddress.Text,
+                SDT = txtPhone.Text,
+                Email = txtMail.Text,
+                GioiTinh = rbMale.Checked.ToString(),
+                ChuyenMon = txtExpertise.Text,
+                TrinhDo = cbbLevel.Text,
+                Luong = txtSalary.Text,
+            };
+            BLL_QLGV.Instance.ExecuteDB(teacher);
+            this.Dispose();
         }
 
         private void btnSave_MouseMove(object sender, MouseEventArgs e)
@@ -125,6 +95,7 @@ namespace PBL3TrungTamDayThem.GUI
             if (teacher != null)
             {
                 txtID.Text = teacher.MaGV;
+                txtID.Enabled = false;
                 txtName.Text = teacher.HoTenGV;
                 txtPhone.Text = teacher.SDT;
                 txtAddress.Text = teacher.DiaChi;

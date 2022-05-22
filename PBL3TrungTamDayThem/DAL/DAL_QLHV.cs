@@ -57,7 +57,7 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> GetStudentByClass(string lophoc)
         {
             List<Student> data = new List<Student>();
-            string query = "exec LayHocVienTheoLop @lop = '" + lophoc + "'";
+            string query = "exec LayHocVienTheoLop @lop ='" + lophoc + "'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));

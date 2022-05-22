@@ -177,7 +177,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btn_ThongTin_Click(object sender, EventArgs e)
         {
-            FormUser f = new FormUser();
+            FormUser f = new FormUser("NV003");
             f.ShowDialog();
         }
     }

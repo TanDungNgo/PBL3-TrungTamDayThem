@@ -38,7 +38,7 @@
             this.pnlCenter2 = new System.Windows.Forms.Panel();
             this.btnSort = new System.Windows.Forms.Button();
             this.lblclass = new System.Windows.Forms.Label();
-            this.cbbclass = new System.Windows.Forms.ComboBox();
+            this.cbbClass = new System.Windows.Forms.ComboBox();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pnlLeft = new System.Windows.Forms.Panel();
@@ -95,7 +95,7 @@
             // 
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(99, 30);
+            this.cbbSort.Location = new System.Drawing.Point(37, 30);
             this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Size = new System.Drawing.Size(173, 28);
@@ -136,7 +136,7 @@
             // 
             this.pnlCenter2.Controls.Add(this.btnSort);
             this.pnlCenter2.Controls.Add(this.lblclass);
-            this.pnlCenter2.Controls.Add(this.cbbclass);
+            this.pnlCenter2.Controls.Add(this.cbbClass);
             this.pnlCenter2.Controls.Add(this.cbbSort);
             this.pnlCenter2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCenter2.Location = new System.Drawing.Point(299, 0);
@@ -148,10 +148,10 @@
             // 
             this.btnSort.BackColor = System.Drawing.Color.White;
             this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSort.Location = new System.Drawing.Point(6, 21);
+            this.btnSort.Location = new System.Drawing.Point(219, 27);
             this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(87, 51);
+            this.btnSort.Size = new System.Drawing.Size(69, 31);
             this.btnSort.TabIndex = 36;
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = false;
@@ -162,21 +162,21 @@
             this.lblclass.AutoSize = true;
             this.lblclass.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblclass.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblclass.Location = new System.Drawing.Point(19, 97);
+            this.lblclass.Location = new System.Drawing.Point(33, 70);
             this.lblclass.Name = "lblclass";
             this.lblclass.Size = new System.Drawing.Size(60, 22);
             this.lblclass.TabIndex = 32;
             this.lblclass.Text = "Class:";
             // 
-            // cbbclass
+            // cbbClass
             // 
-            this.cbbclass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbclass.FormattingEnabled = true;
-            this.cbbclass.Location = new System.Drawing.Point(99, 91);
-            this.cbbclass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbbclass.Name = "cbbclass";
-            this.cbbclass.Size = new System.Drawing.Size(173, 28);
-            this.cbbclass.TabIndex = 33;
+            this.cbbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbClass.FormattingEnabled = true;
+            this.cbbClass.Location = new System.Drawing.Point(37, 97);
+            this.cbbClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbClass.Name = "cbbClass";
+            this.cbbClass.Size = new System.Drawing.Size(173, 28);
+            this.cbbClass.TabIndex = 33;
             // 
             // pnlRight
             // 
@@ -281,7 +281,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Student";
             this.Size = new System.Drawing.Size(907, 609);
-            this.Load += new System.EventHandler(this.UC_Student_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
@@ -314,7 +313,7 @@
         private System.Windows.Forms.Panel pnlLeft;
         private System.Windows.Forms.Panel pnlCenter2;
         private System.Windows.Forms.Label lblclass;
-        private System.Windows.Forms.ComboBox cbbclass;
+        private System.Windows.Forms.ComboBox cbbClass;
         private System.Windows.Forms.Button btnSort;
     }
 }

@@ -2,9 +2,11 @@
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PBL3TrungTamDayThem.BLL
 {
@@ -26,29 +28,30 @@ namespace PBL3TrungTamDayThem.BLL
 
         }
 
-        public List<CBBItem> GetListCBB()
+        public List<string> GetListCBB()
         {
-            List<CBBItem> data = new List<CBBItem>();
-            foreach(Class i in DAL_QLGV.Instance.GetAllClass())
+            List<string> l = new List<string>();
+            foreach (DataRow i in DAL_QLGV.Instance.GetAllExpertise().Rows)
             {
-                data.Add(new CBBItem { Value = i.MaLH });
-            }
-            return data;
+                l.Add(i["ChuyenMon"].ToString());
+            } 
+            return l;
         }
-        public List<Teacher> GetListTeacher(string lophoc, string search)
+        public List<Teacher> GetListTeacher(string chuyenmon, string search)
         {
             List<Teacher> data = new List<Teacher>();
-            //if (search != null)
-            //{
-            //    data = DAL_QLGV.Instance.GetAllTeacher();
-            if (search == null && lophoc == "All")
+            if (search == null && chuyenmon == "All")
             {
                 data = DAL_QLGV.Instance.GetAllTeacher();
-                }
-            //if (lophoc != "All")
-            //{
-            //    data = DAL_QLHV.Instance.GetStudentByClass(lophoc);
-            //}
+            }
+            if (chuyenmon != "All")
+            {
+                data = DAL_QLGV.Instance.GetTeacherByEx(chuyenmon);
+            }
+            if (search != null)
+            {
+                data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
+            }    
             return data;
         }
         public Teacher GetGVByID(string MaGV)
@@ -60,6 +63,43 @@ namespace PBL3TrungTamDayThem.BLL
                     teacher = i;
             }
             return teacher;
+        }
+        public void ExecuteDB(Teacher t)
+        {
+            int check = DataProvider.Instance.ExecuteScalar("Select count(*) from GIAO_VIEN where MaGV = '" + t.MaGV + "'");
+            if (check == 0)
+            {
+                // Add
+                if (DAL_QLGV.Instance.AddTeacher(t) > 0)
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // Edit
+                if (DAL_QLGV.Instance.EditTeacher(t) > 0)
+                    MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Cập nhật thất bại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void DeleteTeacher(List<string> LMaGV)
+        {
+            foreach (string i in LMaGV)
+            {
+                if (DAL_QLGV.Instance.DeleteTeacher(i) > 0)
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public List<Teacher> SortListTeacher(string s)
+        {
+            List<Teacher> data = new List<Teacher>();
+            data = DAL_QLGV.Instance.SortListTeacher(s);
+            return data;
         }
     }
 }

@@ -44,8 +44,12 @@
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.lbl_Username = new System.Windows.Forms.Label();
             this.grbnewpass = new System.Windows.Forms.GroupBox();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbnewpass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblnewpassretype
@@ -98,12 +102,13 @@
             this.btnsavechange.TabIndex = 66;
             this.btnsavechange.Text = "Save Change";
             this.btnsavechange.UseVisualStyleBackColor = true;
+            this.btnsavechange.Click += new System.EventHandler(this.btnsavechange_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCancel.Location = new System.Drawing.Point(514, 442);
+            this.btnCancel.Location = new System.Drawing.Point(514, 396);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(310, 47);
             this.btnCancel.TabIndex = 67;
@@ -177,6 +182,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(21, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(187, 181);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
@@ -214,12 +220,42 @@
             this.grbnewpass.TabStop = false;
             this.grbnewpass.Text = "Thay đổi mật khẩu";
             // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(259, 131);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(143, 62);
+            this.btnSelect.TabIndex = 78;
+            this.btnSelect.Text = "Chọn hình ảnh";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(21, 517);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(381, 26);
+            this.textBox1.TabIndex = 79;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(442, 449);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(476, 110);
+            this.dataGridView1.TabIndex = 80;
+            // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(930, 596);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.grbnewpass);
             this.Controls.Add(this.ckbpass);
             this.Controls.Add(this.lblHeader);
@@ -239,6 +275,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grbnewpass.ResumeLayout(false);
             this.grbnewpass.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +298,8 @@
         private System.Windows.Forms.TextBox txt_Username;
         private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.GroupBox grbnewpass;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

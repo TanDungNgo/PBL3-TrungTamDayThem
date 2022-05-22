@@ -20,6 +20,7 @@ namespace PBL3TrungTamDayThem.GUI
         public UC_Student()
         {
             InitializeComponent();
+            SetGUI();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -29,22 +30,20 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void DGVShow()
         {
-            dgvStudent.DataSource = BLL_QLHV.Instance.GetListStudent(cbbclass.Text, null);
+            dgvStudent.DataSource = BLL_QLHV.Instance.GetListStudent(cbbClass.Text, null);
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
             DGVShow();
         }
-
-        private void UC_Student_Load(object sender, EventArgs e)
+        void SetCBB()
         {
-            if (cbbclass != null)
+            if (cbbClass != null)
             {
-                cbbclass.Items.Clear();
+                cbbClass.Items.Clear();
             }
-            cbbclass.Items.Add(new CBBItem { Value = "All" });
-            cbbclass.Items.AddRange(BLL_QLHV.Instance.GetListCBB().ToArray());
-            cbbclass.Text = "All";
+            cbbClass.Items.Add("All");
+            cbbClass.Items.AddRange(BLL_QLHV.Instance.GetListCBB().ToArray());
             if (cbbSort != null)
             {
                 cbbSort.Items.Clear();
@@ -52,7 +51,11 @@ namespace PBL3TrungTamDayThem.GUI
             cbbSort.Items.Add("HoTenHV");
             cbbSort.Items.Add("NgaySinh");
         }
-
+        void SetGUI()
+        {
+            SetCBB();
+            cbbClass.Text = "All";
+        }
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (dgvStudent.SelectedRows.Count > 0)
@@ -74,26 +77,11 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvStudent.DataSource = BLL_QLHV.Instance.GetListStudent(null, txtName.Text);
-            //dgvStudent.DataSource = DAL_QLHV.Instance.GetStudentBySearch(txtName.Text);
+            dgvStudent.DataSource = BLL_QLHV.Instance.GetListStudent(cbbClass.Text, txtName.Text);
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            //DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
-            //string MaHV = data[0].Cells["MaHV"].Value.ToString();
-            //if (MaHV == null)
-            //{
-            //    MessageBox.Show("Chưa chọn học viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //else
-            //{
-            //    if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
-            //    {
-            //        BLL_QLHV.Instance.DeleteStudent(MaHV);
-            //        DGVShow();
-            //    }
-            //}
             if (dgvStudent.SelectedRows.Count > 0)
             {
                 List<string> LMaHV = new List<string>();
@@ -111,10 +99,6 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            List <Student> list = new List<Student>();  
-            list = BLL_QLHV.Instance.GetListStudent(cbbclass.Text, txtName.Text);
-            list.Sort(new PersonNameComparer());
-            dgvStudent.DataSource = list;
         }
     }
 }
