@@ -22,10 +22,7 @@ namespace PBL3TrungTamDayThem.GUI
             this._MaHV = MaHV;
             SetGUI();
         }
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
+       
         public void SetGUI()
         {
             Student student = BLL_QLHV.Instance.GetHVByID(this._MaHV);
@@ -36,7 +33,7 @@ namespace PBL3TrungTamDayThem.GUI
                 dtpBirthDay.Text = student.NgaySinh.ToString();
                 txtAddress.Text = student.DiaChi;
                 txtPhone.Text = student.SDT;
-                txtMail.Text = student.Email;
+                txtEmail.Text = student.Email;
                 if (student.GioiTinh == "Nam")
                 {
                     rbMale.Checked = true;
@@ -46,25 +43,45 @@ namespace PBL3TrungTamDayThem.GUI
             }    
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            Student s = new Student
-            {
-                MaHV = txtID.Text,
-                HoTenHV = txtName.Text,
-                NgaySinh = dtpBirthDay.Value.Date,
-                DiaChi = txtAddress.Text,
-                SDT = txtPhone.Text,
-                Email = txtMail.Text,
-                GioiTinh = rbMale.Checked.ToString(),
-            };
-            BLL_QLHV.Instance.ExecuteDB(s);
-            this.Dispose();
-        }
+    
 
         private void label1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+        
+                Student s = new Student
+                {
+                    MaHV = txtID.Text,
+                    HoTenHV = txtName.Text,
+                    NgaySinh = dtpBirthDay.Value.Date,
+                    DiaChi = txtAddress.Text,
+                    SDT = txtPhone.Text,
+                    Email = txtEmail.Text,
+                    GioiTinh = rbMale.Checked.ToString(),
+                };
+                BLL_QLHV.Instance.ExecuteDB(s);
+                this.Dispose();
+            
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            txtName.Text = "";
+            dtpBirthDay.Text = "";
+            txtAddress.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            
         }
     }
 }

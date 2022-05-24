@@ -46,7 +46,16 @@ namespace PBL3TrungTamDayThem.GUI
                     rbFemale.Checked = true;
             }
         }
-        private void btnReset_Click(object sender, EventArgs e)
+   
+
+    
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnReset_Click_1(object sender, EventArgs e)
         {
             txtID.Text = "";
             txtName.Text = "";
@@ -59,12 +68,7 @@ namespace PBL3TrungTamDayThem.GUI
             dtpStarting.Text = "";
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             Staff s = new Staff
             {

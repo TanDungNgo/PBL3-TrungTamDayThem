@@ -31,26 +31,9 @@ namespace PBL3TrungTamDayThem.GUI
             string query = "Select * from ACCOUNT where MaNV = '" + _MaNV + "'";
             dataGridView1.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
-        private void btnSelect_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Title = "Chọn ảnh";
-            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-            openFile.FilterIndex = 1;
-            openFile.RestoreDirectory = true;
-            if (openFile.ShowDialog() == DialogResult.OK)
-            {
-                textBox1.Text = openFile.FileName;
-                pictureBox1.ImageLocation = openFile.FileName;
-            }
-        }
-
-        private void btnsavechange_Click(object sender, EventArgs e)
+        private void btnsavechange_Click_1(object sender, EventArgs e)
         {
             User user = DAL_User.Instance.GetUserByMaNV(_MaNV);
             user.Anh = BLL_User.Instance.ImangeToByteArray(pictureBox1);
@@ -67,6 +50,25 @@ namespace PBL3TrungTamDayThem.GUI
             catch (Exception ex)
             {
                 MessageBox.Show("That bai" + ex.Message);
+            }
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSelect_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Title = "Chọn ảnh";
+            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            openFile.FilterIndex = 1;
+            openFile.RestoreDirectory = true;
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = openFile.FileName;
+                pictureBox1.ImageLocation = openFile.FileName;
             }
         }
     }

@@ -60,7 +60,7 @@
             this.dgvStudent.AllowUserToAddRows = false;
             this.dgvStudent.AllowUserToDeleteRows = false;
             this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvStudent.BackgroundColor = System.Drawing.Color.White;
+            this.dgvStudent.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStudent.Location = new System.Drawing.Point(0, 0);
@@ -69,25 +69,25 @@
             this.dgvStudent.ReadOnly = true;
             this.dgvStudent.RowHeadersWidth = 62;
             this.dgvStudent.RowTemplate.Height = 28;
-            this.dgvStudent.Size = new System.Drawing.Size(907, 402);
+            this.dgvStudent.Size = new System.Drawing.Size(806, 322);
             this.dgvStudent.TabIndex = 0;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(8, 21);
+            this.txtName.Location = new System.Drawing.Point(7, 17);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(255, 30);
+            this.txtName.Size = new System.Drawing.Size(227, 26);
             this.txtName.TabIndex = 34;
             // 
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(316, 11);
+            this.lblHeader.Location = new System.Drawing.Point(281, 9);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(255, 32);
+            this.lblHeader.Size = new System.Drawing.Size(219, 26);
             this.lblHeader.TabIndex = 32;
             this.lblHeader.Text = "Thông Tin Học Viên";
             // 
@@ -95,21 +95,21 @@
             // 
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(10, 98);
+            this.cbbSort.Location = new System.Drawing.Point(9, 78);
             this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSort.Name = "cbbSort";
-            this.cbbSort.Size = new System.Drawing.Size(173, 28);
+            this.cbbSort.Size = new System.Drawing.Size(154, 24);
             this.cbbSort.TabIndex = 28;
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.White;
+            this.pnlHeader.BackColor = System.Drawing.SystemColors.Control;
             this.pnlHeader.Controls.Add(this.lblHeader);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(907, 60);
+            this.pnlHeader.Size = new System.Drawing.Size(806, 48);
             this.pnlHeader.TabIndex = 36;
             // 
             // pnlBottom
@@ -117,10 +117,10 @@
             this.pnlBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.pnlBottom.Controls.Add(this.dgvStudent);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 207);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 165);
             this.pnlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(907, 402);
+            this.pnlBottom.Size = new System.Drawing.Size(806, 322);
             this.pnlBottom.TabIndex = 38;
             // 
             // pnlCenter
@@ -130,10 +130,10 @@
             this.pnlCenter.Controls.Add(this.pnlRight);
             this.pnlCenter.Controls.Add(this.pnlLeft);
             this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCenter.Location = new System.Drawing.Point(0, 60);
+            this.pnlCenter.Location = new System.Drawing.Point(0, 48);
             this.pnlCenter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(907, 149);
+            this.pnlCenter.Size = new System.Drawing.Size(806, 119);
             this.pnlCenter.TabIndex = 37;
             // 
             // pnlCenter2
@@ -144,10 +144,10 @@
             this.pnlCenter2.Controls.Add(this.cbbClass);
             this.pnlCenter2.Controls.Add(this.cbbSort);
             this.pnlCenter2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCenter2.Location = new System.Drawing.Point(306, 0);
+            this.pnlCenter2.Location = new System.Drawing.Point(272, 0);
             this.pnlCenter2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCenter2.Name = "pnlCenter2";
-            this.pnlCenter2.Size = new System.Drawing.Size(330, 149);
+            this.pnlCenter2.Size = new System.Drawing.Size(293, 119);
             this.pnlCenter2.TabIndex = 2;
             // 
             // btnSort
@@ -156,10 +156,10 @@
             this.btnSort.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSort.Image = global::PBL3TrungTamDayThem.Properties.Resources.show_icon;
             this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSort.Location = new System.Drawing.Point(189, 86);
+            this.btnSort.Location = new System.Drawing.Point(168, 69);
             this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(135, 50);
+            this.btnSort.Size = new System.Drawing.Size(120, 40);
             this.btnSort.TabIndex = 36;
             this.btnSort.Text = "    Sắp xếp";
             this.btnSort.UseVisualStyleBackColor = false;
@@ -170,9 +170,9 @@
             this.lblclass.AutoSize = true;
             this.lblclass.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblclass.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblclass.Location = new System.Drawing.Point(10, 26);
+            this.lblclass.Location = new System.Drawing.Point(9, 21);
             this.lblclass.Name = "lblclass";
-            this.lblclass.Size = new System.Drawing.Size(53, 25);
+            this.lblclass.Size = new System.Drawing.Size(43, 20);
             this.lblclass.TabIndex = 32;
             this.lblclass.Text = "Lớp:";
             // 
@@ -180,10 +180,10 @@
             // 
             this.cbbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbClass.FormattingEnabled = true;
-            this.cbbClass.Location = new System.Drawing.Point(76, 21);
+            this.cbbClass.Location = new System.Drawing.Point(68, 17);
             this.cbbClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbClass.Name = "cbbClass";
-            this.cbbClass.Size = new System.Drawing.Size(247, 28);
+            this.cbbClass.Size = new System.Drawing.Size(220, 24);
             this.cbbClass.TabIndex = 33;
             // 
             // pnlRight
@@ -192,10 +192,10 @@
             this.pnlRight.Controls.Add(this.btnSearch);
             this.pnlRight.Controls.Add(this.txtName);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(636, 0);
+            this.pnlRight.Location = new System.Drawing.Point(565, 0);
             this.pnlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(271, 149);
+            this.pnlRight.Size = new System.Drawing.Size(241, 119);
             this.pnlRight.TabIndex = 1;
             // 
             // btnSearch
@@ -204,10 +204,10 @@
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = global::PBL3TrungTamDayThem.Properties.Resources.search_icon1;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(128, 86);
+            this.btnSearch.Location = new System.Drawing.Point(114, 69);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(135, 50);
+            this.btnSearch.Size = new System.Drawing.Size(120, 40);
             this.btnSearch.TabIndex = 35;
             this.btnSearch.Text = "    Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -224,7 +224,7 @@
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(306, 149);
+            this.pnlLeft.Size = new System.Drawing.Size(272, 119);
             this.pnlLeft.TabIndex = 0;
             // 
             // btnAdd
@@ -233,12 +233,12 @@
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = global::PBL3TrungTamDayThem.Properties.Resources.add_icon1;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(6, 18);
+            this.btnAdd.Location = new System.Drawing.Point(5, 14);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(146, 50);
+            this.btnAdd.Size = new System.Drawing.Size(130, 40);
             this.btnAdd.TabIndex = 24;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -248,10 +248,10 @@
             this.btnShow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.Image = global::PBL3TrungTamDayThem.Properties.Resources.list__4_;
             this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(155, 88);
+            this.btnShow.Location = new System.Drawing.Point(138, 70);
             this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(146, 50);
+            this.btnShow.Size = new System.Drawing.Size(130, 40);
             this.btnShow.TabIndex = 29;
             this.btnShow.Text = "   Hiển thị";
             this.btnShow.UseVisualStyleBackColor = false;
@@ -263,10 +263,10 @@
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = global::PBL3TrungTamDayThem.Properties.Resources.edit_icon;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(155, 18);
+            this.btnEdit.Location = new System.Drawing.Point(138, 14);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(146, 50);
+            this.btnEdit.Size = new System.Drawing.Size(130, 40);
             this.btnEdit.TabIndex = 26;
             this.btnEdit.Text = "     Chỉnh sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -278,10 +278,10 @@
             this.btnDel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Image = global::PBL3TrungTamDayThem.Properties.Resources.delete_icon1;
             this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDel.Location = new System.Drawing.Point(6, 86);
+            this.btnDel.Location = new System.Drawing.Point(5, 69);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(146, 50);
+            this.btnDel.Size = new System.Drawing.Size(130, 40);
             this.btnDel.TabIndex = 25;
             this.btnDel.Text = "   Xóa";
             this.btnDel.UseVisualStyleBackColor = false;
@@ -289,7 +289,7 @@
             // 
             // UC_Student
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.Controls.Add(this.pnlCenter);
@@ -297,7 +297,7 @@
             this.Controls.Add(this.pnlHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Student";
-            this.Size = new System.Drawing.Size(907, 609);
+            this.Size = new System.Drawing.Size(806, 487);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();

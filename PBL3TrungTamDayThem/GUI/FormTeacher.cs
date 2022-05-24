@@ -23,24 +23,7 @@ namespace PBL3TrungTamDayThem.GUI
             this._MaGV = MaGV;
             SetGUI();
         }
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            Teacher teacher = new Teacher
-            {
-                MaGV = txtID.Text,
-                HoTenGV = txtName.Text,
-                NgaySinh = dtpBD.Value.Date,
-                DiaChi = txtAddress.Text,
-                SDT = txtPhone.Text,
-                Email = txtMail.Text,
-                GioiTinh = rbMale.Checked.ToString(),
-                ChuyenMon = txtExpertise.Text,
-                TrinhDo = cbbLevel.Text,
-                Luong = txtSalary.Text,
-            };
-            BLL_QLGV.Instance.ExecuteDB(teacher);
-            this.Dispose();
-        }
+      
 
         private void btnSave_MouseMove(object sender, MouseEventArgs e)
         {
@@ -52,17 +35,6 @@ namespace PBL3TrungTamDayThem.GUI
             btnSave.BackColor = Color.White;
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            txtID.Text = "";
-            txtName.Text = "";
-            txtPhone.Text = "";
-            txtAddress.Text = "";
-            txtMail.Text = "";
-            cbbLevel.Text = "";
-            txtExpertise.Text = "";
-            txtSalary.Text = "";
-        }
 
         private void btnReset_MouseMove(object sender, MouseEventArgs e)
         {
@@ -84,10 +56,7 @@ namespace PBL3TrungTamDayThem.GUI
             btnBack.BackColor = Color.White;
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
         private void SetGUI()
         {
@@ -112,6 +81,44 @@ namespace PBL3TrungTamDayThem.GUI
                     rbFemale.Checked = true;
             }    
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            txtName.Text = "";
+            txtPhone.Text = "";
+            txtAddress.Text = "";
+            txtMail.Text = "";
+            cbbLevel.Text = "";
+            txtExpertise.Text = "";
+            txtSalary.Text = "";
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Teacher teacher = new Teacher
+            {
+                MaGV = txtID.Text,
+                HoTenGV = txtName.Text,
+                NgaySinh = dtpBD.Value.Date,
+                DiaChi = txtAddress.Text,
+                SDT = txtPhone.Text,
+                Email = txtMail.Text,
+                GioiTinh = rbMale.Checked.ToString(),
+                ChuyenMon = txtExpertise.Text,
+                TrinhDo = cbbLevel.Text,
+                Luong = txtSalary.Text,
+            };
+            BLL_QLGV.Instance.ExecuteDB(teacher);
+            this.Dispose();
+        }
+
+       
 
     }
 }

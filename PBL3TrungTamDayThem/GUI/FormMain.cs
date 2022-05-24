@@ -169,16 +169,20 @@ namespace PBL3TrungTamDayThem.GUI
             }
         }
 
-        private void btn_Logout_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có thật sự muốn đăng suất ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
-                this.Close();
-        }
+     
 
-        private void btn_ThongTin_Click(object sender, EventArgs e)
+       
+
+        private void btn_ThongTin_Click_1(object sender, EventArgs e)
         {
             FormUser f = new FormUser("NV003");
             f.ShowDialog();
+        }
+
+        private void btn_Logout_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thật sự muốn đăng suất ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
+                this.Close();
         }
     }
 }

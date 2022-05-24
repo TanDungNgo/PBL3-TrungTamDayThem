@@ -38,10 +38,10 @@
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.pnlCenter2 = new System.Windows.Forms.Panel();
-            this.pnlRight = new System.Windows.Forms.Panel();
-            this.pnlLeft = new System.Windows.Forms.Panel();
             this.btnSort = new System.Windows.Forms.Button();
+            this.pnlRight = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.pnlLeft = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             this.dgvTeacher.AllowUserToAddRows = false;
             this.dgvTeacher.AllowUserToDeleteRows = false;
             this.dgvTeacher.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTeacher.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTeacher.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTeacher.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTeacher.Location = new System.Drawing.Point(0, 0);
@@ -124,7 +124,7 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.White;
+            this.pnlHeader.BackColor = System.Drawing.SystemColors.Control;
             this.pnlHeader.Controls.Add(this.lblHeader);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -171,32 +171,6 @@
             this.pnlCenter2.Size = new System.Drawing.Size(278, 119);
             this.pnlCenter2.TabIndex = 2;
             // 
-            // pnlRight
-            // 
-            this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
-            this.pnlRight.Controls.Add(this.btnSearch);
-            this.pnlRight.Controls.Add(this.txtName);
-            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(558, 0);
-            this.pnlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(248, 119);
-            this.pnlRight.TabIndex = 1;
-            // 
-            // pnlLeft
-            // 
-            this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
-            this.pnlLeft.Controls.Add(this.btnAdd);
-            this.pnlLeft.Controls.Add(this.btnShow);
-            this.pnlLeft.Controls.Add(this.btnEdit);
-            this.pnlLeft.Controls.Add(this.btnDel);
-            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(280, 119);
-            this.pnlLeft.TabIndex = 0;
-            // 
             // btnSort
             // 
             this.btnSort.BackColor = System.Drawing.Color.White;
@@ -212,6 +186,18 @@
             this.btnSort.UseVisualStyleBackColor = false;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
+            // pnlRight
+            // 
+            this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.pnlRight.Controls.Add(this.btnSearch);
+            this.pnlRight.Controls.Add(this.txtName);
+            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlRight.Location = new System.Drawing.Point(558, 0);
+            this.pnlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlRight.Name = "pnlRight";
+            this.pnlRight.Size = new System.Drawing.Size(248, 119);
+            this.pnlRight.TabIndex = 1;
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.White;
@@ -226,6 +212,20 @@
             this.btnSearch.Text = "    Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // pnlLeft
+            // 
+            this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.pnlLeft.Controls.Add(this.btnAdd);
+            this.pnlLeft.Controls.Add(this.btnShow);
+            this.pnlLeft.Controls.Add(this.btnEdit);
+            this.pnlLeft.Controls.Add(this.btnDel);
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(280, 119);
+            this.pnlLeft.TabIndex = 0;
             // 
             // btnAdd
             // 
