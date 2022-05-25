@@ -23,67 +23,100 @@ namespace PBL3TrungTamDayThem.GUI
             this._MaGV = MaGV;
             SetGUI();
         }
+        public void SetCBB()
+        {
+            if(cbbLevel != null)
+                cbbLevel.Items.Clear();
+            cbbLevel.Items.Add("Tiến sĩ");
+            cbbLevel.Items.Add("Thạc sĩ");
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Teacher teacher = new Teacher
+            if (Error() == true)
             {
-                MaGV = txtID.Text,
-                HoTenGV = txtName.Text,
-                NgaySinh = dtpBD.Value.Date,
-                DiaChi = txtAddress.Text,
-                SDT = txtPhone.Text,
-                Email = txtMail.Text,
-                GioiTinh = rbMale.Checked.ToString(),
-                ChuyenMon = txtExpertise.Text,
-                TrinhDo = cbbLevel.Text,
-                Luong = txtSalary.Text,
-            };
-            BLL_QLGV.Instance.ExecuteDB(teacher);
-            this.Dispose();
+                Teacher teacher = new Teacher
+                {
+                    MaGV = txtID.Text,
+                    HoTenGV = txtName.Text,
+                    NgaySinh = dtpBD.Value.Date,
+                    DiaChi = txtAddress.Text,
+                    SDT = txtPhone.Text,
+                    Email = txtEmail.Text,
+                    GioiTinh = rbMale.Checked.ToString(),
+                    ChuyenMon = txtExpertise.Text,
+                    TrinhDo = cbbLevel.Text,
+                    Luong = txtSalary.Text,
+                };
+                BLL_QLGV.Instance.ExecuteDB(teacher);
+                this.Dispose();
+            }    
         }
-
-        private void btnSave_MouseMove(object sender, MouseEventArgs e)
+        public bool Error()
         {
-            btnSave.BackColor = Color.MediumSeaGreen;
-        }
+            bool check = true;
+            if (txtName.Text == "")
+            {
+                lblername.Visible = true;
+                check = false;
+            }
+            else
+                lblername.Visible = false;
+            if (txtAddress.Text == "")
+            {
+                lbleraddress.Visible = true;
+                check = false;
+            }
+            else
+                lbleraddress.Visible = false;
+            if (txtEmail.Text == "")
+            {
+                lbleremail.Visible = true;
+                check = false;
+            }
+            else
+                lbleremail.Visible = false;
+            if (cbbLevel.Text == "")
+            {
+                lblerlevel.Visible = true;
+                check = false;
+            }
+            else
+                lblerlevel.Visible = false;
+            if (txtExpertise.Text == "")
+            {
+                lblerexpertise.Visible = true;
+                check = false;
+            }
+            else
+                lblerexpertise.Visible = false;
+            if (txtSalary.Text == "")
+            {
+                lblersalary.Visible = true;
+                check = false;
+            }
+            else
+                check = true;
+            if (isDigit(txtPhone.Text)==false && txtPhone.Text.Length < 11)
+            {
+                lblerphone.Visible = true;
+                check = false;
+            }
+            else
+                lblerphone.Visible = false;
 
-        private void btnSave_MouseLeave(object sender, EventArgs e)
-        {
-            btnSave.BackColor = Color.White;
+            return check;
         }
-
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtID.Text = "";
             txtName.Text = "";
             txtPhone.Text = "";
             txtAddress.Text = "";
-            txtMail.Text = "";
+            txtEmail.Text = "";
             cbbLevel.Text = "";
             txtExpertise.Text = "";
             txtSalary.Text = "";
         }
-
-        private void btnReset_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnReset.BackColor = Color.DeepSkyBlue;
-        }
-
-        private void btnReset_MouseLeave(object sender, EventArgs e)
-        {
-            btnReset.BackColor = Color.White;
-        }
-
-        private void btnBack_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnBack.BackColor = Color.Crimson;
-        }
-
-        private void btnBack_MouseLeave(object sender, EventArgs e)
-        {
-            btnBack.BackColor = Color.White;
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -91,6 +124,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void SetGUI()
         {
+            SetCBB();
             Teacher teacher = BLL_QLGV.Instance.GetGVByID(this._MaGV);
             if (teacher != null)
             {
@@ -99,7 +133,7 @@ namespace PBL3TrungTamDayThem.GUI
                 txtName.Text = teacher.HoTenGV;
                 txtPhone.Text = teacher.SDT;
                 txtAddress.Text = teacher.DiaChi;
-                txtMail.Text = teacher.Email;
+                txtEmail.Text = teacher.Email;
                 txtSalary.Text = teacher.Luong;
                 txtExpertise.Text = teacher.ChuyenMon;
                 cbbLevel.Text = teacher.TrinhDo;
@@ -110,8 +144,35 @@ namespace PBL3TrungTamDayThem.GUI
                 }
                 else
                     rbFemale.Checked = true;
+            }  
+            else
+            {
+                int count = BLL_QLGV.Instance.Count() + 1;
+                if (count < 10)
+                {
+                    txtID.Text = "GV00" + count.ToString();
+                }
+                else if (count < 100)
+                {
+                    txtID.Text = "GV0" + count.ToString();
+                }
+                else
+                    txtID.Text = "GV" + count.ToString();
+
             }    
         }
+        internal static bool isDigit(string v)
+        {
+            var isNumeric = !string.IsNullOrEmpty(v) && v.All(Char.IsDigit);
+            return isNumeric;
+        }
 
+        private void cbbLevel_TextChanged(object sender, EventArgs e)
+        {
+            if (cbbLevel.Text == "Tiến sĩ")
+            {
+
+            }    
+        }
     }
 }

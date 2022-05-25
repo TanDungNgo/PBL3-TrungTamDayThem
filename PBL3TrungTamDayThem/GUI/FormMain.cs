@@ -16,7 +16,6 @@ namespace PBL3TrungTamDayThem.GUI
     public partial class FormMain : Form
     {
         private string _MaNV;
-        private Form FormNow;
         public FormMain()
         {
             InitializeComponent();
@@ -46,18 +45,9 @@ namespace PBL3TrungTamDayThem.GUI
         private void FormMain_Load(object sender, EventArgs e)
         {
             btnHome.PerformClick();
-            //DataProvider dataProvider = new DataProvider();
-            //string query = "Select DisplayName from ACCOUNT where UserName = '" + this._Username + "'";
-            //DataRow dr = dataProvider.ExecuteQuery(query).Rows[0];
-            //btn_user.Text = dr["DisplayName"].ToString() + " ﹀";
             User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
-            this.bmp = new Bitmap(user.Anh);
-
-            //this.p.SizeMode = PictureBoxSizeMode.StretchImage;
-            //this.pictureBox2.Image = this.bmp;
+            //this.bmp = new Bitmap(user.Anh);
             btn_user.Text = user.DisplayName + " ﹀";
-
-
             foreach (Control item in flpnlButton.Controls)
                 item.Width = flpnlButton.Width;
         }

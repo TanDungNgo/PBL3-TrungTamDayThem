@@ -27,6 +27,11 @@ namespace PBL3TrungTamDayThem.BLL
         {
 
         }
+        public int Count()
+        {
+            int count = DAL_QLNV.Instance.GetAllStaff().Count;
+            return count;
+        }
         public List<string> GetListCBB()
         {
             List<string> l = new List<string>();
@@ -84,9 +89,9 @@ namespace PBL3TrungTamDayThem.BLL
                     MessageBox.Show("Cập nhật thất bại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void Delete(string ManV)
+        public void Delete(string MaNV)
         {
-            if (DAL_QLNV.Instance.DeleteStaff(ManV) > 0)
+            if (DAL_QLNV.Instance.DeleteStaff(MaNV) > 0)
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -65,7 +65,6 @@ namespace PBL3TrungTamDayThem.GUI
                 }
                 if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                 {
-                    DGVShow();
                     BLL_QLGV.Instance.DeleteTeacher(LMaGV);
                     SetGUI();
                     DGVShow();

@@ -60,6 +60,10 @@
             this.pnl_user = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.btn_ThongTin = new System.Windows.Forms.Button();
+            this.pnlct = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.flpnlButton.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -73,6 +77,7 @@
             this.pnl_header1.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.pnl_user.SuspendLayout();
+            this.pnlct.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -394,7 +399,6 @@
             this.pnl_header3.Name = "pnl_header3";
             this.pnl_header3.Size = new System.Drawing.Size(339, 65);
             this.pnl_header3.TabIndex = 1;
-            
             // 
             // ptbHeader
             // 
@@ -412,7 +416,7 @@
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
             this.lblHeader.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblHeader.Location = new System.Drawing.Point(88, 13);
+            this.lblHeader.Location = new System.Drawing.Point(88, 12);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(204, 45);
             this.lblHeader.TabIndex = 0;
@@ -483,24 +487,24 @@
             // 
             // pnlhl
             // 
-            this.pnlhl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.pnlhl.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlhl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlhl.Location = new System.Drawing.Point(300, 100);
             this.pnlhl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlhl.Name = "pnlhl";
-            this.pnlhl.Size = new System.Drawing.Size(900, 5);
+            this.pnlhl.Size = new System.Drawing.Size(900, 10);
             this.pnlhl.TabIndex = 3;
             // 
             // pnlCenter
             // 
-            this.pnlCenter.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlCenter.BackColor = System.Drawing.Color.White;
             this.pnlCenter.Controls.Add(this.pnl_user);
             this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCenter.Location = new System.Drawing.Point(300, 100);
-            this.pnlCenter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlCenter.Location = new System.Drawing.Point(0, 0);
+            this.pnlCenter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlCenter.Name = "pnlCenter";
             this.pnlCenter.Size = new System.Drawing.Size(900, 622);
-            this.pnlCenter.TabIndex = 2;
+            this.pnlCenter.TabIndex = 0;
             // 
             // pnl_user
             // 
@@ -508,16 +512,16 @@
             this.pnl_user.BackColor = System.Drawing.Color.Gray;
             this.pnl_user.Controls.Add(this.btn_Logout);
             this.pnl_user.Controls.Add(this.btn_ThongTin);
-            this.pnl_user.Location = new System.Drawing.Point(614, 8);
+            this.pnl_user.Location = new System.Drawing.Point(614, 2);
             this.pnl_user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_user.Name = "pnl_user";
             this.pnl_user.Size = new System.Drawing.Size(284, 119);
-            this.pnl_user.TabIndex = 5;
+            this.pnl_user.TabIndex = 6;
             this.pnl_user.Visible = false;
             // 
             // btn_Logout
             // 
-            this.btn_Logout.BackColor = System.Drawing.Color.Gray;
+            this.btn_Logout.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Logout.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Logout.FlatAppearance.BorderSize = 0;
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -537,7 +541,7 @@
             // 
             // btn_ThongTin
             // 
-            this.btn_ThongTin.BackColor = System.Drawing.Color.Gray;
+            this.btn_ThongTin.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_ThongTin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_ThongTin.FlatAppearance.BorderSize = 0;
             this.btn_ThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -554,13 +558,53 @@
             this.btn_ThongTin.UseVisualStyleBackColor = false;
             this.btn_ThongTin.Click += new System.EventHandler(this.btn_ThongTin_Click);
             // 
+            // pnlct
+            // 
+            this.pnlct.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlct.Controls.Add(this.panel3);
+            this.pnlct.Controls.Add(this.panel1);
+            this.pnlct.Controls.Add(this.panel2);
+            this.pnlct.Controls.Add(this.pnlCenter);
+            this.pnlct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlct.Location = new System.Drawing.Point(300, 100);
+            this.pnlct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlct.Name = "pnlct";
+            this.pnlct.Size = new System.Drawing.Size(900, 622);
+            this.pnlct.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 612);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(900, 10);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 612);
+            this.panel1.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(890, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 612);
+            this.panel3.TabIndex = 6;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 722);
             this.Controls.Add(this.pnlhl);
-            this.Controls.Add(this.pnlCenter);
+            this.Controls.Add(this.pnlct);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -585,6 +629,7 @@
             this.pnl_header1.ResumeLayout(false);
             this.pnlCenter.ResumeLayout(false);
             this.pnl_user.ResumeLayout(false);
+            this.pnlct.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -610,7 +655,6 @@
         private System.Windows.Forms.Panel pnlhl;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Panel pnl_leftMenu;
-        private System.Windows.Forms.Panel pnlCenter;
         private System.Windows.Forms.Panel pnl_header2;
         private System.Windows.Forms.Panel pnl_header3;
         private System.Windows.Forms.Panel pnl_header1;
@@ -618,9 +662,14 @@
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.Button btn_Mini;
         private System.Windows.Forms.Button btn_user;
+        private System.Windows.Forms.Panel pnl_rightMenu;
+        private System.Windows.Forms.Panel pnlCenter;
         private System.Windows.Forms.Panel pnl_user;
         private System.Windows.Forms.Button btn_Logout;
         private System.Windows.Forms.Button btn_ThongTin;
-        private System.Windows.Forms.Panel pnl_rightMenu;
+        private System.Windows.Forms.Panel pnlct;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

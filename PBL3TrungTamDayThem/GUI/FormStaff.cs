@@ -45,6 +45,21 @@ namespace PBL3TrungTamDayThem.GUI
                 else
                     rbFemale.Checked = true;
             }
+            else
+            {
+                int count = BLL_QLNV.Instance.Count() + 1;
+                if (count < 10)
+                {
+                    txtID.Text = "NV00" + count.ToString();
+                }
+                else if (count < 100)
+                {
+                    txtID.Text = "NV0" + count.ToString();
+                }
+                else
+                    txtID.Text = "NV" + count.ToString();
+
+            }
         }
         private void btnReset_Click(object sender, EventArgs e)
         {

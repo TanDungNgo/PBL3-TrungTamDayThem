@@ -191,6 +191,7 @@
             this.btnEdit.TabIndex = 44;
             this.btnEdit.Text = "     Chỉnh sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnShow
             // 
@@ -220,6 +221,7 @@
             this.btnDel.TabIndex = 43;
             this.btnDel.Text = "Xóa";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnAdd
             // 
@@ -234,6 +236,7 @@
             this.btnAdd.TabIndex = 42;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // UC_Class
             // 

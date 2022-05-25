@@ -31,18 +31,17 @@ namespace PBL3TrungTamDayThem.GUI
             User user = DAL_User.Instance.GetUserByMaNV(_MaNV);
             txt_Username.Text = user.Username;
             txt_DisplayName.Text = user.DisplayName;
-            this.bmp = new Bitmap(user.Anh);
-            this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.Image = this.bmp;
+            txt_Password.Text = user.Pass;
+            if (user.Anh != "")
+            {
+                this.bmp = new Bitmap(user.Anh);
+                this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                this.pictureBox1.Image = this.bmp;
+            }    
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        void Show()
-        {
-            string query = "Select * from ACCOUNT where MaNV = '" + _MaNV + "'";
-            dataGridView1.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
         private void btnSelect_Click(object sender, EventArgs e)
         {
@@ -53,7 +52,6 @@ namespace PBL3TrungTamDayThem.GUI
                 {
                     string fileName;
                     fileName = dlg.FileName;
-                    textBox1.Text = fileName;
                     this.bmp = new Bitmap(fileName);
                     this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     this.pictureBox1.Image = this.bmp;
@@ -65,7 +63,6 @@ namespace PBL3TrungTamDayThem.GUI
                 }
             }
         }
-
         private void btnsavechange_Click(object sender, EventArgs e)
         {
             try
@@ -73,7 +70,6 @@ namespace PBL3TrungTamDayThem.GUI
                 string fileName = this._MaNV + ".jpg";
                 this.filePath = "Resources\\" + fileName;
                 this.bmp.Save(filePath);
-                textBox1.Text = filePath;
                 User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
                 user.Anh = filePath;
                 BLL_User.Instance.Update(user);
@@ -82,6 +78,18 @@ namespace PBL3TrungTamDayThem.GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ckbpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbpass.Checked == true)
+            {
+                txt_Password.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_Password.UseSystemPasswordChar = true;
             }
         }
     }

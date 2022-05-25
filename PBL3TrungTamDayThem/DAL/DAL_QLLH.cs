@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3TrungTamDayThem.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -36,7 +37,55 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public DataTable GetClassBySubject(string mh)
         {
-            string query = "select gv.HoTenGV, lh.MaLH, lh.SoLuongHV, lh.ThoiGianHoc, lh.NgayBatDau, lh.NgayKetThuc, lh.HocPhi from GIAO_VIEN gv inner join LOP_HOC lh on gv.MaGV = lh.MaGV inner join MON_HOC mh on lh.MaMH = mh.MaMH where mh.TenMon = N'" + mh +"'";
+            string query = "select gv.HoTenGV, lh.MaLH, lh.SoLuongHV, lh.ThoiGianHoc, lh.NgayBatDau, lh.NgayKetThuc, lh.HocPhi " +
+                "from GIAO_VIEN gv inner join LOP_HOC lh on gv.MaGV = lh.MaGV inner join MON_HOC mh on lh.MaMH = mh.MaMH where mh.TenMon = N'" + mh +"'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public List<Class> GetClassByMaLH(string MaLH)
+        {
+            List<Class> list = new List<Class>();   
+            string query = "Select * from LOP_HOC where MaLH = '" + MaLH + "'";
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                list.Add(GetClass(i));
+            }
+            return list;
+        }
+        public Class GetClass(DataRow i)
+        {
+            return new Class
+            {
+                MaLH = i["MaLH"].ToString(),
+                MaGV = i["MaGV"].ToString(),
+                MaMH = i["MaMH"].ToString(),
+                SoLuongHV = int.Parse(i["SoLuongHV"].ToString()),
+                ThoiGianHoc = i["ThoiGianHoc"].ToString(),
+                NgayBatDau = (DateTime)i["NgayBatDau"],
+                NgayKetThuc = (DateTime)i["NgayKetThuc"],
+                HocPhi = int.Parse(i["HocPhi"].ToString())
+            };
+        }
+        public int AddClass(Class lop)
+        {
+            string query = "Insert into LOP_HOC values ('" + lop.MaLH + "', '" + lop.MaGV  + "','" + lop.MaMH +
+                    "', '" + lop.SoLuongHV + "','" + lop.ThoiGianHoc + "','" + lop.NgayBatDau + "','" + lop.NgayKetThuc + "','" + lop.HocPhi + "')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int EditClass(Class lop)
+        {
+            string query = "Update LOP_HOC set MaLH = '" + lop.MaLH + "', MaGV = '" + lop.MaGV + "', MaMH = '"
+                + lop.MaMH + "', SoLuongHV = '" + lop.SoLuongHV + "', ThoiGianHoc = '" + lop.ThoiGianHoc +
+                "', NgayBatDau = '" + lop.NgayBatDau + "', NgayKetThuc = '" + lop.NgayKetThuc + "' where MaLH = '" + lop.MaLH + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteClass(string MaLH)
+        {
+            string query = "Delete from  LOP_HOC where MaLH = '" + MaLH + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public DataTable GetListMaMH()
+        {
+            string query = "Select MaMH from MON_HOC";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

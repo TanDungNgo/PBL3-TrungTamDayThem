@@ -36,14 +36,29 @@ namespace PBL3TrungTamDayThem.GUI
                 dtpBirthDay.Text = student.NgaySinh.ToString();
                 txtAddress.Text = student.DiaChi;
                 txtPhone.Text = student.SDT;
-                txtMail.Text = student.Email;
+                txtEmail.Text = student.Email;
                 if (student.GioiTinh == "Nam")
                 {
                     rbMale.Checked = true;
                 }
                 else
                     rbFemale.Checked = true;
-            }    
+            }
+            else
+            {
+                int count = BLL_QLHV.Instance.Count() + 1;
+                if (count < 10)
+                {
+                    txtID.Text = "HV00" + count.ToString();
+                }
+                else if (count < 100)
+                {
+                    txtID.Text = "HV0" + count.ToString();
+                }
+                else
+                    txtID.Text = "HV" + count.ToString();
+
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -55,16 +70,35 @@ namespace PBL3TrungTamDayThem.GUI
                 NgaySinh = dtpBirthDay.Value.Date,
                 DiaChi = txtAddress.Text,
                 SDT = txtPhone.Text,
-                Email = txtMail.Text,
+                Email = txtEmail.Text,
                 GioiTinh = rbMale.Checked.ToString(),
             };
+            if (isDigit(txtPhone.Text) && txtPhone.Text.Length < 11)
+            {
+                s.SDT = txtPhone.Text;
+            }
+            else
+            {
+                MessageBox.Show("số điện thoại không hợp lệ");
+                return;
+            }
             BLL_QLHV.Instance.ExecuteDB(s);
             this.Dispose();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            txtID.Text = "";
+            txtName.Text = "";
+            dtpBirthDay.Text = "";
+            txtAddress.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+        }
+        internal static bool isDigit(string v)
+        {
+            var isNumeric = !string.IsNullOrEmpty(v) && v.All(Char.IsDigit);
+            return isNumeric;
         }
     }
 }

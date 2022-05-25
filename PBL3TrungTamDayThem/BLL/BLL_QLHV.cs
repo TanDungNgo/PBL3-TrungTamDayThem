@@ -27,7 +27,11 @@ namespace PBL3TrungTamDayThem.BLL
         {
 
         }
-
+        public int Count()
+        {
+            int count = DAL_QLHV.Instance.GetAllStudent().Count;
+            return count;
+        }
         public List<string> GetListCBB()
         {
             List<string> data = new List<string>();

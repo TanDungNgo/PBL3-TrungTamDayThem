@@ -26,7 +26,11 @@ namespace PBL3TrungTamDayThem.BLL
         private BLL_QLGV()
         {
         }
-
+        public int Count()
+        {
+            int count = DAL_QLGV.Instance.GetAllTeacher().Count;
+            return count;
+        }
         public List<string> GetListCBB()
         {
             List<string> l = new List<string>();
@@ -99,6 +103,15 @@ namespace PBL3TrungTamDayThem.BLL
             List<Teacher> data = new List<Teacher>();
             data = DAL_QLGV.Instance.SortListTeacher(s);
             return data;
+        }
+        public List<string> GetMaGV()
+        {
+            List<string> list = new List<string>();
+            foreach(DataRow i in DAL_QLGV.Instance.GetMaGV().Rows)
+            {
+                list.Add(i["MaGV"].ToString());
+            }    
+            return list;
         }
     }
 }

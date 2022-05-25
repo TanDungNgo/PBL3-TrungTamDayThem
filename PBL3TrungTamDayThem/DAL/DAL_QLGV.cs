@@ -112,5 +112,10 @@ namespace PBL3TrungTamDayThem.DAL
             }
             return data;
         }
+        public DataTable GetMaGV()
+        {
+            string query = "Select MaGV from GIAO_VIEN";
+            return DataProvider.Instance.ExecuteQuery(query);   
+        }
     }
 }
