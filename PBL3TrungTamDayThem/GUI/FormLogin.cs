@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3TrungTamDayThem.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,12 +38,15 @@ namespace PBL3TrungTamDayThem.GUI
                     String cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=TrungTamDayThem;Integrated Security=True";
                     SqlConnection cnn = new SqlConnection(cnnStr);
                     cnn.Open();
-                    string query = "select * from ACCOUNT where UserName = '" + UserName + "' and Pass = '" + Pass + "'";
+                    string query = "Select * from ACCOUNT where UserName = @username and Pass = @pass";
                     SqlCommand cmd = new SqlCommand(query, cnn);
+                    cmd.Parameters.Add("@username",SqlDbType.VarChar).Value = txt_User.Text;
+                    cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = txt_Pass.Text;
                     SqlDataReader dt = cmd.ExecuteReader();
                     if (dt.Read())
                     {
-                        FormMain frmMain = new FormMain(txt_User.Text);
+                        string MaNV = DAL_User.Instance.GetMaNVByUsername(txt_User.Text);
+                        FormMain frmMain = new FormMain(MaNV);
                         this.Hide();
                         frmMain.ShowDialog();
                         txt_Pass.Text = "";

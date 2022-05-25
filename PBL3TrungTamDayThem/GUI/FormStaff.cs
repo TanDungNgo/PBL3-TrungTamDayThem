@@ -79,9 +79,23 @@ namespace PBL3TrungTamDayThem.GUI
                 NgayVaoLam = dtpStarting.Value.Date,
                 GioiTinh = rbMale.Checked.ToString(),
             };
+            if (isDigit(txtPhone.Text) && txtPhone.Text.Length < 11)
+            {
+                s.SDT = txtPhone.Text;
+            }
+            else
+            {
+                MessageBox.Show("số điện thoại không hợp lệ");
+                return;
+            }
             BLL_QLNV.Instance.ExecuteDB(s);
             this.Dispose();
 
+        }
+        internal static bool isDigit(string v)
+        {
+            var isNumeric = !string.IsNullOrEmpty(v) && v.All(Char.IsDigit);
+            return isNumeric;
         }
     }
 }

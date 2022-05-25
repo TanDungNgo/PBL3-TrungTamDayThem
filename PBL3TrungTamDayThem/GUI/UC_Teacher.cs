@@ -95,5 +95,13 @@ namespace PBL3TrungTamDayThem.GUI
         {
             dgvTeacher.DataSource = BLL_QLGV.Instance.SortListTeacher(cbbSort.Text);
         }
+        public void SizeDGVMax()
+        {
+            pnlBottom.Height = 460;
+        }
+        public void SizeDGVMin()
+        {
+            pnlBottom.Height = 261;
+        }
     }
 }

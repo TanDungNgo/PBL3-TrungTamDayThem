@@ -394,6 +394,7 @@
             this.pnl_header3.Name = "pnl_header3";
             this.pnl_header3.Size = new System.Drawing.Size(339, 65);
             this.pnl_header3.TabIndex = 1;
+            
             // 
             // ptbHeader
             // 

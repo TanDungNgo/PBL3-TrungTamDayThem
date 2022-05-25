@@ -1,4 +1,5 @@
 ﻿using PBL3TrungTamDayThem.DAL;
+using PBL3TrungTamDayThem.DTO;
 using PBL3TrungTamDayThem.GUI;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace PBL3TrungTamDayThem.GUI
 {
     public partial class FormMain : Form
     {
-        private string _Username;
+        private string _MaNV;
         private Form FormNow;
         public FormMain()
         {
@@ -22,10 +23,12 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private UC_Teacher uC_Teacher = new UC_Teacher();
         private UC_Student uC_Student = new UC_Student();
-        public FormMain(string Username)
+        private Bitmap bmp;
+
+        public FormMain(string MaNV)
         {
             InitializeComponent();
-            this._Username = Username;
+            this._MaNV = MaNV;
         }
         private void OpenUC(UserControl UC)
         {
@@ -43,10 +46,18 @@ namespace PBL3TrungTamDayThem.GUI
         private void FormMain_Load(object sender, EventArgs e)
         {
             btnHome.PerformClick();
-            DataProvider dataProvider = new DataProvider();
-            string query = "Select DisplayName from ACCOUNT where UserName = '" + this._Username + "'";
-            DataRow dr = dataProvider.ExecuteQuery(query).Rows[0];
-            btn_user.Text = dr["DisplayName"].ToString() + " ﹀";
+            //DataProvider dataProvider = new DataProvider();
+            //string query = "Select DisplayName from ACCOUNT where UserName = '" + this._Username + "'";
+            //DataRow dr = dataProvider.ExecuteQuery(query).Rows[0];
+            //btn_user.Text = dr["DisplayName"].ToString() + " ﹀";
+            User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
+            this.bmp = new Bitmap(user.Anh);
+
+            //this.p.SizeMode = PictureBoxSizeMode.StretchImage;
+            //this.pictureBox2.Image = this.bmp;
+            btn_user.Text = user.DisplayName + " ﹀";
+
+
             foreach (Control item in flpnlButton.Controls)
                 item.Width = flpnlButton.Width;
         }
@@ -111,8 +122,6 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            //lblHeader.Text = "Trợ Giúp";
-            //ptbHeader.Image = btnHelp.Image;
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
@@ -149,6 +158,12 @@ namespace PBL3TrungTamDayThem.GUI
                 b.Width = pnlMenu.Width;
                 b.Height = pnlMenu.Height * 85 / 725;
             }
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                uC_Teacher.SizeDGVMax();
+            } 
+            else
+                uC_Teacher.SizeDGVMin();
 
         }
         private void btn_Mini_Click(object sender, EventArgs e)
@@ -177,7 +192,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btn_ThongTin_Click(object sender, EventArgs e)
         {
-            FormUser f = new FormUser("NV003");
+            FormUser f = new FormUser(this._MaNV);
             f.ShowDialog();
         }
     }

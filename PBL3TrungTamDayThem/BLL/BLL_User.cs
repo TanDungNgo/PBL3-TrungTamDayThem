@@ -27,12 +27,6 @@ namespace PBL3TrungTamDayThem.BLL
         {
 
         }
-        public byte[] ImangeToByteArray(PictureBox ptb)
-        {
-            MemoryStream memoryStream = new MemoryStream();
-            ptb.Image.Save(memoryStream, ptb.Image.RawFormat);
-            return memoryStream.ToArray();
-        }
         public void Update(User u)
         {
             if (DAL_User.Instance.UpdateUser(u) > 0)

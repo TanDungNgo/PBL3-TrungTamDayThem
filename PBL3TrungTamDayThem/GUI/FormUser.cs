@@ -17,6 +17,9 @@ namespace PBL3TrungTamDayThem.GUI
     public partial class FormUser : Form
     {
         private string _MaNV;
+        private Bitmap bmp;
+        private string filePath;
+
         public FormUser(string MaNV)
         {
             InitializeComponent();
@@ -28,45 +31,57 @@ namespace PBL3TrungTamDayThem.GUI
             User user = DAL_User.Instance.GetUserByMaNV(_MaNV);
             txt_Username.Text = user.Username;
             txt_DisplayName.Text = user.DisplayName;
-            string query = "Select * from ACCOUNT where MaNV = '" + _MaNV + "'";
-            dataGridView1.DataSource = DataProvider.Instance.ExecuteQuery(query);
+            this.bmp = new Bitmap(user.Anh);
+            this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Image = this.bmp;
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        void Show()
+        {
+            string query = "Select * from ACCOUNT where MaNV = '" + _MaNV + "'";
+            dataGridView1.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        }
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Title = "Chọn ảnh";
-            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-            openFile.FilterIndex = 1;
-            openFile.RestoreDirectory = true;
-            if (openFile.ShowDialog() == DialogResult.OK)
+            OpenFileDialog dlg = new OpenFileDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
             {
-                textBox1.Text = openFile.FileName;
-                pictureBox1.ImageLocation = openFile.FileName;
+                try
+                {
+                    string fileName;
+                    fileName = dlg.FileName;
+                    textBox1.Text = fileName;
+                    this.bmp = new Bitmap(fileName);
+                    this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    this.pictureBox1.Image = this.bmp;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
         }
 
         private void btnsavechange_Click(object sender, EventArgs e)
         {
-            User user = DAL_User.Instance.GetUserByMaNV(_MaNV);
-            user.Anh = BLL_User.Instance.ImangeToByteArray(pictureBox1);
-            //MessageBox.Show(" MaNV: " + user.MaNV + "\n Username :" + user.Username + "\n DisplayName: " + user.DisplayName + "\n Pass: " + user.Pass +
-            //    "\n Phan quyen: " + user.PhanQuyen + "\n Anh:" + BLL_User.Instance.ImangeToByteArray(pictureBox1).ToString());
-            //BLL_User.Instance.Update(user);
-            string query = "Update ACCOUNT set MaNV = @MaNV, Username = @Username, Pass = @Pass, DisplayName = @DisplayName, PhanQuyen = @PhanQuyen, Anh = @Anh " +
-                "where MaNV = @MaNV ";
             try
             {
-                DataProvider.Instance.Command(user, query);
-                MessageBox.Show("Thanh cong");
+                string fileName = this._MaNV + ".jpg";
+                this.filePath = "Resources\\" + fileName;
+                this.bmp.Save(filePath);
+                textBox1.Text = filePath;
+                User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
+                user.Anh = filePath;
+                BLL_User.Instance.Update(user);
+                Show();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("That bai" + ex.Message);
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

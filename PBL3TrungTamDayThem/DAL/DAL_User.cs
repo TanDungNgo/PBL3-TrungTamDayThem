@@ -35,13 +35,19 @@ namespace PBL3TrungTamDayThem.DAL
                 Pass = i["Pass"].ToString(),
                 DisplayName = i["DisplayName"].ToString(),
                 PhanQuyen = (bool)i["PhanQuyen"],
-                //Anh = (byte[])i["Anh"]
+                Anh = i["Anh"].ToString()
             };
+        }
+        public string GetMaNVByUsername(string username)
+        {
+            string query = "Select MaNV from ACCOUNT where Username = '" + username + "'";
+            DataRow dr = DataProvider.Instance.ExecuteQuery(query).Rows[0];
+            return dr["MaNV"].ToString();
         }
         public int UpdateUser(User u)
         {
             string query = "Update ACCOUNT set MaNV = '" + u.MaNV + "',Username = N'" + u.Username + "',Pass = '" + u.Pass +
-                                    "',DisplayName = '" + u.DisplayName + "',PhanQuyen = '" + u.PhanQuyen +
+                                    "',DisplayName = N'" + u.DisplayName + "',PhanQuyen = '" + u.PhanQuyen + "',Anh = '" + u.Anh +
                                     "' where MaNV = '" + u.MaNV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
