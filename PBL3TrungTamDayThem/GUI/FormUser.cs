@@ -32,9 +32,10 @@ namespace PBL3TrungTamDayThem.GUI
             txt_Username.Text = user.Username;
             txt_DisplayName.Text = user.DisplayName;
             txt_Password.Text = user.Pass;
+            this.filePath = user.Anh;
             if (user.Anh != "")
             {
-                this.bmp = new Bitmap(user.Anh);
+                this.bmp = new Bitmap(this.filePath);
                 this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 this.pictureBox1.Image = this.bmp;
             }    
@@ -63,22 +64,35 @@ namespace PBL3TrungTamDayThem.GUI
                 }
             }
         }
-        private void btnsavechange_Click(object sender, EventArgs e)
+        private void btnSaveImage_Click(object sender, EventArgs e)
         {
+            string fileName = this._MaNV + ".jpg";
+            this.filePath = "Resources\\" + fileName;
             try
             {
-                string fileName = this._MaNV + ".jpg";
-                this.filePath = "Resources\\" + fileName;
                 this.bmp.Save(filePath);
-                User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
-                user.Anh = filePath;
-                BLL_User.Instance.Update(user);
-                Show();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void btnsavechange_Click(object sender, EventArgs e)
+        {
+            User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
+            user.Anh = filePath;
+            user.Username = txt_Username.Text;
+            user.DisplayName = txt_DisplayName.Text;
+            if (txtnewpass.Text != "")
+            {
+                user.Pass = txtnewpass.Text;
+            }
+            if (txtnewpassretype.Text != txtnewpass.Text)
+            {
+                MessageBox.Show("Mật khẩu nhập lại không đúng!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
+            BLL_User.Instance.Update(user);
         }
 
         private void ckbpass_CheckedChanged(object sender, EventArgs e)

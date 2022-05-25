@@ -50,6 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSaveImage = new System.Windows.Forms.Button();
             this.grbnewpass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +85,7 @@
             this.txtnewpass.Name = "txtnewpass";
             this.txtnewpass.Size = new System.Drawing.Size(220, 30);
             this.txtnewpass.TabIndex = 64;
+            this.txtnewpass.UseSystemPasswordChar = true;
             // 
             // txtnewpassretype
             // 
@@ -93,6 +95,7 @@
             this.txtnewpassretype.Name = "txtnewpassretype";
             this.txtnewpassretype.Size = new System.Drawing.Size(220, 30);
             this.txtnewpassretype.TabIndex = 65;
+            this.txtnewpassretype.UseSystemPasswordChar = true;
             // 
             // ckbpass
             // 
@@ -118,6 +121,7 @@
             // 
             // txt_Password
             // 
+            this.txt_Password.Enabled = false;
             this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.Location = new System.Drawing.Point(189, 465);
             this.txt_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -201,7 +205,7 @@
             this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnSelect.Image = global::PBL3TrungTamDayThem.Properties.Resources.image;
             this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelect.Location = new System.Drawing.Point(238, 216);
+            this.btnSelect.Location = new System.Drawing.Point(245, 123);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(146, 50);
@@ -289,12 +293,29 @@
             this.panel3.Size = new System.Drawing.Size(10, 576);
             this.panel3.TabIndex = 82;
             // 
+            // btnSaveImage
+            // 
+            this.btnSaveImage.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSaveImage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.btnSaveImage.Image = global::PBL3TrungTamDayThem.Properties.Resources.save1;
+            this.btnSaveImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveImage.Location = new System.Drawing.Point(245, 203);
+            this.btnSaveImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSaveImage.Name = "btnSaveImage";
+            this.btnSaveImage.Size = new System.Drawing.Size(146, 50);
+            this.btnSaveImage.TabIndex = 83;
+            this.btnSaveImage.Text = "     Lưu ảnh";
+            this.btnSaveImage.UseVisualStyleBackColor = false;
+            this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
+            // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(930, 596);
+            this.Controls.Add(this.btnSaveImage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -348,5 +369,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnSaveImage;
     }
 }
