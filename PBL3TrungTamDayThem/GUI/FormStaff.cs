@@ -78,34 +78,74 @@ namespace PBL3TrungTamDayThem.GUI
         {
             this.Dispose();
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        public bool Error()
         {
-            Staff s = new Staff
+            bool check = true;
+            if (txtName.Text == "")
             {
-                MaNV = txtID.Text,
-                HoTenNV = txtName.Text,
-                NgaySinh = dtpBirthDay.Value.Date,
-                DiaChi = txtAddress.Text,
-                SDT = txtPhone.Text,
-                Email = txtEmail.Text,
-                ChucVu = txtPosition.Text,
-                Luong = int.Parse(txtSalary.Text),
-                NgayVaoLam = dtpStarting.Value.Date,
-                GioiTinh = rbMale.Checked.ToString(),
-            };
-            if (isDigit(txtPhone.Text) && txtPhone.Text.Length < 11)
-            {
-                s.SDT = txtPhone.Text;
+                lblername.Visible = true;
+                check = false;
             }
             else
+                lblername.Visible = false;
+            if (txtAddress.Text == "")
             {
-                MessageBox.Show("số điện thoại không hợp lệ");
-                return;
+                lbleraddress.Visible = true;
+                check = false;
             }
-            BLL_QLNV.Instance.ExecuteDB(s);
-            this.Dispose();
+            else
+                lbleraddress.Visible = false;
+            if(txtPosition.Text == "")
+            {
+                lblerposition.Visible = true;
+                check = false;
+            }    
+            else
+                lblerposition.Visible = false; 
+            if (txtEmail.Text == "")
+            {
+                lbleremail.Visible = true;
+                check = false;
+            }
+            else
+                lbleremail.Visible = false;
+            if (txtSalary.Text == "")
+            {
+                lblersalary.Visible = true;
+                check = false;
+            }
+            else
+                lblersalary.Visible = false;
+            if (isDigit(txtPhone.Text) == false && txtPhone.Text.Length < 11)
+            {
+                lblerphone.Visible = true;
+                check = false;
+            }
+            else
+                lblerphone.Visible = false;
 
+            return check;
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(Error() == true)
+            {
+                Staff s = new Staff
+                {
+                    MaNV = txtID.Text,
+                    HoTenNV = txtName.Text,
+                    NgaySinh = dtpBirthDay.Value.Date,
+                    DiaChi = txtAddress.Text,
+                    SDT = txtPhone.Text,
+                    Email = txtEmail.Text,
+                    ChucVu = txtPosition.Text,
+                    Luong = int.Parse(txtSalary.Text),
+                    NgayVaoLam = dtpStarting.Value.Date,
+                    GioiTinh = rbMale.Checked.ToString(),
+                };
+                BLL_QLNV.Instance.ExecuteDB(s);
+                this.Dispose();
+            }    
         }
         internal static bool isDigit(string v)
         {

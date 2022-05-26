@@ -60,30 +60,57 @@ namespace PBL3TrungTamDayThem.GUI
 
             }
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        public bool Error()
         {
-            Student s = new Student
+            bool check = true;
+            if (txtName.Text == "")
             {
-                MaHV = txtID.Text,
-                HoTenHV = txtName.Text,
-                NgaySinh = dtpBirthDay.Value.Date,
-                DiaChi = txtAddress.Text,
-                SDT = txtPhone.Text,
-                Email = txtEmail.Text,
-                GioiTinh = rbMale.Checked.ToString(),
-            };
-            if (isDigit(txtPhone.Text) && txtPhone.Text.Length < 11)
-            {
-                s.SDT = txtPhone.Text;
+                lblername.Visible = true;
+                check = false;
             }
             else
+                lblername.Visible = false;
+            if (txtAddress.Text == "")
             {
-                MessageBox.Show("số điện thoại không hợp lệ");
-                return;
+                lbleraddress.Visible = true;
+                check = false;
             }
-            BLL_QLHV.Instance.ExecuteDB(s);
-            this.Dispose();
+            else
+                lbleraddress.Visible = false;
+            if (txtEmail.Text == "")
+            {
+                lbleremail.Visible = true;
+                check = false;
+            }
+            else
+                lbleremail.Visible = false;
+            if (isDigit(txtPhone.Text) == false && txtPhone.Text.Length < 11)
+            {
+                lblerphone.Visible = true;
+                check = false;
+            }
+            else
+                lblerphone.Visible = false;
+
+            return check;
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+           if(Error() == true)
+           {
+                Student s = new Student
+                {
+                    MaHV = txtID.Text,
+                    HoTenHV = txtName.Text,
+                    NgaySinh = dtpBirthDay.Value.Date,
+                    DiaChi = txtAddress.Text,
+                    SDT = txtPhone.Text,
+                    Email = txtEmail.Text,
+                    GioiTinh = rbMale.Checked.ToString(),
+                };
+                BLL_QLHV.Instance.ExecuteDB(s);
+                this.Dispose();
+           }    
         }
 
         private void btnReset_Click(object sender, EventArgs e)

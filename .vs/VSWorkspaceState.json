@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PBL3TrungTamDayThem",
+    "\\PBL3TrungTamDayThem\\GUI"
   ],
-  "SelectedNode": "\\PBL3TrungTamDayThem.sln",
+  "SelectedNode": "\\PBL3TrungTamDayThem\\GUI\\FormClass.cs",
   "PreviewInSolutionExplorer": false
 }

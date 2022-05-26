@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblersalary = new System.Windows.Forms.Label();
             this.lblerexpertise = new System.Windows.Forms.Label();
             this.lblerlevel = new System.Windows.Forms.Label();
             this.lbleremail = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblersalary = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -103,19 +103,29 @@
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.lblID);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(897, 788);
+            this.panel1.Size = new System.Drawing.Size(797, 630);
             this.panel1.TabIndex = 0;
+            // 
+            // lblersalary
+            // 
+            this.lblersalary.AutoSize = true;
+            this.lblersalary.ForeColor = System.Drawing.Color.Red;
+            this.lblersalary.Location = new System.Drawing.Point(277, 512);
+            this.lblersalary.Name = "lblersalary";
+            this.lblersalary.Size = new System.Drawing.Size(76, 16);
+            this.lblersalary.TabIndex = 54;
+            this.lblersalary.Text = "Nhập lương";
+            this.lblersalary.Visible = false;
             // 
             // lblerexpertise
             // 
             this.lblerexpertise.AutoSize = true;
             this.lblerexpertise.ForeColor = System.Drawing.Color.Red;
-            this.lblerexpertise.Location = new System.Drawing.Point(310, 564);
+            this.lblerexpertise.Location = new System.Drawing.Point(278, 451);
             this.lblerexpertise.Name = "lblerexpertise";
-            this.lblerexpertise.Size = new System.Drawing.Size(137, 20);
+            this.lblerexpertise.Size = new System.Drawing.Size(115, 16);
             this.lblerexpertise.TabIndex = 53;
             this.lblerexpertise.Text = "Nhập chuyên môn";
             this.lblerexpertise.Visible = false;
@@ -124,9 +134,9 @@
             // 
             this.lblerlevel.AutoSize = true;
             this.lblerlevel.ForeColor = System.Drawing.Color.Red;
-            this.lblerlevel.Location = new System.Drawing.Point(310, 490);
+            this.lblerlevel.Location = new System.Drawing.Point(276, 400);
             this.lblerlevel.Name = "lblerlevel";
-            this.lblerlevel.Size = new System.Drawing.Size(104, 20);
+            this.lblerlevel.Size = new System.Drawing.Size(84, 16);
             this.lblerlevel.TabIndex = 52;
             this.lblerlevel.Text = "Chọn trình độ";
             this.lblerlevel.Visible = false;
@@ -135,9 +145,9 @@
             // 
             this.lbleremail.AutoSize = true;
             this.lbleremail.ForeColor = System.Drawing.Color.Red;
-            this.lbleremail.Location = new System.Drawing.Point(310, 427);
+            this.lbleremail.Location = new System.Drawing.Point(275, 337);
             this.lbleremail.Name = "lbleremail";
-            this.lbleremail.Size = new System.Drawing.Size(90, 20);
+            this.lbleremail.Size = new System.Drawing.Size(77, 16);
             this.lbleremail.TabIndex = 51;
             this.lbleremail.Text = "Nhập Email";
             this.lbleremail.Visible = false;
@@ -146,9 +156,9 @@
             // 
             this.lbleraddress.AutoSize = true;
             this.lbleraddress.ForeColor = System.Drawing.Color.Red;
-            this.lbleraddress.Location = new System.Drawing.Point(310, 356);
+            this.lbleraddress.Location = new System.Drawing.Point(276, 281);
             this.lbleraddress.Name = "lbleraddress";
-            this.lbleraddress.Size = new System.Drawing.Size(96, 20);
+            this.lbleraddress.Size = new System.Drawing.Size(82, 16);
             this.lbleraddress.TabIndex = 50;
             this.lbleraddress.Text = "Nhập địa chỉ";
             this.lbleraddress.Visible = false;
@@ -157,9 +167,9 @@
             // 
             this.lblerphone.AutoSize = true;
             this.lblerphone.ForeColor = System.Drawing.Color.Red;
-            this.lblerphone.Location = new System.Drawing.Point(308, 276);
+            this.lblerphone.Location = new System.Drawing.Point(275, 219);
             this.lblerphone.Name = "lblerphone";
-            this.lblerphone.Size = new System.Drawing.Size(197, 20);
+            this.lblerphone.Size = new System.Drawing.Size(165, 16);
             this.lblerphone.TabIndex = 49;
             this.lblerphone.Text = "Số điện thoại không hợp lệ";
             this.lblerphone.Visible = false;
@@ -168,9 +178,9 @@
             // 
             this.lblername.AutoSize = true;
             this.lblername.ForeColor = System.Drawing.Color.Red;
-            this.lblername.Location = new System.Drawing.Point(310, 150);
+            this.lblername.Location = new System.Drawing.Point(274, 117);
             this.lblername.Name = "lblername";
-            this.lblername.Size = new System.Drawing.Size(140, 20);
+            this.lblername.Size = new System.Drawing.Size(119, 16);
             this.lblername.TabIndex = 48;
             this.lblername.Text = "Nhập tên giáo viên";
             this.lblername.Visible = false;
@@ -180,9 +190,9 @@
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblHeader.Location = new System.Drawing.Point(342, 5);
+            this.lblHeader.Location = new System.Drawing.Point(289, 11);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(265, 32);
+            this.lblHeader.Size = new System.Drawing.Size(218, 25);
             this.lblHeader.TabIndex = 47;
             this.lblHeader.Text = "Thông Tin Giáo Viên";
             // 
@@ -192,10 +202,10 @@
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnBack.Image = global::PBL3TrungTamDayThem.Properties.Resources._return;
-            this.btnBack.Location = new System.Drawing.Point(172, 662);
+            this.btnBack.Location = new System.Drawing.Point(153, 543);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(141, 56);
+            this.btnBack.Size = new System.Drawing.Size(125, 45);
             this.btnBack.TabIndex = 46;
             this.btnBack.Text = " Thoát";
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -204,10 +214,10 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(314, 603);
+            this.txtSalary.Location = new System.Drawing.Point(279, 487);
             this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(275, 26);
+            this.txtSalary.Size = new System.Drawing.Size(245, 22);
             this.txtSalary.TabIndex = 45;
             // 
             // btnSave
@@ -216,10 +226,10 @@
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnSave.Image = global::PBL3TrungTamDayThem.Properties.Resources.save1;
-            this.btnSave.Location = new System.Drawing.Point(587, 662);
+            this.btnSave.Location = new System.Drawing.Point(522, 543);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(141, 56);
+            this.btnSave.Size = new System.Drawing.Size(125, 45);
             this.btnSave.TabIndex = 44;
             this.btnSave.Text = "  Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -232,10 +242,10 @@
             this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnReset.Image = global::PBL3TrungTamDayThem.Properties.Resources.reload;
-            this.btnReset.Location = new System.Drawing.Point(379, 662);
+            this.btnReset.Location = new System.Drawing.Point(337, 543);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(152, 56);
+            this.btnReset.Size = new System.Drawing.Size(135, 45);
             this.btnReset.TabIndex = 43;
             this.btnReset.Text = " Đặt lại";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -244,20 +254,20 @@
             // 
             // txtExpertise
             // 
-            this.txtExpertise.Location = new System.Drawing.Point(314, 526);
+            this.txtExpertise.Location = new System.Drawing.Point(279, 426);
             this.txtExpertise.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtExpertise.Name = "txtExpertise";
-            this.txtExpertise.Size = new System.Drawing.Size(275, 26);
+            this.txtExpertise.Size = new System.Drawing.Size(245, 22);
             this.txtExpertise.TabIndex = 42;
             // 
             // cbbLevel
             // 
             this.cbbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLevel.FormattingEnabled = true;
-            this.cbbLevel.Location = new System.Drawing.Point(312, 460);
+            this.cbbLevel.Location = new System.Drawing.Point(277, 373);
             this.cbbLevel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbLevel.Name = "cbbLevel";
-            this.cbbLevel.Size = new System.Drawing.Size(275, 28);
+            this.cbbLevel.Size = new System.Drawing.Size(245, 24);
             this.cbbLevel.TabIndex = 41;
             this.cbbLevel.TextChanged += new System.EventHandler(this.cbbLevel_TextChanged);
             // 
@@ -266,9 +276,9 @@
             this.lblSalary.AutoSize = true;
             this.lblSalary.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalary.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblSalary.Location = new System.Drawing.Point(153, 603);
+            this.lblSalary.Location = new System.Drawing.Point(136, 487);
             this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(88, 26);
+            this.lblSalary.Size = new System.Drawing.Size(73, 23);
             this.lblSalary.TabIndex = 40;
             this.lblSalary.Text = "Lương:";
             // 
@@ -277,9 +287,9 @@
             this.lblExpertise.AutoSize = true;
             this.lblExpertise.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpertise.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblExpertise.Location = new System.Drawing.Point(148, 526);
+            this.lblExpertise.Location = new System.Drawing.Point(132, 426);
             this.lblExpertise.Name = "lblExpertise";
-            this.lblExpertise.Size = new System.Drawing.Size(149, 26);
+            this.lblExpertise.Size = new System.Drawing.Size(120, 23);
             this.lblExpertise.TabIndex = 39;
             this.lblExpertise.Text = "Chuyên môn:";
             // 
@@ -288,18 +298,18 @@
             this.lblLevel.AutoSize = true;
             this.lblLevel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLevel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblLevel.Location = new System.Drawing.Point(148, 463);
+            this.lblLevel.Location = new System.Drawing.Point(132, 375);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(108, 26);
+            this.lblLevel.Size = new System.Drawing.Size(88, 23);
             this.lblLevel.TabIndex = 38;
             this.lblLevel.Text = "Trình độ:";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(312, 384);
+            this.txtEmail.Location = new System.Drawing.Point(277, 312);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(275, 26);
+            this.txtEmail.Size = new System.Drawing.Size(245, 22);
             this.txtEmail.TabIndex = 37;
             // 
             // lblMail
@@ -307,18 +317,18 @@
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMail.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblMail.Location = new System.Drawing.Point(148, 384);
+            this.lblMail.Location = new System.Drawing.Point(132, 307);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(81, 26);
+            this.lblMail.Size = new System.Drawing.Size(65, 23);
             this.lblMail.TabIndex = 36;
             this.lblMail.Text = "Email:";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(312, 314);
+            this.txtAddress.Location = new System.Drawing.Point(277, 256);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(275, 26);
+            this.txtAddress.Size = new System.Drawing.Size(245, 22);
             this.txtAddress.TabIndex = 35;
             // 
             // lblAddress
@@ -326,18 +336,18 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblAddress.Location = new System.Drawing.Point(148, 314);
+            this.lblAddress.Location = new System.Drawing.Point(132, 256);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(93, 26);
+            this.lblAddress.Size = new System.Drawing.Size(75, 23);
             this.lblAddress.TabIndex = 34;
             this.lblAddress.Text = "Địa chỉ:";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(312, 236);
+            this.txtPhone.Location = new System.Drawing.Point(277, 194);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(275, 26);
+            this.txtPhone.Size = new System.Drawing.Size(245, 22);
             this.txtPhone.TabIndex = 33;
             // 
             // lblPhone
@@ -345,34 +355,34 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblPhone.Location = new System.Drawing.Point(148, 236);
+            this.lblPhone.Location = new System.Drawing.Point(132, 194);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(153, 26);
+            this.lblPhone.Size = new System.Drawing.Size(125, 23);
             this.lblPhone.TabIndex = 32;
             this.lblPhone.Text = "Số điện thoại:";
             // 
             // dtpBD
             // 
-            this.dtpBD.Location = new System.Drawing.Point(312, 184);
+            this.dtpBD.Location = new System.Drawing.Point(277, 152);
             this.dtpBD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpBD.Name = "dtpBD";
-            this.dtpBD.Size = new System.Drawing.Size(275, 26);
+            this.dtpBD.Size = new System.Drawing.Size(245, 22);
             this.dtpBD.TabIndex = 31;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(312, 109);
+            this.txtName.Location = new System.Drawing.Point(277, 92);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(275, 26);
+            this.txtName.Size = new System.Drawing.Size(245, 22);
             this.txtName.TabIndex = 30;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(312, 57);
+            this.txtID.Location = new System.Drawing.Point(277, 51);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(275, 26);
+            this.txtID.Size = new System.Drawing.Size(245, 22);
             this.txtID.TabIndex = 29;
             // 
             // gbGender
@@ -381,11 +391,11 @@
             this.gbGender.Controls.Add(this.rbMale);
             this.gbGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbGender.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.gbGender.Location = new System.Drawing.Point(623, 55);
+            this.gbGender.Location = new System.Drawing.Point(554, 44);
             this.gbGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbGender.Name = "gbGender";
             this.gbGender.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbGender.Size = new System.Drawing.Size(152, 115);
+            this.gbGender.Size = new System.Drawing.Size(135, 92);
             this.gbGender.TabIndex = 28;
             this.gbGender.TabStop = false;
             this.gbGender.Text = "Giới tính";
@@ -394,10 +404,10 @@
             // 
             this.rbFemale.AutoSize = true;
             this.rbFemale.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFemale.Location = new System.Drawing.Point(29, 70);
+            this.rbFemale.Location = new System.Drawing.Point(26, 56);
             this.rbFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(68, 30);
+            this.rbFemale.Size = new System.Drawing.Size(57, 27);
             this.rbFemale.TabIndex = 1;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Nữ";
@@ -407,10 +417,10 @@
             // 
             this.rbMale.AutoSize = true;
             this.rbMale.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMale.Location = new System.Drawing.Point(29, 32);
+            this.rbMale.Location = new System.Drawing.Point(26, 26);
             this.rbMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(85, 30);
+            this.rbMale.Size = new System.Drawing.Size(70, 27);
             this.rbMale.TabIndex = 0;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Nam";
@@ -421,9 +431,9 @@
             this.lblBD.AutoSize = true;
             this.lblBD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBD.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblBD.Location = new System.Drawing.Point(148, 184);
+            this.lblBD.Location = new System.Drawing.Point(132, 152);
             this.lblBD.Name = "lblBD";
-            this.lblBD.Size = new System.Drawing.Size(121, 26);
+            this.lblBD.Size = new System.Drawing.Size(99, 23);
             this.lblBD.TabIndex = 27;
             this.lblBD.Text = "Ngày sinh:";
             // 
@@ -432,9 +442,9 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblName.Location = new System.Drawing.Point(148, 109);
+            this.lblName.Location = new System.Drawing.Point(132, 92);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(156, 26);
+            this.lblName.Size = new System.Drawing.Size(128, 23);
             this.lblName.TabIndex = 26;
             this.lblName.Text = "Tên giáo viên:";
             // 
@@ -443,9 +453,9 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblID.Location = new System.Drawing.Point(148, 57);
+            this.lblID.Location = new System.Drawing.Point(132, 51);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(152, 26);
+            this.lblID.Size = new System.Drawing.Size(124, 23);
             this.lblID.TabIndex = 25;
             this.lblID.Text = "Mã giáo viên:";
             // 
@@ -453,53 +463,46 @@
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(897, 10);
+            this.panel2.Size = new System.Drawing.Size(797, 8);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 10);
+            this.panel3.Location = new System.Drawing.Point(0, 8);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 788);
+            this.panel3.Size = new System.Drawing.Size(9, 630);
             this.panel3.TabIndex = 48;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(10, 788);
+            this.panel4.Location = new System.Drawing.Point(9, 630);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(887, 10);
+            this.panel4.Size = new System.Drawing.Size(788, 8);
             this.panel4.TabIndex = 49;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(887, 10);
+            this.panel5.Location = new System.Drawing.Point(788, 8);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 778);
+            this.panel5.Size = new System.Drawing.Size(9, 622);
             this.panel5.TabIndex = 50;
-            // 
-            // lblersalary
-            // 
-            this.lblersalary.AutoSize = true;
-            this.lblersalary.ForeColor = System.Drawing.Color.Red;
-            this.lblersalary.Location = new System.Drawing.Point(313, 640);
-            this.lblersalary.Name = "lblersalary";
-            this.lblersalary.Size = new System.Drawing.Size(90, 20);
-            this.lblersalary.TabIndex = 54;
-            this.lblersalary.Text = "Nhập lương";
-            this.lblersalary.Visible = false;
             // 
             // FormTeacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(897, 798);
+            this.ClientSize = new System.Drawing.Size(797, 638);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
