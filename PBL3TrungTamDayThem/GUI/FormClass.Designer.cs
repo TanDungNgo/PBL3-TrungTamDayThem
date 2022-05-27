@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.pnlFee = new System.Windows.Forms.Panel();
+            this.lblerID = new System.Windows.Forms.Label();
+            this.lblerNumber = new System.Windows.Forms.Label();
+            this.lblerTime = new System.Windows.Forms.Label();
+            this.lblerSb = new System.Windows.Forms.Label();
+            this.lblerIdGv = new System.Windows.Forms.Label();
+            this.lblerFee = new System.Windows.Forms.Label();
+            this.cbbIDSubject = new System.Windows.Forms.ComboBox();
+            this.cbbIDTeacher = new System.Windows.Forms.ComboBox();
             this.txtFee = new System.Windows.Forms.TextBox();
             this.lblFee = new System.Windows.Forms.Label();
             this.txtTime = new System.Windows.Forms.TextBox();
@@ -47,8 +55,10 @@
             this.lblNumber = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
-            this.cbbIDTeacher = new System.Windows.Forms.ComboBox();
-            this.cbbIDSubject = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlFee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDSoLuong)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +66,12 @@
             // pnlFee
             // 
             this.pnlFee.BackColor = System.Drawing.Color.White;
+            this.pnlFee.Controls.Add(this.lblerID);
+            this.pnlFee.Controls.Add(this.lblerNumber);
+            this.pnlFee.Controls.Add(this.lblerTime);
+            this.pnlFee.Controls.Add(this.lblerSb);
+            this.pnlFee.Controls.Add(this.lblerIdGv);
+            this.pnlFee.Controls.Add(this.lblerFee);
             this.pnlFee.Controls.Add(this.cbbIDSubject);
             this.pnlFee.Controls.Add(this.cbbIDTeacher);
             this.pnlFee.Controls.Add(this.txtFee);
@@ -76,15 +92,102 @@
             this.pnlFee.Controls.Add(this.lblNumber);
             this.pnlFee.Controls.Add(this.txtID);
             this.pnlFee.Controls.Add(this.lblID);
-            this.pnlFee.Location = new System.Drawing.Point(14, 15);
+            this.pnlFee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFee.Location = new System.Drawing.Point(0, 0);
             this.pnlFee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlFee.Name = "pnlFee";
-            this.pnlFee.Size = new System.Drawing.Size(870, 768);
+            this.pnlFee.Size = new System.Drawing.Size(897, 798);
             this.pnlFee.TabIndex = 0;
+            // 
+            // lblerID
+            // 
+            this.lblerID.AutoSize = true;
+            this.lblerID.ForeColor = System.Drawing.Color.Red;
+            this.lblerID.Location = new System.Drawing.Point(370, 134);
+            this.lblerID.Name = "lblerID";
+            this.lblerID.Size = new System.Drawing.Size(98, 20);
+            this.lblerID.TabIndex = 113;
+            this.lblerID.Text = "Nhập mã lớp";
+            this.lblerID.Visible = false;
+            // 
+            // lblerNumber
+            // 
+            this.lblerNumber.AutoSize = true;
+            this.lblerNumber.ForeColor = System.Drawing.Color.Red;
+            this.lblerNumber.Location = new System.Drawing.Point(410, 340);
+            this.lblerNumber.Name = "lblerNumber";
+            this.lblerNumber.Size = new System.Drawing.Size(173, 20);
+            this.lblerNumber.TabIndex = 112;
+            this.lblerNumber.Text = "Chọn số lượng học viên";
+            this.lblerNumber.Visible = false;
+            // 
+            // lblerTime
+            // 
+            this.lblerTime.AutoSize = true;
+            this.lblerTime.ForeColor = System.Drawing.Color.Red;
+            this.lblerTime.Location = new System.Drawing.Point(370, 414);
+            this.lblerTime.Name = "lblerTime";
+            this.lblerTime.Size = new System.Drawing.Size(141, 20);
+            this.lblerTime.TabIndex = 111;
+            this.lblerTime.Text = "Nhập thời gian học";
+            this.lblerTime.Visible = false;
+            // 
+            // lblerSb
+            // 
+            this.lblerSb.AutoSize = true;
+            this.lblerSb.ForeColor = System.Drawing.Color.Red;
+            this.lblerSb.Location = new System.Drawing.Point(375, 270);
+            this.lblerSb.Name = "lblerSb";
+            this.lblerSb.Size = new System.Drawing.Size(108, 20);
+            this.lblerSb.TabIndex = 110;
+            this.lblerSb.Text = "Chọn mã môn";
+            this.lblerSb.Visible = false;
+            // 
+            // lblerIdGv
+            // 
+            this.lblerIdGv.AutoSize = true;
+            this.lblerIdGv.ForeColor = System.Drawing.Color.Red;
+            this.lblerIdGv.Location = new System.Drawing.Point(375, 200);
+            this.lblerIdGv.Name = "lblerIdGv";
+            this.lblerIdGv.Size = new System.Drawing.Size(139, 20);
+            this.lblerIdGv.TabIndex = 109;
+            this.lblerIdGv.Text = "Chọn mã giáo viên";
+            this.lblerIdGv.Visible = false;
+            // 
+            // lblerFee
+            // 
+            this.lblerFee.AutoSize = true;
+            this.lblerFee.ForeColor = System.Drawing.Color.Red;
+            this.lblerFee.Location = new System.Drawing.Point(370, 481);
+            this.lblerFee.Name = "lblerFee";
+            this.lblerFee.Size = new System.Drawing.Size(102, 20);
+            this.lblerFee.TabIndex = 79;
+            this.lblerFee.Text = "Nhập học phí";
+            this.lblerFee.Visible = false;
+            // 
+            // cbbIDSubject
+            // 
+            this.cbbIDSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbIDSubject.FormattingEnabled = true;
+            this.cbbIDSubject.Location = new System.Drawing.Point(377, 238);
+            this.cbbIDSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbIDSubject.Name = "cbbIDSubject";
+            this.cbbIDSubject.Size = new System.Drawing.Size(273, 28);
+            this.cbbIDSubject.TabIndex = 108;
+            // 
+            // cbbIDTeacher
+            // 
+            this.cbbIDTeacher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbIDTeacher.FormattingEnabled = true;
+            this.cbbIDTeacher.Location = new System.Drawing.Point(375, 168);
+            this.cbbIDTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbIDTeacher.Name = "cbbIDTeacher";
+            this.cbbIDTeacher.Size = new System.Drawing.Size(273, 28);
+            this.cbbIDTeacher.TabIndex = 107;
             // 
             // txtFee
             // 
-            this.txtFee.Location = new System.Drawing.Point(373, 451);
+            this.txtFee.Location = new System.Drawing.Point(374, 451);
             this.txtFee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFee.Name = "txtFee";
             this.txtFee.Size = new System.Drawing.Size(275, 26);
@@ -103,7 +206,7 @@
             // 
             // txtTime
             // 
-            this.txtTime.Location = new System.Drawing.Point(373, 384);
+            this.txtTime.Location = new System.Drawing.Point(374, 384);
             this.txtTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(275, 26);
@@ -146,7 +249,7 @@
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnExit.Image = global::PBL3TrungTamDayThem.Properties.Resources._return;
-            this.btnExit.Location = new System.Drawing.Point(193, 643);
+            this.btnExit.Location = new System.Drawing.Point(194, 642);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(141, 56);
@@ -173,7 +276,7 @@
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnSave.Image = global::PBL3TrungTamDayThem.Properties.Resources.save1;
-            this.btnSave.Location = new System.Drawing.Point(545, 643);
+            this.btnSave.Location = new System.Drawing.Point(544, 642);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(141, 56);
@@ -189,7 +292,7 @@
             this.btnReset.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnReset.Image = global::PBL3TrungTamDayThem.Properties.Resources.reload;
-            this.btnReset.Location = new System.Drawing.Point(369, 643);
+            this.btnReset.Location = new System.Drawing.Point(369, 642);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(141, 56);
@@ -200,18 +303,19 @@
             // 
             // dtpStart
             // 
-            this.dtpStart.Location = new System.Drawing.Point(373, 512);
+            this.dtpStart.Location = new System.Drawing.Point(374, 512);
             this.dtpStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(275, 26);
             this.dtpStart.TabIndex = 95;
+            this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
             // 
             // lblED
             // 
             this.lblED.AutoSize = true;
             this.lblED.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblED.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblED.Location = new System.Drawing.Point(207, 583);
+            this.lblED.Location = new System.Drawing.Point(207, 582);
             this.lblED.Name = "lblED";
             this.lblED.Size = new System.Drawing.Size(162, 26);
             this.lblED.TabIndex = 94;
@@ -222,7 +326,7 @@
             this.lblID_Tea.AutoSize = true;
             this.lblID_Tea.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID_Tea.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblID_Tea.Location = new System.Drawing.Point(207, 167);
+            this.lblID_Tea.Location = new System.Drawing.Point(207, 168);
             this.lblID_Tea.Name = "lblID_Tea";
             this.lblID_Tea.Size = new System.Drawing.Size(152, 26);
             this.lblID_Tea.TabIndex = 90;
@@ -230,7 +334,7 @@
             // 
             // dtpEnd
             // 
-            this.dtpEnd.Location = new System.Drawing.Point(375, 583);
+            this.dtpEnd.Location = new System.Drawing.Point(375, 582);
             this.dtpEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(275, 26);
@@ -277,23 +381,37 @@
             this.lblID.TabIndex = 83;
             this.lblID.Text = "Mã lớp:";
             // 
-            // cbbIDTeacher
+            // panel1
             // 
-            this.cbbIDTeacher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbIDTeacher.FormattingEnabled = true;
-            this.cbbIDTeacher.Location = new System.Drawing.Point(375, 167);
-            this.cbbIDTeacher.Name = "cbbIDTeacher";
-            this.cbbIDTeacher.Size = new System.Drawing.Size(273, 28);
-            this.cbbIDTeacher.TabIndex = 107;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 798);
+            this.panel1.TabIndex = 1;
             // 
-            // cbbIDSubject
+            // panel2
             // 
-            this.cbbIDSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbIDSubject.FormattingEnabled = true;
-            this.cbbIDSubject.Location = new System.Drawing.Point(377, 237);
-            this.cbbIDSubject.Name = "cbbIDSubject";
-            this.cbbIDSubject.Size = new System.Drawing.Size(273, 28);
-            this.cbbIDSubject.TabIndex = 108;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(887, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 798);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(10, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(877, 10);
+            this.panel3.TabIndex = 114;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(10, 788);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(877, 10);
+            this.panel4.TabIndex = 115;
             // 
             // FormClass
             // 
@@ -301,6 +419,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(897, 798);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlFee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -337,5 +459,15 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.ComboBox cbbIDTeacher;
         private System.Windows.Forms.ComboBox cbbIDSubject;
+        private System.Windows.Forms.Label lblerFee;
+        private System.Windows.Forms.Label lblerNumber;
+        private System.Windows.Forms.Label lblerTime;
+        private System.Windows.Forms.Label lblerSb;
+        private System.Windows.Forms.Label lblerIdGv;
+        private System.Windows.Forms.Label lblerID;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }

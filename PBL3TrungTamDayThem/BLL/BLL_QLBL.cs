@@ -36,6 +36,10 @@ namespace PBL3TrungTamDayThem.BLL
             {
                 data = DAL_QLBL.Instance.GetStudentByClass(lophoc);
             }
+            if (lophoc == "All")
+            {
+                data = DAL_QLBL.Instance.GetAllStudent();
+            }
             return data;
         }
         public string GetFee(string MaLH)

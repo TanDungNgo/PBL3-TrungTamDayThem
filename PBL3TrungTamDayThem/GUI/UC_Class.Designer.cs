@@ -31,7 +31,7 @@
         {
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlBottom = new System.Windows.Forms.Panel();
             this.dgv_Class = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -45,7 +45,7 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -73,15 +73,15 @@
             this.pnlHeader.Size = new System.Drawing.Size(907, 60);
             this.pnlHeader.TabIndex = 36;
             // 
-            // panel1
+            // pnlBottom
             // 
-            this.panel1.Controls.Add(this.dgv_Class);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 209);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 400);
-            this.panel1.TabIndex = 37;
+            this.pnlBottom.Controls.Add(this.dgv_Class);
+            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBottom.Location = new System.Drawing.Point(0, 209);
+            this.pnlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlBottom.Name = "pnlBottom";
+            this.pnlBottom.Size = new System.Drawing.Size(907, 400);
+            this.pnlBottom.TabIndex = 37;
             // 
             // dgv_Class
             // 
@@ -244,14 +244,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.pnlHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Class";
             this.Size = new System.Drawing.Size(907, 609);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.pnlBottom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -264,7 +264,7 @@
         #endregion
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;

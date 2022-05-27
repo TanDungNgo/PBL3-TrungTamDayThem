@@ -57,7 +57,9 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> GetStudentByClass(string lophoc)
         {
             List<Student> data = new List<Student>();
-            string query = "exec LayHocVienTheoLop @lop ='" + lophoc + "'";
+            string query = "select HV.MaHV, HV.HoTenHV, HV.GioiTinh, HV.NgaySinh, HV.DiaChi, HV.Email, HV.SDT " +
+                "From HOC_VIEN HV INNER JOIN HOC_VIEN_TRONG_LOP HVTL ON HV.MaHV = HVTL.MaHV INNER JOIN LOP_HOC L " +
+                "ON HVTL.MaLH = L.MaLH WHERE L.MaLH = '" + lophoc + "'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
@@ -67,7 +69,7 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> GetStudentBySearch(string name)
         {
             List<Student> data = new List<Student>();
-            string query = "exec LayHocVienTheoTen @ten = N'%" + name + "%'";
+            string query = "Select * from HOC_VIEN where HoTenHV like N'%" + name + "%'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));

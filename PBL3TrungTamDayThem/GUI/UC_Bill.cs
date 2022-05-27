@@ -21,10 +21,16 @@ namespace PBL3TrungTamDayThem.GUI
         }
         void SetGUI()
         {
+            SetCBB();
+            cbbClass.Text = "All";
+        }
+        void SetCBB()
+        {
             if (cbbClass != null)
             {
                 cbbClass.Items.Clear();
             }
+            cbbClass.Items.Add("All");
             cbbClass.Items.AddRange(BLL_QLHV.Instance.GetListCBB().ToArray());
         }
 
@@ -60,7 +66,7 @@ namespace PBL3TrungTamDayThem.GUI
             if (cbbClass.Text != null)
             {
                 txbFee.Text = BLL_QLBL.Instance.GetFee(cbbClass.Text);
-            }    
+            }
         }
 
         private void btnPayFee_Click(object sender, EventArgs e)

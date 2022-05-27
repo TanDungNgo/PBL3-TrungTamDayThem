@@ -45,7 +45,7 @@
             this.btnShow = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlBottom = new System.Windows.Forms.Panel();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +82,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.pnlBottom);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 60);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -269,15 +269,15 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // panel3
+            // pnlBottom
             // 
-            this.panel3.Controls.Add(this.dgvStaff);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 149);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(907, 400);
-            this.panel3.TabIndex = 1;
+            this.pnlBottom.Controls.Add(this.dgvStaff);
+            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBottom.Location = new System.Drawing.Point(0, 149);
+            this.pnlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlBottom.Name = "pnlBottom";
+            this.pnlBottom.Size = new System.Drawing.Size(907, 400);
+            this.pnlBottom.TabIndex = 1;
             // 
             // dgvStaff
             // 
@@ -311,7 +311,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.pnlBottom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.ResumeLayout(false);
 
@@ -325,7 +325,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Button btnDel;

@@ -51,7 +51,7 @@ namespace PBL3TrungTamDayThem.GUI
             }
             cbbSort.Items.Add("HoTenHV");
             cbbSort.Items.Add("NgaySinh");
-            
+
         }
         void SetGUI()
         {
@@ -76,7 +76,7 @@ namespace PBL3TrungTamDayThem.GUI
                     DGVShow();
                     SetGUI();
                 }
-            }   
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -105,6 +105,14 @@ namespace PBL3TrungTamDayThem.GUI
         private void btnSort_Click(object sender, EventArgs e)
         {
             dgvStudent.DataSource = BLL_QLHV.Instance.SortListStudent(cbbSort.Text);
+        }
+        public void SizeDGVMax()
+        {
+            pnlBottom.Height = 460;
+        }
+        public void SizeDGVMin()
+        {
+            pnlBottom.Height = 261;
         }
     }
 }

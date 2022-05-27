@@ -23,7 +23,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         public void SetGUI()
         {
-            Class lop = BLL_QLLH.Instance.GetClassByMaLH(this._MaLH); 
+            Class lop = BLL_QLLH.Instance.GetClassByMaLH(this._MaLH);
             if (lop != null)
             {
                 txtID.Text = lop.MaLH;
@@ -39,6 +39,7 @@ namespace PBL3TrungTamDayThem.GUI
             {
                 cbbIDTeacher.Items.AddRange(BLL_QLGV.Instance.GetMaGV().ToArray());
                 cbbIDSubject.Items.AddRange(BLL_QLLH.Instance.GetListMaMH().ToArray());
+                txtFee.Text = "3000000";
             }
         }
 
@@ -46,24 +47,77 @@ namespace PBL3TrungTamDayThem.GUI
         {
             this.Dispose();
         }
+        public bool Error()
+        {
+            bool check = true;
+            if (txtID.Text == "")
+            {
+                lblerID.Visible = true;
+                check = false;
+            }
+            else
+                lblerID.Visible = false;
+            if (cbbIDTeacher.Text == "")
+            {
+                lblerIdGv.Visible = true;
+                check = false;
+            }
+            else
+                lblerIdGv.Visible = false;
+            if (cbbIDSubject.Text == "")
+            {
+                lblerSb.Visible = true;
+                check = false;
+            }
+            else
+                lblerSb.Visible = false;
+            if (NUDSoLuong.Value == 0)
+            {
+                lblerNumber.Visible = true;
+                check = false;
+            }
+            else
+                lblerNumber.Visible = false;
+            if (txtTime.Text == "")
+            {
+                lblerTime.Visible = true;
+                check = false;
+            }
+            else
+                lblerTime.Visible = false;
+            if (txtFee.Text == "")
+            {
+                lblerFee.Visible = true;
+                check = false;
+            }
+            else
+                lblerFee.Visible = false;
 
+            return check;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Class lop = new Class
+            if (Error() == true)
             {
-                MaLH = txtID.Text,
-                MaGV = cbbIDTeacher.Text,
-                MaMH = cbbIDSubject.Text,
-                SoLuongHV = ((int)NUDSoLuong.Value),
-                ThoiGianHoc = txtTime.Text,
-                HocPhi = int.Parse(txtFee.Text),
-                NgayBatDau = dtpStart.Value.Date,
-                NgayKetThuc = dtpEnd.Value.Date,
-            };
-            //MessageBox.Show(lop.MaLH + "\n " + lop.MaGV + "\n " + lop.MaMH + "\n "
-            //    + lop.SoLuongHV + "\n " + lop.ThoiGianHoc + "\n " + lop.NgayBatDau + "\n " + lop.NgayKetThuc + "\n ");
-            BLL_QLLH.Instance.ExecuteDB(lop);
-            this.Dispose();
+                Class lop = new Class
+                {
+                    MaLH = txtID.Text,
+                    MaGV = cbbIDTeacher.Text,
+                    MaMH = cbbIDSubject.Text,
+                    SoLuongHV = ((int)NUDSoLuong.Value),
+                    ThoiGianHoc = txtTime.Text,
+                    HocPhi = int.Parse(txtFee.Text),
+                    NgayBatDau = dtpStart.Value.Date,
+                    NgayKetThuc = dtpEnd.Value.Date,
+                };
+                BLL_QLLH.Instance.ExecuteDB(lop);
+                this.Dispose();
+            }
+        }
+
+        private void dtpStart_ValueChanged(object sender, EventArgs e)
+        {
+            dtpEnd.Value = dtpStart.Value.Date.AddMonths(3);
         }
     }
 }

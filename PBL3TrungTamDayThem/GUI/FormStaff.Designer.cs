@@ -54,6 +54,12 @@
             this.lblBD = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.lblername = new System.Windows.Forms.Label();
+            this.lblerphone = new System.Windows.Forms.Label();
+            this.lbleremail = new System.Windows.Forms.Label();
+            this.lblersalary = new System.Windows.Forms.Label();
+            this.lbleraddress = new System.Windows.Forms.Label();
+            this.lblerposition = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +67,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblerposition);
+            this.panel1.Controls.Add(this.lbleraddress);
+            this.panel1.Controls.Add(this.lblersalary);
+            this.panel1.Controls.Add(this.lbleremail);
+            this.panel1.Controls.Add(this.lblerphone);
+            this.panel1.Controls.Add(this.lblername);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.btnSave);
@@ -360,6 +372,72 @@
             this.lblID.TabIndex = 53;
             this.lblID.Text = "Mã nhân viên:";
             // 
+            // lblername
+            // 
+            this.lblername.AutoSize = true;
+            this.lblername.ForeColor = System.Drawing.Color.Red;
+            this.lblername.Location = new System.Drawing.Point(247, 127);
+            this.lblername.Name = "lblername";
+            this.lblername.Size = new System.Drawing.Size(121, 16);
+            this.lblername.TabIndex = 49;
+            this.lblername.Text = "Nhập tên nhân viên";
+            this.lblername.Visible = false;
+            // 
+            // lblerphone
+            // 
+            this.lblerphone.AutoSize = true;
+            this.lblerphone.ForeColor = System.Drawing.Color.Red;
+            this.lblerphone.Location = new System.Drawing.Point(247, 243);
+            this.lblerphone.Name = "lblerphone";
+            this.lblerphone.Size = new System.Drawing.Size(165, 16);
+            this.lblerphone.TabIndex = 76;
+            this.lblerphone.Text = "Số điện thoại không hợp lệ";
+            this.lblerphone.Visible = false;
+            // 
+            // lbleremail
+            // 
+            this.lbleremail.AutoSize = true;
+            this.lbleremail.ForeColor = System.Drawing.Color.Red;
+            this.lbleremail.Location = new System.Drawing.Point(247, 407);
+            this.lbleremail.Name = "lbleremail";
+            this.lbleremail.Size = new System.Drawing.Size(77, 16);
+            this.lbleremail.TabIndex = 77;
+            this.lbleremail.Text = "Nhập Email";
+            this.lbleremail.Visible = false;
+            // 
+            // lblersalary
+            // 
+            this.lblersalary.AutoSize = true;
+            this.lblersalary.ForeColor = System.Drawing.Color.Red;
+            this.lblersalary.Location = new System.Drawing.Point(247, 460);
+            this.lblersalary.Name = "lblersalary";
+            this.lblersalary.Size = new System.Drawing.Size(76, 16);
+            this.lblersalary.TabIndex = 78;
+            this.lblersalary.Text = "Nhập lương";
+            this.lblersalary.Visible = false;
+            // 
+            // lbleraddress
+            // 
+            this.lbleraddress.AutoSize = true;
+            this.lbleraddress.ForeColor = System.Drawing.Color.Red;
+            this.lbleraddress.Location = new System.Drawing.Point(247, 295);
+            this.lbleraddress.Name = "lbleraddress";
+            this.lbleraddress.Size = new System.Drawing.Size(82, 16);
+            this.lbleraddress.TabIndex = 79;
+            this.lbleraddress.Text = "Nhập địa chỉ";
+            this.lbleraddress.Visible = false;
+            // 
+            // lblerposition
+            // 
+            this.lblerposition.AutoSize = true;
+            this.lblerposition.ForeColor = System.Drawing.Color.Red;
+            this.lblerposition.Location = new System.Drawing.Point(247, 350);
+            this.lblerposition.Name = "lblerposition";
+            this.lblerposition.Size = new System.Drawing.Size(88, 16);
+            this.lblerposition.TabIndex = 80;
+            this.lblerposition.Text = "Nhập chức vụ";
+            this.lblerposition.Visible = false;
+            // 
             // FormStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -409,5 +487,11 @@
         private System.Windows.Forms.Label lblBD;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblername;
+        private System.Windows.Forms.Label lblerphone;
+        private System.Windows.Forms.Label lbleremail;
+        private System.Windows.Forms.Label lblersalary;
+        private System.Windows.Forms.Label lblerposition;
+        private System.Windows.Forms.Label lbleraddress;
     }
 }

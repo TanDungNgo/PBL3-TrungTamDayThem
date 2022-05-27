@@ -22,6 +22,9 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private UC_Teacher uC_Teacher = new UC_Teacher();
         private UC_Student uC_Student = new UC_Student();
+        private UC_Staff uC_Staff = new UC_Staff();
+        private UC_Class uC_Class = new UC_Class();
+        private UC_Bill uC_Bill = new UC_Bill();
         private Bitmap bmp;
 
         public FormMain(string MaNV)
@@ -83,21 +86,21 @@ namespace PBL3TrungTamDayThem.GUI
         {
             ResetColorButton();
             GetFromButton(btnClass);
-            OpenUC(new UC_Class());
+            OpenUC(uC_Class);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
             ResetColorButton();
             GetFromButton(btnStaff);
-            OpenUC(new UC_Staff());
+            OpenUC(uC_Staff);
         }
 
         private void btnBill_Click(object sender, EventArgs e)
         {
             ResetColorButton();
             GetFromButton(btnBill);
-            OpenUC(new UC_Bill());
+            OpenUC(uC_Bill);
         }
 
         private void btnStatistic_Click(object sender, EventArgs e)
@@ -151,9 +154,18 @@ namespace PBL3TrungTamDayThem.GUI
             if (this.WindowState == FormWindowState.Maximized)
             {
                 uC_Teacher.SizeDGVMax();
-            } 
+                uC_Student.SizeDGVMax();
+                uC_Staff.SizeDGVMax();
+                uC_Class.SizeDGVMax();
+            }
             else
+            {
                 uC_Teacher.SizeDGVMin();
+                uC_Student.SizeDGVMin();
+                uC_Staff.SizeDGVMin();
+                uC_Class.SizeDGVMin();
+            }
+
 
         }
         private void btn_Mini_Click(object sender, EventArgs e)

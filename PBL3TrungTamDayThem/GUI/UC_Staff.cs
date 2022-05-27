@@ -24,19 +24,14 @@ namespace PBL3TrungTamDayThem.GUI
             InitializeComponent();
             setGUI();
         }
-
-
         private void DGVShow()
         {
             dgvStaff.DataSource = BLL_QLNV.Instance.GetListStaff(cbbPosition.Text, null);
         }
-
         private void btnShow_Click(object sender, EventArgs e)
         {
             DGVShow();
         }
-
-
         private void setGUI()
         {
             if (cbbPosition != null)
@@ -50,7 +45,6 @@ namespace PBL3TrungTamDayThem.GUI
             cbbSort.Items.Add("HoTenNV");
             cbbSort.Items.Add("NgaySinh");
         }
-
         private void btnDel_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
@@ -68,14 +62,12 @@ namespace PBL3TrungTamDayThem.GUI
                 }
             }
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormStaff frm = new FormStaff();
             frm.ShowDialog();
             DGVShow();
         }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
@@ -92,7 +84,6 @@ namespace PBL3TrungTamDayThem.GUI
             }
 
         }
-
         private void btnSort_Click(object sender, EventArgs e)
         {
             dgvStaff.DataSource = BLL_QLNV.Instance.SortListStaff(cbbSort.Text);
@@ -101,6 +92,14 @@ namespace PBL3TrungTamDayThem.GUI
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvStaff.DataSource = BLL_QLNV.Instance.GetListStaff(cbbPosition.Text, txbName.Text);
+        }
+        public void SizeDGVMax()
+        {
+            pnlBottom.Height = 460;
+        }
+        public void SizeDGVMin()
+        {
+            pnlBottom.Height = 261;
         }
     }
 }
