@@ -34,8 +34,8 @@ namespace PBL3TrungTamDayThem.DAL
                 Username = i["Username"].ToString(),
                 Pass = i["Pass"].ToString(),
                 DisplayName = i["DisplayName"].ToString(),
-                PhanQuyen = (bool)i["PhanQuyen"],
-                Anh = i["Anh"].ToString()
+                Anh = i["Anh"].ToString(),
+                VaiTro = i["VaiTro"].ToString()
             };
         }
         public string GetMaNVByUsername(string username)
@@ -47,7 +47,7 @@ namespace PBL3TrungTamDayThem.DAL
         public int UpdateUser(User u)
         {
             string query = "Update ACCOUNT set MaNV = '" + u.MaNV + "',Username = N'" + u.Username + "',Pass = '" + u.Pass +
-                                    "',DisplayName = N'" + u.DisplayName + "',PhanQuyen = '" + u.PhanQuyen + "',Anh = '" + u.Anh +
+                                    "',DisplayName = N'" + u.DisplayName  + "',Anh = '" + u.Anh + "',VaiTro = '" + u.VaiTro +
                                     "' where MaNV = '" + u.MaNV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }

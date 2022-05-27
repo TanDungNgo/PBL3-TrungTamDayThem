@@ -80,8 +80,8 @@ namespace PBL3TrungTamDayThem.DAL
                 cmd.Parameters.Add("@Username", user.Username);
                 cmd.Parameters.Add("@Pass", user.Pass);
                 cmd.Parameters.Add("@DisplayName", user.DisplayName);
-                cmd.Parameters.Add("@PhanQuyen", user.PhanQuyen);
                 cmd.Parameters.Add("@Anh", user.Anh);
+                cmd.Parameters.Add("@VaiTro", user.VaiTro);
                 cnn.Close();
             }
         }

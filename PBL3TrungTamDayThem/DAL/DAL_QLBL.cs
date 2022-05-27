@@ -24,13 +24,13 @@ namespace PBL3TrungTamDayThem.DAL
         private DAL_QLBL() { }
         public DataTable GetStudentByClass(string lophoc)
         {
-            string query = "select HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
+            string query = "select HVTL.MaLH, HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
                 "on HV.MaHV = HVTL.MaHV where HVTL.MaLH = '" + lophoc + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable GetAllStudent()
         {
-            string query = "select HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
+            string query = "select HVTL.MaLH, HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
                 "on HV.MaHV = HVTL.MaHV ";
             return DataProvider.Instance.ExecuteQuery(query);
         }

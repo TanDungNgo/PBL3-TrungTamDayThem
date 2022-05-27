@@ -84,7 +84,7 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public int AddStaff(Staff s)
         {
-            string query1 = "Insert into ACCOUNT values('" + s.MaNV + "', '" + s.MaNV + "', '123456', 'null', '0' , 'null')";
+            string query1 = "Insert into ACCOUNT values('" + s.MaNV + "', '" + s.MaNV + "', '123456', '" + s.MaNV + "', '', '" + s.ChucVu + "')";
             DataProvider.Instance.ExecuteQuery(query1);
             string query2 = "Insert into NHAN_VIEN values ('" + s.MaNV + "', N'" + s.HoTenNV + "','" + s.NgaySinh +
                     "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email + "'," +
