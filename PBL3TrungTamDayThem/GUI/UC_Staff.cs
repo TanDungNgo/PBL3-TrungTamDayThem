@@ -58,18 +58,16 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
-            string MaNV = data[0].Cells["MaNV"].Value.ToString();
-            if (MaNV == null)
+            if (dgvStaff.SelectedRows.Count > 0)
             {
-                MessageBox.Show("Chưa chọn nhân viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
+                DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
+                string MaNV = data[0].Cells["MaNV"].Value.ToString();
                 FormStaff f = new FormStaff(MaNV);
                 f.ShowDialog();
                 DGVShow();
             }
+            else
+                MessageBox.Show("Chưa chọn nhân viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
         private void btnSort_Click(object sender, EventArgs e)

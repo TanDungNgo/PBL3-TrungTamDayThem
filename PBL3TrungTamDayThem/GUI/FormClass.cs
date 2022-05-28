@@ -19,6 +19,7 @@ namespace PBL3TrungTamDayThem.GUI
             Class lop = BLL_QLLH.Instance.GetClassByMaLH(this._MaLH);
             if (lop != null)
             {
+                GetCBB();
                 txtID.Text = lop.MaLH;
                 cbbIDTeacher.Text = lop.MaGV;
                 cbbIDSubject.Text = lop.MaMH;
@@ -30,12 +31,15 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
             {
-                cbbIDTeacher.Items.AddRange(BLL_QLGV.Instance.GetMaGV().ToArray());
-                cbbIDSubject.Items.AddRange(BLL_QLLH.Instance.GetListMaMH().ToArray());
+                GetCBB();
                 txtFee.Text = "3000000";
             }
         }
-
+        public void GetCBB()
+        {
+            cbbIDTeacher.Items.AddRange(BLL_QLGV.Instance.GetMaGV().ToArray());
+            cbbIDSubject.Items.AddRange(BLL_QLLH.Instance.GetListMaMH().ToArray());
+        }
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -111,6 +115,14 @@ namespace PBL3TrungTamDayThem.GUI
         private void dtpStart_ValueChanged(object sender, EventArgs e)
         {
             dtpEnd.Value = dtpStart.Value.Date.AddMonths(3);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cbbIDTeacher.Text = "";
+            cbbIDSubject.Text = "";
+            NUDSoLuong.Value = 0;
+            txtTime.Text = "";
         }
     }
 }

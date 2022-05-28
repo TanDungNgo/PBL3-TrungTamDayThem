@@ -1,4 +1,6 @@
 ﻿using PBL3TrungTamDayThem.BLL;
+using PBL3TrungTamDayThem.DAL;
+using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -7,9 +9,11 @@ namespace PBL3TrungTamDayThem.GUI
 {
     public partial class UC_Bill : UserControl
     {
-        public UC_Bill()
+        private string _MaNV;
+        public UC_Bill(string MaNV)
         {
             InitializeComponent();
+            this._MaNV = MaNV;
             SetGUI();
         }
         void SetGUI()
@@ -25,6 +29,14 @@ namespace PBL3TrungTamDayThem.GUI
             }
             cbbClass.Items.Add("All");
             cbbClass.Items.AddRange(BLL_QLHV.Instance.GetListCBB().ToArray());
+            if (cbbContent != null)
+            {
+                cbbContent.Items.Clear();
+            }
+            cbbContent.Items.Add("T1 - T3");
+            cbbContent.Items.Add("T4 - T6");
+            cbbContent.Items.Add("T7 - T9");
+            cbbContent.Items.Add("T10 - T12");
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -36,18 +48,36 @@ namespace PBL3TrungTamDayThem.GUI
         {
             dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, txbName.Text);
         }
+        public bool Error()
+        {
+            bool check = true;
+            if (cbbContent.Text == "")
+            {
+                lblercontent.Visible = true;
+                check = false;
+            }
+            else
+                lblercontent.Visible = false;
 
+            return check;
+        }
         private void btnPrint_Click(object sender, EventArgs e)
         {
             if (dgvStudent.SelectedRows.Count > 0)
             {
                 DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
-                string HoTenHV = data[0].Cells["HoTenHV"].Value.ToString();
-                List<string> list = new List<string>();
-                list.Add(cbbClass.Text);
-                list.Add(HoTenHV);
-                list.Add(txbFee.Text);
-                BLL_QLBL.Instance.WriteFile(list);
+                txbFee.Text = BLL_QLBL.Instance.GetFee(data[0].Cells["MaLH"].Value.ToString());
+                Bill bill = new Bill
+                {
+                    MaHV = data[0].Cells["MaHV"].Value.ToString(),
+                    MaLH = data[0].Cells["MaLH"].Value.ToString(),
+                    MaNV = this._MaNV,
+                    HocPhi = int.Parse(txbFee.Text),
+                    NgayThuHP = DateTime.Now,
+                    NoiDung = cbbContent.Text,
+                    HoTenHV = data[0].Cells["HoTenHV"].Value.ToString()
+                };
+                BLL_QLBL.Instance.WriteFile(bill);
             }
             else
             {
@@ -56,7 +86,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void cbbClass_TextChanged(object sender, EventArgs e)
         {
-            if (cbbClass.Text != null)
+            if (cbbClass.Text != "All")
             {
                 txbFee.Text = BLL_QLBL.Instance.GetFee(cbbClass.Text);
             }
@@ -67,8 +97,12 @@ namespace PBL3TrungTamDayThem.GUI
             if (dgvStudent.SelectedRows.Count > 0)
             {
                 DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
-                string HoTenHV = data[0].Cells["HoTenHV"].Value.ToString();
-                BLL_QLBL.Instance.PayFee(HoTenHV, cbbClass.Text);
+                Bill bill = new Bill
+                {
+                    MaHV = data[0].Cells["MaHV"].Value.ToString(),
+                    MaLH = data[0].Cells["MaLH"].Value.ToString(),
+                };
+                BLL_QLBL.Instance.PayFee(bill);
                 dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, txbName.Text);
             }
             else

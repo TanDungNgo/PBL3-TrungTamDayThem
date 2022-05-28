@@ -9,9 +9,9 @@ namespace PBL3TrungTamDayThem.DTO
     public class User
     {
         public string MaNV { get; set; }
-        public string Username { get; set; }
-        public string Pass { get; set; }
-        public string DisplayName { get; set; }
+        public string TaiKhoan { get; set; }
+        public string MatKhau { get; set; }
+        public string TenHienThi { get; set; }
         public string VaiTro { get; set; }
         public string Anh { get; set; }
     }

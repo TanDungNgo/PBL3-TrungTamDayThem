@@ -1,4 +1,5 @@
 ﻿using PBL3TrungTamDayThem.BLL;
+using PBL3TrungTamDayThem.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,11 @@ namespace PBL3TrungTamDayThem.GUI
             }
             cbbSubject.Items.Add("All");
             cbbSubject.Items.AddRange(BLL_QLLH.Instance.GetListCBB().Distinct().ToArray());
+            if (cbbClass != null)
+            {
+                cbbClass.Items.Clear();
+            }
+            cbbClass.Items.AddRange(BLL_QLHV.Instance.GetListCBB().ToArray());
         }
         public void SetGUI()
         {
@@ -43,16 +49,16 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
-            string MaLH = data[0].Cells["MaLH"].Value.ToString();
-            if (MaLH == null)
+            if (dgv_Class.SelectedRows.Count > 0)
             {
-                MessageBox.Show("Chưa chọn lớp học muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
+                string MaLH = data[0].Cells["MaLH"].Value.ToString();
+                FormClass f = new FormClass(MaLH);
+                f.ShowDialog();
             }
             else
             {
-                FormClass f = new FormClass(MaLH);
-                f.ShowDialog();
+                MessageBox.Show("Chưa chọn lớp học muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -80,6 +86,63 @@ namespace PBL3TrungTamDayThem.GUI
         public void SizeDGVMin()
         {
             pnlBottom.Height = 261;
+        }
+
+        private void btnShow2_Click(object sender, EventArgs e)
+        {
+            dgv_Class.DataSource = DAL_QLLH.Instance.GetHVByClass(cbbClass.Text);
+        }
+
+        private void btnAddtoclass_Click(object sender, EventArgs e)
+        {
+            if (txtMaHV.Text == "")
+            {
+                MessageBox.Show("Chưa nhập Mã học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtClass.Text == "")
+            {
+                MessageBox.Show("Chưa nhập Mã lớp học", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                BLL_QLHV.Instance.AddToClass(txtMaHV.Text, txtClass.Text);
+            }    
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dgv_Class.SelectedRows.Count > 0)
+            {
+                DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
+                try
+                {
+                    string MaHV = data[0].Cells["MaHV"].Value.ToString();
+                    string MaLH = data[0].Cells["MaLH"].Value.ToString();
+                    if (MaHV == null)
+                    {
+                        MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else if (txtKQH.Text == "")
+                    {
+                        MessageBox.Show("Chưa nhập điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    else
+                    {
+                        BLL_QLLH.Instance.UpdateKQH(txtKQH.Text, MaHV, MaLH);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+             }
+            else
+            {
+                MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
         }
     }
 }

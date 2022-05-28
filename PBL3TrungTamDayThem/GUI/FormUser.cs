@@ -22,9 +22,9 @@ namespace PBL3TrungTamDayThem.GUI
         public void SetGUI()
         {
             User user = DAL_User.Instance.GetUserByMaNV(_MaNV);
-            txt_Username.Text = user.Username;
-            txt_DisplayName.Text = user.DisplayName;
-            txt_Password.Text = user.Pass;
+            txt_Username.Text = user.TaiKhoan;
+            txt_DisplayName.Text = user.TenHienThi;
+            txt_Password.Text = user.MatKhau;
             this.filePath = user.Anh;
             if (user.Anh != "")
             {
@@ -74,11 +74,11 @@ namespace PBL3TrungTamDayThem.GUI
         {
             User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
             user.Anh = filePath;
-            user.Username = txt_Username.Text;
-            user.DisplayName = txt_DisplayName.Text;
+            user.TaiKhoan = txt_Username.Text;
+            user.TenHienThi = txt_DisplayName.Text;
             if (txtnewpass.Text != "")
             {
-                user.Pass = txtnewpass.Text;
+                user.MatKhau = txtnewpass.Text;
             }
             if (txtnewpassretype.Text != txtnewpass.Text)
             {

@@ -88,5 +88,16 @@ namespace PBL3TrungTamDayThem.DAL
             string query = "Select MaMH from MON_HOC";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetHVByClass(string MaLH)
+        {
+            string query = "Select hvtl.MaLH, hvtl.MaHV, hv.HoTenHV, hvtl.KetQuaHoc, hvtl.TinhTrang from HOC_VIEN_TRONG_LOP hvtl inner join HOC_VIEN hv on hvtl.MaHV = hv.MaHV" +
+                " where MaLH = '" + MaLH + "'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public int UpdateKQH(string KQH, string MaHV, string MaLH)
+        {
+            string query = "Update HOC_VIEN_TRONG_LOP set KetQuaHoc = '" + KQH + "' where MaHV = '" + MaHV +"' and MaLH = '" + MaLH + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

@@ -97,5 +97,12 @@ namespace PBL3TrungTamDayThem.BLL
                     MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }    
         }
+        public void UpdateKQH(string KQH, string MaHV, string MaLH)
+        {
+            if (DAL_QLLH.Instance.UpdateKQH(KQH, MaHV, MaLH) > 0)
+                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Cập nhật thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

@@ -77,9 +77,9 @@ namespace PBL3TrungTamDayThem.DAL
                 cnn.Open();
                 SqlCommand cmd = new SqlCommand(query, cnn);
                 cmd.Parameters.Add("@MaNV", user.MaNV);
-                cmd.Parameters.Add("@Username", user.Username);
-                cmd.Parameters.Add("@Pass", user.Pass);
-                cmd.Parameters.Add("@DisplayName", user.DisplayName);
+                cmd.Parameters.Add("@Username", user.TaiKhoan);
+                cmd.Parameters.Add("@Pass", user.MatKhau);
+                cmd.Parameters.Add("@DisplayName", user.TenHienThi);
                 cmd.Parameters.Add("@Anh", user.Anh);
                 cmd.Parameters.Add("@VaiTro", user.VaiTro);
                 cnn.Close();

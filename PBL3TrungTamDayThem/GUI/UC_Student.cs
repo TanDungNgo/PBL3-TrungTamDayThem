@@ -55,18 +55,15 @@ namespace PBL3TrungTamDayThem.GUI
             {
                 DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
                 string MaHV = data[0].Cells["MaHV"].Value.ToString();
-                if (MaHV == null)
-                {
-                    MessageBox.Show("Chưa chọn học viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    FormStudent f = new FormStudent(MaHV);
-                    f.ShowDialog();
-                    DGVShow();
-                    SetGUI();
-                }
+                FormStudent f = new FormStudent(MaHV);
+                f.ShowDialog();
+                DGVShow();
+                SetGUI();
             }
+            else
+            {
+                MessageBox.Show("Chưa chọn học viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

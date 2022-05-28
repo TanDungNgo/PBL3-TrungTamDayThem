@@ -187,7 +187,7 @@
             // 
             // txtFee
             // 
-            this.txtFee.Location = new System.Drawing.Point(374, 451);
+            this.txtFee.Location = new System.Drawing.Point(373, 445);
             this.txtFee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFee.Name = "txtFee";
             this.txtFee.Size = new System.Drawing.Size(275, 26);
@@ -198,7 +198,7 @@
             this.lblFee.AutoSize = true;
             this.lblFee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFee.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblFee.Location = new System.Drawing.Point(207, 449);
+            this.lblFee.Location = new System.Drawing.Point(211, 443);
             this.lblFee.Name = "lblFee";
             this.lblFee.Size = new System.Drawing.Size(101, 26);
             this.lblFee.TabIndex = 105;
@@ -206,7 +206,7 @@
             // 
             // txtTime
             // 
-            this.txtTime.Location = new System.Drawing.Point(374, 384);
+            this.txtTime.Location = new System.Drawing.Point(374, 374);
             this.txtTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(275, 26);
@@ -217,7 +217,7 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTime.Location = new System.Drawing.Point(207, 382);
+            this.lblTime.Location = new System.Drawing.Point(207, 372);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(160, 26);
             this.lblTime.TabIndex = 103;
@@ -300,6 +300,7 @@
             this.btnReset.Text = "   Đặt lại";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // dtpStart
             // 

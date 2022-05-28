@@ -52,23 +52,30 @@ namespace PBL3TrungTamDayThem.BLL
             }
             return fee;
         }
-        public void WriteFile(List<string> l)
+        public void WriteFile(Bill bill)
         {
-            string header = "\t\t\tPhiếu Thu Tiền Trung Tâm DPT";
-            string noidung = "\tLớp học:" + l[0].ToString() + "\n\tHọ tên người nộp :" + l[1].ToString() + "\n\tSố tiền thu :" + l[2].ToString() + " vnd ";
-            string name = l[0].ToString() + l[1].ToString();
-            string filepath = @"D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\File\BienLai_" + name + ".txt";
-            noidung += "\n\tNgày thu: " + DateTime.Now.ToString();
-            FileStream fs = new FileStream(filepath, FileMode.Create);
-            StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
-            sWriter.WriteLine(header);
-            sWriter.WriteLine(noidung);
-            sWriter.Flush();
-            fs.Close();
+                string header = "\t\t\tPhiếu Thu Tiền Trung Tâm DPT";
+                string noidung = "\tLớp học:" + bill.MaLH + "\n\tHọ tên người nộp :" + bill.HoTenHV + "\n\tSố tiền thu :" + bill.HocPhi + " vnd ";
+                string name = bill.MaHV.ToString() + bill.MaLH.ToString();
+                string filepath = @"D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\File\BienLai_" + name + ".txt";
+                noidung += "\n\tNgày thu: " + DateTime.Now.ToString();
+                FileStream fs = new FileStream(filepath, FileMode.Create);
+                StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
+                sWriter.WriteLine(header);
+                sWriter.WriteLine(noidung);
+                sWriter.Flush();
+                fs.Close();
+            
         }
-        public void PayFee(string HotenHV, string MaLH)
+        public void PayFee(Bill bill)
         {
-            DAL_QLBL.Instance.PayFee(HotenHV, MaLH);
+            if (DAL_QLBL.Instance.AddBill(bill) > 0)
+            {
+                MessageBox.Show("Thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DAL_QLBL.Instance.PayFee(bill.MaHV, bill.MaLH);
+            }
+            else
+                MessageBox.Show("Thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

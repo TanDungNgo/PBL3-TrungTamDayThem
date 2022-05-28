@@ -8,23 +8,16 @@ namespace PBL3TrungTamDayThem.GUI
 {
     public partial class FormMain : Form
     {
-        private string _MaNV;
-        public FormMain()
-        {
-            InitializeComponent();
-        }
-        private UC_Teacher uC_Teacher = new UC_Teacher();
-        private UC_Student uC_Student = new UC_Student();
-        private UC_Staff uC_Staff = new UC_Staff();
-        private UC_Class uC_Class = new UC_Class();
-        private UC_Bill uC_Bill = new UC_Bill();
-        private Bitmap bmp;
-
+         string _MaNV;
         public FormMain(string MaNV)
         {
             InitializeComponent();
             this._MaNV = MaNV;
         }
+        private UC_Teacher uC_Teacher = new UC_Teacher();
+        private UC_Student uC_Student = new UC_Student();
+        private UC_Staff uC_Staff = new UC_Staff();
+        private UC_Class uC_Class = new UC_Class();
         private void OpenUC(UserControl UC)
         {
             UC.Dock = DockStyle.Fill;
@@ -42,8 +35,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             btnHome.PerformClick();
             User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
-            //this.bmp = new Bitmap(user.Anh);
-            btn_user.Text = user.DisplayName + " ﹀";
+            btn_user.Text = user.TenHienThi + " ﹀";
             foreach (Control item in flpnlButton.Controls)
                 item.Width = flpnlButton.Width;
         }
@@ -93,7 +85,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             ResetColorButton();
             GetFromButton(btnBill);
-            OpenUC(uC_Bill);
+            OpenUC(new UC_Bill(this._MaNV));
         }
 
         private void btnStatistic_Click(object sender, EventArgs e)

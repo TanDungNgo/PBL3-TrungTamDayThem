@@ -75,7 +75,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(8, 21);
+            this.txtName.Location = new System.Drawing.Point(3, 30);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(255, 30);
@@ -95,7 +95,7 @@
             // 
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(10, 98);
+            this.cbbSort.Location = new System.Drawing.Point(9, 98);
             this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Size = new System.Drawing.Size(173, 28);
@@ -156,7 +156,7 @@
             this.btnSort.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSort.Image = global::PBL3TrungTamDayThem.Properties.Resources.show_icon;
             this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSort.Location = new System.Drawing.Point(189, 86);
+            this.btnSort.Location = new System.Drawing.Point(188, 86);
             this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(135, 50);
@@ -170,7 +170,7 @@
             this.lblclass.AutoSize = true;
             this.lblclass.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblclass.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblclass.Location = new System.Drawing.Point(10, 26);
+            this.lblclass.Location = new System.Drawing.Point(10, 35);
             this.lblclass.Name = "lblclass";
             this.lblclass.Size = new System.Drawing.Size(53, 25);
             this.lblclass.TabIndex = 32;
@@ -180,7 +180,7 @@
             // 
             this.cbbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbClass.FormattingEnabled = true;
-            this.cbbClass.Location = new System.Drawing.Point(76, 21);
+            this.cbbClass.Location = new System.Drawing.Point(76, 30);
             this.cbbClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbClass.Name = "cbbClass";
             this.cbbClass.Size = new System.Drawing.Size(247, 28);
@@ -204,7 +204,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = global::PBL3TrungTamDayThem.Properties.Resources.search_icon1;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(128, 86);
+            this.btnSearch.Location = new System.Drawing.Point(123, 86);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(135, 50);

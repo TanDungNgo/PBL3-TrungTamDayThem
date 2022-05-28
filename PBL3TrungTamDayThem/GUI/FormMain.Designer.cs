@@ -61,9 +61,9 @@
             this.btn_Logout = new System.Windows.Forms.Button();
             this.btn_ThongTin = new System.Windows.Forms.Button();
             this.pnlct = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.flpnlButton.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -113,7 +113,7 @@
             // 
             this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.SystemColors.Control;
@@ -133,7 +133,7 @@
             // 
             this.btnTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnTeacher.FlatAppearance.BorderSize = 0;
-            this.btnTeacher.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnTeacher.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeacher.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeacher.ForeColor = System.Drawing.SystemColors.Control;
@@ -153,7 +153,7 @@
             // 
             this.btnStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnStudent.FlatAppearance.BorderSize = 0;
-            this.btnStudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnStudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudent.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudent.ForeColor = System.Drawing.SystemColors.Control;
@@ -173,7 +173,7 @@
             // 
             this.btnClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnClass.FlatAppearance.BorderSize = 0;
-            this.btnClass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnClass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClass.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClass.ForeColor = System.Drawing.SystemColors.Control;
@@ -193,7 +193,7 @@
             // 
             this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnBill.FlatAppearance.BorderSize = 0;
-            this.btnBill.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnBill.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBill.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBill.ForeColor = System.Drawing.SystemColors.Control;
@@ -213,7 +213,7 @@
             // 
             this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnStaff.FlatAppearance.BorderSize = 0;
-            this.btnStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaff.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.ForeColor = System.Drawing.SystemColors.Control;
@@ -233,7 +233,7 @@
             // 
             this.btnStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnStatistic.FlatAppearance.BorderSize = 0;
-            this.btnStatistic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnStatistic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistic.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistic.ForeColor = System.Drawing.SystemColors.Control;
@@ -572,15 +572,13 @@
             this.pnlct.Size = new System.Drawing.Size(900, 622);
             this.pnlct.TabIndex = 2;
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 612);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(900, 10);
-            this.panel2.TabIndex = 4;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(890, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 612);
+            this.panel3.TabIndex = 6;
             // 
             // panel1
             // 
@@ -590,13 +588,15 @@
             this.panel1.Size = new System.Drawing.Size(10, 612);
             this.panel1.TabIndex = 5;
             // 
-            // panel3
+            // panel2
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(890, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 612);
-            this.panel3.TabIndex = 6;
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 612);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(900, 10);
+            this.panel2.TabIndex = 4;
             // 
             // FormMain
             // 

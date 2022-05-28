@@ -106,5 +106,12 @@ namespace PBL3TrungTamDayThem.BLL
             data = DAL_QLHV.Instance.SortListStudent(s);
             return data;
         }
+        public void AddToClass(string MaHV, string MaLH)
+        {
+            if (DAL_QLHV.Instance.AddToClass(MaHV, MaLH) > 0)
+                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

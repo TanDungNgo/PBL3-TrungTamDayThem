@@ -94,7 +94,6 @@ namespace PBL3TrungTamDayThem.DAL
             string query = "Insert into HOC_VIEN values ('" + s.MaHV + "', N'" + s.HoTenHV + "','" + s.NgaySinh +
                     "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
-
         }
         public int EditStudent(Student s)
         {
@@ -117,6 +116,12 @@ namespace PBL3TrungTamDayThem.DAL
                 data.Add(GetStudent(i));
             }
             return data;
+        }
+
+        public int AddToClass(string MaHV, string MaLH)
+        {
+            string query = "Insert into HOC_VIEN_TRONG_LOP values ('" + MaHV + "','" + MaLH + "','',N'Chưa đóng học phí')";    
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

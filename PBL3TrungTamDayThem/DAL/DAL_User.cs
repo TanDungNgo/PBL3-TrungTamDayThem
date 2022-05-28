@@ -31,23 +31,23 @@ namespace PBL3TrungTamDayThem.DAL
             return new User
             {
                 MaNV = i["MaNV"].ToString(),
-                Username = i["Username"].ToString(),
-                Pass = i["Pass"].ToString(),
-                DisplayName = i["DisplayName"].ToString(),
+                TaiKhoan = i["TaiKhoan"].ToString(),
+                MatKhau = i["MatKhau"].ToString(),
+                TenHienThi = i["TenHienThi"].ToString(),
                 Anh = i["Anh"].ToString(),
                 VaiTro = i["VaiTro"].ToString()
             };
         }
         public string GetMaNVByUsername(string username)
         {
-            string query = "Select MaNV from ACCOUNT where Username = '" + username + "'";
+            string query = "Select MaNV from ACCOUNT where TaiKhoan = '" + username + "'";
             DataRow dr = DataProvider.Instance.ExecuteQuery(query).Rows[0];
             return dr["MaNV"].ToString();
         }
         public int UpdateUser(User u)
         {
-            string query = "Update ACCOUNT set MaNV = '" + u.MaNV + "',Username = N'" + u.Username + "',Pass = '" + u.Pass +
-                                    "',DisplayName = N'" + u.DisplayName  + "',Anh = '" + u.Anh + "',VaiTro = '" + u.VaiTro +
+            string query = "Update ACCOUNT set MaNV = '" + u.MaNV + "',TaiKhoan = '" + u.TaiKhoan + "',MatKhau = '" + u.MatKhau +
+                                    "',TenHienThi = N'" + u.TenHienThi  + "',Anh = '" + u.Anh + "',VaiTro = '" + u.VaiTro +
                                     "' where MaNV = '" + u.MaNV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }

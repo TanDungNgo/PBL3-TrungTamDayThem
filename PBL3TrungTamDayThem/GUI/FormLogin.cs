@@ -32,7 +32,7 @@ namespace PBL3TrungTamDayThem.GUI
                     String cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=TrungTamDayThem;Integrated Security=True";
                     SqlConnection cnn = new SqlConnection(cnnStr);
                     cnn.Open();
-                    string query = "Select * from ACCOUNT where UserName = @username and Pass = @pass";
+                    string query = "Select * from ACCOUNT where TaiKhoan = @username and MatKhau = @pass";
                     SqlCommand cmd = new SqlCommand(query, cnn);
                     cmd.Parameters.Add("@username",SqlDbType.VarChar).Value = txt_User.Text;
                     cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = txt_Pass.Text;
