@@ -44,6 +44,11 @@ namespace PBL3TrungTamDayThem.DAL
             DataRow dr = DataProvider.Instance.ExecuteQuery(query).Rows[0];
             return dr["MaNV"].ToString();
         }
+        public void AddUser(Staff s)
+        {
+            string query1 = "Insert into ACCOUNT values('" + s.MaNV + "', '" + s.MaNV + "', '123456', '" + s.MaNV + "', '', N'" + s.ChucVu + "')";
+            DataProvider.Instance.ExecuteQuery(query1);
+        }
         public int UpdateUser(User u)
         {
             string query = "Update ACCOUNT set MaNV = '" + u.MaNV + "',TaiKhoan = '" + u.TaiKhoan + "',MatKhau = '" + u.MatKhau +

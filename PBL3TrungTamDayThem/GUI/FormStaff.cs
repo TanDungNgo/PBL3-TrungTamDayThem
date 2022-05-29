@@ -15,9 +15,16 @@ namespace PBL3TrungTamDayThem.GUI
             this._MaNV = MaNV;
             SetGUI();
         }
-
+        public void SetCBB()
+        {
+            if(cbbPosition != null)
+                cbbPosition.Items.Clear();
+            cbbPosition.Items.Add("Nhân Viên");
+            cbbPosition.Items.Add("Quản Lý");
+        }
         public void SetGUI()
         {
+            SetCBB();
             Staff staff = BLL_QLNV.Instance.GetNVByID(this._MaNV);
             if (staff != null)
             {
@@ -28,7 +35,7 @@ namespace PBL3TrungTamDayThem.GUI
                 txtAddress.Text = staff.DiaChi;
                 txtPhone.Text = staff.SDT;
                 txtEmail.Text = staff.Email;
-                txtPosition.Text = staff.ChucVu;
+                cbbPosition.Text = staff.ChucVu;
                 txtSalary.Text = staff.Luong.ToString();
                 dtpStarting.Text = staff.NgayVaoLam.ToString();
                 if (staff.GioiTinh == "Nam")
@@ -51,7 +58,7 @@ namespace PBL3TrungTamDayThem.GUI
                 }
                 else
                     txtID.Text = "NV" + count.ToString();
-
+                txtSalary.Enabled = false;
             }
         }
         private void btnReset_Click(object sender, EventArgs e)
@@ -62,7 +69,7 @@ namespace PBL3TrungTamDayThem.GUI
             txtAddress.Text = "";
             txtPhone.Text = "";
             txtEmail.Text = "";
-            txtPosition.Text = "";
+            cbbPosition.Text = "";
             txtSalary.Text = "";
             dtpStarting.Text = "";
         }
@@ -88,7 +95,7 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
                 lbleraddress.Visible = false;
-            if (txtPosition.Text == "")
+            if (cbbPosition.Text == "")
             {
                 lblerposition.Visible = true;
                 check = false;
@@ -131,7 +138,7 @@ namespace PBL3TrungTamDayThem.GUI
                     DiaChi = txtAddress.Text,
                     SDT = txtPhone.Text,
                     Email = txtEmail.Text,
-                    ChucVu = txtPosition.Text,
+                    ChucVu = cbbPosition.Text,
                     Luong = int.Parse(txtSalary.Text),
                     NgayVaoLam = dtpStarting.Value.Date,
                     GioiTinh = rbMale.Checked.ToString(),
@@ -144,6 +151,14 @@ namespace PBL3TrungTamDayThem.GUI
         {
             var isNumeric = !string.IsNullOrEmpty(v) && v.All(Char.IsDigit);
             return isNumeric;
+        }
+
+        private void cbbPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbPosition.Text == "Quản Lý")
+                txtSalary.Text = "5000000";
+            if (cbbPosition.Text == "Nhân Viên")
+                txtSalary.Text = "3000000";
         }
     }
 }

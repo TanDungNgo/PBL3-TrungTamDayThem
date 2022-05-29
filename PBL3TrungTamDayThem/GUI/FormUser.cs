@@ -21,7 +21,10 @@ namespace PBL3TrungTamDayThem.GUI
         }
         public void SetGUI()
         {
-            User user = DAL_User.Instance.GetUserByMaNV(_MaNV);
+            Staff staff = BLL_QLNV.Instance.GetNVByID(this._MaNV);
+            User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
+            txtName.Text = staff.HoTenNV;
+            txtPosition.Text = staff.ChucVu;
             txt_Username.Text = user.TaiKhoan;
             txt_DisplayName.Text = user.TenHienThi;
             txt_Password.Text = user.MatKhau;

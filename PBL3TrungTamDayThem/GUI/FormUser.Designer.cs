@@ -51,6 +51,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSaveImage = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPosition = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.grbnewpass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -100,7 +104,7 @@
             // ckbpass
             // 
             this.ckbpass.AutoSize = true;
-            this.ckbpass.Location = new System.Drawing.Point(415, 472);
+            this.ckbpass.Location = new System.Drawing.Point(863, 209);
             this.ckbpass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ckbpass.Name = "ckbpass";
             this.ckbpass.Size = new System.Drawing.Size(22, 21);
@@ -123,7 +127,7 @@
             // 
             this.txt_Password.Enabled = false;
             this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Password.Location = new System.Drawing.Point(189, 465);
+            this.txt_Password.Location = new System.Drawing.Point(610, 199);
             this.txt_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(220, 30);
@@ -135,7 +139,7 @@
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Password.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_Password.Location = new System.Drawing.Point(23, 469);
+            this.lbl_Password.Location = new System.Drawing.Point(444, 203);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(110, 27);
             this.lbl_Password.TabIndex = 73;
@@ -144,7 +148,7 @@
             // txt_DisplayName
             // 
             this.txt_DisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DisplayName.Location = new System.Drawing.Point(189, 309);
+            this.txt_DisplayName.Location = new System.Drawing.Point(189, 471);
             this.txt_DisplayName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_DisplayName.Name = "txt_DisplayName";
             this.txt_DisplayName.Size = new System.Drawing.Size(220, 30);
@@ -155,7 +159,7 @@
             this.lbl_DisplayName.AutoSize = true;
             this.lbl_DisplayName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DisplayName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_DisplayName.Location = new System.Drawing.Point(23, 311);
+            this.lbl_DisplayName.Location = new System.Drawing.Point(23, 473);
             this.lbl_DisplayName.Name = "lbl_DisplayName";
             this.lbl_DisplayName.Size = new System.Drawing.Size(133, 27);
             this.lbl_DisplayName.TabIndex = 71;
@@ -164,7 +168,7 @@
             // txt_Username
             // 
             this.txt_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Username.Location = new System.Drawing.Point(189, 385);
+            this.txt_Username.Location = new System.Drawing.Point(610, 119);
             this.txt_Username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Username.Name = "txt_Username";
             this.txt_Username.Size = new System.Drawing.Size(220, 30);
@@ -175,7 +179,7 @@
             this.lbl_Username.AutoSize = true;
             this.lbl_Username.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Username.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_Username.Location = new System.Drawing.Point(23, 389);
+            this.lbl_Username.Location = new System.Drawing.Point(444, 123);
             this.lbl_Username.Name = "lbl_Username";
             this.lbl_Username.Size = new System.Drawing.Size(160, 27);
             this.lbl_Username.TabIndex = 68;
@@ -189,7 +193,7 @@
             this.grbnewpass.Controls.Add(this.txtnewpassretype);
             this.grbnewpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbnewpass.ForeColor = System.Drawing.SystemColors.Control;
-            this.grbnewpass.Location = new System.Drawing.Point(424, 97);
+            this.grbnewpass.Location = new System.Drawing.Point(438, 269);
             this.grbnewpass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbnewpass.Name = "grbnewpass";
             this.grbnewpass.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -232,7 +236,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnCancel.Image = global::PBL3TrungTamDayThem.Properties.Resources.error__1_;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(716, 423);
+            this.btnCancel.Location = new System.Drawing.Point(716, 486);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 72);
@@ -248,7 +252,7 @@
             this.btnsavechange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.btnsavechange.Image = global::PBL3TrungTamDayThem.Properties.Resources.save1;
             this.btnsavechange.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsavechange.Location = new System.Drawing.Point(498, 423);
+            this.btnsavechange.Location = new System.Drawing.Point(498, 486);
             this.btnsavechange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsavechange.Name = "btnsavechange";
             this.btnsavechange.Size = new System.Drawing.Size(169, 72);
@@ -309,12 +313,58 @@
             this.btnSaveImage.UseVisualStyleBackColor = false;
             this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
             // 
+            // txtName
+            // 
+            this.txtName.Enabled = false;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(189, 313);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(220, 30);
+            this.txtName.TabIndex = 85;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(23, 315);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 27);
+            this.label1.TabIndex = 84;
+            this.label1.Text = "Họ tên:";
+            // 
+            // txtPosition
+            // 
+            this.txtPosition.Enabled = false;
+            this.txtPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPosition.Location = new System.Drawing.Point(189, 390);
+            this.txtPosition.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new System.Drawing.Size(220, 30);
+            this.txtPosition.TabIndex = 87;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(23, 390);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 27);
+            this.label2.TabIndex = 86;
+            this.label2.Text = "Chức vụ";
+            // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(930, 596);
+            this.Controls.Add(this.txtPosition);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSaveImage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -370,5 +420,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSaveImage;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPosition;
+        private System.Windows.Forms.Label label2;
     }
 }

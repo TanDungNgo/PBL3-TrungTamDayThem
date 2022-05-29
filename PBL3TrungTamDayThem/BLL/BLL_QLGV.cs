@@ -28,7 +28,10 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public int Count()
         {
-            int count = DAL_QLGV.Instance.GetAllTeacher().Count;
+            //int count = DAL_QLGV.Instance.GetAllTeacher().Count;
+            int count = 0;
+            foreach(DataRow i in DAL_QLGV.Instance.Count().Rows)
+                count = int.Parse(i[0].ToString());
             return count;
         }
         public List<string> GetListCBB()

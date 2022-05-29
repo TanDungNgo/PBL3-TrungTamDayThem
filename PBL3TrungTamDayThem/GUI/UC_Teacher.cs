@@ -19,6 +19,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             FormTeacher frm = new FormTeacher();
             frm.ShowDialog();
+            DGVShow();
             SetGUI();
         }
         void SetGUI()
@@ -85,7 +86,11 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            dgvTeacher.DataSource = BLL_QLGV.Instance.SortListTeacher(cbbSort.Text);
+            if (cbbSort.Text == "")
+                MessageBox.Show("Chọn cách sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                dgvTeacher.DataSource = BLL_QLGV.Instance.SortListTeacher(cbbSort.Text);
+
         }
         public void SizeDGVMax()
         {

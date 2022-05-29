@@ -104,5 +104,19 @@ namespace PBL3TrungTamDayThem.BLL
             else
                 MessageBox.Show("Cập nhật thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        public void AddToClass(string MaHV, string MaLH)
+        {
+            if (DAL_QLLH.Instance.AddToClass(MaHV, MaLH) > 0)
+                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public void RemoveFromClass(string MaHV, string MaLH)
+        {
+            if (DAL_QLLH.Instance.RemoveFromClass(MaHV, MaLH) > 0)
+                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

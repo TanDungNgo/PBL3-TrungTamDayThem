@@ -47,7 +47,7 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> GetAllStudent()
         {
             List<Student> data = new List<Student>();
-            string query = "Select * from HOC_VIEN";
+            string query = "Select * from HOC_VIEN where KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
@@ -59,7 +59,7 @@ namespace PBL3TrungTamDayThem.DAL
             List<Student> data = new List<Student>();
             string query = "select HV.MaHV, HV.HoTenHV, HV.GioiTinh, HV.NgaySinh, HV.DiaChi, HV.Email, HV.SDT " +
                 "From HOC_VIEN HV INNER JOIN HOC_VIEN_TRONG_LOP HVTL ON HV.MaHV = HVTL.MaHV INNER JOIN LOP_HOC L " +
-                "ON HVTL.MaLH = L.MaLH WHERE L.MaLH = '" + lophoc + "'";
+                "ON HVTL.MaLH = L.MaLH WHERE L.MaLH = '" + lophoc + "' and KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
@@ -69,7 +69,7 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> GetStudentBySearch(string name)
         {
             List<Student> data = new List<Student>();
-            string query = "Select * from HOC_VIEN where HoTenHV like N'%" + name + "%'";
+            string query = "Select * from HOC_VIEN where HoTenHV like N'%" + name + "%' and KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
@@ -92,7 +92,7 @@ namespace PBL3TrungTamDayThem.DAL
         public int AddStudent(Student s)
         {
             string query = "Insert into HOC_VIEN values ('" + s.MaHV + "', N'" + s.HoTenHV + "','" + s.NgaySinh +
-                    "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email + "')";
+                    "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email + "','true')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int EditStudent(Student s)
@@ -104,24 +104,23 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public int DeleteStudent(string MaHV)
         {
-            string query = "Delete from  HOC_VIEN where MaHV = '" + MaHV + "'";
+            string query = "Update HOC_VIEN set KiemTra = 'false' where MaHV = '" + MaHV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public List<Student> SortListStudent(string s)
         {
             List<Student> data = new List<Student>();
-            string query = "Select * from HOC_VIEN ORDER BY " + s;
+            string query = "Select * from HOC_VIEN where KiemTra = 'true' ORDER BY " + s;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
             }
             return data;
         }
-
-        public int AddToClass(string MaHV, string MaLH)
+        public DataTable Count()
         {
-            string query = "Insert into HOC_VIEN_TRONG_LOP values ('" + MaHV + "','" + MaLH + "','',N'Chưa đóng học phí')";    
-            return DataProvider.Instance.ExecuteNonQuery(query);
+            string query = "select COUNT(*) from HOC_VIEN";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

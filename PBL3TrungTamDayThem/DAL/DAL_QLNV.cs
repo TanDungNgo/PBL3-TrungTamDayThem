@@ -35,7 +35,7 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Staff> GetAllStaff()
         {
             List<Staff> data = new List<Staff>();
-            string query = "Select * from NHAN_VIEN";
+            string query = "Select * from NHAN_VIEN where KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStaff(i));
@@ -45,7 +45,7 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Staff> GetStaffByPosition(string chucvu)
         {
             List<Staff> data = new List<Staff>();
-            string query = "Select * from NHAN_VIEN where ChucVu = N'" + chucvu + "'";
+            string query = "Select * from NHAN_VIEN where ChucVu = N'" + chucvu + "' and KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStaff(i));
@@ -57,9 +57,9 @@ namespace PBL3TrungTamDayThem.DAL
             List<Staff> data = new List<Staff>();
             string query = "";
             if (chucvu == "All")
-                query = "Select * from NHAN_VIEN where HoTenNV like N'%" + name + "%'";
+                query = "Select * from NHAN_VIEN where HoTenNV like N'%" + name + "%' and KiemTra = 'true'";
             else
-                query = "Select * from NHAN_VIEN where HoTenNV like N'%" + name + "%' and ChucVu = N'" + chucvu + "'";
+                query = "Select * from NHAN_VIEN where HoTenNV like N'%" + name + "%' and ChucVu = N'" + chucvu + "' and KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStaff(i));
@@ -84,12 +84,11 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public int AddStaff(Staff s)
         {
-            string query1 = "Insert into ACCOUNT values('" + s.MaNV + "', '" + s.MaNV + "', '123456', '" + s.MaNV + "', '', 'N" + s.ChucVu + "')";
-            DataProvider.Instance.ExecuteQuery(query1);
-            string query2 = "Insert into NHAN_VIEN values ('" + s.MaNV + "', N'" + s.HoTenNV + "','" + s.NgaySinh +
+            DAL_User.Instance.AddUser(s);
+            string query = "Insert into NHAN_VIEN values ('" + s.MaNV + "', N'" + s.HoTenNV + "','" + s.NgaySinh +
                     "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email + "'," +
                     "N'" + s.ChucVu + "', '" + s.NgayVaoLam + "', '" + s.Luong + "')";
-            return DataProvider.Instance.ExecuteNonQuery(query2);
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int EditStaff(Staff s)
         {
@@ -101,13 +100,13 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public int DeleteStaff(string MaNV)
         {
-            string query = "Delete from  NHAN_VIEN where MaNV = '" + MaNV + "'";
+            string query = "Update NHAN_VIEN set KiemTra = 'false' where MaNV = '" + MaNV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public List<Staff> SortListStaff(string s)
         {
             List<Staff> data = new List<Staff>();
-            string query = "Select * from NHAN_VIEN ORDER BY " + s;
+            string query = "Select * from NHAN_VIEN where KiemTra = 'true' ORDER BY " + s;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStaff(i));

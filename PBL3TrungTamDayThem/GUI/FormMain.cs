@@ -18,6 +18,7 @@ namespace PBL3TrungTamDayThem.GUI
         private UC_Student uC_Student = new UC_Student();
         private UC_Staff uC_Staff = new UC_Staff();
         private UC_Class uC_Class = new UC_Class();
+        private UC_Bill uC_Bill = new UC_Bill();
         private void OpenUC(UserControl UC)
         {
             UC.Dock = DockStyle.Fill;
@@ -73,19 +74,19 @@ namespace PBL3TrungTamDayThem.GUI
             GetFromButton(btnClass);
             OpenUC(uC_Class);
         }
-
         private void btnStaff_Click(object sender, EventArgs e)
         {
             ResetColorButton();
             GetFromButton(btnStaff);
+            uC_Staff.VaiTro = DAL_User.Instance.GetUserByMaNV(this._MaNV).VaiTro;
             OpenUC(uC_Staff);
         }
-
         private void btnBill_Click(object sender, EventArgs e)
         {
             ResetColorButton();
             GetFromButton(btnBill);
-            OpenUC(new UC_Bill(this._MaNV));
+            uC_Bill.MaNV = this._MaNV;
+            OpenUC(uC_Bill);
         }
 
         private void btnStatistic_Click(object sender, EventArgs e)
@@ -142,6 +143,7 @@ namespace PBL3TrungTamDayThem.GUI
                 uC_Student.SizeDGVMax();
                 uC_Staff.SizeDGVMax();
                 uC_Class.SizeDGVMax();
+                uC_Bill.SizeDGVMax();
             }
             else
             {
@@ -149,6 +151,7 @@ namespace PBL3TrungTamDayThem.GUI
                 uC_Student.SizeDGVMin();
                 uC_Staff.SizeDGVMin();
                 uC_Class.SizeDGVMin();
+                uC_Bill.SizeDGVMin();
             }
 
 

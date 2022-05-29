@@ -99,5 +99,33 @@ namespace PBL3TrungTamDayThem.DAL
             string query = "Update HOC_VIEN_TRONG_LOP set KetQuaHoc = '" + KQH + "' where MaHV = '" + MaHV +"' and MaLH = '" + MaLH + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int AddToClass(string MaHV, string MaLH)
+        {
+            string query1 = "Select SoLuongHV from LOP_HOC where MaLH = '" + MaLH + "'";
+            int SoLuongHV = 0;
+            foreach (DataRow row in DataProvider.Instance.ExecuteQuery(query1).Rows)
+            {
+                SoLuongHV = int.Parse(row["SoLuongHV"].ToString());
+            }
+            SoLuongHV++;
+            string query2 = "Update LOP_HOC set SoLuongHV = '" + SoLuongHV + "' where MaLH = '" + MaLH + "'";
+            DataProvider.Instance.ExecuteQuery(query2);
+            string query = "Insert into HOC_VIEN_TRONG_LOP values ('" + MaHV + "','" + MaLH + "','',N'Chưa đóng học phí')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int RemoveFromClass(string MaHV, string MaLH)
+        {
+            string query1 = "Select SoLuongHV from LOP_HOC where MaLH = '" + MaLH + "'";
+            int SoLuongHV = 0;
+            foreach (DataRow row in DataProvider.Instance.ExecuteQuery(query1).Rows)
+            {
+                SoLuongHV = int.Parse(row["SoLuongHV"].ToString());
+            }
+            SoLuongHV--;
+            string query2 = "Update LOP_HOC set SoLuongHV = '" + SoLuongHV + "' where MaLH = '" + MaLH + "'";
+            DataProvider.Instance.ExecuteQuery(query2);
+            string query = "Delete from HOC_VIEN_TRONG_LOP where MaHV = '" + MaHV + "' and MaLH = '" + MaLH + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

@@ -7,10 +7,11 @@ namespace PBL3TrungTamDayThem.GUI
 {
     public partial class UC_Staff : UserControl
     {
+        public string VaiTro { get; set; }
         public UC_Staff()
         {
             InitializeComponent();
-            setGUI();
+            SetGUI();
         }
         private void DGVShow()
         {
@@ -20,35 +21,47 @@ namespace PBL3TrungTamDayThem.GUI
         {
             DGVShow();
         }
-        private void setGUI()
+        private void SetCBB()
         {
             if (cbbPosition != null)
                 cbbPosition.Items.Clear();
             cbbPosition.Items.Add("All");
             cbbPosition.Items.AddRange(BLL_QLNV.Instance.GetListCBB().Distinct().ToArray());
-            cbbPosition.Text = "All";
             if (cbbSort != null)
                 cbbSort.Items.Clear();
             cbbSort.Items.Add("Luong");
             cbbSort.Items.Add("HoTenNV");
             cbbSort.Items.Add("NgaySinh");
         }
+        private void SetGUI()
+        {
+            SetCBB();
+            cbbPosition.Text = "All";
+        }
         private void btnDel_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
-            string MaNV = data[0].Cells["MaNV"].Value.ToString();
-            if (MaNV == null)
+            MessageBox.Show(VaiTro);
+            if (VaiTro == "Quản Lý")
             {
-                MessageBox.Show("Chưa chọn nhân viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
+                string MaNV = data[0].Cells["MaNV"].Value.ToString();
+                if (MaNV == null)
+                {
+                    MessageBox.Show("Chưa chọn nhân viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        BLL_QLNV.Instance.Delete(MaNV);
+                        DGVShow();
+                    }
+                }
             }
             else
             {
-                if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
-                {
-                    BLL_QLNV.Instance.Delete(MaNV);
-                    DGVShow();
-                }
-            }
+                MessageBox.Show("Bạn không có chức năng này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -72,7 +85,10 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnSort_Click(object sender, EventArgs e)
         {
-            dgvStaff.DataSource = BLL_QLNV.Instance.SortListStaff(cbbSort.Text);
+            if (cbbSort.Text == "")
+                MessageBox.Show("Chọn cách sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                dgvStaff.DataSource = BLL_QLNV.Instance.SortListStaff(cbbSort.Text);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

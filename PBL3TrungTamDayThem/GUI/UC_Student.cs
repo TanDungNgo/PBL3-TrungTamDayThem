@@ -47,7 +47,6 @@ namespace PBL3TrungTamDayThem.GUI
         {
             SetCBB();
             cbbClass.Text = "All";
-            cbbSort.Text = "HoTenHV";
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -91,7 +90,10 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            dgvStudent.DataSource = BLL_QLHV.Instance.SortListStudent(cbbSort.Text);
+            if (cbbSort.Text == "")
+                MessageBox.Show("Chọn cách sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                dgvStudent.DataSource = BLL_QLHV.Instance.SortListStudent(cbbSort.Text);
         }
         public void SizeDGVMax()
         {

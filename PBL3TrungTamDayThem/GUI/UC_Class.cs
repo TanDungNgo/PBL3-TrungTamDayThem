@@ -107,7 +107,7 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
             {
-                BLL_QLHV.Instance.AddToClass(txtMaHV.Text, txtClass.Text);
+                BLL_QLLH.Instance.AddToClass(txtMaHV.Text, txtClass.Text);
             }    
         }
 
@@ -143,6 +143,35 @@ namespace PBL3TrungTamDayThem.GUI
             {
                 MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }    
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (dgv_Class.SelectedRows.Count > 0)
+            {
+                DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
+                try
+                {
+                    string MaHV = data[0].Cells["MaHV"].Value.ToString();
+                    string MaLH = data[0].Cells["MaLH"].Value.ToString();
+                    if (MaHV == null)
+                    {
+                        MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        BLL_QLLH.Instance.RemoveFromClass(MaHV, MaLH);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

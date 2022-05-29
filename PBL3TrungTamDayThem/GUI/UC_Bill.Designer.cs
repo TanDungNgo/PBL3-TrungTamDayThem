@@ -30,8 +30,7 @@
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblercontent = new System.Windows.Forms.Label();
+            this.pnlLeft = new System.Windows.Forms.Panel();
             this.cbbContent = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,13 +44,13 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txbName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlRight = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
             this.pnlHeader.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlLeft.SuspendLayout();
+            this.pnlRight.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
@@ -78,46 +77,34 @@
             this.lblHeader.TabIndex = 33;
             this.lblHeader.Text = "Biên Lai";
             // 
-            // panel1
+            // pnlLeft
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
-            this.panel1.Controls.Add(this.lblercontent);
-            this.panel1.Controls.Add(this.cbbContent);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnPayFee);
-            this.panel1.Controls.Add(this.btnShow);
-            this.panel1.Controls.Add(this.btnPrint);
-            this.panel1.Controls.Add(this.txbFee);
-            this.panel1.Controls.Add(this.lblFee);
-            this.panel1.Controls.Add(this.cbbClass);
-            this.panel1.Controls.Add(this.lblClass);
-            this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.txbName);
-            this.panel1.Controls.Add(this.lblName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 60);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 549);
-            this.panel1.TabIndex = 1;
-            // 
-            // lblercontent
-            // 
-            this.lblercontent.AutoSize = true;
-            this.lblercontent.ForeColor = System.Drawing.Color.Red;
-            this.lblercontent.Location = new System.Drawing.Point(131, 404);
-            this.lblercontent.Name = "lblercontent";
-            this.lblercontent.Size = new System.Drawing.Size(165, 20);
-            this.lblercontent.TabIndex = 78;
-            this.lblercontent.Text = "Nhập nội dung biên lai";
-            this.lblercontent.Visible = false;
+            this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.pnlLeft.Controls.Add(this.cbbContent);
+            this.pnlLeft.Controls.Add(this.label2);
+            this.pnlLeft.Controls.Add(this.label1);
+            this.pnlLeft.Controls.Add(this.btnPayFee);
+            this.pnlLeft.Controls.Add(this.btnShow);
+            this.pnlLeft.Controls.Add(this.btnPrint);
+            this.pnlLeft.Controls.Add(this.txbFee);
+            this.pnlLeft.Controls.Add(this.lblFee);
+            this.pnlLeft.Controls.Add(this.cbbClass);
+            this.pnlLeft.Controls.Add(this.lblClass);
+            this.pnlLeft.Controls.Add(this.btnSearch);
+            this.pnlLeft.Controls.Add(this.txbName);
+            this.pnlLeft.Controls.Add(this.lblName);
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 60);
+            this.pnlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(397, 549);
+            this.pnlLeft.TabIndex = 1;
             // 
             // cbbContent
             // 
             this.cbbContent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbContent.FormattingEnabled = true;
-            this.cbbContent.Location = new System.Drawing.Point(135, 357);
+            this.cbbContent.Location = new System.Drawing.Point(135, 368);
             this.cbbContent.Name = "cbbContent";
             this.cbbContent.Size = new System.Drawing.Size(223, 28);
             this.cbbContent.TabIndex = 43;
@@ -127,7 +114,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(21, 358);
+            this.label2.Location = new System.Drawing.Point(21, 369);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 27);
             this.label2.TabIndex = 42;
@@ -267,29 +254,29 @@
             this.lblName.TabIndex = 32;
             this.lblName.Text = "Họ Tên:";
             // 
-            // panel2
+            // pnlRight
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(386, 60);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(521, 549);
-            this.panel2.TabIndex = 2;
+            this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.pnlRight.Controls.Add(this.groupBox1);
+            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRight.Location = new System.Drawing.Point(397, 60);
+            this.pnlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlRight.Name = "pnlRight";
+            this.pnlRight.Size = new System.Drawing.Size(510, 549);
+            this.pnlRight.TabIndex = 2;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(14, 0);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(507, 549);
+            this.groupBox1.Size = new System.Drawing.Size(510, 549);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Học Viên";
@@ -302,7 +289,7 @@
             this.panel3.Location = new System.Drawing.Point(3, 29);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(501, 516);
+            this.panel3.Size = new System.Drawing.Size(504, 516);
             this.panel3.TabIndex = 2;
             // 
             // dgvStudent
@@ -319,7 +306,7 @@
             this.dgvStudent.ReadOnly = true;
             this.dgvStudent.RowHeadersWidth = 62;
             this.dgvStudent.RowTemplate.Height = 28;
-            this.dgvStudent.Size = new System.Drawing.Size(501, 516);
+            this.dgvStudent.Size = new System.Drawing.Size(504, 516);
             this.dgvStudent.TabIndex = 1;
             // 
             // UC_Bill
@@ -327,17 +314,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlRight);
+            this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.pnlHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Bill";
             this.Size = new System.Drawing.Size(907, 609);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.pnlLeft.ResumeLayout(false);
+            this.pnlLeft.PerformLayout();
+            this.pnlRight.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
@@ -349,8 +336,8 @@
 
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label lblHeader;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlLeft;
+        private System.Windows.Forms.Panel pnlRight;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txbFee;
@@ -367,6 +354,5 @@
         private System.Windows.Forms.ComboBox cbbContent;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblercontent;
     }
 }

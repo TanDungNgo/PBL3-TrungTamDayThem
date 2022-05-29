@@ -9,11 +9,10 @@ namespace PBL3TrungTamDayThem.GUI
 {
     public partial class UC_Bill : UserControl
     {
-        private string _MaNV;
-        public UC_Bill(string MaNV)
+        public string MaNV { get; set; }
+        public UC_Bill()
         {
             InitializeComponent();
-            this._MaNV = MaNV;
             SetGUI();
         }
         void SetGUI()
@@ -48,30 +47,22 @@ namespace PBL3TrungTamDayThem.GUI
         {
             dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, txbName.Text);
         }
-        public bool Error()
-        {
-            bool check = true;
-            if (cbbContent.Text == "")
-            {
-                lblercontent.Visible = true;
-                check = false;
-            }
-            else
-                lblercontent.Visible = false;
-
-            return check;
-        }
         private void btnPrint_Click(object sender, EventArgs e)
         {
             if (dgvStudent.SelectedRows.Count > 0)
             {
+                if(cbbContent.Text == "")
+                {
+                    MessageBox.Show("Chưa có nội dung", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }    
                 DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
                 txbFee.Text = BLL_QLBL.Instance.GetFee(data[0].Cells["MaLH"].Value.ToString());
                 Bill bill = new Bill
                 {
                     MaHV = data[0].Cells["MaHV"].Value.ToString(),
                     MaLH = data[0].Cells["MaLH"].Value.ToString(),
-                    MaNV = this._MaNV,
+                    MaNV = MaNV,
                     HocPhi = int.Parse(txbFee.Text),
                     NgayThuHP = DateTime.Now,
                     NoiDung = cbbContent.Text,
@@ -96,19 +87,40 @@ namespace PBL3TrungTamDayThem.GUI
         {
             if (dgvStudent.SelectedRows.Count > 0)
             {
-                DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
-                Bill bill = new Bill
+                if (MessageBox.Show("Nhấn OK để hoàn thành trả phí", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.OK)
                 {
-                    MaHV = data[0].Cells["MaHV"].Value.ToString(),
-                    MaLH = data[0].Cells["MaLH"].Value.ToString(),
-                };
-                BLL_QLBL.Instance.PayFee(bill);
+                    if (cbbContent.Text == "")
+                    {
+                        MessageBox.Show("Chưa có nội dung", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
+                    txbFee.Text = BLL_QLBL.Instance.GetFee(data[0].Cells["MaLH"].Value.ToString());
+                    Bill bill = new Bill
+                    {
+                        MaHV = data[0].Cells["MaHV"].Value.ToString(),
+                        MaLH = data[0].Cells["MaLH"].Value.ToString(),
+                        MaNV = MaNV,
+                        HocPhi = int.Parse(txbFee.Text),
+                        NgayThuHP = DateTime.Now,
+                        NoiDung = cbbContent.Text,
+                    };
+                    BLL_QLBL.Instance.PayFee(bill);
+                }    
                 dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, txbName.Text);
             }
             else
             {
                 MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        public void SizeDGVMax()
+        {
+            pnlRight.Width = 550;
+        }
+        public void SizeDGVMin()
+        {
+            pnlRight.Width = 510;
         }
     }
 }

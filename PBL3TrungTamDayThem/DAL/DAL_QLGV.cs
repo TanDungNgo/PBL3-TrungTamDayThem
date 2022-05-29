@@ -27,13 +27,13 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public DataTable GetAllExpertise()
         {
-            string query = "Select ChuyenMon from GIAO_VIEN ";
+            string query = "Select ChuyenMon from GIAO_VIEN";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public List<Teacher> GetAllTeacher()
         {
             List<Teacher> data = new List<Teacher>();
-            string query = "Select * from GIAO_VIEN";
+            string query = "Select * from GIAO_VIEN where KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetTeacher(i));
@@ -43,7 +43,7 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Teacher> GetTeacherByEx(string chuyenmon)
         {
             List<Teacher> data = new List<Teacher>();
-            string query = "Select * from GIAO_VIEN where ChuyenMon = N'" + chuyenmon + "'";
+            string query = "Select * from GIAO_VIEN where ChuyenMon = N'" + chuyenmon + "' and KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetTeacher(i));
@@ -55,9 +55,9 @@ namespace PBL3TrungTamDayThem.DAL
             List<Teacher> data = new List<Teacher>();
             string query = "";
             if (chuyenmon == "All")
-                query = "Select * from GIAO_VIEN where HoTenGV like N'%" + name + "%'";
+                query = "Select * from GIAO_VIEN where HoTenGV like N'%" + name + "%' and KiemTra = 'true'";
             else
-                query = "Select * from GIAO_VIEN where HoTenGV like N'%" + name + "%' and ChuyenMon = N'" + chuyenmon + "'";
+                query = "Select * from GIAO_VIEN where HoTenGV like N'%" + name + "%' and ChuyenMon = N'" + chuyenmon + "' and KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetTeacher(i));
@@ -78,13 +78,12 @@ namespace PBL3TrungTamDayThem.DAL
                 TrinhDo = i["TrinhDo"].ToString(),
                 ChuyenMon = i["ChuyenMon"].ToString(),
                 Luong = i["Luong"].ToString()
-
             };
         }
         public int AddTeacher(Teacher t)
         {
             string query = "Insert into GIAO_VIEN values ('" +t.MaGV + "',N'" + t.HoTenGV + "','" + t.NgaySinh + "','" + t.GioiTinh + "',N'" + t.DiaChi +
-                                    "',N'" + t.ChuyenMon + "',N'" + t.TrinhDo + "','" + t.SDT + "','" + t.Email + "','" + t.Luong + "')";
+                                    "',N'" + t.ChuyenMon + "',N'" + t.TrinhDo + "','" + t.SDT + "','" + t.Email + "','" + t.Luong + "', 'true')";
             return DataProvider.Instance.ExecuteNonQuery(query);
 
         }
@@ -98,14 +97,14 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public int DeleteTeacher(string MaGV)
         {
-            string query = "Delete from  GIAO_VIEN where MaGV = '" + MaGV + "'";
+            string query = "Update GIAO_VIEN set KiemTra = 'false' where MaGV = '" + MaGV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
 
         public List<Teacher> SortListTeacher(string s)
         {
             List<Teacher> data = new List<Teacher>();
-            string query = "Select * from GIAO_VIEN ORDER BY " + s;
+            string query = "Select * from GIAO_VIEN where KiemTra = 'true' ORDER BY " + s;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetTeacher(i));
@@ -114,8 +113,13 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public DataTable GetMaGV()
         {
-            string query = "Select MaGV from GIAO_VIEN";
+            string query = "Select MaGV from GIAO_VIEN where KiemTra = 'true'";
             return DataProvider.Instance.ExecuteQuery(query);   
+        }
+        public DataTable Count()
+        {
+            string query = "select COUNT(*) from GIAO_VIEN";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

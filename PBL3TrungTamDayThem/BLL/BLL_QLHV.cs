@@ -29,7 +29,10 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public int Count()
         {
-            int count = DAL_QLHV.Instance.GetAllStudent().Count;
+            //int count = DAL_QLHV.Instance.GetAllStudent().Count;
+            int count = 0;
+            foreach (DataRow i in DAL_QLHV.Instance.Count().Rows)
+                count = int.Parse(i[0].ToString());
             return count;
         }
         public List<string> GetListCBB()
@@ -105,13 +108,6 @@ namespace PBL3TrungTamDayThem.BLL
             List<Student> data = new List<Student>();
             data = DAL_QLHV.Instance.SortListStudent(s);
             return data;
-        }
-        public void AddToClass(string MaHV, string MaLH)
-        {
-            if (DAL_QLHV.Instance.AddToClass(MaHV, MaLH) > 0)
-                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
