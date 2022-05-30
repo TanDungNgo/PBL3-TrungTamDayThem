@@ -52,7 +52,7 @@ namespace PBL3TrungTamDayThem.DAL
         public int UpdateUser(User u)
         {
             string query = "Update ACCOUNT set MaNV = '" + u.MaNV + "',TaiKhoan = '" + u.TaiKhoan + "',MatKhau = '" + u.MatKhau +
-                                    "',TenHienThi = N'" + u.TenHienThi  + "',Anh = '" + u.Anh + "',VaiTro = '" + u.VaiTro +
+                                    "',TenHienThi = N'" + u.TenHienThi  + "',Anh = '" + u.Anh + "',VaiTro = N'" + u.VaiTro +
                                     "' where MaNV = '" + u.MaNV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }

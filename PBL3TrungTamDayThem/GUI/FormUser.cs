@@ -62,8 +62,9 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnSaveImage_Click(object sender, EventArgs e)
         {
-            string fileName = this._MaNV + ".jpg";
+            string fileName = this._MaNV + DateTime.Now.Second + ".jpg";
             this.filePath = "Resources\\" + fileName;
+            MessageBox.Show(this.filePath.ToString());
             try
             {
                 this.bmp.Save(filePath);

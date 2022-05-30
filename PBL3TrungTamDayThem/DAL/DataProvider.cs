@@ -70,20 +70,5 @@ namespace PBL3TrungTamDayThem.DAL
             cnn.Close();
             return check;
         }
-        public void Command(User user, string query)
-        {
-            using (SqlConnection cnn = new SqlConnection(cnnSTR))
-            {
-                cnn.Open();
-                SqlCommand cmd = new SqlCommand(query, cnn);
-                cmd.Parameters.Add("@MaNV", user.MaNV);
-                cmd.Parameters.Add("@Username", user.TaiKhoan);
-                cmd.Parameters.Add("@Pass", user.MatKhau);
-                cmd.Parameters.Add("@DisplayName", user.TenHienThi);
-                cmd.Parameters.Add("@Anh", user.Anh);
-                cmd.Parameters.Add("@VaiTro", user.VaiTro);
-                cnn.Close();
-            }
-        }
     }
 }
