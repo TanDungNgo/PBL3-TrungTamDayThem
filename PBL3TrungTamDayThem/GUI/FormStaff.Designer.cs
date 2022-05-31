@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbPosition = new System.Windows.Forms.ComboBox();
             this.lblerposition = new System.Windows.Forms.Label();
             this.lbleraddress = new System.Windows.Forms.Label();
             this.lblersalary = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.lblBD = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.cbbPosition = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -106,6 +106,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(897, 798);
             this.panel1.TabIndex = 0;
+            // 
+            // cbbPosition
+            // 
+            this.cbbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPosition.FormattingEnabled = true;
+            this.cbbPosition.Location = new System.Drawing.Point(281, 401);
+            this.cbbPosition.Name = "cbbPosition";
+            this.cbbPosition.Size = new System.Drawing.Size(275, 28);
+            this.cbbPosition.TabIndex = 81;
+            this.cbbPosition.SelectedIndexChanged += new System.EventHandler(this.cbbPosition_SelectedIndexChanged);
             // 
             // lblerposition
             // 
@@ -356,6 +366,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(281, 64);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
@@ -435,16 +446,6 @@
             this.lblID.Size = new System.Drawing.Size(160, 26);
             this.lblID.TabIndex = 53;
             this.lblID.Text = "Mã nhân viên:";
-            // 
-            // cbbPosition
-            // 
-            this.cbbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbPosition.FormattingEnabled = true;
-            this.cbbPosition.Location = new System.Drawing.Point(281, 401);
-            this.cbbPosition.Name = "cbbPosition";
-            this.cbbPosition.Size = new System.Drawing.Size(275, 28);
-            this.cbbPosition.TabIndex = 81;
-            this.cbbPosition.SelectedIndexChanged += new System.EventHandler(this.cbbPosition_SelectedIndexChanged);
             // 
             // panel2
             // 

@@ -41,20 +41,22 @@ namespace PBL3TrungTamDayThem.BLL
             }
             return l;
         }
-        public List<Staff> GetListStaff(string chucvu, string name)
+        public List<Staff> GetListStaff(string chucvu, string search)
         {
             List<Staff> data = new List<Staff>();
-            if (name != null)
+            if (chucvu == "All")
             {
-                data = DAL_QLNV.Instance.GetStaffBySearch(chucvu, name);
+                if (search == "")
+                    data = DAL_QLNV.Instance.GetAllStaff();
+                else
+                    data = DAL_QLNV.Instance.GetStaffBySearch(chucvu, search);
             }
-            if (name == null && chucvu == "All")
+            else
             {
-                data = DAL_QLNV.Instance.GetAllStaff();
-            }
-            if (chucvu != "All")
-            {
-                data = DAL_QLNV.Instance.GetStaffByPosition(chucvu);
+                if (search == "")
+                    data = DAL_QLNV.Instance.GetStaffByPosition(chucvu);
+                else
+                    data = DAL_QLNV.Instance.GetStaffBySearch(chucvu, search);
             }
             return data;
         }

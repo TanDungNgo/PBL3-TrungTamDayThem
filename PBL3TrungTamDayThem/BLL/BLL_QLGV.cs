@@ -28,7 +28,6 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public int Count()
         {
-            //int count = DAL_QLGV.Instance.GetAllTeacher().Count;
             int count = 0;
             foreach(DataRow i in DAL_QLGV.Instance.Count().Rows)
                 count = int.Parse(i[0].ToString());
@@ -46,18 +45,20 @@ namespace PBL3TrungTamDayThem.BLL
         public List<Teacher> GetListTeacher(string chuyenmon, string search)
         {
             List<Teacher> data = new List<Teacher>();
-            if (search == null && chuyenmon == "All")
+            if (chuyenmon == "All")
             {
-                data = DAL_QLGV.Instance.GetAllTeacher();
+                if (search == "")
+                    data = DAL_QLGV.Instance.GetAllTeacher();
+                else
+                    data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
             }
-            if (chuyenmon != "All")
+            else
             {
-                data = DAL_QLGV.Instance.GetTeacherByEx(chuyenmon);
+                if (search == "")
+                    data = DAL_QLGV.Instance.GetTeacherByEx(chuyenmon);
+                else
+                    data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
             }
-            if (search != null)
-            {
-                data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
-            }    
             return data;
         }
         public Teacher GetGVByID(string MaGV)

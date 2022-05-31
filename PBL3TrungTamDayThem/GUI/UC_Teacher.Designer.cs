@@ -95,7 +95,7 @@
             // 
             this.cbbExpertise.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbExpertise.FormattingEnabled = true;
-            this.cbbExpertise.Location = new System.Drawing.Point(126, 100);
+            this.cbbExpertise.Location = new System.Drawing.Point(133, 88);
             this.cbbExpertise.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbExpertise.Name = "cbbExpertise";
             this.cbbExpertise.Size = new System.Drawing.Size(183, 28);
@@ -106,7 +106,7 @@
             this.lblExpertise.AutoSize = true;
             this.lblExpertise.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpertise.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblExpertise.Location = new System.Drawing.Point(1, 104);
+            this.lblExpertise.Location = new System.Drawing.Point(6, 91);
             this.lblExpertise.Name = "lblExpertise";
             this.lblExpertise.Size = new System.Drawing.Size(128, 25);
             this.lblExpertise.TabIndex = 30;
@@ -116,7 +116,7 @@
             // 
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(3, 32);
+            this.cbbSort.Location = new System.Drawing.Point(7, 24);
             this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Size = new System.Drawing.Size(173, 28);
@@ -168,7 +168,7 @@
             this.pnlCenter2.Location = new System.Drawing.Point(315, 0);
             this.pnlCenter2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCenter2.Name = "pnlCenter2";
-            this.pnlCenter2.Size = new System.Drawing.Size(313, 149);
+            this.pnlCenter2.Size = new System.Drawing.Size(322, 149);
             this.pnlCenter2.TabIndex = 2;
             // 
             // btnSort
@@ -192,10 +192,10 @@
             this.pnlRight.Controls.Add(this.btnSearch);
             this.pnlRight.Controls.Add(this.txtName);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(628, 0);
+            this.pnlRight.Location = new System.Drawing.Point(637, 0);
             this.pnlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(279, 149);
+            this.pnlRight.Size = new System.Drawing.Size(270, 149);
             this.pnlRight.TabIndex = 1;
             // 
             // btnSearch

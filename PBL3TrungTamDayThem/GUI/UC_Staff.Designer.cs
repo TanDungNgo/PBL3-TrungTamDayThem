@@ -110,10 +110,10 @@
             this.panel5.Controls.Add(this.cbbPosition);
             this.panel5.Controls.Add(this.lblPosition);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(347, 0);
+            this.panel5.Location = new System.Drawing.Point(330, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(560, 149);
+            this.panel5.Size = new System.Drawing.Size(577, 149);
             this.panel5.TabIndex = 1;
             // 
             // btnSort
@@ -122,7 +122,7 @@
             this.btnSort.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSort.Image = global::PBL3TrungTamDayThem.Properties.Resources.show_icon;
             this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSort.Location = new System.Drawing.Point(164, 76);
+            this.btnSort.Location = new System.Drawing.Point(184, 76);
             this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(119, 50);
@@ -135,10 +135,10 @@
             // 
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(6, 88);
+            this.cbbSort.Location = new System.Drawing.Point(18, 88);
             this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSort.Name = "cbbSort";
-            this.cbbSort.Size = new System.Drawing.Size(152, 28);
+            this.cbbSort.Size = new System.Drawing.Size(160, 28);
             this.cbbSort.TabIndex = 48;
             // 
             // panel6
@@ -146,7 +146,7 @@
             this.panel6.Controls.Add(this.txbName);
             this.panel6.Controls.Add(this.btnSearch);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(304, 0);
+            this.panel6.Location = new System.Drawing.Point(321, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(256, 149);
             this.panel6.TabIndex = 47;
@@ -181,7 +181,7 @@
             this.cbbPosition.Location = new System.Drawing.Point(112, 30);
             this.cbbPosition.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbPosition.Name = "cbbPosition";
-            this.cbbPosition.Size = new System.Drawing.Size(171, 28);
+            this.cbbPosition.Size = new System.Drawing.Size(191, 28);
             this.cbbPosition.TabIndex = 44;
             // 
             // lblPosition
@@ -206,7 +206,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(347, 149);
+            this.panel4.Size = new System.Drawing.Size(330, 149);
             this.panel4.TabIndex = 0;
             // 
             // btnEdit
@@ -215,7 +215,7 @@
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = global::PBL3TrungTamDayThem.Properties.Resources.edit_icon;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(191, 16);
+            this.btnEdit.Location = new System.Drawing.Point(172, 17);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(146, 50);
@@ -230,7 +230,7 @@
             this.btnShow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.Image = global::PBL3TrungTamDayThem.Properties.Resources.list__4_;
             this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(191, 83);
+            this.btnShow.Location = new System.Drawing.Point(172, 84);
             this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(146, 50);

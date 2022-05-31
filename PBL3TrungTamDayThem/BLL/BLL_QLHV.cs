@@ -29,7 +29,6 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public int Count()
         {
-            //int count = DAL_QLHV.Instance.GetAllStudent().Count;
             int count = 0;
             foreach (DataRow i in DAL_QLHV.Instance.Count().Rows)
                 count = int.Parse(i[0].ToString());
@@ -48,18 +47,20 @@ namespace PBL3TrungTamDayThem.BLL
         public List<Student> GetListStudent(string lophoc, string search)
         {
             List < Student > data  = new List<Student>();
-            if (search != null)
+            if (lophoc == "All")
             {
-                data = DAL_QLHV.Instance.GetStudentBySearch(search);
+                if (search == "")
+                    data = DAL_QLHV.Instance.GetAllStudent();
+                else
+                    data = DAL_QLHV.Instance.GetStudentBySearch(search, lophoc);
             }
-            if (search == null && lophoc == "All")
+            else
             {
-                data = DAL_QLHV.Instance.GetAllStudent();
-            }
-            if (lophoc != "All")
-            {
-                data = DAL_QLHV.Instance.GetStudentByClass(lophoc);
-            }
+                if (search == "")
+                    data = DAL_QLHV.Instance.GetStudentByClass(lophoc);
+                else
+                    data = DAL_QLHV.Instance.GetStudentBySearch(search, lophoc);
+            }    
             return data;
         }
         public Student GetHVByID(string MaHV)

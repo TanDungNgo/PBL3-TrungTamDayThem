@@ -19,6 +19,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             SetCBB();
             cbbClass.Text = "All";
+            cbbStatus.Text = "All";
         }
         void SetCBB()
         {
@@ -36,16 +37,26 @@ namespace PBL3TrungTamDayThem.GUI
             cbbContent.Items.Add("T4 - T6");
             cbbContent.Items.Add("T7 - T9");
             cbbContent.Items.Add("T10 - T12");
+            if (cbbStatus != null)
+            {
+                cbbStatus.Items.Clear();
+            }
+            cbbStatus.Items.Add("Đã đóng học phí");
+            cbbStatus.Items.Add("Chưa đóng học phí");
+            cbbStatus.Items.Add("All");
         }
-
+        void ShowDGV()
+        {
+            dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, null, "All");
+        }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, null);
+            ShowDGV();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, txbName.Text);
+            dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, txbName.Text, cbbStatus.Text);
         }
         private void btnPrint_Click(object sender, EventArgs e)
         {
@@ -106,8 +117,8 @@ namespace PBL3TrungTamDayThem.GUI
                         NoiDung = cbbContent.Text,
                     };
                     BLL_QLBL.Instance.PayFee(bill);
-                }    
-                dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, txbName.Text);
+                }
+                ShowDGV();
             }
             else
             {

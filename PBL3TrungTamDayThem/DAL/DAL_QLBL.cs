@@ -38,7 +38,7 @@ namespace PBL3TrungTamDayThem.DAL
         public DataTable GetStudentBySearch(string name, string lophoc)
         {
             string query = "";
-            if (lophoc == "")
+            if (lophoc == "All")
                 query = "select HVTL.MaLH, HV.MaHV, HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
                     "on HV.MaHV = HVTL.MaHV where HV.HoTenHV like N'%" + name + "%'";
             else
@@ -62,6 +62,31 @@ namespace PBL3TrungTamDayThem.DAL
             string query = "Update HOC_VIEN_TRONG_LOP set TinhTrang = N'Đã đóng học phí' from HOC_VIEN_TRONG_LOP hvtl  inner join HOC_VIEN hv " +
                 "on hvtl.MaHV = hv.MaHV where hv.MaHV = '" + MaHV + "' and hvtl.MaLH = '" + MaLH + "'";
             DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable GetStudentByStatus(string tinhtrang, string MaLH, string search)
+        {
+            string query = "";
+            if (MaLH == "All")
+            {
+                if (search == "")
+                    query = "select HVTL.MaLH, HV.MaHV, HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
+                            "on HV.MaHV = HVTL.MaHV where HVTL.TinhTrang = N'" + tinhtrang + "'";
+                else
+                    query = "select HVTL.MaLH, HV.MaHV, HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
+                    "on HV.MaHV = HVTL.MaHV where HVTL.TinhTrang = N'" + tinhtrang + "' and HV.HoTenHV like N'%" + search + "%'";
+            }    
+            else
+            {
+                if (search == "")
+                    query = "select HVTL.MaLH, HV.MaHV, HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
+                            "on HV.MaHV = HVTL.MaHV where HVTL.TinhTrang = N'" + tinhtrang + "'  and HVTL.MaLH = '" + MaLH + "'";
+                else
+                    query = "select HVTL.MaLH, HV.MaHV, HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
+                    "on HV.MaHV = HVTL.MaHV where HVTL.TinhTrang = N'" + tinhtrang + "'  and HVTL.MaLH = '" + MaLH + "' and HV.HoTenHV like N'%" + search + "%'";
+            }    
+          
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

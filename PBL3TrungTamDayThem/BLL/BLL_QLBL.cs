@@ -25,21 +25,27 @@ namespace PBL3TrungTamDayThem.BLL
             private set { }
         }
         private BLL_QLBL() { }
-        public DataTable GetListStudent(string lophoc, string search)
+        public DataTable GetListStudent(string lophoc, string search, string tinhtrang)
         {
             DataTable data = new DataTable();
-            if (search != null)
-            {
-                data = DAL_QLBL.Instance.GetStudentBySearch(search, lophoc);
-            }
-            if (search == null)
-            {
-                data = DAL_QLBL.Instance.GetStudentByClass(lophoc);
-            }
             if (lophoc == "All")
             {
-                data = DAL_QLBL.Instance.GetAllStudent();
-            }
+                if (search == "" && tinhtrang == "All")
+                    data = DAL_QLBL.Instance.GetAllStudent();
+                if (search != "" && tinhtrang == "All")
+                    data = data = DAL_QLBL.Instance.GetStudentBySearch(search, lophoc);
+                if (tinhtrang != "All")
+                    data = DAL_QLBL.Instance.GetStudentByStatus(tinhtrang, lophoc, search);
+            }   
+            else
+            {
+                if (search == "" && tinhtrang == "All")
+                    data = DAL_QLBL.Instance.GetStudentByClass(lophoc);
+                if (search != "" && tinhtrang == "All")
+                    data = DAL_QLBL.Instance.GetStudentBySearch(search, lophoc);
+                if (tinhtrang != "All")
+                    data = DAL_QLBL.Instance.GetStudentByStatus(tinhtrang, lophoc, search);
+            }    
             return data;
         }
         public string GetFee(string MaLH)

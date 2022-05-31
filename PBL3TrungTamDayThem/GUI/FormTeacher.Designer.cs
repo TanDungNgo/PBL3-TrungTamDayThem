@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblersalary = new System.Windows.Forms.Label();
             this.lblerexpertise = new System.Windows.Forms.Label();
             this.lblerlevel = new System.Windows.Forms.Label();
             this.lbleremail = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblersalary = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +108,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(897, 788);
             this.panel1.TabIndex = 0;
+            // 
+            // lblersalary
+            // 
+            this.lblersalary.AutoSize = true;
+            this.lblersalary.ForeColor = System.Drawing.Color.Red;
+            this.lblersalary.Location = new System.Drawing.Point(313, 640);
+            this.lblersalary.Name = "lblersalary";
+            this.lblersalary.Size = new System.Drawing.Size(90, 20);
+            this.lblersalary.TabIndex = 54;
+            this.lblersalary.Text = "Nhập lương";
+            this.lblersalary.Visible = false;
             // 
             // lblerexpertise
             // 
@@ -369,6 +380,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(312, 57);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
@@ -482,17 +494,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 50;
-            // 
-            // lblersalary
-            // 
-            this.lblersalary.AutoSize = true;
-            this.lblersalary.ForeColor = System.Drawing.Color.Red;
-            this.lblersalary.Location = new System.Drawing.Point(313, 640);
-            this.lblersalary.Name = "lblersalary";
-            this.lblersalary.Size = new System.Drawing.Size(90, 20);
-            this.lblersalary.TabIndex = 54;
-            this.lblersalary.Text = "Nhập lương";
-            this.lblersalary.Visible = false;
             // 
             // FormTeacher
             // 

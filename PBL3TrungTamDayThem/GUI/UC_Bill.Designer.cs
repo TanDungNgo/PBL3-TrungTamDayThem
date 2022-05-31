@@ -48,6 +48,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
+            this.cbbStatus = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             this.pnlRight.SuspendLayout();
@@ -80,6 +82,8 @@
             // pnlLeft
             // 
             this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.pnlLeft.Controls.Add(this.label3);
+            this.pnlLeft.Controls.Add(this.cbbStatus);
             this.pnlLeft.Controls.Add(this.cbbContent);
             this.pnlLeft.Controls.Add(this.label2);
             this.pnlLeft.Controls.Add(this.label1);
@@ -104,7 +108,7 @@
             // 
             this.cbbContent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbContent.FormattingEnabled = true;
-            this.cbbContent.Location = new System.Drawing.Point(135, 368);
+            this.cbbContent.Location = new System.Drawing.Point(143, 401);
             this.cbbContent.Name = "cbbContent";
             this.cbbContent.Size = new System.Drawing.Size(223, 28);
             this.cbbContent.TabIndex = 43;
@@ -114,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(21, 369);
+            this.label2.Location = new System.Drawing.Point(16, 399);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 27);
             this.label2.TabIndex = 42;
@@ -125,7 +129,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(119, 255);
+            this.label1.Location = new System.Drawing.Point(109, 290);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 32);
             this.label1.TabIndex = 41;
@@ -136,7 +140,7 @@
             this.btnPayFee.BackColor = System.Drawing.Color.White;
             this.btnPayFee.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayFee.Image = global::PBL3TrungTamDayThem.Properties.Resources.save_money;
-            this.btnPayFee.Location = new System.Drawing.Point(26, 448);
+            this.btnPayFee.Location = new System.Drawing.Point(21, 478);
             this.btnPayFee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPayFee.Name = "btnPayFee";
             this.btnPayFee.Size = new System.Drawing.Size(146, 50);
@@ -152,7 +156,7 @@
             this.btnShow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.Image = global::PBL3TrungTamDayThem.Properties.Resources.list__4_;
             this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(212, 75);
+            this.btnShow.Location = new System.Drawing.Point(220, 54);
             this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(146, 50);
@@ -166,7 +170,7 @@
             this.btnPrint.BackColor = System.Drawing.Color.White;
             this.btnPrint.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Image = global::PBL3TrungTamDayThem.Properties.Resources.printer;
-            this.btnPrint.Location = new System.Drawing.Point(212, 448);
+            this.btnPrint.Location = new System.Drawing.Point(207, 478);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(146, 50);
@@ -180,7 +184,7 @@
             // txbFee
             // 
             this.txbFee.Enabled = false;
-            this.txbFee.Location = new System.Drawing.Point(135, 311);
+            this.txbFee.Location = new System.Drawing.Point(144, 341);
             this.txbFee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbFee.Name = "txbFee";
             this.txbFee.Size = new System.Drawing.Size(223, 26);
@@ -191,7 +195,7 @@
             this.lblFee.AutoSize = true;
             this.lblFee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFee.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFee.Location = new System.Drawing.Point(21, 309);
+            this.lblFee.Location = new System.Drawing.Point(16, 339);
             this.lblFee.Name = "lblFee";
             this.lblFee.Size = new System.Drawing.Size(94, 27);
             this.lblFee.TabIndex = 36;
@@ -201,7 +205,7 @@
             // 
             this.cbbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbClass.FormattingEnabled = true;
-            this.cbbClass.Location = new System.Drawing.Point(135, 31);
+            this.cbbClass.Location = new System.Drawing.Point(143, 12);
             this.cbbClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbClass.Name = "cbbClass";
             this.cbbClass.Size = new System.Drawing.Size(223, 28);
@@ -213,7 +217,7 @@
             this.lblClass.AutoSize = true;
             this.lblClass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblClass.Location = new System.Drawing.Point(21, 32);
+            this.lblClass.Location = new System.Drawing.Point(16, 13);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(58, 27);
             this.lblClass.TabIndex = 35;
@@ -224,7 +228,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = global::PBL3TrungTamDayThem.Properties.Resources.search_icon1;
-            this.btnSearch.Location = new System.Drawing.Point(212, 188);
+            this.btnSearch.Location = new System.Drawing.Point(221, 228);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(146, 50);
@@ -237,7 +241,7 @@
             // 
             // txbName
             // 
-            this.txbName.Location = new System.Drawing.Point(135, 146);
+            this.txbName.Location = new System.Drawing.Point(143, 129);
             this.txbName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(224, 26);
@@ -248,7 +252,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblName.Location = new System.Drawing.Point(21, 146);
+            this.lblName.Location = new System.Drawing.Point(16, 127);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(90, 27);
             this.lblName.TabIndex = 32;
@@ -309,6 +313,27 @@
             this.dgvStudent.Size = new System.Drawing.Size(504, 516);
             this.dgvStudent.TabIndex = 1;
             // 
+            // cbbStatus
+            // 
+            this.cbbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStatus.FormattingEnabled = true;
+            this.cbbStatus.Location = new System.Drawing.Point(143, 185);
+            this.cbbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbStatus.Name = "cbbStatus";
+            this.cbbStatus.Size = new System.Drawing.Size(223, 28);
+            this.cbbStatus.TabIndex = 44;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(16, 183);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 27);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Tình Trạng:";
+            // 
             // UC_Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -354,5 +379,7 @@
         private System.Windows.Forms.ComboBox cbbContent;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbbStatus;
     }
 }

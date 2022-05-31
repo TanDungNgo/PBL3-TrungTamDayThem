@@ -66,10 +66,16 @@ namespace PBL3TrungTamDayThem.DAL
             }
             return data;
         }
-        public List<Student> GetStudentBySearch(string name)
+        public List<Student> GetStudentBySearch(string name, string lophoc)
         {
             List<Student> data = new List<Student>();
-            string query = "Select * from HOC_VIEN where HoTenHV like N'%" + name + "%' and KiemTra = 'true'";
+            string query = "";
+            if (lophoc == "All")
+                query = "Select * from HOC_VIEN where HoTenHV like N'%" + name + "%' and KiemTra = 'true'";
+            else
+                query = "Select HV.MaHV, HV.HoTenHV, HV.GioiTinh, HV.NgaySinh, HV.DiaChi, HV.Email, HV.SDT " +
+                "From HOC_VIEN HV INNER JOIN HOC_VIEN_TRONG_LOP HVTL ON HV.MaHV = HVTL.MaHV INNER JOIN LOP_HOC L " +
+                "ON HVTL.MaLH = L.MaLH WHERE HoTenHV like N'%" + name + "%' and L.MaLH = '" + lophoc + "' and KiemTra = 'true'";
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
