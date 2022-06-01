@@ -30,7 +30,7 @@ namespace PBL3TrungTamDayThem.GUI
                 MessageBox.Show("Chọn năm muốn thống kê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }    
-            int ma = int.Parse(comboBox1.Text.Substring(2)) - 2;
+            int ma = int.Parse(comboBox1.Text.Substring(2));
             chart1.Series.Clear(); 
             chart1.Series.Add("DoanhThu");
             chart1.Titles.Clear();
@@ -59,7 +59,7 @@ namespace PBL3TrungTamDayThem.GUI
                 MessageBox.Show("Chọn năm muốn thống kê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            int ma = int.Parse(comboBox1.Text.Substring(2)) - 2;
+            int ma = int.Parse(comboBox1.Text.Substring(2));
             chart1.Series.Clear();
             chart1.Series.Add("SoLuong");
             chart1.Titles.Clear();

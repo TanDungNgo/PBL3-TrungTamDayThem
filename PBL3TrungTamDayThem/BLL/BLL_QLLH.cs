@@ -89,13 +89,24 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public void Delete(List<string> LMaLH)
         {
+            int length = LMaLH.Count;
+            int count = 0;
             foreach (string i in LMaLH)
             {
                 if (DAL_QLLH.Instance.DeleteClass(i) > 0)
-                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    count++;
                 else
+                {
                     MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                }    
             }    
+            if (count == length)
+                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public DataTable GetHVByClass(string MaLH)
+        {
+            return DAL_QLLH.Instance.GetHVByClass(MaLH);
         }
         public void UpdateKQH(string KQH, string MaHV, string MaLH)
         {
@@ -117,6 +128,11 @@ namespace PBL3TrungTamDayThem.BLL
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public DataTable SortListStudent(string MaLH)
+        {
+            DataTable data = DAL_QLLH.Instance.SortLisstStudentInClass(MaLH);
+            return data;
         }
     }
 }

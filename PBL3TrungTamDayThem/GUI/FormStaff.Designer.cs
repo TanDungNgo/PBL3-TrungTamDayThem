@@ -331,7 +331,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(281, 272);
+            this.txtPhone.Location = new System.Drawing.Point(281, 263);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(275, 26);
@@ -342,7 +342,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblPhone.Location = new System.Drawing.Point(129, 270);
+            this.lblPhone.Location = new System.Drawing.Point(129, 261);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(153, 26);
             this.lblPhone.TabIndex = 60;

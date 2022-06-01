@@ -1,5 +1,4 @@
 ﻿using PBL3TrungTamDayThem.BLL;
-using PBL3TrungTamDayThem.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,25 +35,27 @@ namespace PBL3TrungTamDayThem.GUI
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormClass frm = new FormClass();
+            frm.d += new FormClass.MyDel(ShowDGV);
             frm.ShowDialog();
         }
-        public void DGVShow()
+        public void ShowDGV()
         {
             dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(cbbSubject.Text, cbbClass.Text);
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            DGVShow();
+            ShowDGV();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgv_Class.SelectedRows.Count > 0)
+            if (dgv_Class.SelectedRows.Count == 1)
             {
                 DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
                 string MaLH = data[0].Cells["MaLH"].Value.ToString();
-                FormClass f = new FormClass(MaLH);
-                f.ShowDialog();
+                FormClass frm = new FormClass(MaLH);
+                frm.d += new FormClass.MyDel(ShowDGV);
+                frm.ShowDialog();
             }
             else
             {
@@ -75,7 +76,7 @@ namespace PBL3TrungTamDayThem.GUI
                 {
                     BLL_QLLH.Instance.Delete(LMaLH);
                     SetGUI();
-                    DGVShow();
+                    ShowDGV();
                 }
             }
         }
@@ -90,7 +91,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnShow2_Click(object sender, EventArgs e)
         {
-            dgv_Class.DataSource = DAL_QLLH.Instance.GetHVByClass(cbbClass.Text);
+            dgv_Class.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
         }
 
         private void btnAddtoclass_Click(object sender, EventArgs e)
@@ -108,6 +109,7 @@ namespace PBL3TrungTamDayThem.GUI
             else
             {
                 BLL_QLLH.Instance.AddToClass(txtMaHV.Text, txtClass.Text);
+                dgv_Class.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
             }    
         }
 
@@ -132,6 +134,7 @@ namespace PBL3TrungTamDayThem.GUI
                     else
                     {
                         BLL_QLLH.Instance.UpdateKQH(txtKQH.Text, MaHV, MaLH);
+                        dgv_Class.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
                     }
                 }
                 catch (Exception ex)
@@ -161,6 +164,7 @@ namespace PBL3TrungTamDayThem.GUI
                     else
                     {
                         BLL_QLLH.Instance.RemoveFromClass(MaHV, MaLH);
+                        dgv_Class.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
                     }
                 }
                 catch (Exception ex)
@@ -172,6 +176,11 @@ namespace PBL3TrungTamDayThem.GUI
             {
                 MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            dgv_Class.DataSource = BLL_QLLH.Instance.SortListStudent(cbbClass.Text);
         }
     }
 }

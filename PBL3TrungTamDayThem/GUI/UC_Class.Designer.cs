@@ -35,6 +35,8 @@
             this.dgv_Class = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSort = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtKQH = new System.Windows.Forms.TextBox();
@@ -53,7 +55,6 @@
             this.lblSubject = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).BeginInit();
@@ -95,6 +96,7 @@
             // 
             // dgv_Class
             // 
+            this.dgv_Class.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Class.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Class.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Class.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,6 +122,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.panel4.Controls.Add(this.btnSort);
             this.panel4.Controls.Add(this.btnRemove);
             this.panel4.Controls.Add(this.btnUpdate);
             this.panel4.Controls.Add(this.label3);
@@ -138,6 +141,28 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(907, 145);
             this.panel4.TabIndex = 1;
+            // 
+            // btnSort
+            // 
+            this.btnSort.BackColor = System.Drawing.Color.White;
+            this.btnSort.Location = new System.Drawing.Point(634, 74);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(146, 50);
+            this.btnSort.TabIndex = 56;
+            this.btnSort.Text = "Sắp xếp điểm số";
+            this.btnSort.UseVisualStyleBackColor = false;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(468, 74);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(146, 50);
+            this.btnRemove.TabIndex = 55;
+            this.btnRemove.Text = "Xóa khỏi lớp";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnUpdate
             // 
@@ -349,17 +374,6 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(468, 74);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(146, 50);
-            this.btnRemove.TabIndex = 55;
-            this.btnRemove.Text = "Xóa khỏi lớp";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
             // UC_Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -410,5 +424,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtKQH;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnSort;
     }
 }

@@ -94,20 +94,30 @@ namespace PBL3TrungTamDayThem.BLL
                     MessageBox.Show("Cập nhật thất bại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void DeleteStudent(List<string> LMahV)
+        public void DeleteStudent(List<string> LMaHV)
         {
-            foreach (string i in LMahV)
+            int length = LMaHV.Count;
+            int count = 0;
+            foreach (string i in LMaHV)
             {
                 if (DAL_QLHV.Instance.DeleteStudent(i) > 0)
-                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    count++;
                 else
+                {
                     MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }    
+                    break;
+                }
+            }   
+            if (count == length)
+                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        public List<Student> SortListStudent(string s)
+        public List<Student> SortListStudent(string s, string MaLH)
         {
             List<Student> data = new List<Student>();
-            data = DAL_QLHV.Instance.SortListStudent(s);
+            if (MaLH == "All")
+                data = DAL_QLHV.Instance.SortListStudent(s);
+            else
+                data = DAL_QLHV.Instance.SortListStudentInClass(s, MaLH);
             return data;
         }
     }

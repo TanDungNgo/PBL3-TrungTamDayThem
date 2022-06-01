@@ -9,6 +9,8 @@ namespace PBL3TrungTamDayThem.GUI
     public partial class FormStudent : Form
     {
         private string _MaHV;
+        public delegate void MyDel();
+        public MyDel d { get; set; }
         public FormStudent(string MaHV = null)
         {
             InitializeComponent();
@@ -102,6 +104,7 @@ namespace PBL3TrungTamDayThem.GUI
                     GioiTinh = rbMale.Checked.ToString(),
                 };
                 BLL_QLHV.Instance.ExecuteDB(s);
+                d();
                 this.Dispose();
             }
         }

@@ -30,7 +30,6 @@
         {
             this.pnlFee = new System.Windows.Forms.Panel();
             this.lblerID = new System.Windows.Forms.Label();
-            this.lblerNumber = new System.Windows.Forms.Label();
             this.lblerTime = new System.Windows.Forms.Label();
             this.lblerSb = new System.Windows.Forms.Label();
             this.lblerIdGv = new System.Windows.Forms.Label();
@@ -67,7 +66,6 @@
             // 
             this.pnlFee.BackColor = System.Drawing.Color.White;
             this.pnlFee.Controls.Add(this.lblerID);
-            this.pnlFee.Controls.Add(this.lblerNumber);
             this.pnlFee.Controls.Add(this.lblerTime);
             this.pnlFee.Controls.Add(this.lblerSb);
             this.pnlFee.Controls.Add(this.lblerIdGv);
@@ -109,17 +107,6 @@
             this.lblerID.TabIndex = 113;
             this.lblerID.Text = "Nhập mã lớp";
             this.lblerID.Visible = false;
-            // 
-            // lblerNumber
-            // 
-            this.lblerNumber.AutoSize = true;
-            this.lblerNumber.ForeColor = System.Drawing.Color.Red;
-            this.lblerNumber.Location = new System.Drawing.Point(410, 340);
-            this.lblerNumber.Name = "lblerNumber";
-            this.lblerNumber.Size = new System.Drawing.Size(173, 20);
-            this.lblerNumber.TabIndex = 112;
-            this.lblerNumber.Text = "Chọn số lượng học viên";
-            this.lblerNumber.Visible = false;
             // 
             // lblerTime
             // 
@@ -225,7 +212,7 @@
             // 
             // NUDSoLuong
             // 
-            this.NUDSoLuong.Location = new System.Drawing.Point(413, 309);
+            this.NUDSoLuong.Location = new System.Drawing.Point(413, 320);
             this.NUDSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NUDSoLuong.Name = "NUDSoLuong";
             this.NUDSoLuong.Size = new System.Drawing.Size(93, 26);
@@ -357,7 +344,7 @@
             this.lblNumber.AutoSize = true;
             this.lblNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumber.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblNumber.Location = new System.Drawing.Point(207, 309);
+            this.lblNumber.Location = new System.Drawing.Point(207, 320);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(200, 26);
             this.lblNumber.TabIndex = 87;
@@ -461,7 +448,6 @@
         private System.Windows.Forms.ComboBox cbbIDTeacher;
         private System.Windows.Forms.ComboBox cbbIDSubject;
         private System.Windows.Forms.Label lblerFee;
-        private System.Windows.Forms.Label lblerNumber;
         private System.Windows.Forms.Label lblerTime;
         private System.Windows.Forms.Label lblerSb;
         private System.Windows.Forms.Label lblerIdGv;

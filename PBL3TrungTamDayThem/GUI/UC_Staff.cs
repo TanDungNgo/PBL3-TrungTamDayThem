@@ -1,5 +1,6 @@
 ﻿using PBL3TrungTamDayThem.BLL;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -13,13 +14,13 @@ namespace PBL3TrungTamDayThem.GUI
             InitializeComponent();
             SetGUI();
         }
-        private void DGVShow()
+        private void ShowDGV()
         {
             dgvStaff.DataSource = BLL_QLNV.Instance.GetListStaff(cbbPosition.Text, null);
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            DGVShow();
+            ShowDGV();
         }
         private void SetCBB()
         {
@@ -40,23 +41,23 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnDel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(VaiTro);
             if (VaiTro == "Quản Lý")
             {
-                DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
-                string MaNV = data[0].Cells["MaNV"].Value.ToString();
-                if (MaNV == null)
+                if (dgvStaff.SelectedRows.Count > 0)
                 {
-                    MessageBox.Show("Chưa chọn nhân viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
+                    List<string> LMaNV = new List<string>();
+                    foreach (DataGridViewRow row in dgvStaff.SelectedRows)
+                    {
+                        LMaNV.Add(row.Cells["MaNV"].Value.ToString());
+                    }
                     if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                     {
-                        BLL_QLNV.Instance.Delete(MaNV);
-                        DGVShow();
+                        SetGUI();
+                        ShowDGV();
                     }
                 }
+                else
+                    MessageBox.Show("Chưa chọn nhân viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -66,18 +67,18 @@ namespace PBL3TrungTamDayThem.GUI
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormStaff frm = new FormStaff();
+            frm.d += new FormStaff.MyDel(ShowDGV);
             frm.ShowDialog();
-            DGVShow();
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvStaff.SelectedRows.Count > 0)
+            if (dgvStaff.SelectedRows.Count == 1)
             {
                 DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
                 string MaNV = data[0].Cells["MaNV"].Value.ToString();
-                FormStaff f = new FormStaff(MaNV);
-                f.ShowDialog();
-                DGVShow();
+                FormStaff frm = new FormStaff(MaNV);
+                frm.d += new FormStaff.MyDel(ShowDGV);
+                frm.ShowDialog();
             }
             else
                 MessageBox.Show("Chưa chọn nhân viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

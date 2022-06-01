@@ -93,13 +93,20 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public void DeleteTeacher(List<string> LMaGV)
         {
+            int length = LMaGV.Count;
+            int count = 0;
             foreach (string i in LMaGV)
             {
                 if (DAL_QLGV.Instance.DeleteTeacher(i) > 0)
-                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    count++;
                 else
+                {
                     MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                }         
             }
+            if (count == length)
+                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public List<Teacher> SortListTeacher(string s)

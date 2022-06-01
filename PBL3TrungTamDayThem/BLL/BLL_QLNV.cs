@@ -91,12 +91,23 @@ namespace PBL3TrungTamDayThem.BLL
                     MessageBox.Show("Cập nhật thất bại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void Delete(string MaNV)
+        public void Delete(List<string> LMaNV)
         {
-            if (DAL_QLNV.Instance.DeleteStaff(MaNV) > 0)
+            int length = LMaNV.Count;
+            int count = 0;
+            foreach (string i in LMaNV)
+            {
+                if (DAL_QLNV.Instance.DeleteStaff(i) > 0)
+                    count++;
+                else
+                {
+                    MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                }    
+            }    
+            if (count == length)
+
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         public List<Staff> SortListStaff(string s)
         {

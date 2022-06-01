@@ -9,6 +9,8 @@ namespace PBL3TrungTamDayThem.GUI
     public partial class FormTeacher : Form
     {
         private string _MaGV;
+        public delegate void MyDel();
+        public MyDel d { get; set; }
         public FormTeacher(string MaGV = null)
         {
             InitializeComponent();
@@ -40,6 +42,7 @@ namespace PBL3TrungTamDayThem.GUI
                     Luong = txtSalary.Text,
                 };
                 BLL_QLGV.Instance.ExecuteDB(teacher);
+                d();
                 this.Dispose();
             }    
         }

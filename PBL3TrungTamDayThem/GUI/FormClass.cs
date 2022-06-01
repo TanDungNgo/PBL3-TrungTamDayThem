@@ -8,6 +8,8 @@ namespace PBL3TrungTamDayThem.GUI
     public partial class FormClass : Form
     {
         private string _MaLH;
+        public delegate void MyDel();
+        public MyDel d { get; set; }
         public FormClass(string MaLH = null)
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace PBL3TrungTamDayThem.GUI
             {
                 GetCBB();
                 txtID.Text = lop.MaLH;
+                txtID.Enabled = false;
                 cbbIDTeacher.Text = lop.MaGV;
                 cbbIDSubject.Text = lop.MaMH;
                 NUDSoLuong.Text = lop.SoLuongHV.ToString();
@@ -68,13 +71,6 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
                 lblerSb.Visible = false;
-            if (NUDSoLuong.Value == 0)
-            {
-                lblerNumber.Visible = true;
-                check = false;
-            }
-            else
-                lblerNumber.Visible = false;
             if (txtTime.Text == "")
             {
                 lblerTime.Visible = true;
@@ -108,6 +104,7 @@ namespace PBL3TrungTamDayThem.GUI
                     NgayKetThuc = dtpEnd.Value.Date,
                 };
                 BLL_QLLH.Instance.ExecuteDB(lop);
+                d();
                 this.Dispose();
             }
         }

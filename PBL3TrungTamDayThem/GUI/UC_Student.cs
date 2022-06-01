@@ -15,17 +15,17 @@ namespace PBL3TrungTamDayThem.GUI
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormStudent frm = new FormStudent();
+            frm.d += new FormStudent.MyDel(ShowDGV);
             frm.ShowDialog();
-            DGVShow();
             SetGUI();
         }
-        private void DGVShow()
+        private void ShowDGV()
         {
             dgvStudent.DataSource = BLL_QLHV.Instance.GetListStudent(cbbClass.Text, null);
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            DGVShow();
+            ShowDGV();
         }
         void SetCBB()
         {
@@ -50,13 +50,13 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvStudent.SelectedRows.Count > 0)
+            if (dgvStudent.SelectedRows.Count == 1)
             {
                 DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
                 string MaHV = data[0].Cells["MaHV"].Value.ToString();
-                FormStudent f = new FormStudent(MaHV);
-                f.ShowDialog();
-                DGVShow();
+                FormStudent frm = new FormStudent(MaHV);
+                frm.d += new FormStudent.MyDel(ShowDGV);
+                frm.ShowDialog();
                 SetGUI();
             }
             else
@@ -82,10 +82,13 @@ namespace PBL3TrungTamDayThem.GUI
                 if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                 {
                     BLL_QLHV.Instance.DeleteStudent(LMaHV);
-                    DGVShow();
+                    ShowDGV();
                     SetGUI();
                 }
             }
+            else
+                MessageBox.Show("Chưa chọn học viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btnSort_Click(object sender, EventArgs e)
@@ -93,7 +96,7 @@ namespace PBL3TrungTamDayThem.GUI
             if (cbbSort.Text == "")
                 MessageBox.Show("Chọn cách sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                dgvStudent.DataSource = BLL_QLHV.Instance.SortListStudent(cbbSort.Text);
+                dgvStudent.DataSource = BLL_QLHV.Instance.SortListStudent(cbbSort.Text,cbbClass.Text);
         }
         public void SizeDGVMax()
         {

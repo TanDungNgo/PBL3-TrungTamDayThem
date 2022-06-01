@@ -127,5 +127,11 @@ namespace PBL3TrungTamDayThem.DAL
             string query = "Delete from HOC_VIEN_TRONG_LOP where MaHV = '" + MaHV + "' and MaLH = '" + MaLH + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public DataTable SortLisstStudentInClass(string MaLH)
+        {
+            string query = "Select hvtl.MaLH, hvtl.MaHV, hv.HoTenHV, hvtl.KetQuaHoc, hvtl.TinhTrang from HOC_VIEN_TRONG_LOP hvtl inner join HOC_VIEN hv on hvtl.MaHV = hv.MaHV" +
+                " where MaLH = '" + MaLH + "' Order by hvtl.KetQuaHoc";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

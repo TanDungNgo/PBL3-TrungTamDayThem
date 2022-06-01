@@ -18,8 +18,8 @@ namespace PBL3TrungTamDayThem.GUI
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormTeacher frm = new FormTeacher();
+            frm.d += new FormTeacher.MyDel(ShowDGV);
             frm.ShowDialog();
-            DGVShow();
             SetGUI();
         }
         void SetGUI()
@@ -39,13 +39,13 @@ namespace PBL3TrungTamDayThem.GUI
             cbbSort.Items.Add("HoTenGV");
             cbbSort.Items.Add("NgaySinh");
         }
-        void DGVShow()
+        void ShowDGV()
         {
             dgvTeacher.DataSource = BLL_QLGV.Instance.GetListTeacher(cbbExpertise.Text, null);
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            DGVShow();
+            ShowDGV();
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -61,20 +61,22 @@ namespace PBL3TrungTamDayThem.GUI
                 {
                     BLL_QLGV.Instance.DeleteTeacher(LMaGV);
                     SetGUI();
-                    DGVShow();
+                    ShowDGV();
                 }
             }
+            else
+                MessageBox.Show("Chưa chọn giáo viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvTeacher.SelectedRows.Count > 0)
+            if (dgvTeacher.SelectedRows.Count == 1)
             {
                 DataGridViewSelectedRowCollection data = dgvTeacher.SelectedRows;
                 string MaGV = data[0].Cells["MaGV"].Value.ToString();
-                FormTeacher f = new FormTeacher(MaGV);
-                f.ShowDialog();
+                FormTeacher frm = new FormTeacher(MaGV);
+                frm.d += new FormTeacher.MyDel(ShowDGV);
+                frm.ShowDialog();
                 SetGUI();
-                DGVShow();
             }
             else
                 MessageBox.Show("Chưa chọn giáo viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
