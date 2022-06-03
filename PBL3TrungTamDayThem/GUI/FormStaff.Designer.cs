@@ -64,6 +64,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblerBD = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblerBD);
             this.panel1.Controls.Add(this.cbbPosition);
             this.panel1.Controls.Add(this.lblerposition);
             this.panel1.Controls.Add(this.lbleraddress);
@@ -350,7 +352,7 @@
             // 
             // dtpBirthDay
             // 
-            this.dtpBirthDay.Location = new System.Drawing.Point(281, 200);
+            this.dtpBirthDay.Location = new System.Drawing.Point(281, 193);
             this.dtpBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpBirthDay.Name = "dtpBirthDay";
             this.dtpBirthDay.Size = new System.Drawing.Size(275, 26);
@@ -363,6 +365,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(275, 26);
             this.txtName.TabIndex = 58;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtID
             // 
@@ -419,7 +422,7 @@
             this.lblBD.AutoSize = true;
             this.lblBD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBD.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblBD.Location = new System.Drawing.Point(129, 200);
+            this.lblBD.Location = new System.Drawing.Point(129, 193);
             this.lblBD.Name = "lblBD";
             this.lblBD.Size = new System.Drawing.Size(121, 26);
             this.lblBD.TabIndex = 55;
@@ -478,6 +481,17 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 4;
+            // 
+            // lblerBD
+            // 
+            this.lblerBD.AutoSize = true;
+            this.lblerBD.ForeColor = System.Drawing.Color.Red;
+            this.lblerBD.Location = new System.Drawing.Point(278, 228);
+            this.lblerBD.Name = "lblerBD";
+            this.lblerBD.Size = new System.Drawing.Size(173, 20);
+            this.lblerBD.TabIndex = 82;
+            this.lblerBD.Text = "Ngày sinh không hợp lệ";
+            this.lblerBD.Visible = false;
             // 
             // FormStaff
             // 
@@ -542,5 +556,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblerBD;
     }
 }

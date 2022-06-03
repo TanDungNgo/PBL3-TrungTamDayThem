@@ -82,55 +82,63 @@ namespace PBL3TrungTamDayThem.GUI
         }
         public bool Error()
         {
-            bool check = true;
+            bool check = false;
             if (txtName.Text == "")
             {
                 lblername.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblername.Visible = false;
             if (txtAddress.Text == "")
             {
                 lbleraddress.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lbleraddress.Visible = false;
             if (cbbPosition.Text == "")
             {
                 lblerposition.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblerposition.Visible = false;
             if (txtEmail.Text == "")
             {
                 lbleremail.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lbleremail.Visible = false;
             if (txtSalary.Text == "")
             {
                 lblersalary.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblersalary.Visible = false;
-            if (isDigit(txtPhone.Text) == false && txtPhone.Text.Length < 11)
+            if (isDigit(txtPhone.Text) == false || txtPhone.Text.Length < 11)
             {
                 lblerphone.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblerphone.Visible = false;
-
+            dtpBirthDay.MinDate = new DateTime(1962, 1, 1);
+            dtpBirthDay.MaxDate = new DateTime(2004, 12, 31);
+            if (dtpBirthDay.Value <= dtpBirthDay.MinDate || dtpBirthDay.Value >= dtpBirthDay.MaxDate)
+            {
+                lblerBD.Visible = true;
+                check = true;
+            }
+            else
+                lblerBD.Visible = false;
             return check;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (Error() == true)
+            if (Error() == false)
             {
                 Staff s = new Staff
                 {
@@ -162,6 +170,11 @@ namespace PBL3TrungTamDayThem.GUI
                 txtSalary.Text = "5000000";
             if (cbbPosition.Text == "Nhân Viên")
                 txtSalary.Text = "3000000";
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8));
         }
     }
 }

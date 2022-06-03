@@ -65,6 +65,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblersalary2 = new System.Windows.Forms.Label();
+            this.lblerBD = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +74,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblerBD);
+            this.panel1.Controls.Add(this.lblersalary2);
             this.panel1.Controls.Add(this.lblersalary);
             this.panel1.Controls.Add(this.lblerexpertise);
             this.panel1.Controls.Add(this.lblerlevel);
@@ -270,7 +274,6 @@
             this.cbbLevel.Name = "cbbLevel";
             this.cbbLevel.Size = new System.Drawing.Size(275, 28);
             this.cbbLevel.TabIndex = 41;
-            this.cbbLevel.TextChanged += new System.EventHandler(this.cbbLevel_TextChanged);
             // 
             // lblSalary
             // 
@@ -345,7 +348,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(312, 236);
+            this.txtPhone.Location = new System.Drawing.Point(312, 242);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(275, 26);
@@ -356,7 +359,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblPhone.Location = new System.Drawing.Point(148, 236);
+            this.lblPhone.Location = new System.Drawing.Point(148, 242);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(153, 26);
             this.lblPhone.TabIndex = 32;
@@ -364,7 +367,7 @@
             // 
             // dtpBD
             // 
-            this.dtpBD.Location = new System.Drawing.Point(312, 184);
+            this.dtpBD.Location = new System.Drawing.Point(312, 178);
             this.dtpBD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpBD.Name = "dtpBD";
             this.dtpBD.Size = new System.Drawing.Size(275, 26);
@@ -377,6 +380,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(275, 26);
             this.txtName.TabIndex = 30;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtID
             // 
@@ -433,7 +437,7 @@
             this.lblBD.AutoSize = true;
             this.lblBD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBD.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblBD.Location = new System.Drawing.Point(148, 184);
+            this.lblBD.Location = new System.Drawing.Point(148, 178);
             this.lblBD.Name = "lblBD";
             this.lblBD.Size = new System.Drawing.Size(121, 26);
             this.lblBD.TabIndex = 27;
@@ -494,6 +498,28 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 50;
+            // 
+            // lblersalary2
+            // 
+            this.lblersalary2.AutoSize = true;
+            this.lblersalary2.ForeColor = System.Drawing.Color.Red;
+            this.lblersalary2.Location = new System.Drawing.Point(619, 609);
+            this.lblersalary2.Name = "lblersalary2";
+            this.lblersalary2.Size = new System.Drawing.Size(149, 20);
+            this.lblersalary2.TabIndex = 55;
+            this.lblersalary2.Text = "Lương không hợp lệ";
+            this.lblersalary2.Visible = false;
+            // 
+            // lblerBD
+            // 
+            this.lblerBD.AutoSize = true;
+            this.lblerBD.ForeColor = System.Drawing.Color.Red;
+            this.lblerBD.Location = new System.Drawing.Point(313, 214);
+            this.lblerBD.Name = "lblerBD";
+            this.lblerBD.Size = new System.Drawing.Size(173, 20);
+            this.lblerBD.TabIndex = 76;
+            this.lblerBD.Text = "Ngày sinh không hợp lệ";
+            this.lblerBD.Visible = false;
             // 
             // FormTeacher
             // 
@@ -559,5 +585,7 @@
         private System.Windows.Forms.Label lbleremail;
         private System.Windows.Forms.Label lbleraddress;
         private System.Windows.Forms.Label lblersalary;
+        private System.Windows.Forms.Label lblersalary2;
+        private System.Windows.Forms.Label lblerBD;
     }
 }

@@ -64,6 +64,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
             this.flpnlButton.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -78,6 +79,7 @@
             this.pnlCenter.SuspendLayout();
             this.pnl_user.SuspendLayout();
             this.pnlct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -361,6 +363,7 @@
             // pnl_header2
             // 
             this.pnl_header2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.pnl_header2.Controls.Add(this.pictureBox1);
             this.pnl_header2.Controls.Add(this.btn_user);
             this.pnl_header2.Controls.Add(this.pnl_header3);
             this.pnl_header2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -598,6 +601,15 @@
             this.panel2.Size = new System.Drawing.Size(900, 10);
             this.panel2.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(534, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(76, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -630,6 +642,7 @@
             this.pnlCenter.ResumeLayout(false);
             this.pnl_user.ResumeLayout(false);
             this.pnlct.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -671,5 +684,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -322,6 +322,7 @@
             // 
             // dtpEnd
             // 
+            this.dtpEnd.Enabled = false;
             this.dtpEnd.Location = new System.Drawing.Point(375, 582);
             this.dtpEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEnd.Name = "dtpEnd";

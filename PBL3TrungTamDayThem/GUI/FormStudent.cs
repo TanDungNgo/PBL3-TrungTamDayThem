@@ -52,46 +52,53 @@ namespace PBL3TrungTamDayThem.GUI
                 }
                 else
                     txtID.Text = "HV" + count.ToString();
-
             }
         }
         public bool Error()
         {
-            bool check = true;
+            bool check = false;
             if (txtName.Text == "")
             {
                 lblername.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblername.Visible = false;
             if (txtAddress.Text == "")
             {
                 lbleraddress.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lbleraddress.Visible = false;
             if (txtEmail.Text == "")
             {
                 lbleremail.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lbleremail.Visible = false;
-            if (isDigit(txtPhone.Text) == false && txtPhone.Text.Length < 11)
+            if (isDigit(txtPhone.Text) == false || txtPhone.Text.Length != 10)
             {
                 lblerphone.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblerphone.Visible = false;
-
+            dtpBirthDay.MinDate = new DateTime(1982,1,1);
+            dtpBirthDay.MaxDate = new DateTime(2004, 12, 31);
+            if (dtpBirthDay.Value <= dtpBirthDay.MinDate || dtpBirthDay.Value >= dtpBirthDay.MaxDate)
+            {
+                lblerBD.Visible = true;
+                check = true;
+            }   
+            else
+                lblerBD.Visible = false;
             return check;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (Error() == true)
+            if (Error() == false)
             {
                 Student s = new Student
                 {
@@ -121,6 +128,11 @@ namespace PBL3TrungTamDayThem.GUI
         {
             var isNumeric = !string.IsNullOrEmpty(v) && v.All(Char.IsDigit);
             return isNumeric;
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8));
         }
     }
 }

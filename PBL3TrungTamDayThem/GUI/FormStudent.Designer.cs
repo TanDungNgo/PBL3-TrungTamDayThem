@@ -43,7 +43,6 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.gbGender = new System.Windows.Forms.GroupBox();
@@ -56,6 +55,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
+            this.lblerBD = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblerBD);
+            this.panel1.Controls.Add(this.dtpBirthDay);
             this.panel1.Controls.Add(this.lblerphone);
             this.panel1.Controls.Add(this.lbleremail);
             this.panel1.Controls.Add(this.lbleraddress);
@@ -77,7 +80,6 @@
             this.panel1.Controls.Add(this.lblAddress);
             this.panel1.Controls.Add(this.txtPhone);
             this.panel1.Controls.Add(this.lblPhone);
-            this.panel1.Controls.Add(this.dtpBirthDay);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.gbGender);
@@ -95,7 +97,7 @@
             // 
             this.lblerphone.AutoSize = true;
             this.lblerphone.ForeColor = System.Drawing.Color.Red;
-            this.lblerphone.Location = new System.Drawing.Point(281, 451);
+            this.lblerphone.Location = new System.Drawing.Point(281, 473);
             this.lblerphone.Name = "lblerphone";
             this.lblerphone.Size = new System.Drawing.Size(197, 20);
             this.lblerphone.TabIndex = 73;
@@ -106,7 +108,7 @@
             // 
             this.lbleremail.AutoSize = true;
             this.lbleremail.ForeColor = System.Drawing.Color.Red;
-            this.lbleremail.Location = new System.Drawing.Point(281, 526);
+            this.lbleremail.Location = new System.Drawing.Point(281, 546);
             this.lbleremail.Name = "lbleremail";
             this.lbleremail.Size = new System.Drawing.Size(90, 20);
             this.lbleremail.TabIndex = 72;
@@ -117,7 +119,7 @@
             // 
             this.lbleraddress.AutoSize = true;
             this.lbleraddress.ForeColor = System.Drawing.Color.Red;
-            this.lbleraddress.Location = new System.Drawing.Point(281, 379);
+            this.lbleraddress.Location = new System.Drawing.Point(281, 394);
             this.lbleraddress.Name = "lbleraddress";
             this.lbleraddress.Size = new System.Drawing.Size(96, 20);
             this.lbleraddress.TabIndex = 71;
@@ -196,7 +198,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(285, 495);
+            this.txtEmail.Location = new System.Drawing.Point(285, 515);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(275, 26);
@@ -207,7 +209,7 @@
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMail.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblMail.Location = new System.Drawing.Point(125, 495);
+            this.lblMail.Location = new System.Drawing.Point(125, 515);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(81, 26);
             this.lblMail.TabIndex = 62;
@@ -215,7 +217,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(285, 340);
+            this.txtAddress.Location = new System.Drawing.Point(285, 355);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(275, 26);
@@ -226,7 +228,7 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblAddress.Location = new System.Drawing.Point(125, 338);
+            this.lblAddress.Location = new System.Drawing.Point(125, 353);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(93, 26);
             this.lblAddress.TabIndex = 60;
@@ -234,7 +236,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(285, 420);
+            this.txtPhone.Location = new System.Drawing.Point(285, 442);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(275, 26);
@@ -245,19 +247,11 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblPhone.Location = new System.Drawing.Point(125, 416);
+            this.lblPhone.Location = new System.Drawing.Point(125, 438);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(153, 26);
             this.lblPhone.TabIndex = 58;
             this.lblPhone.Text = "Số điện thoại:";
-            // 
-            // dtpBirthDay
-            // 
-            this.dtpBirthDay.Location = new System.Drawing.Point(285, 280);
-            this.dtpBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpBirthDay.Name = "dtpBirthDay";
-            this.dtpBirthDay.Size = new System.Drawing.Size(275, 26);
-            this.dtpBirthDay.TabIndex = 57;
             // 
             // txtName
             // 
@@ -275,6 +269,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(275, 26);
             this.txtID.TabIndex = 55;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // gbGender
             // 
@@ -381,6 +376,25 @@
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 4;
             // 
+            // dtpBirthDay
+            // 
+            this.dtpBirthDay.Location = new System.Drawing.Point(285, 280);
+            this.dtpBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpBirthDay.Name = "dtpBirthDay";
+            this.dtpBirthDay.Size = new System.Drawing.Size(275, 26);
+            this.dtpBirthDay.TabIndex = 74;
+            // 
+            // lblerBD
+            // 
+            this.lblerBD.AutoSize = true;
+            this.lblerBD.ForeColor = System.Drawing.Color.Red;
+            this.lblerBD.Location = new System.Drawing.Point(281, 321);
+            this.lblerBD.Name = "lblerBD";
+            this.lblerBD.Size = new System.Drawing.Size(173, 20);
+            this.lblerBD.TabIndex = 75;
+            this.lblerBD.Text = "Ngày sinh không hợp lệ";
+            this.lblerBD.Visible = false;
+            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -416,7 +430,6 @@
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.DateTimePicker dtpBirthDay;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.GroupBox gbGender;
@@ -436,5 +449,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DateTimePicker dtpBirthDay;
+        private System.Windows.Forms.Label lblerBD;
     }
 }

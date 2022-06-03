@@ -113,6 +113,17 @@ namespace PBL3TrungTamDayThem.GUI
             }    
         }
 
+        internal static bool isMark(string m)
+        {
+            if (int.Parse(m) <= 10 && int.Parse(m) >= 0)
+                return true;
+            return false;
+        }
+        internal static bool isDigit(string v)
+        {
+            var isNumeric = !string.IsNullOrEmpty(v) && v.All(Char.IsDigit);
+            return isNumeric;
+        }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (dgv_Class.SelectedRows.Count > 0)
@@ -129,6 +140,11 @@ namespace PBL3TrungTamDayThem.GUI
                     else if (txtKQH.Text == "")
                     {
                         MessageBox.Show("Chưa nhập điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    else if (isDigit(txtKQH.Text) == false || isMark(txtKQH.Text) == false)
+                    {
+                        MessageBox.Show("Điểm chỉ từ 0 đến 10", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     else

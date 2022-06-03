@@ -41,7 +41,6 @@ namespace PBL3TrungTamDayThem.GUI
             }
             cbbSort.Items.Add("HoTenHV");
             cbbSort.Items.Add("NgaySinh");
-
         }
         void SetGUI()
         {

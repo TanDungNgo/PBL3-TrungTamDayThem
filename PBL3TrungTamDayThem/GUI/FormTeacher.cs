@@ -26,7 +26,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (Error() == true)
+            if (Error() == false)
             {
                 Teacher teacher = new Teacher
                 {
@@ -44,61 +44,79 @@ namespace PBL3TrungTamDayThem.GUI
                 BLL_QLGV.Instance.ExecuteDB(teacher);
                 d();
                 this.Dispose();
-            }    
+            }
         }
         public bool Error()
         {
-            bool check = true;
-            if (txtName.Text == "")
+            bool check = false;
+            if (txtName.Text == "" || isDigit(txtName.Text) == true)
             {
                 lblername.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblername.Visible = false;
             if (txtAddress.Text == "")
             {
                 lbleraddress.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lbleraddress.Visible = false;
             if (txtEmail.Text == "")
             {
                 lbleremail.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lbleremail.Visible = false;
             if (cbbLevel.Text == "")
             {
                 lblerlevel.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblerlevel.Visible = false;
             if (txtExpertise.Text == "")
             {
                 lblerexpertise.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblerexpertise.Visible = false;
             if (txtSalary.Text == "")
             {
                 lblersalary.Visible = true;
-                check = false;
+                check = true;
             }
             else
-                check = true;
-            if (isDigit(txtPhone.Text)==false && txtPhone.Text.Length < 11)
+            {
+                lblersalary.Visible = false;
+                if (isDigit(txtSalary.Text) == false || isSalary(txtSalary.Text) == false)
+                {
+                    lblersalary2.Visible = true;
+                    check = true;
+                }
+                else
+                    lblersalary2.Visible = false;
+            }    
+
+            if (isDigit(txtPhone.Text)==false || txtPhone.Text.Length != 10)
             {
                 lblerphone.Visible = true;
-                check = false;
+                check = true;
             }
             else
                 lblerphone.Visible = false;
-
+            dtpBD.MinDate = new DateTime(1962, 1, 1);
+            dtpBD.MaxDate = new DateTime(2004, 12, 31);
+            if (dtpBD.Value <= dtpBD.MinDate || dtpBD.Value >= dtpBD.MaxDate)
+            {
+                lblerBD.Visible = true;
+                check = true;
+            }
+            else
+                lblerBD.Visible = false;
             return check;
         }
         private void btnReset_Click(object sender, EventArgs e)
@@ -161,13 +179,15 @@ namespace PBL3TrungTamDayThem.GUI
             var isNumeric = !string.IsNullOrEmpty(v) && v.All(Char.IsDigit);
             return isNumeric;
         }
-
-        private void cbbLevel_TextChanged(object sender, EventArgs e)
+        internal static bool isSalary(string m)
         {
-            if (cbbLevel.Text == "Tiến sĩ")
-            {
-
-            }    
+            if (int.Parse(m) <= 20000000 && int.Parse(m) >= 10000000)
+                return true;
+            return false;
+        }
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8));
         }
     }
 }
