@@ -49,7 +49,7 @@ namespace PBL3TrungTamDayThem.GUI
         public bool Error()
         {
             bool check = false;
-            if (txtName.Text == "" || isDigit(txtName.Text) == true)
+            if (txtName.Text == "" )
             {
                 lblername.Visible = true;
                 check = true;

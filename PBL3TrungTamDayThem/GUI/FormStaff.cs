@@ -83,7 +83,7 @@ namespace PBL3TrungTamDayThem.GUI
         public bool Error()
         {
             bool check = false;
-            if (txtName.Text == "")
+            if (txtName.Text == "" )
             {
                 lblername.Visible = true;
                 check = true;
@@ -172,9 +172,11 @@ namespace PBL3TrungTamDayThem.GUI
                 txtSalary.Text = "3000000";
         }
 
-        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8));
+        private void txtName_Regex(){
+           
+            
+            
+
         }
     }
 }

@@ -27,6 +27,7 @@ namespace PBL3TrungTamDayThem.GUI
             if (student != null)
             {
                 txtID.Text = student.MaHV;
+                txtID.Enabled = false;
                 txtName.Text = student.HoTenHV;
                 dtpBirthDay.Text = student.NgaySinh.ToString();
                 txtAddress.Text = student.DiaChi;
@@ -130,7 +131,8 @@ namespace PBL3TrungTamDayThem.GUI
             return isNumeric;
         }
 
-        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+      
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8));
         }
