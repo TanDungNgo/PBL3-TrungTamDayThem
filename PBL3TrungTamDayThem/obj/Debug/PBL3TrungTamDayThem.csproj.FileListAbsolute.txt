@@ -200,3 +200,4 @@ C:\Users\ASUS\Source\Repos\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PB
 C:\Users\ASUS\Source\Repos\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.exe.config
 C:\Users\ASUS\Source\Repos\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.exe
 C:\Users\ASUS\Source\Repos\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.pdb
+C:\Users\ASUS\source\repos\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.AssemblyReference.cache

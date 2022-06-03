@@ -172,11 +172,9 @@ namespace PBL3TrungTamDayThem.GUI
                 txtSalary.Text = "3000000";
         }
 
-        private void txtName_Regex(){
-           
-            
-            
-
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8));
         }
     }
 }

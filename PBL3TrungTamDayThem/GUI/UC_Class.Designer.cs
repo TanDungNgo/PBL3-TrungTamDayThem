@@ -67,9 +67,9 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(328, 12);
+            this.lblHeader.Location = new System.Drawing.Point(292, 10);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(252, 32);
+            this.lblHeader.Size = new System.Drawing.Size(214, 26);
             this.lblHeader.TabIndex = 32;
             this.lblHeader.Text = "Thông Tin Lớp Học";
             // 
@@ -81,17 +81,16 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(907, 60);
+            this.pnlHeader.Size = new System.Drawing.Size(806, 48);
             this.pnlHeader.TabIndex = 36;
             // 
             // pnlBottom
             // 
             this.pnlBottom.Controls.Add(this.dgv_Class);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 290);
-            this.pnlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 232);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(907, 319);
+            this.pnlBottom.Size = new System.Drawing.Size(806, 255);
             this.pnlBottom.TabIndex = 37;
             // 
             // dgv_Class
@@ -101,11 +100,10 @@
             this.dgv_Class.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Class.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Class.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Class.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_Class.Name = "dgv_Class";
             this.dgv_Class.RowHeadersWidth = 51;
             this.dgv_Class.RowTemplate.Height = 24;
-            this.dgv_Class.Size = new System.Drawing.Size(907, 319);
+            this.dgv_Class.Size = new System.Drawing.Size(806, 255);
             this.dgv_Class.TabIndex = 0;
             // 
             // panel2
@@ -113,10 +111,9 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 60);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(907, 230);
+            this.panel2.Size = new System.Drawing.Size(806, 184);
             this.panel2.TabIndex = 38;
             // 
             // panel4
@@ -136,42 +133,50 @@
             this.panel4.Controls.Add(this.cbbClass);
             this.panel4.Controls.Add(this.lblClass);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 85);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(0, 68);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(907, 145);
+            this.panel4.Size = new System.Drawing.Size(806, 116);
             this.panel4.TabIndex = 1;
             // 
             // btnSort
             // 
             this.btnSort.BackColor = System.Drawing.Color.White;
-            this.btnSort.Location = new System.Drawing.Point(634, 74);
+            this.btnSort.Image = global::PBL3TrungTamDayThem.Properties.Resources.sort;
+            this.btnSort.Location = new System.Drawing.Point(632, 69);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(146, 50);
+            this.btnSort.Size = new System.Drawing.Size(130, 40);
             this.btnSort.TabIndex = 56;
-            this.btnSort.Text = "Sắp xếp điểm số";
+            this.btnSort.Text = "Sx điểm số";
+            this.btnSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSort.UseVisualStyleBackColor = false;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // btnRemove
             // 
             this.btnRemove.BackColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(468, 74);
+            this.btnRemove.Image = global::PBL3TrungTamDayThem.Properties.Resources.delete_icon1;
+            this.btnRemove.Location = new System.Drawing.Point(281, 69);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(146, 50);
+            this.btnRemove.Size = new System.Drawing.Size(144, 41);
             this.btnRemove.TabIndex = 55;
             this.btnRemove.Text = "Xóa khỏi lớp";
+            this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(316, 74);
+            this.btnUpdate.Image = global::PBL3TrungTamDayThem.Properties.Resources.edit_icon;
+            this.btnUpdate.Location = new System.Drawing.Point(431, 69);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(146, 50);
+            this.btnUpdate.Size = new System.Drawing.Size(150, 41);
             this.btnUpdate.TabIndex = 54;
             this.btnUpdate.Text = "Cập nhật điểm";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -180,17 +185,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(8, 99);
+            this.label3.Location = new System.Drawing.Point(7, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 25);
+            this.label3.Size = new System.Drawing.Size(99, 20);
             this.label3.TabIndex = 53;
             this.label3.Text = "KetQuaHoc:";
             // 
             // txtKQH
             // 
-            this.txtKQH.Location = new System.Drawing.Point(148, 98);
+            this.txtKQH.Location = new System.Drawing.Point(132, 78);
+            this.txtKQH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKQH.Name = "txtKQH";
-            this.txtKQH.Size = new System.Drawing.Size(146, 26);
+            this.txtKQH.Size = new System.Drawing.Size(130, 22);
             this.txtKQH.TabIndex = 52;
             // 
             // label2
@@ -198,9 +204,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(7, 51);
+            this.label2.Location = new System.Drawing.Point(6, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 25);
+            this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 51;
             this.label2.Text = "MaLH:";
             // 
@@ -209,34 +215,39 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(7, 4);
+            this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 25);
+            this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 50;
             this.label1.Text = "MaHV:";
             // 
             // txtClass
             // 
-            this.txtClass.Location = new System.Drawing.Point(148, 52);
+            this.txtClass.Location = new System.Drawing.Point(132, 42);
+            this.txtClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(146, 26);
+            this.txtClass.Size = new System.Drawing.Size(130, 22);
             this.txtClass.TabIndex = 49;
             // 
             // txtMaHV
             // 
-            this.txtMaHV.Location = new System.Drawing.Point(148, 4);
+            this.txtMaHV.Location = new System.Drawing.Point(132, 3);
+            this.txtMaHV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaHV.Name = "txtMaHV";
-            this.txtMaHV.Size = new System.Drawing.Size(146, 26);
+            this.txtMaHV.Size = new System.Drawing.Size(130, 22);
             this.txtMaHV.TabIndex = 48;
             // 
             // btnAddtoclass
             // 
             this.btnAddtoclass.BackColor = System.Drawing.Color.White;
-            this.btnAddtoclass.Location = new System.Drawing.Point(316, 8);
+            this.btnAddtoclass.Image = global::PBL3TrungTamDayThem.Properties.Resources.add_icon1;
+            this.btnAddtoclass.Location = new System.Drawing.Point(281, 6);
+            this.btnAddtoclass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddtoclass.Name = "btnAddtoclass";
-            this.btnAddtoclass.Size = new System.Drawing.Size(146, 50);
+            this.btnAddtoclass.Size = new System.Drawing.Size(144, 40);
             this.btnAddtoclass.TabIndex = 47;
             this.btnAddtoclass.Text = "Thêm vào lớp";
+            this.btnAddtoclass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddtoclass.UseVisualStyleBackColor = false;
             this.btnAddtoclass.Click += new System.EventHandler(this.btnAddtoclass_Click);
             // 
@@ -246,10 +257,10 @@
             this.btnShow2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow2.Image = global::PBL3TrungTamDayThem.Properties.Resources.list__4_;
             this.btnShow2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow2.Location = new System.Drawing.Point(468, 8);
+            this.btnShow2.Location = new System.Drawing.Point(431, 6);
             this.btnShow2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow2.Name = "btnShow2";
-            this.btnShow2.Size = new System.Drawing.Size(146, 50);
+            this.btnShow2.Size = new System.Drawing.Size(130, 40);
             this.btnShow2.TabIndex = 46;
             this.btnShow2.Text = "  Hiển thị HV";
             this.btnShow2.UseVisualStyleBackColor = false;
@@ -259,10 +270,10 @@
             // 
             this.cbbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbClass.FormattingEnabled = true;
-            this.cbbClass.Location = new System.Drawing.Point(711, 19);
+            this.cbbClass.Location = new System.Drawing.Point(632, 15);
             this.cbbClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbClass.Name = "cbbClass";
-            this.cbbClass.Size = new System.Drawing.Size(180, 28);
+            this.cbbClass.Size = new System.Drawing.Size(160, 24);
             this.cbbClass.TabIndex = 39;
             // 
             // lblClass
@@ -271,9 +282,9 @@
             this.lblClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.lblClass.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblClass.Location = new System.Drawing.Point(634, 19);
+            this.lblClass.Location = new System.Drawing.Point(564, 15);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(53, 25);
+            this.lblClass.Size = new System.Drawing.Size(43, 20);
             this.lblClass.TabIndex = 38;
             this.lblClass.Text = "Lớp:";
             // 
@@ -288,9 +299,8 @@
             this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(907, 85);
+            this.panel3.Size = new System.Drawing.Size(806, 68);
             this.panel3.TabIndex = 0;
             // 
             // btnEdit
@@ -299,10 +309,10 @@
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = global::PBL3TrungTamDayThem.Properties.Resources.edit_icon;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(316, 19);
+            this.btnEdit.Location = new System.Drawing.Point(281, 15);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(146, 50);
+            this.btnEdit.Size = new System.Drawing.Size(144, 40);
             this.btnEdit.TabIndex = 44;
             this.btnEdit.Text = "     Chỉnh sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -312,10 +322,10 @@
             // 
             this.cbbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSubject.FormattingEnabled = true;
-            this.cbbSubject.Location = new System.Drawing.Point(710, 26);
+            this.cbbSubject.Location = new System.Drawing.Point(631, 21);
             this.cbbSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSubject.Name = "cbbSubject";
-            this.cbbSubject.Size = new System.Drawing.Size(181, 28);
+            this.cbbSubject.Size = new System.Drawing.Size(161, 24);
             this.cbbSubject.TabIndex = 41;
             // 
             // btnShow
@@ -324,10 +334,10 @@
             this.btnShow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.Image = global::PBL3TrungTamDayThem.Properties.Resources.list__4_;
             this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(468, 19);
+            this.btnShow.Location = new System.Drawing.Point(431, 15);
             this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(146, 50);
+            this.btnShow.Size = new System.Drawing.Size(130, 40);
             this.btnShow.TabIndex = 45;
             this.btnShow.Text = "  Hiển thị";
             this.btnShow.UseVisualStyleBackColor = false;
@@ -338,9 +348,9 @@
             this.lblSubject.AutoSize = true;
             this.lblSubject.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubject.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblSubject.Location = new System.Drawing.Point(629, 30);
+            this.lblSubject.Location = new System.Drawing.Point(559, 24);
             this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(58, 25);
+            this.lblSubject.Size = new System.Drawing.Size(47, 20);
             this.lblSubject.TabIndex = 40;
             this.lblSubject.Text = "Môn:";
             // 
@@ -350,10 +360,10 @@
             this.btnDel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Image = global::PBL3TrungTamDayThem.Properties.Resources.delete_icon1;
             this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDel.Location = new System.Drawing.Point(164, 19);
+            this.btnDel.Location = new System.Drawing.Point(146, 15);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(146, 50);
+            this.btnDel.Size = new System.Drawing.Size(130, 40);
             this.btnDel.TabIndex = 43;
             this.btnDel.Text = "Xóa";
             this.btnDel.UseVisualStyleBackColor = false;
@@ -365,10 +375,10 @@
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = global::PBL3TrungTamDayThem.Properties.Resources.add_icon1;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(12, 19);
+            this.btnAdd.Location = new System.Drawing.Point(11, 15);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(146, 50);
+            this.btnAdd.Size = new System.Drawing.Size(130, 40);
             this.btnAdd.TabIndex = 42;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -376,7 +386,7 @@
             // 
             // UC_Class
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.panel2);
@@ -384,7 +394,7 @@
             this.Controls.Add(this.pnlHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Class";
-            this.Size = new System.Drawing.Size(907, 609);
+            this.Size = new System.Drawing.Size(806, 487);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlBottom.ResumeLayout(false);
