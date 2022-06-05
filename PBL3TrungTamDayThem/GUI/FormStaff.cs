@@ -2,6 +2,7 @@
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace PBL3TrungTamDayThem.GUI
@@ -19,7 +20,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         public void SetCBB()
         {
-            if(cbbPosition != null)
+            if (cbbPosition != null)
                 cbbPosition.Items.Clear();
             cbbPosition.Items.Add("Nhân Viên");
             cbbPosition.Items.Add("Quản Lý");
@@ -83,13 +84,22 @@ namespace PBL3TrungTamDayThem.GUI
         public bool Error()
         {
             bool check = false;
-            if (txtName.Text == "" )
+            if (txtName.Text == "")
             {
                 lblername.Visible = true;
                 check = true;
             }
             else
+            {
                 lblername.Visible = false;
+                if (isName(txtName.Text) == false)
+                {
+                    lblername2.Visible = true;
+                    check = true;
+                }
+                else
+                    lblername2.Visible = false;
+            }
             if (txtAddress.Text == "")
             {
                 lbleraddress.Visible = true;
@@ -110,14 +120,16 @@ namespace PBL3TrungTamDayThem.GUI
                 check = true;
             }
             else
-                lbleremail.Visible = false;
-            if (txtSalary.Text == "")
             {
-                lblersalary.Visible = true;
-                check = true;
+                lbleremail.Visible = false;
+                if (isMail(txtEmail.Text) == false)
+                {
+                    lbleremail2.Visible = true;
+                    check = true;
+                }
+                else
+                    lbleremail2.Visible = false;
             }
-            else
-                lblersalary.Visible = false;
             if (isDigit(txtPhone.Text) == false || txtPhone.Text.Length < 11)
             {
                 lblerphone.Visible = true;
@@ -171,10 +183,15 @@ namespace PBL3TrungTamDayThem.GUI
             if (cbbPosition.Text == "Nhân Viên")
                 txtSalary.Text = "3000000";
         }
-
-        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        internal static bool isName(string name)
         {
-            e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8));
+            bool match = Regex.IsMatch(name, "^[^0-9]+[^0-9]$");
+            return match;
+        }
+        internal static bool isMail(string mail)
+        {
+            bool match = Regex.IsMatch(mail, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
+            return match;
         }
     }
 }

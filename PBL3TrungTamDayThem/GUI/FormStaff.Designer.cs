@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblerBD = new System.Windows.Forms.Label();
             this.cbbPosition = new System.Windows.Forms.ComboBox();
             this.lblerposition = new System.Windows.Forms.Label();
             this.lbleraddress = new System.Windows.Forms.Label();
-            this.lblersalary = new System.Windows.Forms.Label();
             this.lbleremail = new System.Windows.Forms.Label();
             this.lblerphone = new System.Windows.Forms.Label();
             this.lblername = new System.Windows.Forms.Label();
@@ -64,7 +64,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblerBD = new System.Windows.Forms.Label();
+            this.lblername2 = new System.Windows.Forms.Label();
+            this.lbleremail2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -72,11 +73,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lbleremail2);
+            this.panel1.Controls.Add(this.lblername2);
             this.panel1.Controls.Add(this.lblerBD);
             this.panel1.Controls.Add(this.cbbPosition);
             this.panel1.Controls.Add(this.lblerposition);
             this.panel1.Controls.Add(this.lbleraddress);
-            this.panel1.Controls.Add(this.lblersalary);
             this.panel1.Controls.Add(this.lbleremail);
             this.panel1.Controls.Add(this.lblerphone);
             this.panel1.Controls.Add(this.lblername);
@@ -109,6 +111,17 @@
             this.panel1.Size = new System.Drawing.Size(897, 798);
             this.panel1.TabIndex = 0;
             // 
+            // lblerBD
+            // 
+            this.lblerBD.AutoSize = true;
+            this.lblerBD.ForeColor = System.Drawing.Color.Red;
+            this.lblerBD.Location = new System.Drawing.Point(278, 228);
+            this.lblerBD.Name = "lblerBD";
+            this.lblerBD.Size = new System.Drawing.Size(173, 20);
+            this.lblerBD.TabIndex = 82;
+            this.lblerBD.Text = "Ngày sinh không hợp lệ";
+            this.lblerBD.Visible = false;
+            // 
             // cbbPosition
             // 
             this.cbbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -140,17 +153,6 @@
             this.lbleraddress.TabIndex = 79;
             this.lbleraddress.Text = "Nhập địa chỉ";
             this.lbleraddress.Visible = false;
-            // 
-            // lblersalary
-            // 
-            this.lblersalary.AutoSize = true;
-            this.lblersalary.ForeColor = System.Drawing.Color.Red;
-            this.lblersalary.Location = new System.Drawing.Point(278, 575);
-            this.lblersalary.Name = "lblersalary";
-            this.lblersalary.Size = new System.Drawing.Size(90, 20);
-            this.lblersalary.TabIndex = 78;
-            this.lblersalary.Text = "Nhập lương";
-            this.lblersalary.Visible = false;
             // 
             // lbleremail
             // 
@@ -365,7 +367,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(275, 26);
             this.txtName.TabIndex = 58;
-            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtID
             // 
@@ -482,16 +483,27 @@
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 4;
             // 
-            // lblerBD
+            // lblername2
             // 
-            this.lblerBD.AutoSize = true;
-            this.lblerBD.ForeColor = System.Drawing.Color.Red;
-            this.lblerBD.Location = new System.Drawing.Point(278, 228);
-            this.lblerBD.Name = "lblerBD";
-            this.lblerBD.Size = new System.Drawing.Size(173, 20);
-            this.lblerBD.TabIndex = 82;
-            this.lblerBD.Text = "Ngày sinh không hợp lệ";
-            this.lblerBD.Visible = false;
+            this.lblername2.AutoSize = true;
+            this.lblername2.ForeColor = System.Drawing.Color.Red;
+            this.lblername2.Location = new System.Drawing.Point(425, 159);
+            this.lblername2.Name = "lblername2";
+            this.lblername2.Size = new System.Drawing.Size(131, 20);
+            this.lblername2.TabIndex = 83;
+            this.lblername2.Text = "Tên không hợp lệ";
+            this.lblername2.Visible = false;
+            // 
+            // lbleremail2
+            // 
+            this.lbleremail2.AutoSize = true;
+            this.lbleremail2.ForeColor = System.Drawing.Color.Red;
+            this.lbleremail2.Location = new System.Drawing.Point(413, 509);
+            this.lbleremail2.Name = "lbleremail2";
+            this.lbleremail2.Size = new System.Drawing.Size(143, 20);
+            this.lbleremail2.TabIndex = 84;
+            this.lbleremail2.Text = "Email không hợp lệ";
+            this.lbleremail2.Visible = false;
             // 
             // FormStaff
             // 
@@ -548,7 +560,6 @@
         private System.Windows.Forms.Label lblername;
         private System.Windows.Forms.Label lblerphone;
         private System.Windows.Forms.Label lbleremail;
-        private System.Windows.Forms.Label lblersalary;
         private System.Windows.Forms.Label lblerposition;
         private System.Windows.Forms.Label lbleraddress;
         private System.Windows.Forms.ComboBox cbbPosition;
@@ -557,5 +568,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblerBD;
+        private System.Windows.Forms.Label lblername2;
+        private System.Windows.Forms.Label lbleremail2;
     }
 }

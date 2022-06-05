@@ -8,7 +8,9 @@ namespace PBL3TrungTamDayThem.GUI
 {
     public partial class FormMain : Form
     {
-         string _MaNV;
+        private string _MaNV;
+        private Bitmap bmp;
+        private string filePath;
         public FormMain(string MaNV)
         {
             InitializeComponent();
@@ -39,6 +41,13 @@ namespace PBL3TrungTamDayThem.GUI
             btn_user.Text = user.TenHienThi + " ﹀";
             foreach (Control item in flpnlButton.Controls)
                 item.Width = flpnlButton.Width;
+            this.filePath = user.Anh;
+            if (user.Anh != "")
+            {
+                this.bmp = new Bitmap(this.filePath);
+                this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                this.pictureBox1.Image = this.bmp;
+            }
         }
         private void ResetColorButton()
         {

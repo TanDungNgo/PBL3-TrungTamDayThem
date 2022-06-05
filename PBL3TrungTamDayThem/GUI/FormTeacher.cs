@@ -2,6 +2,7 @@
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace PBL3TrungTamDayThem.GUI
@@ -19,7 +20,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         public void SetCBB()
         {
-            if(cbbLevel != null)
+            if (cbbLevel != null)
                 cbbLevel.Items.Clear();
             cbbLevel.Items.Add("Tiến sĩ");
             cbbLevel.Items.Add("Thạc sĩ");
@@ -49,13 +50,22 @@ namespace PBL3TrungTamDayThem.GUI
         public bool Error()
         {
             bool check = false;
-            if (txtName.Text == "" )
+            if (txtName.Text == "")
             {
                 lblername.Visible = true;
                 check = true;
             }
             else
+            {
                 lblername.Visible = false;
+                if (isName(txtName.Text) == false)
+                {
+                    lblername2.Visible = true;
+                    check = true;
+                }
+                else
+                    lblername2.Visible = false;
+            }
             if (txtAddress.Text == "")
             {
                 lbleraddress.Visible = true;
@@ -69,7 +79,16 @@ namespace PBL3TrungTamDayThem.GUI
                 check = true;
             }
             else
+            {
                 lbleremail.Visible = false;
+                if (isMail(txtEmail.Text) == false)
+                {
+                    lbleremail2.Visible = true;
+                    check = true;
+                }
+                else
+                    lbleremail2.Visible = false;
+            }
             if (cbbLevel.Text == "")
             {
                 lblerlevel.Visible = true;
@@ -99,9 +118,9 @@ namespace PBL3TrungTamDayThem.GUI
                 }
                 else
                     lblersalary2.Visible = false;
-            }    
+            }
 
-            if (isDigit(txtPhone.Text)==false || txtPhone.Text.Length != 10)
+            if (isDigit(txtPhone.Text) == false || txtPhone.Text.Length != 10)
             {
                 lblerphone.Visible = true;
                 check = true;
@@ -157,7 +176,7 @@ namespace PBL3TrungTamDayThem.GUI
                 }
                 else
                     rbFemale.Checked = true;
-            }  
+            }
             else
             {
                 int count = BLL_QLGV.Instance.Count() + 1;
@@ -172,7 +191,7 @@ namespace PBL3TrungTamDayThem.GUI
                 else
                     txtID.Text = "GV" + count.ToString();
 
-            }    
+            }
         }
         internal static bool isDigit(string v)
         {
@@ -185,9 +204,15 @@ namespace PBL3TrungTamDayThem.GUI
                 return true;
             return false;
         }
-        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        internal static bool isName(string name)
         {
-            e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8));
+            bool match = Regex.IsMatch(name, "^[^0-9]+[^0-9]$");
+            return match;
+        }
+        internal static bool isMail(string mail)
+        {
+            bool match = Regex.IsMatch(mail, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
+            return match;
         }
     }
 }

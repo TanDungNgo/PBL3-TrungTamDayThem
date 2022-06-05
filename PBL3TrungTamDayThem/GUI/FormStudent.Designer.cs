@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblerBD = new System.Windows.Forms.Label();
+            this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
             this.lblerphone = new System.Windows.Forms.Label();
             this.lbleremail = new System.Windows.Forms.Label();
             this.lbleraddress = new System.Windows.Forms.Label();
@@ -55,8 +57,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
-            this.lblerBD = new System.Windows.Forms.Label();
+            this.lblername2 = new System.Windows.Forms.Label();
+            this.lbleremail2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +66,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lbleremail2);
+            this.panel1.Controls.Add(this.lblername2);
             this.panel1.Controls.Add(this.lblerBD);
             this.panel1.Controls.Add(this.dtpBirthDay);
             this.panel1.Controls.Add(this.lblerphone);
@@ -92,6 +96,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(897, 798);
             this.panel1.TabIndex = 0;
+            // 
+            // lblerBD
+            // 
+            this.lblerBD.AutoSize = true;
+            this.lblerBD.ForeColor = System.Drawing.Color.Red;
+            this.lblerBD.Location = new System.Drawing.Point(281, 321);
+            this.lblerBD.Name = "lblerBD";
+            this.lblerBD.Size = new System.Drawing.Size(173, 20);
+            this.lblerBD.TabIndex = 75;
+            this.lblerBD.Text = "Ngày sinh không hợp lệ";
+            this.lblerBD.Visible = false;
+            // 
+            // dtpBirthDay
+            // 
+            this.dtpBirthDay.Location = new System.Drawing.Point(285, 280);
+            this.dtpBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpBirthDay.Name = "dtpBirthDay";
+            this.dtpBirthDay.Size = new System.Drawing.Size(275, 26);
+            this.dtpBirthDay.TabIndex = 74;
             // 
             // lblerphone
             // 
@@ -130,7 +153,7 @@
             // 
             this.lblername.AutoSize = true;
             this.lblername.ForeColor = System.Drawing.Color.Red;
-            this.lblername.Location = new System.Drawing.Point(282, 241);
+            this.lblername.Location = new System.Drawing.Point(281, 237);
             this.lblername.Name = "lblername";
             this.lblername.Size = new System.Drawing.Size(136, 20);
             this.lblername.TabIndex = 49;
@@ -255,7 +278,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(285, 210);
+            this.txtName.Location = new System.Drawing.Point(285, 192);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(275, 26);
@@ -269,7 +292,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(275, 26);
             this.txtID.TabIndex = 55;
-            
             // 
             // gbGender
             // 
@@ -327,7 +349,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblName.Location = new System.Drawing.Point(125, 210);
+            this.lblName.Location = new System.Drawing.Point(125, 192);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(149, 26);
             this.lblName.TabIndex = 52;
@@ -376,24 +398,27 @@
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 4;
             // 
-            // dtpBirthDay
+            // lblername2
             // 
-            this.dtpBirthDay.Location = new System.Drawing.Point(285, 280);
-            this.dtpBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpBirthDay.Name = "dtpBirthDay";
-            this.dtpBirthDay.Size = new System.Drawing.Size(275, 26);
-            this.dtpBirthDay.TabIndex = 74;
+            this.lblername2.AutoSize = true;
+            this.lblername2.ForeColor = System.Drawing.Color.Red;
+            this.lblername2.Location = new System.Drawing.Point(428, 237);
+            this.lblername2.Name = "lblername2";
+            this.lblername2.Size = new System.Drawing.Size(131, 20);
+            this.lblername2.TabIndex = 79;
+            this.lblername2.Text = "Tên không hợp lệ";
+            this.lblername2.Visible = false;
             // 
-            // lblerBD
+            // lbleremail2
             // 
-            this.lblerBD.AutoSize = true;
-            this.lblerBD.ForeColor = System.Drawing.Color.Red;
-            this.lblerBD.Location = new System.Drawing.Point(281, 321);
-            this.lblerBD.Name = "lblerBD";
-            this.lblerBD.Size = new System.Drawing.Size(173, 20);
-            this.lblerBD.TabIndex = 75;
-            this.lblerBD.Text = "Ngày sinh không hợp lệ";
-            this.lblerBD.Visible = false;
+            this.lbleremail2.AutoSize = true;
+            this.lbleremail2.ForeColor = System.Drawing.Color.Red;
+            this.lbleremail2.Location = new System.Drawing.Point(416, 546);
+            this.lbleremail2.Name = "lbleremail2";
+            this.lbleremail2.Size = new System.Drawing.Size(143, 20);
+            this.lbleremail2.TabIndex = 85;
+            this.lbleremail2.Text = "Email không hợp lệ";
+            this.lbleremail2.Visible = false;
             // 
             // FormStudent
             // 
@@ -451,5 +476,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DateTimePicker dtpBirthDay;
         private System.Windows.Forms.Label lblerBD;
+        private System.Windows.Forms.Label lblername2;
+        private System.Windows.Forms.Label lbleremail2;
     }
 }

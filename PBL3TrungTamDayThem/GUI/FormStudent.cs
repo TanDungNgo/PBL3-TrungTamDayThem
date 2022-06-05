@@ -2,6 +2,7 @@
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace PBL3TrungTamDayThem.GUI
@@ -64,7 +65,17 @@ namespace PBL3TrungTamDayThem.GUI
                 check = true;
             }
             else
+            {
                 lblername.Visible = false;
+                if (isName(txtName.Text) == false)
+                {
+                    lblername2.Visible = true;
+                    check = true;
+                }
+                else
+                    lblername2.Visible = false;
+            }
+
             if (txtAddress.Text == "")
             {
                 lbleraddress.Visible = true;
@@ -78,7 +89,16 @@ namespace PBL3TrungTamDayThem.GUI
                 check = true;
             }
             else
+            {
                 lbleremail.Visible = false;
+                if (isMail(txtEmail.Text) == false)
+                {
+                    lbleremail2.Visible = true;
+                    check = true;
+                }
+                else
+                    lbleremail2.Visible = false;
+            }
             if (isDigit(txtPhone.Text) == false || txtPhone.Text.Length != 10)
             {
                 lblerphone.Visible = true;
@@ -86,13 +106,13 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
                 lblerphone.Visible = false;
-            dtpBirthDay.MinDate = new DateTime(1982,1,1);
+            dtpBirthDay.MinDate = new DateTime(1982, 1, 1);
             dtpBirthDay.MaxDate = new DateTime(2004, 12, 31);
             if (dtpBirthDay.Value <= dtpBirthDay.MinDate || dtpBirthDay.Value >= dtpBirthDay.MaxDate)
             {
                 lblerBD.Visible = true;
                 check = true;
-            }   
+            }
             else
                 lblerBD.Visible = false;
             return check;
@@ -130,11 +150,15 @@ namespace PBL3TrungTamDayThem.GUI
             var isNumeric = !string.IsNullOrEmpty(v) && v.All(Char.IsDigit);
             return isNumeric;
         }
-
-      
-        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        internal static bool isName(string name)
         {
-            e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8));
+            bool match = Regex.IsMatch(name, "^[^0-9]+[^0-9]$");
+            return match;
+        }
+        internal static bool isMail(string mail)
+        {
+            bool match = Regex.IsMatch(mail, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
+            return match;
         }
     }
 }

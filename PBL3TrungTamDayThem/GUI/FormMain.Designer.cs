@@ -47,6 +47,7 @@
             this.btn_Min = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnl_header2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_user = new System.Windows.Forms.Button();
             this.pnl_header3 = new System.Windows.Forms.Panel();
             this.ptbHeader = new System.Windows.Forms.PictureBox();
@@ -64,7 +65,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
             this.flpnlButton.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -73,13 +73,13 @@
             this.pnl_leftMenu.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.pnl_header2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_header3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHeader)).BeginInit();
             this.pnl_header1.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.pnl_user.SuspendLayout();
             this.pnlct.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -373,6 +373,17 @@
             this.pnl_header2.Size = new System.Drawing.Size(900, 65);
             this.pnl_header2.TabIndex = 5;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::PBL3TrungTamDayThem.Properties.Resources.account;
+            this.pictureBox1.Location = new System.Drawing.Point(617, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(76, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // btn_user
             // 
             this.btn_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
@@ -381,11 +392,10 @@
             this.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_user.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_user.Image = global::PBL3TrungTamDayThem.Properties.Resources.account;
-            this.btn_user.Location = new System.Drawing.Point(616, 0);
+            this.btn_user.Location = new System.Drawing.Point(693, 0);
             this.btn_user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_user.Name = "btn_user";
-            this.btn_user.Size = new System.Drawing.Size(284, 65);
+            this.btn_user.Size = new System.Drawing.Size(207, 65);
             this.btn_user.TabIndex = 4;
             this.btn_user.Text = "   User_Name    ﹀";
             this.btn_user.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -601,15 +611,6 @@
             this.panel2.Size = new System.Drawing.Size(900, 10);
             this.panel2.TabIndex = 4;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(534, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(76, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -635,6 +636,7 @@
             this.pnl_leftMenu.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
             this.pnl_header2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_header3.ResumeLayout(false);
             this.pnl_header3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHeader)).EndInit();
@@ -642,7 +644,6 @@
             this.pnlCenter.ResumeLayout(false);
             this.pnl_user.ResumeLayout(false);
             this.pnlct.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
