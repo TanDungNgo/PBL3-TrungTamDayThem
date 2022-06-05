@@ -34,11 +34,12 @@
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTKMH = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnTKDT = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnTKMH = new System.Windows.Forms.Button();
+            this.lblYear = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,7 +62,7 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(332, 11);
+            this.lblHeader.Location = new System.Drawing.Point(290, 13);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(134, 32);
             this.lblHeader.TabIndex = 19;
@@ -69,6 +70,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblYear);
             this.panel1.Controls.Add(this.btnTKMH);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.btnTKDT);
@@ -78,12 +80,23 @@
             this.panel1.Size = new System.Drawing.Size(907, 128);
             this.panel1.TabIndex = 28;
             // 
+            // btnTKMH
+            // 
+            this.btnTKMH.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTKMH.Location = new System.Drawing.Point(511, 28);
+            this.btnTKMH.Name = "btnTKMH";
+            this.btnTKMH.Size = new System.Drawing.Size(175, 73);
+            this.btnTKMH.TabIndex = 2;
+            this.btnTKMH.Text = "Thống kê môn học";
+            this.btnTKMH.UseVisualStyleBackColor = true;
+            this.btnTKMH.Click += new System.EventHandler(this.btnTKMH_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(35, 41);
+            this.comboBox1.Location = new System.Drawing.Point(128, 66);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(159, 35);
             this.comboBox1.TabIndex = 1;
@@ -91,9 +104,9 @@
             // btnTKDT
             // 
             this.btnTKDT.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKDT.Location = new System.Drawing.Point(216, 23);
+            this.btnTKDT.Location = new System.Drawing.Point(320, 28);
             this.btnTKDT.Name = "btnTKDT";
-            this.btnTKDT.Size = new System.Drawing.Size(151, 73);
+            this.btnTKDT.Size = new System.Drawing.Size(175, 73);
             this.btnTKDT.TabIndex = 0;
             this.btnTKDT.Text = "Thống kê doanh thu";
             this.btnTKDT.UseVisualStyleBackColor = true;
@@ -125,16 +138,16 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // btnTKMH
+            // lblYear
             // 
-            this.btnTKMH.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKMH.Location = new System.Drawing.Point(407, 23);
-            this.btnTKMH.Name = "btnTKMH";
-            this.btnTKMH.Size = new System.Drawing.Size(151, 73);
-            this.btnTKMH.TabIndex = 2;
-            this.btnTKMH.Text = "Thống kê môn học";
-            this.btnTKMH.UseVisualStyleBackColor = true;
-            this.btnTKMH.Click += new System.EventHandler(this.btnTKMH_Click);
+            this.lblYear.AutoSize = true;
+            this.lblYear.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblYear.Location = new System.Drawing.Point(123, 28);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(60, 25);
+            this.lblYear.TabIndex = 44;
+            this.lblYear.Text = "Năm:";
             // 
             // UC_Statistic
             // 
@@ -151,6 +164,7 @@
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
@@ -167,5 +181,6 @@
         private System.Windows.Forms.Button btnTKDT;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Button btnTKMH;
+        private System.Windows.Forms.Label lblYear;
     }
 }

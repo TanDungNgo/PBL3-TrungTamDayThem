@@ -80,13 +80,17 @@ namespace PBL3TrungTamDayThem.GUI
                 }
             }
         }
-        public void SizeDGVMax()
+        public void SizeMax()
         {
             pnlBottom.Height = 460;
+            cbbClass.Width = 200;
+            cbbSubject.Width = 200;
         }
-        public void SizeDGVMin()
+        public void SizeMin()
         {
-            pnlBottom.Height = 261;
+            pnlBottom.Height = 207;
+            cbbClass.Width = 111;
+            cbbSubject.Width = 111;
         }
 
         private void btnShow2_Click(object sender, EventArgs e)

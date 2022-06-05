@@ -90,11 +90,11 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void ckbpass_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckbpass.Checked == true)
+            if (ckbpass.Checked == true && txt_Pass.Text != "Nhập Password")
             {
                 txt_Pass.UseSystemPasswordChar = false;
-            }    
-            else
+            }
+            if (ckbpass.Checked == false && txt_Pass.Text != "Nhập Password")
             {
                 txt_Pass.UseSystemPasswordChar = true;
             }    
@@ -105,6 +105,44 @@ namespace PBL3TrungTamDayThem.GUI
             {
                 Login();
             }
+        }
+
+        private void txt_User_Enter(object sender, EventArgs e)
+        {
+            if (txt_User.Text == "Nhập Username")
+            {
+                txt_User.Text = null;
+            }
+            txt_User.ForeColor = Color.Black;
+        }
+
+        private void txt_User_Leave(object sender, EventArgs e)
+        {
+            if (txt_User.Text == "")
+            {
+                txt_User.Text = "Nhập Username";
+                txt_User.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void txt_Pass_Leave(object sender, EventArgs e)
+        {
+            if (txt_Pass.Text == "")
+            {
+                txt_Pass.Text = "Nhập Password";
+                txt_Pass.UseSystemPasswordChar = false;
+                txt_Pass.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void txt_Pass_Enter(object sender, EventArgs e)
+        {
+            if (txt_Pass.Text == "Nhập Password")
+            {
+                txt_Pass.Text = null;
+                txt_Pass.UseSystemPasswordChar = true;
+            }
+            txt_Pass.ForeColor = Color.Black;
         }
     }
 }

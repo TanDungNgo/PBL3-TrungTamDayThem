@@ -160,7 +160,7 @@
             this.cbbIDSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbIDSubject.Name = "cbbIDSubject";
             this.cbbIDSubject.Size = new System.Drawing.Size(273, 28);
-            this.cbbIDSubject.TabIndex = 108;
+            this.cbbIDSubject.TabIndex = 12;
             // 
             // cbbIDTeacher
             // 
@@ -170,7 +170,7 @@
             this.cbbIDTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbIDTeacher.Name = "cbbIDTeacher";
             this.cbbIDTeacher.Size = new System.Drawing.Size(273, 28);
-            this.cbbIDTeacher.TabIndex = 107;
+            this.cbbIDTeacher.TabIndex = 11;
             // 
             // txtFee
             // 
@@ -178,7 +178,7 @@
             this.txtFee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFee.Name = "txtFee";
             this.txtFee.Size = new System.Drawing.Size(275, 26);
-            this.txtFee.TabIndex = 106;
+            this.txtFee.TabIndex = 15;
             // 
             // lblFee
             // 
@@ -197,7 +197,7 @@
             this.txtTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(275, 26);
-            this.txtTime.TabIndex = 104;
+            this.txtTime.TabIndex = 14;
             // 
             // lblTime
             // 
@@ -216,7 +216,7 @@
             this.NUDSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NUDSoLuong.Name = "NUDSoLuong";
             this.NUDSoLuong.Size = new System.Drawing.Size(93, 26);
-            this.NUDSoLuong.TabIndex = 102;
+            this.NUDSoLuong.TabIndex = 13;
             // 
             // label1
             // 
@@ -240,7 +240,7 @@
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(141, 56);
-            this.btnExit.TabIndex = 100;
+            this.btnExit.TabIndex = 20;
             this.btnExit.Text = "   Thoát";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = false;
@@ -267,7 +267,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(141, 56);
-            this.btnSave.TabIndex = 97;
+            this.btnSave.TabIndex = 18;
             this.btnSave.Text = "   Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -283,7 +283,7 @@
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(141, 56);
-            this.btnReset.TabIndex = 96;
+            this.btnReset.TabIndex = 19;
             this.btnReset.Text = "   Đặt lại";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
@@ -295,7 +295,7 @@
             this.dtpStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(275, 26);
-            this.dtpStart.TabIndex = 95;
+            this.dtpStart.TabIndex = 16;
             this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
             // 
             // lblED
@@ -327,7 +327,7 @@
             this.dtpEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(275, 26);
-            this.dtpEnd.TabIndex = 89;
+            this.dtpEnd.TabIndex = 17;
             // 
             // lblSD
             // 
@@ -357,7 +357,7 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(277, 26);
-            this.txtID.TabIndex = 85;
+            this.txtID.TabIndex = 10;
             // 
             // lblID
             // 

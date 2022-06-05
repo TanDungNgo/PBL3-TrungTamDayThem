@@ -148,19 +148,19 @@ namespace PBL3TrungTamDayThem.GUI
             }
             if (this.WindowState == FormWindowState.Maximized)
             {
-                uC_Teacher.SizeDGVMax();
-                uC_Student.SizeDGVMax();
-                uC_Staff.SizeDGVMax();
-                uC_Class.SizeDGVMax();
-                uC_Bill.SizeDGVMax();
+                uC_Teacher.SizeMax();
+                uC_Student.SizeMax();
+                uC_Staff.SizeMax();
+                uC_Class.SizeMax();
+                uC_Bill.SizeMax();
             }
             else
             {
-                uC_Teacher.SizeDGVMin();
-                uC_Student.SizeDGVMin();
-                uC_Staff.SizeDGVMin();
-                uC_Class.SizeDGVMin();
-                uC_Bill.SizeDGVMin();
+                uC_Teacher.SizeMin();
+                uC_Student.SizeMin();
+                uC_Staff.SizeMin();
+                uC_Class.SizeMin();
+                uC_Bill.SizeMin();
             }
 
 

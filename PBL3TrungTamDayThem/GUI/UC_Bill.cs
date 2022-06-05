@@ -125,13 +125,15 @@ namespace PBL3TrungTamDayThem.GUI
                 MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        public void SizeDGVMax()
+        public void SizeMax()
         {
             pnlRight.Width = 550;
+            pnlBotton.Height = 300;
         }
-        public void SizeDGVMin()
+        public void SizeMin()
         {
             pnlRight.Width = 510;
+            pnlBotton.Height = 175;
         }
     }
 }

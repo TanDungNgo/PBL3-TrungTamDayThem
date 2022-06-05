@@ -94,15 +94,49 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvStaff.DataSource = BLL_QLNV.Instance.GetListStaff(cbbPosition.Text, txbName.Text);
+            dgvStaff.DataSource = BLL_QLNV.Instance.GetListStaff(cbbPosition.Text, txtName.Text);
         }
-        public void SizeDGVMax()
+        public void SizeMax()
         {
             pnlBottom.Height = 460;
+            pnlLeft.Width = 300;
+            pnlRight.Width = 350;
+            panel3.Height = 60;
+            panel2.Height = 60;
+            panel1.Height = 60;
+            txtName.Width = 250;
+            btnSearch.Width = 120;
+            btnSearch.Height = 60;
+            btnAdd.Width = 120;
+            btnEdit.Width = 120;
+            btnDel.Width = 120;
+            btnShow.Width = 120;
+            cbbSort.Width = 130;
+            cbbPosition.Width = 170;
+            btnSort.Width = 120;
         }
-        public void SizeDGVMin()
+        public void SizeMin()
         {
             pnlBottom.Height = 261;
+            pnlLeft.Width = 196;
+            pnlRight.Width = 177;
+            panel3.Height = 47;
+            panel2.Height = 47;
+            panel1.Height = 47;
+            txtName.Width = 171;
+            btnSearch.Width = 90;
+            btnSearch.Height = 45;
+            btnAdd.Width = 97;
+            btnAdd.Height = 32;
+            btnEdit.Width = 97;
+            btnEdit.Height = 32;
+            btnDel.Width = 97;
+            btnDel.Height = 32;
+            btnShow.Width = 97;
+            btnShow.Height = 32;
+            cbbSort.Width = 117;
+            cbbPosition.Width = 153;
+            btnSort.Width = 97;
         }
     }
 }

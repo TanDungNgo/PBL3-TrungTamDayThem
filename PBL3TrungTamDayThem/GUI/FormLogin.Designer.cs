@@ -72,20 +72,23 @@
             // txt_Pass
             // 
             this.txt_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Pass.ForeColor = System.Drawing.Color.DarkGray;
             this.txt_Pass.Location = new System.Drawing.Point(152, 91);
             this.txt_Pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Pass.Name = "txt_Pass";
             this.txt_Pass.Size = new System.Drawing.Size(347, 35);
             this.txt_Pass.TabIndex = 3;
-            this.txt_Pass.UseSystemPasswordChar = true;
+            this.txt_Pass.Text = "Nhập Password";
+            this.txt_Pass.Enter += new System.EventHandler(this.txt_Pass_Enter);
             this.txt_Pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Pass_KeyPress);
+            this.txt_Pass.Leave += new System.EventHandler(this.txt_Pass_Leave);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::PBL3TrungTamDayThem.Properties.Resources.padlock__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(78, 81);
+            this.pictureBox2.Location = new System.Drawing.Point(78, 80);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 46);
@@ -96,11 +99,15 @@
             // txt_User
             // 
             this.txt_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_User.ForeColor = System.Drawing.Color.DarkGray;
             this.txt_User.Location = new System.Drawing.Point(152, 28);
             this.txt_User.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_User.Name = "txt_User";
             this.txt_User.Size = new System.Drawing.Size(347, 35);
             this.txt_User.TabIndex = 2;
+            this.txt_User.Text = "Nhập Username";
+            this.txt_User.Enter += new System.EventHandler(this.txt_User_Enter);
+            this.txt_User.Leave += new System.EventHandler(this.txt_User_Leave);
             // 
             // pictureBox1
             // 
@@ -134,7 +141,7 @@
             this.btn_Exit.BackColor = System.Drawing.Color.LightGray;
             this.btn_Exit.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Image = global::PBL3TrungTamDayThem.Properties.Resources.logout__1_;
-            this.btn_Exit.Location = new System.Drawing.Point(400, 454);
+            this.btn_Exit.Location = new System.Drawing.Point(386, 455);
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(208, 78);
@@ -152,7 +159,7 @@
             this.btn_Login.BackColor = System.Drawing.Color.LightGray;
             this.btn_Login.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.Image = global::PBL3TrungTamDayThem.Properties.Resources.enter__1_;
-            this.btn_Login.Location = new System.Drawing.Point(652, 454);
+            this.btn_Login.Location = new System.Drawing.Point(638, 455);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(208, 78);

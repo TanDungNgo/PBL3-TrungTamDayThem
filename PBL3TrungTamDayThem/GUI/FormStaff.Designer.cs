@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbleremail2 = new System.Windows.Forms.Label();
+            this.lblername2 = new System.Windows.Forms.Label();
             this.lblerBD = new System.Windows.Forms.Label();
             this.cbbPosition = new System.Windows.Forms.ComboBox();
             this.lblerposition = new System.Windows.Forms.Label();
@@ -64,8 +66,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblername2 = new System.Windows.Forms.Label();
-            this.lbleremail2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +111,28 @@
             this.panel1.Size = new System.Drawing.Size(897, 798);
             this.panel1.TabIndex = 0;
             // 
+            // lbleremail2
+            // 
+            this.lbleremail2.AutoSize = true;
+            this.lbleremail2.ForeColor = System.Drawing.Color.Red;
+            this.lbleremail2.Location = new System.Drawing.Point(413, 509);
+            this.lbleremail2.Name = "lbleremail2";
+            this.lbleremail2.Size = new System.Drawing.Size(143, 20);
+            this.lbleremail2.TabIndex = 84;
+            this.lbleremail2.Text = "Email không hợp lệ";
+            this.lbleremail2.Visible = false;
+            // 
+            // lblername2
+            // 
+            this.lblername2.AutoSize = true;
+            this.lblername2.ForeColor = System.Drawing.Color.Red;
+            this.lblername2.Location = new System.Drawing.Point(425, 159);
+            this.lblername2.Name = "lblername2";
+            this.lblername2.Size = new System.Drawing.Size(131, 20);
+            this.lblername2.TabIndex = 83;
+            this.lblername2.Text = "Tên không hợp lệ";
+            this.lblername2.Visible = false;
+            // 
             // lblerBD
             // 
             this.lblerBD.AutoSize = true;
@@ -129,7 +151,7 @@
             this.cbbPosition.Location = new System.Drawing.Point(281, 401);
             this.cbbPosition.Name = "cbbPosition";
             this.cbbPosition.Size = new System.Drawing.Size(275, 28);
-            this.cbbPosition.TabIndex = 81;
+            this.cbbPosition.TabIndex = 63;
             this.cbbPosition.SelectedIndexChanged += new System.EventHandler(this.cbbPosition_SelectedIndexChanged);
             // 
             // lblerposition
@@ -208,7 +230,7 @@
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(141, 56);
-            this.btnBack.TabIndex = 74;
+            this.btnBack.TabIndex = 69;
             this.btnBack.Text = "  Thoát";
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = false;
@@ -224,7 +246,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(141, 56);
-            this.btnSave.TabIndex = 73;
+            this.btnSave.TabIndex = 67;
             this.btnSave.Text = "   Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -240,7 +262,7 @@
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(141, 56);
-            this.btnReset.TabIndex = 72;
+            this.btnReset.TabIndex = 68;
             this.btnReset.Text = "  Đặt lại";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
@@ -263,7 +285,7 @@
             this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(275, 26);
-            this.txtSalary.TabIndex = 69;
+            this.txtSalary.TabIndex = 65;
             // 
             // lblSalary
             // 
@@ -282,7 +304,7 @@
             this.dtpStarting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStarting.Name = "dtpStarting";
             this.dtpStarting.Size = new System.Drawing.Size(275, 26);
-            this.dtpStarting.TabIndex = 67;
+            this.dtpStarting.TabIndex = 66;
             // 
             // lblSD
             // 
@@ -301,7 +323,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(275, 26);
-            this.txtEmail.TabIndex = 65;
+            this.txtEmail.TabIndex = 64;
             // 
             // lblMail
             // 
@@ -320,7 +342,7 @@
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(275, 26);
-            this.txtAddress.TabIndex = 63;
+            this.txtAddress.TabIndex = 62;
             // 
             // lblAddress
             // 
@@ -358,7 +380,7 @@
             this.dtpBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpBirthDay.Name = "dtpBirthDay";
             this.dtpBirthDay.Size = new System.Drawing.Size(275, 26);
-            this.dtpBirthDay.TabIndex = 59;
+            this.dtpBirthDay.TabIndex = 60;
             // 
             // txtName
             // 
@@ -388,7 +410,7 @@
             this.gbGender.Name = "gbGender";
             this.gbGender.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbGender.Size = new System.Drawing.Size(150, 115);
-            this.gbGender.TabIndex = 56;
+            this.gbGender.TabIndex = 59;
             this.gbGender.TabStop = false;
             this.gbGender.Text = "Giới tính";
             // 
@@ -482,28 +504,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 4;
-            // 
-            // lblername2
-            // 
-            this.lblername2.AutoSize = true;
-            this.lblername2.ForeColor = System.Drawing.Color.Red;
-            this.lblername2.Location = new System.Drawing.Point(425, 159);
-            this.lblername2.Name = "lblername2";
-            this.lblername2.Size = new System.Drawing.Size(131, 20);
-            this.lblername2.TabIndex = 83;
-            this.lblername2.Text = "Tên không hợp lệ";
-            this.lblername2.Visible = false;
-            // 
-            // lbleremail2
-            // 
-            this.lbleremail2.AutoSize = true;
-            this.lbleremail2.ForeColor = System.Drawing.Color.Red;
-            this.lbleremail2.Location = new System.Drawing.Point(413, 509);
-            this.lbleremail2.Name = "lbleremail2";
-            this.lbleremail2.Size = new System.Drawing.Size(143, 20);
-            this.lbleremail2.TabIndex = 84;
-            this.lbleremail2.Text = "Email không hợp lệ";
-            this.lbleremail2.Visible = false;
             // 
             // FormStaff
             // 
