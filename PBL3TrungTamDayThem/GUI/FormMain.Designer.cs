@@ -57,14 +57,14 @@
             this.btn_Max = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.pnl_user = new System.Windows.Forms.Panel();
-            this.btn_ThongTin = new System.Windows.Forms.Button();
             this.btn_Logout = new System.Windows.Forms.Button();
+            this.btn_ThongTin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.flpnlButton.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -511,25 +511,6 @@
             this.pnl_user.TabIndex = 6;
             this.pnl_user.Visible = false;
             // 
-            // btn_ThongTin
-            // 
-            this.btn_ThongTin.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_ThongTin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_ThongTin.FlatAppearance.BorderSize = 0;
-            this.btn_ThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThongTin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThongTin.Image = global::PBL3TrungTamDayThem.Properties.Resources.user__3_;
-            this.btn_ThongTin.Location = new System.Drawing.Point(0, 0);
-            this.btn_ThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_ThongTin.Name = "btn_ThongTin";
-            this.btn_ThongTin.Size = new System.Drawing.Size(284, 60);
-            this.btn_ThongTin.TabIndex = 0;
-            this.btn_ThongTin.Text = "Thông tin người dùng";
-            this.btn_ThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThongTin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_ThongTin.UseVisualStyleBackColor = false;
-            this.btn_ThongTin.Click += new System.EventHandler(this.btn_ThongTin_Click);
-            // 
             // btn_Logout
             // 
             this.btn_Logout.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -550,6 +531,25 @@
             this.btn_Logout.UseVisualStyleBackColor = false;
             this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
+            // btn_ThongTin
+            // 
+            this.btn_ThongTin.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_ThongTin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ThongTin.FlatAppearance.BorderSize = 0;
+            this.btn_ThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThongTin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongTin.Image = global::PBL3TrungTamDayThem.Properties.Resources.user__3_;
+            this.btn_ThongTin.Location = new System.Drawing.Point(0, 0);
+            this.btn_ThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThongTin.Name = "btn_ThongTin";
+            this.btn_ThongTin.Size = new System.Drawing.Size(284, 60);
+            this.btn_ThongTin.TabIndex = 0;
+            this.btn_ThongTin.Text = "Thông tin người dùng";
+            this.btn_ThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ThongTin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_ThongTin.UseVisualStyleBackColor = false;
+            this.btn_ThongTin.Click += new System.EventHandler(this.btn_ThongTin_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pnlCenter);
@@ -563,32 +563,14 @@
             this.panel1.Size = new System.Drawing.Size(900, 622);
             this.panel1.TabIndex = 2;
             // 
-            // panel2
+            // pnlCenter
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(900, 10);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 612);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(900, 10);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 10);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 602);
-            this.panel4.TabIndex = 2;
+            this.pnlCenter.Controls.Add(this.pnl_user);
+            this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCenter.Location = new System.Drawing.Point(10, 10);
+            this.pnlCenter.Name = "pnlCenter";
+            this.pnlCenter.Size = new System.Drawing.Size(880, 602);
+            this.pnlCenter.TabIndex = 4;
             // 
             // panel5
             // 
@@ -599,24 +581,42 @@
             this.panel5.Size = new System.Drawing.Size(10, 602);
             this.panel5.TabIndex = 3;
             // 
-            // pnlCenter
+            // panel4
             // 
-            this.pnlCenter.Controls.Add(this.pnl_user);
-            this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCenter.Location = new System.Drawing.Point(10, 10);
-            this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(880, 602);
-            this.pnlCenter.TabIndex = 4;
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 10);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 602);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 612);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(900, 10);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(900, 10);
+            this.panel2.TabIndex = 0;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 722);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMain";
