@@ -103,6 +103,16 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account__3_ {
+            get {
+                object obj = ResourceManager.GetObject("account (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_icon1 {
             get {
                 object obj = ResourceManager.GetObject("add-icon1", resourceCulture);
@@ -373,6 +383,16 @@ namespace PBL3TrungTamDayThem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap padlock__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("padlock (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap padlock__2_ {
             get {
                 object obj = ResourceManager.GetObject("padlock (2)", resourceCulture);
@@ -576,6 +596,16 @@ namespace PBL3TrungTamDayThem.Properties {
         internal static System.Drawing.Bitmap statistic {
             get {
                 object obj = ResourceManager.GetObject("statistic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap statistical {
+            get {
+                object obj = ResourceManager.GetObject("statistical", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
