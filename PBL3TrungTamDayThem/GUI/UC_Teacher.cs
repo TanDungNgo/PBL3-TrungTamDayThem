@@ -137,10 +137,5 @@ namespace PBL3TrungTamDayThem.GUI
             cbbExpertise.Width = 120;
             btnSort.Width = 97;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(cbbExpertise.Width.ToString());
-        }
     }
 }

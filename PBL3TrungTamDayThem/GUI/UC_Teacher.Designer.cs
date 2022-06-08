@@ -37,16 +37,16 @@
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.pnlCenter2 = new System.Windows.Forms.Panel();
-            this.pnlRight = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSort = new System.Windows.Forms.Button();
             this.cbbSort = new System.Windows.Forms.ComboBox();
+            this.pnlRight = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).BeginInit();
@@ -54,8 +54,8 @@
             this.pnlBottom.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.pnlCenter2.SuspendLayout();
-            this.pnlRight.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -166,6 +166,43 @@
             this.pnlCenter2.Size = new System.Drawing.Size(348, 147);
             this.pnlCenter2.TabIndex = 2;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnSort);
+            this.panel3.Controls.Add(this.cbbSort);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 74);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(348, 73);
+            this.panel3.TabIndex = 35;
+            // 
+            // btnSort
+            // 
+            this.btnSort.BackColor = System.Drawing.Color.White;
+            this.btnSort.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSort.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSort.Image = global::PBL3TrungTamDayThem.Properties.Resources.show_icon;
+            this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSort.Location = new System.Drawing.Point(202, 0);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(146, 73);
+            this.btnSort.TabIndex = 36;
+            this.btnSort.Text = "    Sắp xếp";
+            this.btnSort.UseVisualStyleBackColor = false;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
+            // 
+            // cbbSort
+            // 
+            this.cbbSort.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSort.FormattingEnabled = true;
+            this.cbbSort.Location = new System.Drawing.Point(0, 0);
+            this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbSort.Name = "cbbSort";
+            this.cbbSort.Size = new System.Drawing.Size(173, 28);
+            this.cbbSort.TabIndex = 28;
+            // 
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
@@ -193,42 +230,6 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnSort);
-            this.panel3.Controls.Add(this.cbbSort);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 74);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(348, 73);
-            this.panel3.TabIndex = 35;
-            // 
-            // btnSort
-            // 
-            this.btnSort.BackColor = System.Drawing.Color.White;
-            this.btnSort.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSort.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSort.Image = global::PBL3TrungTamDayThem.Properties.Resources.show_icon;
-            this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSort.Location = new System.Drawing.Point(202, 0);
-            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(146, 73);
-            this.btnSort.TabIndex = 36;
-            this.btnSort.Text = "    Sắp xếp";
-            this.btnSort.UseVisualStyleBackColor = false;
-            // 
-            // cbbSort
-            // 
-            this.cbbSort.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(0, 0);
-            this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbbSort.Name = "cbbSort";
-            this.cbbSort.Size = new System.Drawing.Size(173, 28);
-            this.cbbSort.TabIndex = 28;
-            // 
             // pnlLeft
             // 
             this.pnlLeft.Controls.Add(this.panel2);
@@ -249,16 +250,6 @@
             this.panel2.Size = new System.Drawing.Size(294, 73);
             this.panel2.TabIndex = 1;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnEdit);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(294, 73);
-            this.panel1.TabIndex = 0;
-            // 
             // btnShow
             // 
             this.btnShow.BackColor = System.Drawing.Color.White;
@@ -273,6 +264,7 @@
             this.btnShow.TabIndex = 30;
             this.btnShow.Text = "   Hiển thị";
             this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnDel
             // 
@@ -288,6 +280,17 @@
             this.btnDel.TabIndex = 26;
             this.btnDel.Text = "   Xóa";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(294, 73);
+            this.panel1.TabIndex = 0;
             // 
             // btnEdit
             // 
@@ -303,6 +306,7 @@
             this.btnEdit.TabIndex = 27;
             this.btnEdit.Text = "     Chỉnh sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -318,6 +322,7 @@
             this.btnAdd.TabIndex = 25;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // UC_Teacher
             // 
@@ -337,9 +342,9 @@
             this.pnlCenter.ResumeLayout(false);
             this.pnlCenter2.ResumeLayout(false);
             this.pnlCenter2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.pnlLeft.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

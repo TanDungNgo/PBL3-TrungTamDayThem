@@ -36,6 +36,7 @@
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.pnlCenter2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnSort = new System.Windows.Forms.Button();
             this.lblclass = new System.Windows.Forms.Label();
             this.cbbClass = new System.Windows.Forms.ComboBox();
@@ -48,17 +49,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.pnlCenter2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvStudent
@@ -155,6 +155,16 @@
             this.pnlCenter2.Name = "pnlCenter2";
             this.pnlCenter2.Size = new System.Drawing.Size(348, 147);
             this.pnlCenter2.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnSort);
+            this.panel3.Controls.Add(this.cbbSort);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 74);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(348, 73);
+            this.panel3.TabIndex = 34;
             // 
             // btnSort
             // 
@@ -316,16 +326,6 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnSort);
-            this.panel3.Controls.Add(this.cbbSort);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 74);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(348, 73);
-            this.panel3.TabIndex = 34;
-            // 
             // UC_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -344,12 +344,12 @@
             this.pnlCenter.ResumeLayout(false);
             this.pnlCenter2.ResumeLayout(false);
             this.pnlCenter2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
             this.pnlLeft.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

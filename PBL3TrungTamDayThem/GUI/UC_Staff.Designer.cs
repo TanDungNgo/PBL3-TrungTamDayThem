@@ -215,6 +215,7 @@
             this.btnShow.TabIndex = 30;
             this.btnShow.Text = "   Hiển thị";
             this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnDel
             // 
@@ -230,6 +231,7 @@
             this.btnDel.TabIndex = 26;
             this.btnDel.Text = "   Xóa";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // panel1
             // 
@@ -255,6 +257,7 @@
             this.btnAdd.TabIndex = 24;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -270,6 +273,7 @@
             this.btnEdit.TabIndex = 26;
             this.btnEdit.Text = "     Chỉnh sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // pnlRight
             // 

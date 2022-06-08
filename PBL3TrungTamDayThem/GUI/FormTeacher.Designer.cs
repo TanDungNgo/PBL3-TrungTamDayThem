@@ -328,7 +328,7 @@
             this.lblSalary.AutoSize = true;
             this.lblSalary.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalary.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblSalary.Location = new System.Drawing.Point(153, 603);
+            this.lblSalary.Location = new System.Drawing.Point(148, 603);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(88, 26);
             this.lblSalary.TabIndex = 40;
