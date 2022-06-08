@@ -2,6 +2,7 @@
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace PBL3TrungTamDayThem.GUI
@@ -147,24 +148,6 @@ namespace PBL3TrungTamDayThem.GUI
                 b.Width = pnlMenu.Width;
                 b.Height = pnlMenu.Height * 85 / 725;
             }
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                uC_Teacher.SizeMax();
-                uC_Student.SizeMax();
-                uC_Staff.SizeMax();
-                uC_Class.SizeMax();
-                uC_Bill.SizeMax();
-            }
-            else
-            {
-                uC_Teacher.SizeMin();
-                uC_Student.SizeMin();
-                uC_Staff.SizeMin();
-                uC_Class.SizeMin();
-                uC_Bill.SizeMin();
-            }
-
-
         }
         private void btn_Mini_Click(object sender, EventArgs e)
         {
@@ -194,6 +177,39 @@ namespace PBL3TrungTamDayThem.GUI
         {
             FormUser f = new FormUser(this._MaNV);
             f.ShowDialog();
+        }
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void pnl_header1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }    
+        }
+
+        private void FormMain_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                uC_Teacher.SizeMax();
+                uC_Student.SizeMax();
+                uC_Staff.SizeMax();
+                uC_Class.SizeMax();
+                uC_Bill.SizeMax();
+            }
+            else
+            {
+                uC_Teacher.SizeMin();
+                uC_Student.SizeMin();
+                uC_Staff.SizeMin();
+                uC_Class.SizeMin();
+                uC_Bill.SizeMin();
+            }
         }
     }
 }

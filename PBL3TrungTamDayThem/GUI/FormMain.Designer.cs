@@ -447,6 +447,7 @@
             this.pnl_header1.Name = "pnl_header1";
             this.pnl_header1.Size = new System.Drawing.Size(900, 35);
             this.pnl_header1.TabIndex = 4;
+            this.pnl_header1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_header1_MouseDown);
             // 
             // btn_Mini
             // 
@@ -624,6 +625,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Trung Tâm Dạy Thêm";
             this.Load += new System.EventHandler(this.FormMain_Load);
+            this.Resize += new System.EventHandler(this.FormMain_Resize);
             this.pnlMenu.ResumeLayout(false);
             this.flpnlButton.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
