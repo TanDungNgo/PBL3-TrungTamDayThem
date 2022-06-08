@@ -21,6 +21,7 @@ namespace PBL3TrungTamDayThem.GUI
         private UC_Staff uC_Staff = new UC_Staff();
         private UC_Class uC_Class = new UC_Class();
         private UC_Bill uC_Bill = new UC_Bill();
+        private UC_Statistic uC_Statistic = new UC_Statistic();
         private void OpenUC(UserControl UC)
         {
             UC.Dock = DockStyle.Fill;
@@ -102,7 +103,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             ResetColorButton();
             GetFromButton(btnStatistic);
-            OpenUC(new UC_Statistic());
+            OpenUC(uC_Statistic);
         }
         private void btn_Min_Click(object sender, EventArgs e)
         {

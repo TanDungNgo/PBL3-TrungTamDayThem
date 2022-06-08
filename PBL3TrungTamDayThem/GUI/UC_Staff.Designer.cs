@@ -33,34 +33,34 @@
             this.pnlFill = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnSort = new System.Windows.Forms.Button();
             this.cbbSort = new System.Windows.Forms.ComboBox();
-            this.pnlRight = new System.Windows.Forms.Panel();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.cbbPosition = new System.Windows.Forms.ComboBox();
             this.lblPosition = new System.Windows.Forms.Label();
             this.pnlLeft = new System.Windows.Forms.Panel();
-            this.pnlBottom = new System.Windows.Forms.Panel();
-            this.dgvStaff = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnShow = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlRight = new System.Windows.Forms.Panel();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.pnlBottom = new System.Windows.Forms.Panel();
+            this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.pnlHeader.SuspendLayout();
             this.pnlFill.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.pnlRight.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.pnlLeft.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.pnlRight.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -121,6 +121,16 @@
             this.panel5.Size = new System.Drawing.Size(348, 149);
             this.panel5.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnSort);
+            this.panel3.Controls.Add(this.cbbSort);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 76);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(348, 73);
+            this.panel3.TabIndex = 48;
+            // 
             // btnSort
             // 
             this.btnSort.BackColor = System.Drawing.Color.White;
@@ -147,40 +157,6 @@
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Size = new System.Drawing.Size(173, 28);
             this.cbbSort.TabIndex = 48;
-            // 
-            // pnlRight
-            // 
-            this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
-            this.pnlRight.Controls.Add(this.txtName);
-            this.pnlRight.Controls.Add(this.btnSearch);
-            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(642, 0);
-            this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(265, 149);
-            this.pnlRight.TabIndex = 47;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(3, 29);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(255, 26);
-            this.txtName.TabIndex = 45;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Image = global::PBL3TrungTamDayThem.Properties.Resources.search_icon1;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(70, 80);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(135, 69);
-            this.btnSearch.TabIndex = 46;
-            this.btnSearch.Text = "   Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cbbPosition
             // 
@@ -215,32 +191,45 @@
             this.pnlLeft.Size = new System.Drawing.Size(294, 149);
             this.pnlLeft.TabIndex = 0;
             // 
-            // pnlBottom
+            // panel2
             // 
-            this.pnlBottom.Controls.Add(this.dgvStaff);
-            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 149);
-            this.pnlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(907, 400);
-            this.pnlBottom.TabIndex = 1;
+            this.panel2.Controls.Add(this.btnShow);
+            this.panel2.Controls.Add(this.btnDel);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 76);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(294, 73);
+            this.panel2.TabIndex = 32;
             // 
-            // dgvStaff
+            // btnShow
             // 
-            this.dgvStaff.AllowUserToAddRows = false;
-            this.dgvStaff.AllowUserToDeleteRows = false;
-            this.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvStaff.BackgroundColor = System.Drawing.Color.White;
-            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStaff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvStaff.Location = new System.Drawing.Point(0, 0);
-            this.dgvStaff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvStaff.Name = "dgvStaff";
-            this.dgvStaff.ReadOnly = true;
-            this.dgvStaff.RowHeadersWidth = 51;
-            this.dgvStaff.RowTemplate.Height = 24;
-            this.dgvStaff.Size = new System.Drawing.Size(907, 400);
-            this.dgvStaff.TabIndex = 0;
+            this.btnShow.BackColor = System.Drawing.Color.White;
+            this.btnShow.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnShow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShow.Image = global::PBL3TrungTamDayThem.Properties.Resources.list__4_;
+            this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShow.Location = new System.Drawing.Point(148, 0);
+            this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(146, 73);
+            this.btnShow.TabIndex = 30;
+            this.btnShow.Text = "   Hiển thị";
+            this.btnShow.UseVisualStyleBackColor = false;
+            // 
+            // btnDel
+            // 
+            this.btnDel.BackColor = System.Drawing.Color.White;
+            this.btnDel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Image = global::PBL3TrungTamDayThem.Properties.Resources.delete_icon1;
+            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.Location = new System.Drawing.Point(0, 0);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(146, 73);
+            this.btnDel.TabIndex = 26;
+            this.btnDel.Text = "   Xóa";
+            this.btnDel.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -282,55 +271,66 @@
             this.btnEdit.Text = "     Chỉnh sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // pnlRight
             // 
-            this.panel2.Controls.Add(this.btnShow);
-            this.panel2.Controls.Add(this.btnDel);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 76);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(294, 73);
-            this.panel2.TabIndex = 32;
+            this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.pnlRight.Controls.Add(this.txtName);
+            this.pnlRight.Controls.Add(this.btnSearch);
+            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlRight.Location = new System.Drawing.Point(642, 0);
+            this.pnlRight.Name = "pnlRight";
+            this.pnlRight.Size = new System.Drawing.Size(265, 149);
+            this.pnlRight.TabIndex = 47;
             // 
-            // btnDel
+            // txtName
             // 
-            this.btnDel.BackColor = System.Drawing.Color.White;
-            this.btnDel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Image = global::PBL3TrungTamDayThem.Properties.Resources.delete_icon1;
-            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDel.Location = new System.Drawing.Point(0, 0);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(146, 73);
-            this.btnDel.TabIndex = 26;
-            this.btnDel.Text = "   Xóa";
-            this.btnDel.UseVisualStyleBackColor = false;
+            this.txtName.Location = new System.Drawing.Point(3, 29);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(255, 26);
+            this.txtName.TabIndex = 45;
             // 
-            // btnShow
+            // btnSearch
             // 
-            this.btnShow.BackColor = System.Drawing.Color.White;
-            this.btnShow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnShow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShow.Image = global::PBL3TrungTamDayThem.Properties.Resources.list__4_;
-            this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(148, 0);
-            this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(146, 73);
-            this.btnShow.TabIndex = 30;
-            this.btnShow.Text = "   Hiển thị";
-            this.btnShow.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Image = global::PBL3TrungTamDayThem.Properties.Resources.search_icon1;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(70, 80);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(135, 69);
+            this.btnSearch.TabIndex = 46;
+            this.btnSearch.Text = "   Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // panel3
+            // pnlBottom
             // 
-            this.panel3.Controls.Add(this.btnSort);
-            this.panel3.Controls.Add(this.cbbSort);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 76);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(348, 73);
-            this.panel3.TabIndex = 48;
+            this.pnlBottom.Controls.Add(this.dgvStaff);
+            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBottom.Location = new System.Drawing.Point(0, 149);
+            this.pnlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlBottom.Name = "pnlBottom";
+            this.pnlBottom.Size = new System.Drawing.Size(907, 400);
+            this.pnlBottom.TabIndex = 1;
+            // 
+            // dgvStaff
+            // 
+            this.dgvStaff.AllowUserToAddRows = false;
+            this.dgvStaff.AllowUserToDeleteRows = false;
+            this.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStaff.BackgroundColor = System.Drawing.Color.White;
+            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStaff.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvStaff.Location = new System.Drawing.Point(0, 0);
+            this.dgvStaff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvStaff.Name = "dgvStaff";
+            this.dgvStaff.ReadOnly = true;
+            this.dgvStaff.RowHeadersWidth = 51;
+            this.dgvStaff.RowTemplate.Height = 24;
+            this.dgvStaff.Size = new System.Drawing.Size(907, 400);
+            this.dgvStaff.TabIndex = 0;
             // 
             // UC_Staff
             // 
@@ -348,14 +348,14 @@
             this.pnlCenter.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.pnlLeft.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
-            this.pnlLeft.ResumeLayout(false);
             this.pnlBottom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -37,9 +37,9 @@
             this.lblYear = new System.Windows.Forms.Label();
             this.btnTKMH = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnTKDT = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnTKDT = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,9 +62,9 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(290, 13);
+            this.lblHeader.Location = new System.Drawing.Point(299, 13);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(113, 26);
+            this.lblHeader.Size = new System.Drawing.Size(134, 32);
             this.lblHeader.TabIndex = 19;
             this.lblHeader.Text = "Thống Kê";
             // 
@@ -87,7 +87,7 @@
             this.lblYear.ForeColor = System.Drawing.SystemColors.Control;
             this.lblYear.Location = new System.Drawing.Point(24, 33);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(48, 20);
+            this.lblYear.Size = new System.Drawing.Size(60, 25);
             this.lblYear.TabIndex = 44;
             this.lblYear.Text = "Năm:";
             // 
@@ -96,9 +96,9 @@
             this.btnTKMH.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTKMH.Image = global::PBL3TrungTamDayThem.Properties.Resources.statistical;
             this.btnTKMH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTKMH.Location = new System.Drawing.Point(441, 47);
+            this.btnTKMH.Location = new System.Drawing.Point(444, 35);
             this.btnTKMH.Name = "btnTKMH";
-            this.btnTKMH.Size = new System.Drawing.Size(194, 50);
+            this.btnTKMH.Size = new System.Drawing.Size(194, 75);
             this.btnTKMH.TabIndex = 2;
             this.btnTKMH.Text = "     Thống kê môn học";
             this.btnTKMH.UseVisualStyleBackColor = true;
@@ -111,8 +111,21 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(28, 67);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 30);
+            this.comboBox1.Size = new System.Drawing.Size(159, 35);
             this.comboBox1.TabIndex = 1;
+            // 
+            // btnTKDT
+            // 
+            this.btnTKDT.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTKDT.Image = global::PBL3TrungTamDayThem.Properties.Resources.statistical;
+            this.btnTKDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTKDT.Location = new System.Drawing.Point(218, 35);
+            this.btnTKDT.Name = "btnTKDT";
+            this.btnTKDT.Size = new System.Drawing.Size(206, 75);
+            this.btnTKDT.TabIndex = 0;
+            this.btnTKDT.Text = "     Thống kê doanh thu";
+            this.btnTKDT.UseVisualStyleBackColor = true;
+            this.btnTKDT.Click += new System.EventHandler(this.btnTKDT_Click);
             // 
             // panel2
             // 
@@ -140,22 +153,9 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // btnTKDT
-            // 
-            this.btnTKDT.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKDT.Image = global::PBL3TrungTamDayThem.Properties.Resources.statistical;
-            this.btnTKDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTKDT.Location = new System.Drawing.Point(218, 47);
-            this.btnTKDT.Name = "btnTKDT";
-            this.btnTKDT.Size = new System.Drawing.Size(194, 50);
-            this.btnTKDT.TabIndex = 0;
-            this.btnTKDT.Text = "     Thống kê doanh thu";
-            this.btnTKDT.UseVisualStyleBackColor = true;
-            this.btnTKDT.Click += new System.EventHandler(this.btnTKDT_Click);
-            // 
             // UC_Statistic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
             this.Controls.Add(this.panel2);
