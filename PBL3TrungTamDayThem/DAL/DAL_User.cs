@@ -50,5 +50,10 @@ namespace PBL3TrungTamDayThem.DAL
                                     "' where MaNV = '" + u.MaNV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public int ResetPass(string username)
+        {
+            string query = "Update ACCOUNT set MatKhau = '123456' where TaiKhoan = '" + username + "'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

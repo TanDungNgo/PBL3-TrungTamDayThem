@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pnlCenter = new System.Windows.Forms.Panel();
+            this.forgotpass = new System.Windows.Forms.Label();
             this.ckbpass = new System.Windows.Forms.CheckBox();
             this.txt_Pass = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -47,6 +48,7 @@
             // 
             this.pnlCenter.BackColor = System.Drawing.Color.Transparent;
             this.pnlCenter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlCenter.Controls.Add(this.forgotpass);
             this.pnlCenter.Controls.Add(this.ckbpass);
             this.pnlCenter.Controls.Add(this.txt_Pass);
             this.pnlCenter.Controls.Add(this.pictureBox2);
@@ -57,6 +59,19 @@
             this.pnlCenter.Name = "pnlCenter";
             this.pnlCenter.Size = new System.Drawing.Size(588, 179);
             this.pnlCenter.TabIndex = 0;
+            // 
+            // forgotpass
+            // 
+            this.forgotpass.AutoSize = true;
+            this.forgotpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotpass.Location = new System.Drawing.Point(74, 140);
+            this.forgotpass.Name = "forgotpass";
+            this.forgotpass.Size = new System.Drawing.Size(146, 25);
+            this.forgotpass.TabIndex = 7;
+            this.forgotpass.Text = "Quên mật khẩu";
+            this.forgotpass.Click += new System.EventHandler(this.forgotpass_Click);
+            this.forgotpass.MouseLeave += new System.EventHandler(this.forgotpass_MouseLeave);
+            this.forgotpass.MouseMove += new System.Windows.Forms.MouseEventHandler(this.forgotpass_MouseMove);
             // 
             // ckbpass
             // 
@@ -210,5 +225,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_Header;
         private System.Windows.Forms.CheckBox ckbpass;
+        private System.Windows.Forms.Label forgotpass;
     }
 }

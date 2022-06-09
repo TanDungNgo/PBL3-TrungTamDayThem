@@ -72,6 +72,12 @@
     <Compile Include="GUI\FormClass.Designer.cs">
       <DependentUpon>FormClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormForgotPasss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormForgotPasss.Designer.cs">
+      <DependentUpon>FormForgotPasss.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\FormClass.resx">
       <DependentUpon>FormClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormForgotPasss.resx">
+      <DependentUpon>FormForgotPasss.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

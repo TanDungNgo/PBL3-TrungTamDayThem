@@ -34,5 +34,10 @@ namespace PBL3TrungTamDayThem.BLL
             else
                 MessageBox.Show("Cập nhật thất bại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        public void ResetPass(string username)
+        {
+            if (DAL_User.Instance.ResetPass(username) > 0)
+                MessageBox.Show("Thành công! Mật khẩu mới sẽ là 123456", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

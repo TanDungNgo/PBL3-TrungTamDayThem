@@ -146,5 +146,23 @@ namespace PBL3TrungTamDayThem.GUI
             }
             txt_Pass.ForeColor = Color.Black;
         }
+
+        private void forgotpass_Click(object sender, EventArgs e)
+        {
+            FormForgotPasss f = new FormForgotPasss();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void forgotpass_MouseLeave(object sender, EventArgs e)
+        {
+            forgotpass.ForeColor = Color.Black;
+        }
+
+        private void forgotpass_MouseMove(object sender, MouseEventArgs e)
+        {
+            forgotpass.ForeColor = Color.Crimson;
+        }
     }
 }
