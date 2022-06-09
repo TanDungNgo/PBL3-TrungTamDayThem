@@ -38,12 +38,6 @@ namespace PBL3TrungTamDayThem.DAL
                 VaiTro = i["VaiTro"].ToString()
             };
         }
-        public string GetMaNVByUsername(string username)
-        {
-            string query = "Select MaNV from ACCOUNT where TaiKhoan = '" + username + "'";
-            DataRow dr = DataProvider.Instance.ExecuteQuery(query).Rows[0];
-            return dr["MaNV"].ToString();
-        }
         public void AddUser(Staff s)
         {
             string query1 = "Insert into ACCOUNT values('" + s.MaNV + "', '" + s.MaNV + "', '123456', '" + s.MaNV + "', '', N'" + s.ChucVu + "')";

@@ -36,10 +36,12 @@ namespace PBL3TrungTamDayThem.GUI
                     SqlCommand cmd = new SqlCommand(query, cnn);
                     cmd.Parameters.Add("@username",SqlDbType.VarChar).Value = txt_User.Text;
                     cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = txt_Pass.Text;
-                    SqlDataReader dt = cmd.ExecuteReader();
-                    if (dt.Read())
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable data = new DataTable();
+                    adapter.Fill(data);
+                    if(data.Rows.Count > 0)
                     {
-                        string MaNV = DAL_User.Instance.GetMaNVByUsername(txt_User.Text);
+                        string MaNV = data.Rows[0]["MaNV"].ToString();
                         FormMain frmMain = new FormMain(MaNV);
                         this.Hide();
                         frmMain.ShowDialog();
