@@ -76,7 +76,7 @@ namespace PBL3TrungTamDayThem.BLL
 
         public void ExecuteDB(Student s)
         {
-            int check = DataProvider.Instance.ExecuteScalar("Select count(*) from HOC_VIEN where MaHV = '" + s.MaHV + "'");
+            int check = DAL_QLHV.Instance.CheckStudent(s.MaHV);
             if (check == 0)
             {
                 // Add

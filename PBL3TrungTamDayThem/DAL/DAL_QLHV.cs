@@ -95,6 +95,11 @@ namespace PBL3TrungTamDayThem.DAL
                 Email = i["Email"].ToString(),
             };
         }
+        public int CheckStudent(string MaHV)
+        {
+            string query = "Select count(*) from HOC_VIEN where MaHV = '" + MaHV + "'";
+            return DataProvider.Instance.ExecuteScalar(query);
+        }
         public int AddStudent(Student s)
         {
             string query = "Insert into HOC_VIEN values ('" + s.MaHV + "', N'" + s.HoTenHV + "','" + s.NgaySinh +

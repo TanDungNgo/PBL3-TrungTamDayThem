@@ -72,17 +72,23 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvStaff.SelectedRows.Count == 1)
+            if (VaiTro == "Quản Lý")
             {
-                DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
-                string MaNV = data[0].Cells["MaNV"].Value.ToString();
-                FormStaff frm = new FormStaff(MaNV);
-                frm.d += new FormStaff.MyDel(ShowDGV);
-                frm.ShowDialog();
-            }
+                if (dgvStaff.SelectedRows.Count == 1)
+                {
+                    DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
+                    string MaNV = data[0].Cells["MaNV"].Value.ToString();
+                    FormStaff frm = new FormStaff(MaNV);
+                    frm.d += new FormStaff.MyDel(ShowDGV);
+                    frm.ShowDialog();
+                }
+                else
+                    MessageBox.Show("Chưa chọn nhân viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
             else
-                MessageBox.Show("Chưa chọn nhân viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            {
+                MessageBox.Show("Bạn không có chức năng này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
         }
         private void btnSort_Click(object sender, EventArgs e)
         {

@@ -130,7 +130,7 @@ namespace PBL3TrungTamDayThem.GUI
                 else
                     lbleremail2.Visible = false;
             }
-            if (isDigit(txtPhone.Text) == false || txtPhone.Text.Length < 11)
+            if (isDigit(txtPhone.Text) == false || txtPhone.Text.Length != 10)
             {
                 lblerphone.Visible = true;
                 check = true;

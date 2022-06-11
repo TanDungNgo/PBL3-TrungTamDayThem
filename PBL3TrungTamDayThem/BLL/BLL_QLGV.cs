@@ -73,7 +73,7 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public void ExecuteDB(Teacher t)
         {
-            int check = DataProvider.Instance.ExecuteScalar("Select count(*) from GIAO_VIEN where MaGV = '" + t.MaGV + "'");
+            int check = DAL_QLGV.Instance.CheckTeacher(t.MaGV);
             if (check == 0)
             {
                 // Add

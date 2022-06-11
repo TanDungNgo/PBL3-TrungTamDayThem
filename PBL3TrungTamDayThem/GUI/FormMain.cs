@@ -117,7 +117,7 @@ namespace PBL3TrungTamDayThem.GUI
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có thật sự muốn thoát ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
-                Application.Exit();
+                this.Close();
         }
 
         private void btn_Exit_MouseMove(object sender, MouseEventArgs e)

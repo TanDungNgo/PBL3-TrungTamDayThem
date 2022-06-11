@@ -82,6 +82,11 @@ namespace PBL3TrungTamDayThem.DAL
                 Luong = int.Parse(i["Luong"].ToString())
             };
         }
+        public int CheckStaff(string MaNV)
+        {
+            string query = "Select count(*) from NHAN_VIEN where MaNV = '" + MaNV + "'";
+            return DataProvider.Instance.ExecuteScalar(query);
+        }
         public int AddStaff(Staff s)
         {
             DAL_User.Instance.AddUser(s);

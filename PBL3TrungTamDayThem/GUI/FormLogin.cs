@@ -1,7 +1,7 @@
-﻿using PBL3TrungTamDayThem.DAL;
+﻿using PBL3TrungTamDayThem.BLL;
+using PBL3TrungTamDayThem.DAL;
+using PBL3TrungTamDayThem.DTO;
 using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -13,7 +13,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             InitializeComponent();
         }
-        private void Login()
+        public void Login()
         {
             string UserName = txt_User.Text;
             string Pass = txt_Pass.Text;
@@ -27,37 +27,21 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
             {
-                try
+                if (BLL_User.Instance.Login(UserName, Pass))
                 {
-                    String cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=TrungTamDayThem;Integrated Security=True";
-                    SqlConnection cnn = new SqlConnection(cnnStr);
-                    cnn.Open();
-                    string query = "Select * from ACCOUNT where TaiKhoan = @username and MatKhau = @pass";
-                    SqlCommand cmd = new SqlCommand(query, cnn);
-                    cmd.Parameters.Add("@username",SqlDbType.VarChar).Value = txt_User.Text;
-                    cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = txt_Pass.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable data = new DataTable();
-                    adapter.Fill(data);
-                    if(data.Rows.Count > 0)
-                    {
-                        string MaNV = data.Rows[0]["MaNV"].ToString();
-                        FormMain frmMain = new FormMain(MaNV);
-                        this.Hide();
-                        frmMain.ShowDialog();
-                        txt_Pass.Text = "";
-                        this.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Login Failed", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    cnn.Close();
+                    User user = BLL_User.Instance.GetUserByUsername(txt_User.Text);
+                    FormMain frmMain = new FormMain(user.MaNV);
+                    this.Hide();
+                    frmMain.ShowDialog();
+                    //txt_Pass.Text = "Nhập Password";
+                    //txt_Pass.UseSystemPasswordChar = false;
+                    //txt_Pass.ForeColor = Color.DarkGray;
+                    txt_Pass.Text = "";
+                    this.Show();
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
-
+                    MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -153,6 +137,7 @@ namespace PBL3TrungTamDayThem.GUI
             this.Hide();
             f.ShowDialog();
             this.Show();
+            txt_Pass.Text = "";
         }
 
         private void forgotpass_MouseLeave(object sender, EventArgs e)

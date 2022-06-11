@@ -24,6 +24,32 @@ namespace PBL3TrungTamDayThem.DAL
         private DAL_User()
         {
         }
+        public int Login(string username, string password)
+        {
+            string query = "Select * from ACCOUNT where TaiKhoan = @username and MatKhau = @pass";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {username, password});
+            return result.Rows.Count;
+        }
+        public int CheckUsernameMail(string username, string email)
+        {
+            string query = "Select * from ACCOUNT ac inner join NHAN_VIEN nv on ac.MaNV = nv.MaNV where ac.TaiKhoan = @username and nv.Email = @email";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, email }) ;
+            return result.Rows.Count;
+        }
+        public User GetUserByUsername(string Username)
+        {
+            string query = "Select * from ACCOUNT where TaiKhoan = '" + Username + "'";
+            DataRow i = DataProvider.Instance.ExecuteQuery(query).Rows[0];
+            return new User
+            {
+                MaNV = i["MaNV"].ToString(),
+                TaiKhoan = i["TaiKhoan"].ToString(),
+                MatKhau = i["MatKhau"].ToString(),
+                TenHienThi = i["TenHienThi"].ToString(),
+                Anh = i["Anh"].ToString(),
+                VaiTro = i["VaiTro"].ToString()
+            };
+        }
         public User GetUserByMaNV(string MaNV)
         {
             string query = "Select * from ACCOUNT where MaNV = '" + MaNV + "'";

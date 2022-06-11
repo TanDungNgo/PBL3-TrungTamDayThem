@@ -27,6 +27,18 @@ namespace PBL3TrungTamDayThem.BLL
         {
 
         }
+        public bool Login(string username, string password)
+        {
+            if (DAL_User.Instance.Login(username, password) > 0)
+                return true;
+            else return false;
+        }
+        public bool CheckUsernameMail (string username, string email)
+        {
+            if (DAL_User.Instance.CheckUsernameMail(username,email) > 0)
+                return true;
+            else return false;
+        }
         public void Update(User u)
         {
             if (DAL_User.Instance.UpdateUser(u) > 0)
@@ -38,6 +50,10 @@ namespace PBL3TrungTamDayThem.BLL
         {
             if (DAL_User.Instance.ResetPass(username) > 0)
                 MessageBox.Show("Thành công! Mật khẩu mới sẽ là 123456", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public User GetUserByUsername(string username)
+        {
+             return DAL_User.Instance.GetUserByUsername(username);
         }
     }
 }

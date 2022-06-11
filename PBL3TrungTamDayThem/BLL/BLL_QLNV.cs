@@ -73,7 +73,7 @@ namespace PBL3TrungTamDayThem.BLL
 
         public void ExecuteDB(Staff s)
         {
-            int check = DataProvider.Instance.ExecuteScalar("Select count(*) from NHAN_VIEN where MaNV = '" + s.MaNV + "'");
+            int check = DAL_QLNV.Instance.CheckStaff(s.MaNV);
             if (check == 0)
             {
                 // Add

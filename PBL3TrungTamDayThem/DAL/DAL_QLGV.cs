@@ -80,6 +80,11 @@ namespace PBL3TrungTamDayThem.DAL
                 Luong = i["Luong"].ToString()
             };
         }
+        public int CheckTeacher(string MaGV)
+        {
+            string query = "Select count(*) from GIAO_VIEN where MaGV = '" + MaGV + "'";
+            return DataProvider.Instance.ExecuteScalar(query);
+        }
         public int AddTeacher(Teacher t)
         {
             string query = "Insert into GIAO_VIEN values ('" +t.MaGV + "',N'" + t.HoTenGV + "','" + t.NgaySinh + "','" + t.GioiTinh + "',N'" + t.DiaChi +

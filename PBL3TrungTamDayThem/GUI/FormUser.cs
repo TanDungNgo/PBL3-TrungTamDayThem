@@ -28,6 +28,8 @@ namespace PBL3TrungTamDayThem.GUI
             txt_Username.Text = user.TaiKhoan;
             txt_DisplayName.Text = user.TenHienThi;
             txt_Password.Text = user.MatKhau;
+            txtnewpass.Text = "";
+            txtnewpassretype.Text = "";
             this.filePath = user.Anh;
             if (user.Anh != "")
             {
@@ -90,6 +92,7 @@ namespace PBL3TrungTamDayThem.GUI
                 return;
             }    
             BLL_User.Instance.Update(user);
+            SetGUI();
         }
 
         private void ckbpass_CheckedChanged(object sender, EventArgs e)
