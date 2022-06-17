@@ -52,6 +52,7 @@ namespace PBL3TrungTamDayThem.GUI
                     }
                     if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                     {
+                        BLL_QLNV.Instance.Delete(LMaNV);
                         SetGUI();
                         ShowDGV();
                     }
@@ -66,9 +67,16 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FormStaff frm = new FormStaff();
-            frm.d += new FormStaff.MyDel(ShowDGV);
-            frm.ShowDialog();
+            if (VaiTro == "Quản Lý")
+            {
+                FormStaff frm = new FormStaff();
+                frm.d += new FormStaff.MyDel(ShowDGV);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có chức năng này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {

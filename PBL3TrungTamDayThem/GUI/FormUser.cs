@@ -1,5 +1,4 @@
 ﻿using PBL3TrungTamDayThem.BLL;
-using PBL3TrungTamDayThem.DAL;
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Drawing;
@@ -22,7 +21,7 @@ namespace PBL3TrungTamDayThem.GUI
         public void SetGUI()
         {
             Staff staff = BLL_QLNV.Instance.GetNVByID(this._MaNV);
-            User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
+            User user = BLL_User.Instance.GetUserByMaNV(this._MaNV);
             txtName.Text = staff.HoTenNV;
             txtPosition.Text = staff.ChucVu;
             txt_Username.Text = user.TaiKhoan;
@@ -78,7 +77,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnsavechange_Click(object sender, EventArgs e)
         {
-            User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
+            User user = BLL_User.Instance.GetUserByMaNV(this._MaNV);
             user.Anh = filePath;
             user.TaiKhoan = txt_Username.Text;
             user.TenHienThi = txt_DisplayName.Text;

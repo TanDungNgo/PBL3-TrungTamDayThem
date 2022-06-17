@@ -39,6 +39,10 @@ namespace PBL3TrungTamDayThem.BLL
                 return true;
             else return false;
         }
+        public User GetUserByMaNV(string MaNV)
+        {
+            return DAL_User.Instance.GetUserByMaNV(MaNV);
+        }
         public void Update(User u)
         {
             if (DAL_User.Instance.UpdateUser(u) > 0)

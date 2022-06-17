@@ -90,7 +90,6 @@ namespace PBL3TrungTamDayThem.DAL
             string query = "Insert into GIAO_VIEN values ('" +t.MaGV + "',N'" + t.HoTenGV + "','" + t.NgaySinh + "','" + t.GioiTinh + "',N'" + t.DiaChi +
                                     "',N'" + t.ChuyenMon + "',N'" + t.TrinhDo + "','" + t.SDT + "','" + t.Email + "','" + t.Luong + "', 'true')";
             return DataProvider.Instance.ExecuteNonQuery(query);
-
         }
         public int EditTeacher(Teacher t)
         {

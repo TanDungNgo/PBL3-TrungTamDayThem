@@ -1,4 +1,4 @@
-﻿using PBL3TrungTamDayThem.DAL;
+﻿using PBL3TrungTamDayThem.BLL;
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Drawing;
@@ -39,7 +39,7 @@ namespace PBL3TrungTamDayThem.GUI
         private void FormMain_Load(object sender, EventArgs e)
         {
             btnHome.PerformClick();
-            User user = DAL_User.Instance.GetUserByMaNV(this._MaNV);
+            User user = BLL_User.Instance.GetUserByMaNV(this._MaNV);
             btn_user.Text = user.TenHienThi + " ﹀";
             foreach (Control item in flpnlButton.Controls)
                 item.Width = flpnlButton.Width;
@@ -69,6 +69,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             ResetColorButton();
             GetFromButton(btnTeacher);
+            uC_Teacher.VaiTro = BLL_QLNV.Instance.GetNVByID(this._MaNV).ChucVu; ;
             OpenUC(uC_Teacher);
         }
 
@@ -89,7 +90,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             ResetColorButton();
             GetFromButton(btnStaff);
-            uC_Staff.VaiTro = DAL_User.Instance.GetUserByMaNV(this._MaNV).VaiTro;
+            uC_Staff.VaiTro = BLL_QLNV.Instance.GetNVByID(this._MaNV).ChucVu;
             OpenUC(uC_Staff);
         }
         private void btnBill_Click(object sender, EventArgs e)

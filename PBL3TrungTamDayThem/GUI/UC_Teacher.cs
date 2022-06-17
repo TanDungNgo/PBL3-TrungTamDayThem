@@ -9,6 +9,7 @@ namespace PBL3TrungTamDayThem.GUI
 {
     public partial class UC_Teacher : UserControl
     {
+        public string VaiTro { get; set; }
         public UC_Teacher()
         {
             InitializeComponent();
@@ -17,10 +18,17 @@ namespace PBL3TrungTamDayThem.GUI
         private Teacher teacher = new Teacher();
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FormTeacher frm = new FormTeacher();
-            frm.d += new FormTeacher.MyDel(ShowDGV);
-            frm.ShowDialog();
-            SetGUI();
+            if (VaiTro == "Quản Lý")
+            {
+                FormTeacher frm = new FormTeacher();
+                frm.d += new FormTeacher.MyDel(ShowDGV);
+                frm.ShowDialog();
+                SetGUI();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có chức năng này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         void SetGUI()
         {
@@ -50,36 +58,50 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (dgvTeacher.SelectedRows.Count > 0)
+            if (VaiTro == "Quản Lý")
             {
-                List<string> LMaGV = new List<string>();
-                foreach (DataGridViewRow row in dgvTeacher.SelectedRows)
+                if (dgvTeacher.SelectedRows.Count > 0)
                 {
-                    LMaGV.Add(row.Cells["MaGV"].Value.ToString());
+                    List<string> LMaGV = new List<string>();
+                    foreach (DataGridViewRow row in dgvTeacher.SelectedRows)
+                    {
+                        LMaGV.Add(row.Cells["MaGV"].Value.ToString());
+                    }
+                    if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        BLL_QLGV.Instance.DeleteTeacher(LMaGV);
+                        SetGUI();
+                        ShowDGV();
+                    }
                 }
-                if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
-                {
-                    BLL_QLGV.Instance.DeleteTeacher(LMaGV);
-                    SetGUI();
-                    ShowDGV();
-                }
+                else
+                    MessageBox.Show("Chưa chọn giáo viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Chưa chọn giáo viên muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                MessageBox.Show("Bạn không có chức năng này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvTeacher.SelectedRows.Count == 1)
+            if (VaiTro == "Quản Lý")
             {
-                DataGridViewSelectedRowCollection data = dgvTeacher.SelectedRows;
-                string MaGV = data[0].Cells["MaGV"].Value.ToString();
-                FormTeacher frm = new FormTeacher(MaGV);
-                frm.d += new FormTeacher.MyDel(ShowDGV);
-                frm.ShowDialog();
-                SetGUI();
+                if (dgvTeacher.SelectedRows.Count == 1)
+                {
+                    DataGridViewSelectedRowCollection data = dgvTeacher.SelectedRows;
+                    string MaGV = data[0].Cells["MaGV"].Value.ToString();
+                    FormTeacher frm = new FormTeacher(MaGV);
+                    frm.d += new FormTeacher.MyDel(ShowDGV);
+                    frm.ShowDialog();
+                    SetGUI();
+                }
+                else
+                    MessageBox.Show("Chưa chọn giáo viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Chưa chọn giáo viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                MessageBox.Show("Bạn không có chức năng này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {

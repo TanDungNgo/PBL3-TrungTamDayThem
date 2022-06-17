@@ -12,7 +12,6 @@ namespace PBL3TrungTamDayThem.DTO
         public string TaiKhoan { get; set; }
         public string MatKhau { get; set; }
         public string TenHienThi { get; set; }
-        public string VaiTro { get; set; }
         public string Anh { get; set; }
     }
 }

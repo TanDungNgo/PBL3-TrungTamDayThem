@@ -2,11 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace PBL3TrungTamDayThem.DAL
 {
@@ -92,7 +88,7 @@ namespace PBL3TrungTamDayThem.DAL
             DAL_User.Instance.AddUser(s);
             string query = "Insert into NHAN_VIEN values ('" + s.MaNV + "', N'" + s.HoTenNV + "','" + s.NgaySinh +
                     "', '" + s.GioiTinh + "',N'" + s.DiaChi + "','" + s.SDT + "','" + s.Email + "'," +
-                    "N'" + s.ChucVu + "', '" + s.NgayVaoLam + "', '" + s.Luong + "')";
+                    "N'" + s.ChucVu + "', '" + s.NgayVaoLam + "', '" + s.Luong + "','true')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int EditStaff(Staff s)
@@ -105,6 +101,7 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public int DeleteStaff(string MaNV)
         {
+            DataProvider.Instance.ExecuteNonQuery("Update ACCOUNT set KiemTra = 'false' where MaNV = '" + MaNV + "'");
             string query = "Update NHAN_VIEN set KiemTra = 'false' where MaNV = '" + MaNV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }

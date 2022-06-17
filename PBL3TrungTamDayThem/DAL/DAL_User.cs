@@ -26,19 +26,19 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public int Login(string username, string password)
         {
-            string query = "Select * from ACCOUNT where TaiKhoan = @username and MatKhau = @pass";
+            string query = "Select * from ACCOUNT where TaiKhoan = @username and MatKhau = @pass and KiemTra = 'True'";
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {username, password});
             return result.Rows.Count;
         }
         public int CheckUsernameMail(string username, string email)
         {
-            string query = "Select * from ACCOUNT ac inner join NHAN_VIEN nv on ac.MaNV = nv.MaNV where ac.TaiKhoan = @username and nv.Email = @email";
+            string query = "Select * from ACCOUNT ac inner join NHAN_VIEN nv on ac.MaNV = nv.MaNV where ac.TaiKhoan = @username and nv.Email = @email and KiemTra = 'True'";
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, email }) ;
             return result.Rows.Count;
         }
         public User GetUserByUsername(string Username)
         {
-            string query = "Select * from ACCOUNT where TaiKhoan = '" + Username + "'";
+            string query = "Select * from ACCOUNT where TaiKhoan = '" + Username + "' and KiemTra = 'True'";
             DataRow i = DataProvider.Instance.ExecuteQuery(query).Rows[0];
             return new User
             {
@@ -47,12 +47,11 @@ namespace PBL3TrungTamDayThem.DAL
                 MatKhau = i["MatKhau"].ToString(),
                 TenHienThi = i["TenHienThi"].ToString(),
                 Anh = i["Anh"].ToString(),
-                VaiTro = i["VaiTro"].ToString()
             };
         }
         public User GetUserByMaNV(string MaNV)
         {
-            string query = "Select * from ACCOUNT where MaNV = '" + MaNV + "'";
+            string query = "Select * from ACCOUNT where MaNV = '" + MaNV + "' and KiemTra = 'True'";
             DataRow i = DataProvider.Instance.ExecuteQuery(query).Rows[0];
             return new User
             {
@@ -61,19 +60,17 @@ namespace PBL3TrungTamDayThem.DAL
                 MatKhau = i["MatKhau"].ToString(),
                 TenHienThi = i["TenHienThi"].ToString(),
                 Anh = i["Anh"].ToString(),
-                VaiTro = i["VaiTro"].ToString()
             };
         }
         public void AddUser(Staff s)
         {
-            string query1 = "Insert into ACCOUNT values('" + s.MaNV + "', '" + s.MaNV + "', '123456', '" + s.MaNV + "', '', N'" + s.ChucVu + "')";
+            string query1 = "Insert into ACCOUNT values('" + s.MaNV + "', '" + s.MaNV + "', '123456', '" + s.MaNV + "', '','True')";
             DataProvider.Instance.ExecuteQuery(query1);
         }
         public int UpdateUser(User u)
         {
             string query = "Update ACCOUNT set MaNV = '" + u.MaNV + "',TaiKhoan = '" + u.TaiKhoan + "',MatKhau = '" + u.MatKhau +
-                                    "',TenHienThi = N'" + u.TenHienThi  + "',Anh = '" + u.Anh + "',VaiTro = N'" + u.VaiTro +
-                                    "' where MaNV = '" + u.MaNV + "'";
+                                    "',TenHienThi = N'" + u.TenHienThi  + "',Anh = '" + u.Anh + "' where MaNV = '" + u.MaNV + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         public int ResetPass(string username)
