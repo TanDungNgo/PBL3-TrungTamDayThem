@@ -124,5 +124,27 @@ namespace PBL3TrungTamDayThem.BLL
             }    
             return list;
         }
+        public bool CheckPhone(string MaGV, string Phone)
+        {
+            int k = 0;
+            List<Teacher> list = DAL_QLGV.Instance.GetAllTeacher();
+            if (list.Count > 0)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    if (list[i].SDT == Phone && list[i].MaGV != MaGV)
+                    {
+                        k++;
+                        break;
+                    }    
+                }
+                if (k == 0)
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
     }
 }

@@ -60,10 +60,12 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public void WriteFile(Bill bill)
         {
+            try
+            {
                 string header = "\t\t\tPhiếu Thu Tiền Trung Tâm DPT";
                 string noidung = "\tLớp học:" + bill.MaLH + "\n\tHọ tên người nộp :" + bill.HoTenHV + "\n\tSố tiền thu :" + bill.HocPhi + " vnd ";
                 string name = bill.MaHV.ToString() + bill.MaLH.ToString();
-                string filepath = @"D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\File\BienLai_" + name + ".txt";
+                string filepath = @"D:\Subjects\PBL3TrungTamDayThem\PBL3TrungTamDayThem\File\BienLai_" + name + ".txt";
                 noidung += "\n\tNgày thu: " + DateTime.Now.ToString();
                 FileStream fs = new FileStream(filepath, FileMode.Create);
                 StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
@@ -71,7 +73,12 @@ namespace PBL3TrungTamDayThem.BLL
                 sWriter.WriteLine(noidung);
                 sWriter.Flush();
                 fs.Close();
-            
+                MessageBox.Show("In thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("In thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void PayFee(Bill bill)
         {
@@ -82,6 +89,24 @@ namespace PBL3TrungTamDayThem.BLL
             }
             else
                 MessageBox.Show("Thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public List<string> GetNoiDung(string MaLH)
+        {
+            List<string> list = new List<string>();
+            foreach (DataRow i in DAL_QLBL.Instance.GetNoiDung(MaLH).Rows)
+            {
+                list.Add(i[0].ToString());
+            }
+            return list;
+        }
+        public int GetHocPhi(string noidung, string malh)
+        {
+            int sum = 0;
+            foreach (DataRow row in DAL_QLBL.Instance.GetHocPhi(noidung, malh).Rows)
+            {
+                sum += int.Parse(row["HocPhi"].ToString());
+            }
+            return sum;
         }
     }
 }

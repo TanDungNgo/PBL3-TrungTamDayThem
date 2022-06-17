@@ -32,8 +32,8 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
-            this.dgv_Class = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgv_Class = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -55,12 +55,17 @@
             this.lblSubject = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgv_Student = new System.Windows.Forms.DataGridView();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -86,38 +91,41 @@
             // 
             // pnlBottom
             // 
-            this.pnlBottom.Controls.Add(this.dgv_Class);
+            this.pnlBottom.Controls.Add(this.dgv_Student);
+            this.pnlBottom.Controls.Add(this.panel1);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 290);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 346);
             this.pnlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(907, 319);
+            this.pnlBottom.Size = new System.Drawing.Size(907, 203);
             this.pnlBottom.TabIndex = 37;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgv_Class);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.pnlBottom);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 60);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(907, 549);
+            this.panel2.TabIndex = 38;
             // 
             // dgv_Class
             // 
             this.dgv_Class.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Class.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Class.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Class.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Class.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Class.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_Class.Location = new System.Drawing.Point(0, 232);
             this.dgv_Class.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_Class.Name = "dgv_Class";
             this.dgv_Class.RowHeadersWidth = 51;
             this.dgv_Class.RowTemplate.Height = 24;
-            this.dgv_Class.Size = new System.Drawing.Size(907, 319);
-            this.dgv_Class.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 60);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(907, 230);
-            this.panel2.TabIndex = 38;
+            this.dgv_Class.Size = new System.Drawing.Size(907, 114);
+            this.dgv_Class.TabIndex = 38;
             // 
             // panel4
             // 
@@ -139,7 +147,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 85);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(907, 145);
+            this.panel4.Size = new System.Drawing.Size(907, 261);
             this.panel4.TabIndex = 1;
             // 
             // btnSort
@@ -277,7 +285,7 @@
             this.cbbClass.Location = new System.Drawing.Point(724, 19);
             this.cbbClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbClass.Name = "cbbClass";
-            this.cbbClass.Size = new System.Drawing.Size(164, 28);
+            this.cbbClass.Size = new System.Drawing.Size(145, 28);
             this.cbbClass.TabIndex = 39;
             // 
             // lblClass
@@ -327,10 +335,10 @@
             // 
             this.cbbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSubject.FormattingEnabled = true;
-            this.cbbSubject.Location = new System.Drawing.Point(728, 26);
+            this.cbbSubject.Location = new System.Drawing.Point(724, 27);
             this.cbbSubject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSubject.Name = "cbbSubject";
-            this.cbbSubject.Size = new System.Drawing.Size(160, 28);
+            this.cbbSubject.Size = new System.Drawing.Size(145, 28);
             this.cbbSubject.TabIndex = 41;
             // 
             // btnShow
@@ -389,13 +397,47 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(907, 49);
+            this.panel1.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(328, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(258, 32);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Học Viên Trong Lớp";
+            // 
+            // dgv_Student
+            // 
+            this.dgv_Student.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Student.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Student.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Student.GridColor = System.Drawing.Color.DarkGray;
+            this.dgv_Student.Location = new System.Drawing.Point(0, 49);
+            this.dgv_Student.Name = "dgv_Student";
+            this.dgv_Student.RowHeadersWidth = 62;
+            this.dgv_Student.RowTemplate.Height = 28;
+            this.dgv_Student.Size = new System.Drawing.Size(907, 154);
+            this.dgv_Student.TabIndex = 2;
+            // 
             // UC_Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.pnlHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Class";
@@ -403,12 +445,15 @@
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlBottom.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,7 +469,6 @@
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView dgv_Class;
         private System.Windows.Forms.ComboBox cbbSubject;
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.ComboBox cbbClass;
@@ -440,5 +484,9 @@
         private System.Windows.Forms.TextBox txtKQH;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnSort;
+        private System.Windows.Forms.DataGridView dgv_Class;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgv_Student;
     }
 }

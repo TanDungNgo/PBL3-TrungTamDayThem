@@ -106,6 +106,14 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
                 lblerphone.Visible = false;
+            if (BLL_QLHV.Instance.CheckPhone(txtID.Text,txtPhone.Text) == false)
+            {
+                erphone.Visible = true;
+                check = true;
+
+            }
+            else
+                erphone.Visible = false;
             dtpBirthDay.MinDate = new DateTime(1982, 1, 1);
             dtpBirthDay.MaxDate = new DateTime(2004, 12, 31);
             if (dtpBirthDay.Value <= dtpBirthDay.MinDate || dtpBirthDay.Value >= dtpBirthDay.MaxDate)

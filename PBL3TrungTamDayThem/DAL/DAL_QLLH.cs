@@ -65,6 +65,10 @@ namespace PBL3TrungTamDayThem.DAL
                 HocPhi = int.Parse(i["HocPhi"].ToString())
             };
         }
+        public int CheckMaLH(string MaLH)
+        {
+            return DataProvider.Instance.ExecuteScalar("Select count(*) from LOP_HOC where MaLH = '" + MaLH + "'");
+        }
         public int AddClass(Class lop)
         {
             string query = "Insert into LOP_HOC values ('" + lop.MaLH + "', '" + lop.MaGV  + "','" + lop.MaMH +
@@ -131,6 +135,12 @@ namespace PBL3TrungTamDayThem.DAL
         {
             string query = "Select hvtl.MaLH, hvtl.MaHV, hv.HoTenHV, hvtl.KetQuaHoc, hvtl.TinhTrang from HOC_VIEN_TRONG_LOP hvtl inner join HOC_VIEN hv on hvtl.MaHV = hv.MaHV" +
                 " where MaLH = '" + MaLH + "' Order by hvtl.KetQuaHoc";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable GetSoLuongHV(string tenmon, string malh)
+        {
+            string query = "select SoLuongHV from LOP_HOC lh inner join MON_HOC mh on lh.MaMH = mh.MaMH " +
+                "where mh.TenMon = N'" + tenmon + "' and MaLH like '" + malh + "%'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

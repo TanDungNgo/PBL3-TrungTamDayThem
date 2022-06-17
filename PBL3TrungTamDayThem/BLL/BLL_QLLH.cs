@@ -69,7 +69,7 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public void ExecuteDB(Class lop)
         {
-            int check = DataProvider.Instance.ExecuteScalar("Select count(*) from LOP_HOC where MaLH = '" + lop.MaLH + "'");
+            int check = DAL_QLLH.Instance.CheckMaLH(lop.MaLH);
             if (check == 0)
             {
                 // Add
@@ -133,6 +133,15 @@ namespace PBL3TrungTamDayThem.BLL
         {
             DataTable data = DAL_QLLH.Instance.SortLisstStudentInClass(MaLH);
             return data;
+        }
+        public int SoLuongHV(string tenmon, string malh)
+        {
+            int sum = 0;
+            foreach (DataRow row in DAL_QLLH.Instance.GetSoLuongHV(tenmon, malh).Rows)
+            {
+                sum += int.Parse(row["SoLuongHV"].ToString());
+            }
+            return sum;
         }
     }
 }

@@ -120,5 +120,27 @@ namespace PBL3TrungTamDayThem.BLL
                 data = DAL_QLHV.Instance.SortListStudentInClass(s, MaLH);
             return data;
         }
+        public bool CheckPhone(string MaHV, string Phone)
+        {
+            int k = 0;
+            List<Student> list = DAL_QLHV.Instance.GetAllStudent();
+            if (list.Count > 0)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    if (list[i].SDT == Phone && list[i].MaHV != MaHV)
+                    {
+                        k++;
+                        break;
+                    }    
+                }
+                if (k == 0)
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
     }
 }

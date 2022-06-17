@@ -59,6 +59,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.erphone = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +67,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.erphone);
             this.panel1.Controls.Add(this.lbleremail2);
             this.panel1.Controls.Add(this.lblername2);
             this.panel1.Controls.Add(this.lblerBD);
@@ -101,7 +103,7 @@
             // 
             this.lbleremail2.AutoSize = true;
             this.lbleremail2.ForeColor = System.Drawing.Color.Red;
-            this.lbleremail2.Location = new System.Drawing.Point(416, 546);
+            this.lbleremail2.Location = new System.Drawing.Point(416, 556);
             this.lbleremail2.Name = "lbleremail2";
             this.lbleremail2.Size = new System.Drawing.Size(143, 20);
             this.lbleremail2.TabIndex = 85;
@@ -142,7 +144,7 @@
             // 
             this.lblerphone.AutoSize = true;
             this.lblerphone.ForeColor = System.Drawing.Color.Red;
-            this.lblerphone.Location = new System.Drawing.Point(281, 473);
+            this.lblerphone.Location = new System.Drawing.Point(281, 485);
             this.lblerphone.Name = "lblerphone";
             this.lblerphone.Size = new System.Drawing.Size(197, 20);
             this.lblerphone.TabIndex = 73;
@@ -153,7 +155,7 @@
             // 
             this.lbleremail.AutoSize = true;
             this.lbleremail.ForeColor = System.Drawing.Color.Red;
-            this.lbleremail.Location = new System.Drawing.Point(281, 546);
+            this.lbleremail.Location = new System.Drawing.Point(281, 556);
             this.lbleremail.Name = "lbleremail";
             this.lbleremail.Size = new System.Drawing.Size(90, 20);
             this.lbleremail.TabIndex = 72;
@@ -243,7 +245,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(285, 515);
+            this.txtEmail.Location = new System.Drawing.Point(285, 525);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(275, 26);
@@ -254,7 +256,7 @@
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMail.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblMail.Location = new System.Drawing.Point(125, 515);
+            this.lblMail.Location = new System.Drawing.Point(125, 525);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(81, 26);
             this.lblMail.TabIndex = 62;
@@ -420,6 +422,18 @@
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 4;
             // 
+            // erphone
+            // 
+            this.erphone.AutoSize = true;
+            this.erphone.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.erphone.ForeColor = System.Drawing.Color.Red;
+            this.erphone.Location = new System.Drawing.Point(502, 485);
+            this.erphone.Name = "erphone";
+            this.erphone.Size = new System.Drawing.Size(175, 20);
+            this.erphone.TabIndex = 88;
+            this.erphone.Text = "Số điện thoại đã tồn tại";
+            this.erphone.Visible = false;
+            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -478,5 +492,6 @@
         private System.Windows.Forms.Label lblerBD;
         private System.Windows.Forms.Label lblername2;
         private System.Windows.Forms.Label lbleremail2;
+        private System.Windows.Forms.Label erphone;
     }
 }

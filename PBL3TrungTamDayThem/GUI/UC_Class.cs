@@ -49,9 +49,9 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgv_Class.SelectedRows.Count == 1)
+            if (dgv_Student.SelectedRows.Count == 1)
             {
-                DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
+                DataGridViewSelectedRowCollection data = dgv_Student.SelectedRows;
                 string MaLH = data[0].Cells["MaLH"].Value.ToString();
                 FormClass frm = new FormClass(MaLH);
                 frm.d += new FormClass.MyDel(ShowDGV);
@@ -65,10 +65,10 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (dgv_Class.SelectedRows.Count > 0)
+            if (dgv_Student.SelectedRows.Count > 0)
             {
                 List<string> LMaLH = new List<string>();
-                foreach (DataGridViewRow row in dgv_Class.SelectedRows)
+                foreach (DataGridViewRow row in dgv_Student.SelectedRows)
                 {
                     LMaLH.Add(row.Cells["MaLH"].Value.ToString());
                 }
@@ -82,20 +82,22 @@ namespace PBL3TrungTamDayThem.GUI
         }
         public void SizeMax()
         {
-            pnlBottom.Height = 460;
+            dgv_Class.Height = 120;
+            pnlBottom.Height = 300;
             cbbClass.Width = 200;
             cbbSubject.Width = 200;
         }
         public void SizeMin()
         {
-            pnlBottom.Height = 207;
-            cbbClass.Width = 111;
-            cbbSubject.Width = 111;
+            dgv_Class.Height = 74;
+            pnlBottom.Height = 132;
+            cbbClass.Width = 101;
+            cbbSubject.Width = 101;
         }
 
         private void btnShow2_Click(object sender, EventArgs e)
         {
-            dgv_Class.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
+            dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
         }
 
         private void btnAddtoclass_Click(object sender, EventArgs e)
@@ -113,7 +115,7 @@ namespace PBL3TrungTamDayThem.GUI
             else
             {
                 BLL_QLLH.Instance.AddToClass(txtMaHV.Text, txtClass.Text);
-                dgv_Class.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
+                dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
             }    
         }
 
@@ -130,9 +132,9 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (dgv_Class.SelectedRows.Count > 0)
+            if (dgv_Student.SelectedRows.Count > 0)
             {
-                DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
+                DataGridViewSelectedRowCollection data = dgv_Student.SelectedRows;
                 try
                 {
                     string MaHV = data[0].Cells["MaHV"].Value.ToString();
@@ -154,7 +156,7 @@ namespace PBL3TrungTamDayThem.GUI
                     else
                     {
                         BLL_QLLH.Instance.UpdateKQH(txtKQH.Text, MaHV, MaLH);
-                        dgv_Class.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
+                        dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
                     }
                 }
                 catch (Exception ex)
@@ -170,9 +172,9 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (dgv_Class.SelectedRows.Count > 0)
+            if (dgv_Student.SelectedRows.Count > 0)
             {
-                DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
+                DataGridViewSelectedRowCollection data = dgv_Student.SelectedRows;
                 try
                 {
                     string MaHV = data[0].Cells["MaHV"].Value.ToString();
@@ -184,7 +186,7 @@ namespace PBL3TrungTamDayThem.GUI
                     else
                     {
                         BLL_QLLH.Instance.RemoveFromClass(MaHV, MaLH);
-                        dgv_Class.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
+                        dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
                     }
                 }
                 catch (Exception ex)
@@ -200,7 +202,12 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            dgv_Class.DataSource = BLL_QLLH.Instance.SortListStudent(cbbClass.Text);
+            dgv_Student.DataSource = BLL_QLLH.Instance.SortListStudent(cbbClass.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(pnlBottom.Height.ToString() + cbbClass.Width.ToString() + dgv_Class.Height.ToString());
         }
     }
 }

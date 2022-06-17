@@ -69,6 +69,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.erphone = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +77,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.erphone);
             this.panel1.Controls.Add(this.lbleremail2);
             this.panel1.Controls.Add(this.lblername2);
             this.panel1.Controls.Add(this.lblerBD);
@@ -546,6 +548,18 @@
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 50;
             // 
+            // erphone
+            // 
+            this.erphone.AutoSize = true;
+            this.erphone.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.erphone.ForeColor = System.Drawing.Color.Red;
+            this.erphone.Location = new System.Drawing.Point(521, 276);
+            this.erphone.Name = "erphone";
+            this.erphone.Size = new System.Drawing.Size(175, 20);
+            this.erphone.TabIndex = 87;
+            this.erphone.Text = "Số điện thoại đã tồn tại";
+            this.erphone.Visible = false;
+            // 
             // FormTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -614,5 +628,6 @@
         private System.Windows.Forms.Label lblerBD;
         private System.Windows.Forms.Label lblername2;
         private System.Windows.Forms.Label lbleremail2;
+        private System.Windows.Forms.Label erphone;
     }
 }

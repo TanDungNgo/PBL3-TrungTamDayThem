@@ -115,5 +115,27 @@ namespace PBL3TrungTamDayThem.BLL
             data = DAL_QLNV.Instance.SortListStaff(s);
             return data;
         }
+        public bool CheckPhone(string MaNV, string Phone)
+        {
+            int k = 0;
+            List<Staff> list = DAL_QLNV.Instance.GetAllStaff();
+            if (list.Count > 0)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    if (list[i].SDT == Phone && list[i].MaNV != MaNV)
+                    {
+                        k++;
+                        break;
+                    }    
+                }
+                if (k == 0)
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
     }
 }

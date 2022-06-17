@@ -136,11 +136,18 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
                 lblerBD.Visible = false;
+            if (BLL_QLGV.Instance.CheckPhone(txtID.Text,txtPhone.Text) == false)
+            {
+                erphone.Visible = true;
+                check = true;
+
+            }
+            else
+                erphone.Visible = false;
             return check;
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
-            txtID.Text = "";
             txtName.Text = "";
             txtPhone.Text = "";
             txtAddress.Text = "";
