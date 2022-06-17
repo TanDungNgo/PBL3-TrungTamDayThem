@@ -9,6 +9,7 @@ namespace PBL3TrungTamDayThem.GUI
     public partial class UC_Staff : UserControl
     {
         public string VaiTro { get; set; }
+        public string MaNV { get; set; }
         public UC_Staff()
         {
             InitializeComponent();
@@ -48,6 +49,11 @@ namespace PBL3TrungTamDayThem.GUI
                     List<string> LMaNV = new List<string>();
                     foreach (DataGridViewRow row in dgvStaff.SelectedRows)
                     {
+                        if (row.Cells["MaNV"].Value.ToString() == MaNV)
+                        {
+                            MessageBox.Show("Không thể xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }    
                         LMaNV.Add(row.Cells["MaNV"].Value.ToString());
                     }
                     if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
@@ -90,6 +96,8 @@ namespace PBL3TrungTamDayThem.GUI
                     frm.d += new FormStaff.MyDel(ShowDGV);
                     frm.ShowDialog();
                 }
+                else if (dgvStaff.SelectedRows.Count > 1)
+                    MessageBox.Show("Chỉ chọn 1 nhân viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show("Chưa chọn nhân viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }    

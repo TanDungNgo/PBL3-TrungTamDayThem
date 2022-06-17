@@ -91,6 +91,7 @@ namespace PBL3TrungTamDayThem.GUI
             ResetColorButton();
             GetFromButton(btnStaff);
             uC_Staff.VaiTro = BLL_QLNV.Instance.GetNVByID(this._MaNV).ChucVu;
+            uC_Staff.MaNV = BLL_QLNV.Instance.GetNVByID(this._MaNV).MaNV;
             OpenUC(uC_Staff);
         }
         private void btnBill_Click(object sender, EventArgs e)

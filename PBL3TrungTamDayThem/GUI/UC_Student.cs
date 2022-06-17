@@ -59,6 +59,8 @@ namespace PBL3TrungTamDayThem.GUI
                 frm.ShowDialog();
                 SetGUI();
             }
+            else if (dgvStudent.SelectedRows.Count > 1)
+                MessageBox.Show("Chỉ chọn 1 học viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 MessageBox.Show("Chưa chọn học viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
