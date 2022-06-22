@@ -32,6 +32,9 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
+            this.dgv_Student = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_Class = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -42,7 +45,6 @@
             this.txtKQH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtClass = new System.Windows.Forms.TextBox();
             this.txtMaHV = new System.Windows.Forms.TextBox();
             this.btnAddtoclass = new System.Windows.Forms.Button();
             this.btnShow2 = new System.Windows.Forms.Button();
@@ -55,17 +57,15 @@
             this.lblSubject = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgv_Student = new System.Windows.Forms.DataGridView();
+            this.cbbMaLH = new System.Windows.Forms.ComboBox();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -100,6 +100,41 @@
             this.pnlBottom.Size = new System.Drawing.Size(907, 203);
             this.pnlBottom.TabIndex = 37;
             // 
+            // dgv_Student
+            // 
+            this.dgv_Student.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Student.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Student.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Student.GridColor = System.Drawing.Color.DarkGray;
+            this.dgv_Student.Location = new System.Drawing.Point(0, 49);
+            this.dgv_Student.Name = "dgv_Student";
+            this.dgv_Student.RowHeadersWidth = 62;
+            this.dgv_Student.RowTemplate.Height = 28;
+            this.dgv_Student.Size = new System.Drawing.Size(907, 154);
+            this.dgv_Student.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(907, 49);
+            this.panel1.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(328, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(258, 32);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Học Viên Trong Lớp";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgv_Class);
@@ -130,6 +165,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.panel4.Controls.Add(this.cbbMaLH);
             this.panel4.Controls.Add(this.btnSort);
             this.panel4.Controls.Add(this.btnRemove);
             this.panel4.Controls.Add(this.btnUpdate);
@@ -137,7 +173,6 @@
             this.panel4.Controls.Add(this.txtKQH);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.txtClass);
             this.panel4.Controls.Add(this.txtMaHV);
             this.panel4.Controls.Add(this.btnAddtoclass);
             this.panel4.Controls.Add(this.btnShow2);
@@ -205,10 +240,10 @@
             // 
             // txtKQH
             // 
-            this.txtKQH.Location = new System.Drawing.Point(148, 98);
+            this.txtKQH.Location = new System.Drawing.Point(149, 99);
             this.txtKQH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKQH.Name = "txtKQH";
-            this.txtKQH.Size = new System.Drawing.Size(146, 26);
+            this.txtKQH.Size = new System.Drawing.Size(145, 26);
             this.txtKQH.TabIndex = 52;
             // 
             // label2
@@ -232,14 +267,6 @@
             this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 50;
             this.label1.Text = "MaHV:";
-            // 
-            // txtClass
-            // 
-            this.txtClass.Location = new System.Drawing.Point(148, 52);
-            this.txtClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(146, 26);
-            this.txtClass.TabIndex = 49;
             // 
             // txtMaHV
             // 
@@ -397,40 +424,15 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // panel1
+            // cbbMaLH
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 49);
-            this.panel1.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(328, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(258, 32);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Học Viên Trong Lớp";
-            // 
-            // dgv_Student
-            // 
-            this.dgv_Student.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Student.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Student.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Student.GridColor = System.Drawing.Color.DarkGray;
-            this.dgv_Student.Location = new System.Drawing.Point(0, 49);
-            this.dgv_Student.Name = "dgv_Student";
-            this.dgv_Student.RowHeadersWidth = 62;
-            this.dgv_Student.RowTemplate.Height = 28;
-            this.dgv_Student.Size = new System.Drawing.Size(907, 154);
-            this.dgv_Student.TabIndex = 2;
+            this.cbbMaLH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMaLH.FormattingEnabled = true;
+            this.cbbMaLH.Location = new System.Drawing.Point(149, 51);
+            this.cbbMaLH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbMaLH.Name = "cbbMaLH";
+            this.cbbMaLH.Size = new System.Drawing.Size(145, 28);
+            this.cbbMaLH.TabIndex = 49;
             // 
             // UC_Class
             // 
@@ -445,15 +447,15 @@
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlBottom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,7 +478,6 @@
         private System.Windows.Forms.Button btnShow2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.TextBox txtMaHV;
         private System.Windows.Forms.Button btnAddtoclass;
         private System.Windows.Forms.Button btnUpdate;
@@ -488,5 +489,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgv_Student;
+        private System.Windows.Forms.ComboBox cbbMaLH;
     }
 }

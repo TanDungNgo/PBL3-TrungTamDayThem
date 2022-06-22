@@ -117,10 +117,22 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public void AddToClass(string MaHV, string MaLH)
         {
-            if (DAL_QLLH.Instance.AddToClass(MaHV, MaLH) > 0)
-                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (DAL_QLLH.Instance.CheckInClass(MaHV, MaLH) > 0)
+            {
+                MessageBox.Show("Học viên đã có trong lớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (DAL_QLLH.Instance.CheckTKB(MaHV, MaLH) > 0)
+            {
+                MessageBox.Show("Trùng thời khóa biểu","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } 
             else
-                MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                if (DAL_QLLH.Instance.AddToClass(MaHV, MaLH) > 0)
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void RemoveFromClass(string MaHV, string MaLH)
         {

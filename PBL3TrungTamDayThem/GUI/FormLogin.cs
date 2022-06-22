@@ -32,15 +32,12 @@ namespace PBL3TrungTamDayThem.GUI
                     FormMain frmMain = new FormMain(user.MaNV);
                     this.Hide();
                     frmMain.ShowDialog();
-                    //txt_Pass.Text = "Nhập Password";
-                    //txt_Pass.UseSystemPasswordChar = false;
-                    //txt_Pass.ForeColor = Color.DarkGray;
                     txt_Pass.Text = "";
                     this.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Đăng nhập thất bại! Tài khoản hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -136,7 +133,9 @@ namespace PBL3TrungTamDayThem.GUI
             this.Hide();
             f.ShowDialog();
             this.Show();
-            txt_Pass.Text = "";
+            txt_Pass.Text = "Nhập Password";
+            txt_Pass.UseSystemPasswordChar = false;
+            txt_Pass.ForeColor = Color.DarkGray;
         }
 
         private void forgotpass_MouseLeave(object sender, EventArgs e)

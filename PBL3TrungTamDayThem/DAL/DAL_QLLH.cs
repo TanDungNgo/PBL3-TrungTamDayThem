@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PBL3TrungTamDayThem.DAL
 {
@@ -102,6 +103,26 @@ namespace PBL3TrungTamDayThem.DAL
         {
             string query = "Update HOC_VIEN_TRONG_LOP set KetQuaHoc = '" + KQH + "' where MaHV = '" + MaHV +"' and MaLH = '" + MaLH + "'";
             return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int CheckInClass(string MaHV, string MaLH)
+        {
+            string query = "select count(*)  from  HOC_VIEN_TRONG_LOP hvtl inner join LOP_HOC l on hvtl.MaLH = l.MaLH " +
+                "where hvtl.MaHV = '" + MaHV + "' and l.MaLH = '" + MaLH + "'";
+            return DataProvider.Instance.ExecuteScalar(query);
+        }
+        public int CheckTKB(string MaHV,  string MaLH)
+        {
+            string query = "select ThoiGianHoc, NgayBatDau from LOP_HOC where MaLH = '" + MaLH + "'";
+            string ThoiGianHoc ="";
+            string NgayBatDau ="";
+            foreach (DataRow row in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                ThoiGianHoc = row["ThoiGianHoc"].ToString();
+                NgayBatDau = row["NgayBatDau"].ToString();
+            }
+            string query2 = "select count(*) from  HOC_VIEN_TRONG_LOP hvtl inner join LOP_HOC l on hvtl.MaLH = l.MaLH " +
+                "where hvtl.MaHV = '"+ MaHV +"' and l.ThoiGianHoc = '"+ ThoiGianHoc +"' and l.NgayBatDau = '"+ NgayBatDau +"'";
+            return DataProvider.Instance.ExecuteScalar(query2);
         }
         public int AddToClass(string MaHV, string MaLH)
         {
