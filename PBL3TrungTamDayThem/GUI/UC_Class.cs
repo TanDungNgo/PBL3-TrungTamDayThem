@@ -36,6 +36,8 @@ namespace PBL3TrungTamDayThem.GUI
         {
             SetCBB();
             cbbSubject.Text = "All";
+            dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(null, null);
+            dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(null);
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -51,7 +53,6 @@ namespace PBL3TrungTamDayThem.GUI
         {
             ShowDGV();
         }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (dgv_Class.SelectedRows.Count == 1)
@@ -80,7 +81,7 @@ namespace PBL3TrungTamDayThem.GUI
                 if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                 {
                     BLL_QLLH.Instance.Delete(LMaLH);
-                    SetGUI();
+                    SetCBB();
                     ShowDGV();
                 }
             }

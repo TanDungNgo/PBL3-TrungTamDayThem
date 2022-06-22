@@ -34,6 +34,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             SetCBB();
             cbbExpertise.Text = "All";
+            dgvTeacher.DataSource = new List<Teacher>();
         }
         void SetCBB()
         {

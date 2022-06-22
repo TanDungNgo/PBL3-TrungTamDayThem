@@ -1,4 +1,5 @@
 ﻿using PBL3TrungTamDayThem.BLL;
+using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -47,6 +48,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             SetCBB();
             cbbClass.Text = "All";
+            dgvStudent.DataSource = new List<Student>();
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
