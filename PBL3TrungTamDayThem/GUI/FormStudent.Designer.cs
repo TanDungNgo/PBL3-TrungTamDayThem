@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.erphone = new System.Windows.Forms.Label();
             this.lbleremail2 = new System.Windows.Forms.Label();
             this.lblername2 = new System.Windows.Forms.Label();
             this.lblerBD = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.erphone = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(897, 798);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // erphone
+            // 
+            this.erphone.AutoSize = true;
+            this.erphone.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.erphone.ForeColor = System.Drawing.Color.Red;
+            this.erphone.Location = new System.Drawing.Point(502, 485);
+            this.erphone.Name = "erphone";
+            this.erphone.Size = new System.Drawing.Size(175, 20);
+            this.erphone.TabIndex = 88;
+            this.erphone.Text = "Số điện thoại đã tồn tại";
+            this.erphone.Visible = false;
             // 
             // lbleremail2
             // 
@@ -421,18 +434,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 4;
-            // 
-            // erphone
-            // 
-            this.erphone.AutoSize = true;
-            this.erphone.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.erphone.ForeColor = System.Drawing.Color.Red;
-            this.erphone.Location = new System.Drawing.Point(502, 485);
-            this.erphone.Name = "erphone";
-            this.erphone.Size = new System.Drawing.Size(175, 20);
-            this.erphone.TabIndex = 88;
-            this.erphone.Text = "Số điện thoại đã tồn tại";
-            this.erphone.Visible = false;
             // 
             // FormStudent
             // 

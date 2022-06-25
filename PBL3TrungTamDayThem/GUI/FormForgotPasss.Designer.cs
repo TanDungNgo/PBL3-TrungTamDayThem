@@ -181,6 +181,7 @@
             this.Name = "FormForgotPasss";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormForgotPasss";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormForgotPasss_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

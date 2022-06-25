@@ -96,6 +96,7 @@
             this.pnlFee.Name = "pnlFee";
             this.pnlFee.Size = new System.Drawing.Size(897, 798);
             this.pnlFee.TabIndex = 0;
+            this.pnlFee.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlFee_MouseDown);
             // 
             // lblerID
             // 

@@ -389,6 +389,7 @@
             this.Name = "FormUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormUser_MouseDown);
             this.grbnewpass.ResumeLayout(false);
             this.grbnewpass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
