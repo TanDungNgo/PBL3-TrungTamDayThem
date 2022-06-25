@@ -48,6 +48,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             SetCBB();
             cbbClass.Text = "All";
+            cbbSort.Text = "HoTenHV";
             dgvStudent.DataSource = new List<Student>();
         }
         private void btnEdit_Click(object sender, EventArgs e)

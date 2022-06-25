@@ -40,6 +40,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             SetCBB();
             cbbPosition.Text = "All";
+            cbbSort.Text = "HoTenNV";
             dgvStaff.DataSource = new List<Staff>();
         }
         private void btnDel_Click(object sender, EventArgs e)

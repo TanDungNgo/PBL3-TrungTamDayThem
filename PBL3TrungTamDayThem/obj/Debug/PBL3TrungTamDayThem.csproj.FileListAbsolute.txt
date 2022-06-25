@@ -202,3 +202,5 @@ C:\Users\ASUS\Source\Repos\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\bin\Debug\PB
 C:\Users\ASUS\Source\Repos\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\bin\Debug\PBL3TrungTamDayThem.pdb
 C:\Users\ASUS\source\repos\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.AssemblyReference.cache
 D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.GUI.FormForgotPasss.resources
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\bin\Debug\Aspose.Words.dll
+D:\Subjects\PBL3-TrungTamDayThem\PBL3TrungTamDayThem\obj\Debug\PBL3TrungTamDayThem.csproj.CopyComplete

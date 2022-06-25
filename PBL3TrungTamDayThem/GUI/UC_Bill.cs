@@ -60,7 +60,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if (dgvStudent.SelectedRows.Count > 0)
+            if (dgvStudent.SelectedRows.Count == 1)
             {
                 if(cbbContent.Text == "")
                 {
@@ -81,6 +81,10 @@ namespace PBL3TrungTamDayThem.GUI
                 };
                 BLL_QLBL.Instance.WriteFile(bill);
             }
+            else if (dgvStudent.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Chọn 1 học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
             else
             {
                 MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -134,6 +138,12 @@ namespace PBL3TrungTamDayThem.GUI
         {
             pnlRight.Width = 510;
             pnlBotton.Height = 175;
+        }
+
+        private void dgvStudent_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
+            txbFee.Text = BLL_QLBL.Instance.GetFee(data[0].Cells["MaLH"].Value.ToString());
         }
     }
 }

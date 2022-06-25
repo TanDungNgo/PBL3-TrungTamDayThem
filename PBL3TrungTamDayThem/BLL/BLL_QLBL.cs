@@ -3,11 +3,11 @@ using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Aspose.Words;
+using PBL3TrungTamDayThem.Lib;
+using Aspose.Words.Tables;
+using System.Data;
 
 namespace PBL3TrungTamDayThem.BLL
 {
@@ -61,19 +61,17 @@ namespace PBL3TrungTamDayThem.BLL
         public void WriteFile(Bill bill)
         {
             try
-            {
-                string header = "\t\t\tPhiếu Thu Tiền Trung Tâm DPT";
-                string noidung = "\tLớp học:" + bill.MaLH + "\n\tHọ tên người nộp :" + bill.HoTenHV + "\n\tSố tiền thu :" + bill.HocPhi + " vnd ";
-                string name = bill.MaHV.ToString() + bill.MaLH.ToString();
-                string filepath = @"D:\Subjects\PBL3TrungTamDayThem\PBL3TrungTamDayThem\File\BienLai_" + name + ".txt";
-                noidung += "\n\tNgày thu: " + DateTime.Now.ToString();
-                FileStream fs = new FileStream(filepath, FileMode.Create);
-                StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
-                sWriter.WriteLine(header);
-                sWriter.WriteLine(noidung);
-                sWriter.Flush();
-                fs.Close();
-                MessageBox.Show("In thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            { 
+                DateTime today = DateTime.Now;
+                Document bienlai = new Document("Template\\Mau_Bien_Lai.doc");
+                bienlai.MailMerge.Execute(new[] { "Ma_Lop" }, new[] { bill.MaLH });
+                bienlai.MailMerge.Execute(new[] { "Ho_Ten_HV" }, new[] { bill.HoTenHV });
+                bienlai.MailMerge.Execute(new[] { "Noi_Dung" }, new[] { bill.NoiDung });
+                bienlai.MailMerge.Execute(new[] { "So_Tien" }, new[] { bill.HocPhi.ToString() });
+                bienlai.MailMerge.Execute(new[] { "Ngay_Thu" }, new[] { string.Format("Đà Nẵng, ngày {0} tháng {1} năm {2}", today.Day, today.Month, today.Year) });
+                Staff staff = BLL_QLNV.Instance.GetNVByID(bill.MaNV);
+                bienlai.MailMerge.Execute(new[] { "Ho_Ten_NV" }, new[] { staff.HoTenNV });
+                bienlai.SaveAndOpenFile("BienLai\\BienLai_" +bill.MaHV +"_" + bill.MaLH + ".doc");
             }
             catch (Exception ex)
             {

@@ -44,7 +44,7 @@ namespace PBL3TrungTamDayThem.BLL
             }
             return l;
         }
-        public DataTable GetListClass(string monhoc, string lophoc)
+        public DataTable GetListClass(string monhoc)
         {
             DataTable data = new DataTable();
             if (monhoc == "All")

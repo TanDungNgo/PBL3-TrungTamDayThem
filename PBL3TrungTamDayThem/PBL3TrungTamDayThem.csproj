@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>C:\Users\tandu\Downloads\XuatBaoCaoWordBangMailMergeAspose\Dll\Aspose.Words.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -156,6 +159,7 @@
     <Compile Include="GUI\UC_Teacher.Designer.cs">
       <DependentUpon>UC_Teacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lib\ReportExtensionMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\FormClass.resx">
@@ -361,9 +365,7 @@
   <ItemGroup>
     <None Include="Resources\backgroundlogin.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="File\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\sort.png" />
   </ItemGroup>

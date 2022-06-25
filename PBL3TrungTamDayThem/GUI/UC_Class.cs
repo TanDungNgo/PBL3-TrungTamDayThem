@@ -3,6 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Aspose.Words;
+using PBL3TrungTamDayThem.Lib;
+using Aspose.Words.Tables;
+using System.Data;
 
 namespace PBL3TrungTamDayThem.GUI
 {
@@ -21,11 +25,6 @@ namespace PBL3TrungTamDayThem.GUI
             }
             cbbSubject.Items.Add("All");
             cbbSubject.Items.AddRange(BLL_QLLH.Instance.GetListCBB().Distinct().ToArray());
-            if (cbbClass != null)
-            {
-                cbbClass.Items.Clear();
-            }
-            cbbClass.Items.AddRange(BLL_QLHV.Instance.GetListCBB().ToArray());
             if (cbbMaLH != null)
             {
                 cbbMaLH.Items.Clear();
@@ -36,7 +35,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             SetCBB();
             cbbSubject.Text = "All";
-            dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(null, null);
+            dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(null);
             dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(null);
         }
         private void btnAdd_Click(object sender, EventArgs e)
@@ -47,7 +46,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         public void ShowDGV()
         {
-            dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(cbbSubject.Text, cbbClass.Text);
+            dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(cbbSubject.Text);
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
@@ -90,20 +89,27 @@ namespace PBL3TrungTamDayThem.GUI
         {
             dgv_Class.Height = 120;
             pnlBottom.Height = 300;
-            cbbClass.Width = 200;
             cbbSubject.Width = 200;
         }
         public void SizeMin()
         {
             dgv_Class.Height = 74;
             pnlBottom.Height = 132;
-            cbbClass.Width = 101;
             cbbSubject.Width = 101;
         }
 
         private void btnShow2_Click(object sender, EventArgs e)
         {
-            dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
+            if (dgv_Class.SelectedRows.Count == 1)
+            {
+                DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
+                string MaLH = data[0].Cells["MaLH"].Value.ToString();
+                dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(MaLH);
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn lớp học muốn xem danh sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnAddtoclass_Click(object sender, EventArgs e)
@@ -163,7 +169,7 @@ namespace PBL3TrungTamDayThem.GUI
                     else
                     {
                         BLL_QLLH.Instance.UpdateKQH(txtKQH.Text, MaHV, MaLH);
-                        dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
+                        dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(MaLH);
                     }
                 }
                 catch (Exception ex)
@@ -193,7 +199,7 @@ namespace PBL3TrungTamDayThem.GUI
                     else
                     {
                         BLL_QLLH.Instance.RemoveFromClass(MaHV, MaLH);
-                        dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbClass.Text);
+                        dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(MaLH);
                     }
                 }
                 catch (Exception ex)
@@ -209,7 +215,51 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            dgv_Student.DataSource = BLL_QLLH.Instance.SortListStudent(cbbClass.Text);
+            if (dgv_Class.SelectedRows.Count == 1)
+            {
+                DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
+                string MaLH = data[0].Cells["MaLH"].Value.ToString();
+                dgv_Student.DataSource = BLL_QLLH.Instance.SortListStudent(MaLH);
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn lớp học muốn sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dgv_Class.SelectedRows.Count == 1)
+            {
+                DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
+                string MaLH = data[0].Cells["MaLH"].Value.ToString();
+                string HoTenGV = data[0].Cells["HoTenGV"].Value.ToString();
+                int SoLuongHV = int.Parse(data[0].Cells["SoLuongHV"].Value.ToString());
+                //Bước 1: Nạp file mẫu
+                Document danhsach = new Document("Template\\Mau_Danh_Sach.doc");
+
+                //Bước 2: Điền các thông tin cố định
+                danhsach.MailMerge.Execute(new[] { "Ma_Lop" }, new[] { MaLH });
+                danhsach.MailMerge.Execute(new[] { "Ho_Ten_GV" }, new[] { HoTenGV });
+
+                //Bước 3: Điền thông tin lên bảng
+                Table bangdanhsach = danhsach.GetChild(NodeType.Table, 1, true) as Table;//Lấy bảng thứ 2 trong file mẫu
+                int hangHienTai = 1;
+                bangdanhsach.InsertRows(hangHienTai, hangHienTai, SoLuongHV);
+                foreach (DataRow i in BLL_QLLH.Instance.GetHVByClass(MaLH).Rows)
+                {
+                    bangdanhsach.PutValue(hangHienTai, 0, hangHienTai.ToString());//Cột STT
+                    bangdanhsach.PutValue(hangHienTai, 1, i["HoTenHV"].ToString());//Cột Họ và tên
+                    hangHienTai++;
+                }    
+
+                //Bước 4: Lưu và mở file
+                danhsach.SaveAndOpenFile("DanhSach_"+MaLH+".doc");
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn lớp học in danh sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

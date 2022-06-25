@@ -38,6 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_Class = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbbMaLH = new System.Windows.Forms.ComboBox();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -48,8 +49,6 @@
             this.txtMaHV = new System.Windows.Forms.TextBox();
             this.btnAddtoclass = new System.Windows.Forms.Button();
             this.btnShow2 = new System.Windows.Forms.Button();
-            this.cbbClass = new System.Windows.Forms.ComboBox();
-            this.lblClass = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnEdit = new System.Windows.Forms.Button();
             this.cbbSubject = new System.Windows.Forms.ComboBox();
@@ -57,7 +56,7 @@
             this.lblSubject = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.cbbMaLH = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).BeginInit();
@@ -165,6 +164,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
+            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.cbbMaLH);
             this.panel4.Controls.Add(this.btnSort);
             this.panel4.Controls.Add(this.btnRemove);
@@ -176,14 +176,22 @@
             this.panel4.Controls.Add(this.txtMaHV);
             this.panel4.Controls.Add(this.btnAddtoclass);
             this.panel4.Controls.Add(this.btnShow2);
-            this.panel4.Controls.Add(this.cbbClass);
-            this.panel4.Controls.Add(this.lblClass);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 85);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(907, 261);
             this.panel4.TabIndex = 1;
+            // 
+            // cbbMaLH
+            // 
+            this.cbbMaLH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMaLH.FormattingEnabled = true;
+            this.cbbMaLH.Location = new System.Drawing.Point(149, 51);
+            this.cbbMaLH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbMaLH.Name = "cbbMaLH";
+            this.cbbMaLH.Size = new System.Drawing.Size(145, 28);
+            this.cbbMaLH.TabIndex = 49;
             // 
             // btnSort
             // 
@@ -192,9 +200,9 @@
             this.btnSort.Location = new System.Drawing.Point(670, 74);
             this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(146, 50);
+            this.btnSort.Size = new System.Drawing.Size(199, 50);
             this.btnSort.TabIndex = 56;
-            this.btnSort.Text = "Sx điểm số";
+            this.btnSort.Text = "Sắp xếp điểm số";
             this.btnSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSort.UseVisualStyleBackColor = false;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
@@ -305,28 +313,6 @@
             this.btnShow2.UseVisualStyleBackColor = false;
             this.btnShow2.Click += new System.EventHandler(this.btnShow2_Click);
             // 
-            // cbbClass
-            // 
-            this.cbbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbClass.FormattingEnabled = true;
-            this.cbbClass.Location = new System.Drawing.Point(724, 19);
-            this.cbbClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbbClass.Name = "cbbClass";
-            this.cbbClass.Size = new System.Drawing.Size(145, 28);
-            this.cbbClass.TabIndex = 39;
-            // 
-            // lblClass
-            // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
-            this.lblClass.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblClass.Location = new System.Drawing.Point(665, 22);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(53, 25);
-            this.lblClass.TabIndex = 38;
-            this.lblClass.Text = "Lớp:";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(130)))));
@@ -424,15 +410,19 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // cbbMaLH
+            // button1
             // 
-            this.cbbMaLH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbMaLH.FormattingEnabled = true;
-            this.cbbMaLH.Location = new System.Drawing.Point(149, 51);
-            this.cbbMaLH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbbMaLH.Name = "cbbMaLH";
-            this.cbbMaLH.Size = new System.Drawing.Size(145, 28);
-            this.cbbMaLH.TabIndex = 49;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Image = global::PBL3TrungTamDayThem.Properties.Resources.printer;
+            this.button1.Location = new System.Drawing.Point(670, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(199, 50);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "In danh sách";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UC_Class
             // 
@@ -473,8 +463,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cbbSubject;
         private System.Windows.Forms.Label lblSubject;
-        private System.Windows.Forms.ComboBox cbbClass;
-        private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.Button btnShow2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -490,5 +478,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgv_Student;
         private System.Windows.Forms.ComboBox cbbMaLH;
+        private System.Windows.Forms.Button button1;
     }
 }

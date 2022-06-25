@@ -355,6 +355,7 @@
             this.dgvStudent.RowTemplate.Height = 28;
             this.dgvStudent.Size = new System.Drawing.Size(504, 516);
             this.dgvStudent.TabIndex = 1;
+            this.dgvStudent.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvStudent_RowHeaderMouseClick);
             // 
             // UC_Bill
             // 

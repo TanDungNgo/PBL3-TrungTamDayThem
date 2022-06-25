@@ -145,7 +145,7 @@
             this.lbl_Header.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Header.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Header.ForeColor = System.Drawing.Color.White;
-            this.lbl_Header.Location = new System.Drawing.Point(25, 14);
+            this.lbl_Header.Location = new System.Drawing.Point(32, 16);
             this.lbl_Header.Name = "lbl_Header";
             this.lbl_Header.Size = new System.Drawing.Size(482, 55);
             this.lbl_Header.TabIndex = 1;
