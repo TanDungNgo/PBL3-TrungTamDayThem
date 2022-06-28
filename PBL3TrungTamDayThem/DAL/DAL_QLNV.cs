@@ -115,6 +115,36 @@ namespace PBL3TrungTamDayThem.DAL
             }
             return data;
         }
+        public List<Staff> SortListStaffBySearch(string s, string search)
+        {
+            List<Staff> data = new List<Staff>();
+            string query = "Select * from NHAN_VIEN where HoTenNV like N'%"+search+"%'and KiemTra = 'true' ORDER BY " + s;
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetStaff(i));
+            }
+            return data;
+        }
+        public List<Staff> SortListStaffByPosition(string s, string chucvu)
+        {
+            List<Staff> data = new List<Staff>();
+            string query = "Select * from NHAN_VIEN where ChucVu like N'%" + chucvu + "%'and KiemTra = 'true' ORDER BY " + s;
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetStaff(i));
+            }
+            return data;
+        }
+        public List<Staff> SortListStaffByPositionSearch(string s, string chucvu, string search)
+        {
+            List<Staff> data = new List<Staff>();
+            string query = "Select * from NHAN_VIEN where ChucVu like N'%" + chucvu + "%'and HoTenNV like N'%" + search + "%' and KiemTra = 'true' ORDER BY " + s;
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetStaff(i));
+            }
+            return data;
+        }
         public DataTable Count()
         {
             string query = "select COUNT(*) from NHAN_VIEN";

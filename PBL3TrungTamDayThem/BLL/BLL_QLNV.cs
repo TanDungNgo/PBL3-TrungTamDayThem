@@ -111,10 +111,23 @@ namespace PBL3TrungTamDayThem.BLL
 
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        public List<Staff> SortListStaff(string s)
+        public List<Staff> SortListStaff(string sort, string search, string chucvu)
         {
             List<Staff> data = new List<Staff>();
-            data = DAL_QLNV.Instance.SortListStaff(s);
+            if (chucvu == "All")
+            {
+                if(search == "Nhập tên tìm kiếm")
+                    data = DAL_QLNV.Instance.SortListStaff(sort);
+                else
+                    data = DAL_QLNV.Instance.SortListStaffBySearch(sort, search);
+            }
+            else
+            {
+                if (search == "Nhập tên tìm kiếm")
+                    data = DAL_QLNV.Instance.SortListStaffByPosition(sort, chucvu);
+                else
+                    data=DAL_QLNV.Instance.SortListStaffByPositionSearch(sort,chucvu,search);
+            }    
             return data;
         }
         public bool CheckPhone(string MaNV, string Phone)

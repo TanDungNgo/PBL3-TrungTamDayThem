@@ -105,10 +105,40 @@ namespace PBL3TrungTamDayThem.DAL
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public List<Teacher> SortListTeacher(string s)
+        public List<Teacher> SortListAllTeacher(string s)
         {
             List<Teacher> data = new List<Teacher>();
             string query = "Select * from GIAO_VIEN where KiemTra = 'true' ORDER BY " + s;
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetTeacher(i));
+            }
+            return data;
+        }
+        public List<Teacher> SortListTeacherBySearch(string sort, string search)
+        {
+            List<Teacher> data = new List<Teacher>();
+            string query = "Select * from GIAO_VIEN where HoTenGV like N'%"+ search +"%' and KiemTra = 'true' ORDER BY " + sort;
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetTeacher(i));
+            }
+            return data;
+        }
+        public List<Teacher> SortListTeacherByEx(string sort, string ex)
+        {
+            List<Teacher> data = new List<Teacher>();
+            string query = "Select * from GIAO_VIEN where ChuyenMon like N'" + ex + "' and KiemTra = 'true' ORDER BY " + sort;
+            foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                data.Add(GetTeacher(i));
+            }
+            return data;
+        }
+        public List<Teacher> SortListTeacher(string sort, string search, string ex)
+        {
+            List<Teacher> data = new List<Teacher>();
+            string query = "Select * from GIAO_VIEN where HoTenGV like N'%" + search + "%' and ChuyenMon like N'"+ ex +"' and KiemTra = 'true' ORDER BY " + sort;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetTeacher(i));

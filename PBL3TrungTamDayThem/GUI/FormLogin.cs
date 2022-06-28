@@ -146,7 +146,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void forgotpass_MouseMove(object sender, MouseEventArgs e)
         {
-            forgotpass.ForeColor = Color.Crimson;
+            forgotpass.ForeColor = Color.DodgerBlue;
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

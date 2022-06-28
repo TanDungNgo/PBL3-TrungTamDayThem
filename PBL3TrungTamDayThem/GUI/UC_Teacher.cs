@@ -122,11 +122,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            if (cbbSort.Text == "")
-                MessageBox.Show("Chọn cách sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                dgvTeacher.DataSource = BLL_QLGV.Instance.SortListTeacher(cbbSort.Text);
-
+            dgvTeacher.DataSource = BLL_QLGV.Instance.SortListTeacher(cbbSort.Text, txtName.Text, cbbExpertise.Text);
         }
         public void SizeMax()
         {

@@ -47,16 +47,10 @@ namespace PBL3TrungTamDayThem.BLL
             List<Teacher> data = new List<Teacher>();
             if (chuyenmon == "All")
             {
-                if (search == "")
-                    data = DAL_QLGV.Instance.GetAllTeacher();
-                else
                     data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
             }
             else
             {
-                if (search == "")
-                    data = DAL_QLGV.Instance.GetTeacherByEx(chuyenmon);
-                else
                     data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
             }
             return data;
@@ -109,10 +103,24 @@ namespace PBL3TrungTamDayThem.BLL
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public List<Teacher> SortListTeacher(string s)
+        public List<Teacher> SortListTeacher(string sort, string search, string chuyenmon)
         {
             List<Teacher> data = new List<Teacher>();
-            data = DAL_QLGV.Instance.SortListTeacher(s);
+            if (chuyenmon == "All")
+            {
+                if (search == "Nhập tên tìm kiếm")
+                    data = DAL_QLGV.Instance.SortListAllTeacher(sort);
+                else
+                    data = DAL_QLGV.Instance.SortListTeacherBySearch(sort, search);
+            }
+            else
+            {
+                if (search == "Nhập tên tìm kiếm")
+                    data = DAL_QLGV.Instance.SortListAllTeacher(sort);
+                else
+                    data = DAL_QLGV.Instance.SortListTeacher(sort, search, chuyenmon);
+            }
+            
             return data;
         }
         public List<string> GetMaGV()

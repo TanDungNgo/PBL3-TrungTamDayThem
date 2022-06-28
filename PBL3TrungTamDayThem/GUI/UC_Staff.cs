@@ -112,10 +112,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnSort_Click(object sender, EventArgs e)
         {
-            if (cbbSort.Text == "")
-                MessageBox.Show("Chọn cách sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                dgvStaff.DataSource = BLL_QLNV.Instance.SortListStaff(cbbSort.Text);
+            dgvStaff.DataSource = BLL_QLNV.Instance.SortListStaff(cbbSort.Text, txtName.Text, cbbPosition.Text);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

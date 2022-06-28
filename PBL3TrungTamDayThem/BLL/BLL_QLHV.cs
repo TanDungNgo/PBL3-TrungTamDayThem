@@ -111,13 +111,23 @@ namespace PBL3TrungTamDayThem.BLL
             if (count == length)
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        public List<Student> SortListStudent(string s, string MaLH)
+        public List<Student> SortListStudent(string sort, string MaLH, string search)
         {
             List<Student> data = new List<Student>();
             if (MaLH == "All")
-                data = DAL_QLHV.Instance.SortListStudent(s);
+            {
+                if(search == "Nhập tên tìm kiếm")
+                    data = DAL_QLHV.Instance.SortListStudent(sort);
+                else
+                  data = DAL_QLHV.Instance.SortListStudentBySearch(sort,search);
+            }    
             else
-                data = DAL_QLHV.Instance.SortListStudentInClass(s, MaLH);
+            {
+                if (search == "Nhập tên tìm kiếm")
+                    data = DAL_QLHV.Instance.SortListStudentInClass(sort, MaLH);
+                else
+                    data = DAL_QLHV.Instance.SortListStudentInClassBySearch(sort,MaLH,search);
+            }    
             return data;
         }
         public bool CheckPhone(string MaHV, string Phone)
