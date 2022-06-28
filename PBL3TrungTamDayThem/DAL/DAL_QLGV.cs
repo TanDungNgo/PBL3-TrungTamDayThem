@@ -27,7 +27,7 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public DataTable GetAllExpertise()
         {
-            string query = "Select ChuyenMon from GIAO_VIEN";
+            string query = "Select ChuyenMon from GIAO_VIEN where KiemTra = 'true'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public List<Teacher> GetAllTeacher()

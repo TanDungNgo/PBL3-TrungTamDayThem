@@ -15,6 +15,8 @@ namespace PBL3TrungTamDayThem.GUI
         public UC_Class()
         {
             InitializeComponent();
+            dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(null);
+            dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(null);
             SetGUI();
         }
         public void SetCBB()
@@ -35,14 +37,13 @@ namespace PBL3TrungTamDayThem.GUI
         {
             SetCBB();
             cbbSubject.Text = "All";
-            dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(null);
-            dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(null);
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormClass frm = new FormClass();
             frm.d += new FormClass.MyDel(ShowDGV);
             frm.ShowDialog();
+            SetGUI();
         }
         public void ShowDGV()
         {
@@ -61,6 +62,7 @@ namespace PBL3TrungTamDayThem.GUI
                 FormClass frm = new FormClass(MaLH);
                 frm.d += new FormClass.MyDel(ShowDGV);
                 frm.ShowDialog();
+                SetGUI();
             }
             else
             {

@@ -115,5 +115,10 @@ namespace PBL3TrungTamDayThem.DAL
             }
             return data;
         }
+        public DataTable Count()
+        {
+            string query = "select COUNT(*) from NHAN_VIEN";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

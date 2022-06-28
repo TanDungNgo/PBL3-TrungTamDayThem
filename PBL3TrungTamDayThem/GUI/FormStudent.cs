@@ -84,6 +84,13 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
                 lbleraddress.Visible = false;
+            if (rbMale.Checked == false && rbFemale.Checked == false)
+            {
+                lblergender.Visible = true;
+                check = true;
+            }
+            else
+                lblergender.Visible = false;
             if (txtEmail.Text == "")
             {
                 lbleremail.Visible = true;

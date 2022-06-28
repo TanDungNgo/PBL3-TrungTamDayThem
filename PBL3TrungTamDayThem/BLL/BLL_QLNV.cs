@@ -29,7 +29,9 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public int Count()
         {
-            int count = DAL_QLNV.Instance.GetAllStaff().Count;
+            int count = 0;
+            foreach (DataRow i in DAL_QLNV.Instance.Count().Rows)
+                count = int.Parse(i[0].ToString());
             return count;
         }
         public List<string> GetListCBB()

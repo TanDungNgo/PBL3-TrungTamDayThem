@@ -42,7 +42,7 @@
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblClass = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.txbName = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.btnShow = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbStatus = new System.Windows.Forms.ComboBox();
@@ -159,6 +159,7 @@
             // cbbContent
             // 
             this.cbbContent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbContent.ForeColor = System.Drawing.Color.Black;
             this.cbbContent.FormattingEnabled = true;
             this.cbbContent.Location = new System.Drawing.Point(151, 136);
             this.cbbContent.Name = "cbbContent";
@@ -196,7 +197,7 @@
             // 
             this.pnlTop.Controls.Add(this.lblClass);
             this.pnlTop.Controls.Add(this.lblName);
-            this.pnlTop.Controls.Add(this.txbName);
+            this.pnlTop.Controls.Add(this.txtName);
             this.pnlTop.Controls.Add(this.btnShow);
             this.pnlTop.Controls.Add(this.label3);
             this.pnlTop.Controls.Add(this.cbbStatus);
@@ -224,19 +225,24 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblName.Location = new System.Drawing.Point(24, 163);
+            this.lblName.Location = new System.Drawing.Point(16, 179);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(90, 27);
             this.lblName.TabIndex = 32;
             this.lblName.Text = "Họ Tên:";
             // 
-            // txbName
+            // txtName
             // 
-            this.txbName.Location = new System.Drawing.Point(149, 174);
-            this.txbName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(224, 26);
-            this.txbName.TabIndex = 33;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtName.Location = new System.Drawing.Point(151, 179);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(222, 30);
+            this.txtName.TabIndex = 33;
+            this.txtName.Text = "Nhập tên tìm kiếm";
+            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // btnShow
             // 
@@ -244,7 +250,7 @@
             this.btnShow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.Image = global::PBL3TrungTamDayThem.Properties.Resources.list__4_;
             this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(228, 63);
+            this.btnShow.Location = new System.Drawing.Point(228, 59);
             this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(146, 50);
@@ -258,7 +264,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(16, 125);
+            this.label3.Location = new System.Drawing.Point(16, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 27);
             this.label3.TabIndex = 45;
@@ -268,7 +274,7 @@
             // 
             this.cbbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbStatus.FormattingEnabled = true;
-            this.cbbStatus.Location = new System.Drawing.Point(151, 127);
+            this.cbbStatus.Location = new System.Drawing.Point(151, 123);
             this.cbbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbStatus.Name = "cbbStatus";
             this.cbbStatus.Size = new System.Drawing.Size(223, 28);
@@ -279,7 +285,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = global::PBL3TrungTamDayThem.Properties.Resources.search_icon1;
-            this.btnSearch.Location = new System.Drawing.Point(228, 220);
+            this.btnSearch.Location = new System.Drawing.Point(227, 219);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(146, 50);
@@ -393,7 +399,7 @@
         private System.Windows.Forms.ComboBox cbbClass;
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txbName;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.DataGridView dgvStudent;

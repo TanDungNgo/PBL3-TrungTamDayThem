@@ -2,6 +2,7 @@
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -14,6 +15,7 @@ namespace PBL3TrungTamDayThem.GUI
         public UC_Staff()
         {
             InitializeComponent();
+            dgvStaff.DataSource = new List<Staff>();
             SetGUI();
         }
         private void ShowDGV()
@@ -41,7 +43,6 @@ namespace PBL3TrungTamDayThem.GUI
             SetCBB();
             cbbPosition.Text = "All";
             cbbSort.Text = "HoTenNV";
-            dgvStaff.DataSource = new List<Staff>();
         }
         private void btnDel_Click(object sender, EventArgs e)
         {
@@ -119,6 +120,10 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            if (txtName.Text == "Nhập tên tìm kiếm")
+            {
+                return;
+            }    
             dgvStaff.DataSource = BLL_QLNV.Instance.GetListStaff(cbbPosition.Text, txtName.Text);
         }
         public void SizeMax()
@@ -162,6 +167,24 @@ namespace PBL3TrungTamDayThem.GUI
             cbbSort.Width = 117;
             cbbPosition.Width = 153;
             btnSort.Width = 97;
+        }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")
+            {
+                txtName.Text = "Nhập tên tìm kiếm";
+                txtName.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+            if (txtName.Text == "Nhập tên tìm kiếm")
+            {
+                txtName.Text = null;
+            }
+            txtName.ForeColor = Color.Black;
         }
     }
 }

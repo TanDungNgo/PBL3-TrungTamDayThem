@@ -17,11 +17,11 @@ namespace PBL3TrungTamDayThem.GUI
         {
             string UserName = txt_User.Text;
             string Pass = txt_Pass.Text;
-            if (UserName == null || UserName.Equals(""))
+            if (UserName == null || UserName.Equals("Nhập Username"))
             {
                 MessageBox.Show("Tài khoản không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (Pass == null || Pass.Equals(""))
+            if (Pass == null || Pass.Equals("Nhập Password"))
             {
                 MessageBox.Show("Mật khẩu không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

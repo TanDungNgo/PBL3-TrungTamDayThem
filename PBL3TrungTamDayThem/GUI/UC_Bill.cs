@@ -3,6 +3,7 @@ using PBL3TrungTamDayThem.DAL;
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PBL3TrungTamDayThem.GUI
@@ -55,8 +56,8 @@ namespace PBL3TrungTamDayThem.GUI
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
-        {
-            dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, txbName.Text, cbbStatus.Text);
+        {   
+            dgvStudent.DataSource = BLL_QLBL.Instance.GetListStudent(cbbClass.Text, txtName.Text, cbbStatus.Text);
         }
         private void btnPrint_Click(object sender, EventArgs e)
         {
@@ -144,6 +145,23 @@ namespace PBL3TrungTamDayThem.GUI
         {
             DataGridViewSelectedRowCollection data = dgvStudent.SelectedRows;
             txbFee.Text = BLL_QLBL.Instance.GetFee(data[0].Cells["MaLH"].Value.ToString());
+        }
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+            if (txtName.Text == "Nhập tên tìm kiếm")
+            {
+                txtName.Text = null;
+            }
+            txtName.ForeColor = Color.Black;
+        }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            if(txtName.Text == "")
+            {
+                txtName.Text = "Nhập tên tìm kiếm";
+                txtName.ForeColor = Color.DarkGray;
+            }
         }
     }
 }

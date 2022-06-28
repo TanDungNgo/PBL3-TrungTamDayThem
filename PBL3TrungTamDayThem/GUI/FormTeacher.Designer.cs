@@ -70,6 +70,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblergender = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +78,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblergender);
             this.panel1.Controls.Add(this.erphone);
             this.panel1.Controls.Add(this.lbleremail2);
             this.panel1.Controls.Add(this.lblername2);
@@ -561,6 +563,17 @@
             this.panel5.Size = new System.Drawing.Size(10, 778);
             this.panel5.TabIndex = 50;
             // 
+            // lblergender
+            // 
+            this.lblergender.AutoSize = true;
+            this.lblergender.ForeColor = System.Drawing.Color.Red;
+            this.lblergender.Location = new System.Drawing.Point(670, 178);
+            this.lblergender.Name = "lblergender";
+            this.lblergender.Size = new System.Drawing.Size(105, 20);
+            this.lblergender.TabIndex = 88;
+            this.lblergender.Text = "Chọn giới tính";
+            this.lblergender.Visible = false;
+            // 
             // FormTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -630,5 +643,6 @@
         private System.Windows.Forms.Label lblername2;
         private System.Windows.Forms.Label lbleremail2;
         private System.Windows.Forms.Label erphone;
+        private System.Windows.Forms.Label lblergender;
     }
 }

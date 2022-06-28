@@ -30,18 +30,18 @@ namespace PBL3TrungTamDayThem.BLL
             DataTable data = new DataTable();
             if (lophoc == "All")
             {
-                if (search == "" && tinhtrang == "All")
+                if (search == "Nhập tên tìm kiếm" && tinhtrang == "All")
                     data = DAL_QLBL.Instance.GetAllStudent();
-                if (search != "" && tinhtrang == "All")
-                    data = data = DAL_QLBL.Instance.GetStudentBySearch(search, lophoc);
+                if (search != "Nhập tên tìm kiếm" && tinhtrang == "All")
+                    data = DAL_QLBL.Instance.GetStudentBySearch(search, lophoc);
                 if (tinhtrang != "All")
                     data = DAL_QLBL.Instance.GetStudentByStatus(tinhtrang, lophoc, search);
             }   
             else
             {
-                if (search == "" && tinhtrang == "All")
+                if (search == "Nhập tên tìm kiếm" && tinhtrang == "All")
                     data = DAL_QLBL.Instance.GetStudentByClass(lophoc);
-                if (search != "" && tinhtrang == "All")
+                if (search != "Nhập tên tìm kiếm" && tinhtrang == "All")
                     data = DAL_QLBL.Instance.GetStudentBySearch(search, lophoc);
                 if (tinhtrang != "All")
                     data = DAL_QLBL.Instance.GetStudentByStatus(tinhtrang, lophoc, search);

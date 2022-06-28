@@ -69,7 +69,7 @@ namespace PBL3TrungTamDayThem.DAL
             string query = "";
             if (MaLH == "All")
             {
-                if (search == "")
+                if (search == "Nhập tên tìm kiếm")
                     query = "select HVTL.MaLH, HV.MaHV, HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
                             "on HV.MaHV = HVTL.MaHV where HVTL.TinhTrang = N'" + tinhtrang + "'";
                 else
@@ -78,7 +78,7 @@ namespace PBL3TrungTamDayThem.DAL
             }    
             else
             {
-                if (search == "")
+                if (search == "Nhập tên tìm kiếm")
                     query = "select HVTL.MaLH, HV.MaHV, HV.HoTenHV, HVTL.TinhTrang from HOC_VIEN HV inner join HOC_VIEN_TRONG_LOP HVTL " +
                             "on HV.MaHV = HVTL.MaHV where HVTL.TinhTrang = N'" + tinhtrang + "'  and HVTL.MaLH = '" + MaLH + "'";
                 else

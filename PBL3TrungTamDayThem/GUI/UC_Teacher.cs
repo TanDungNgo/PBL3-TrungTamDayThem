@@ -2,6 +2,7 @@
 using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -14,6 +15,7 @@ namespace PBL3TrungTamDayThem.GUI
         {
             InitializeComponent();
             SetGUI();
+            dgvTeacher.DataSource = new List<Teacher>();
         }
         private Teacher teacher = new Teacher();
         private void btnAdd_Click(object sender, EventArgs e)
@@ -35,7 +37,6 @@ namespace PBL3TrungTamDayThem.GUI
             SetCBB();
             cbbExpertise.Text = "All";
             cbbSort.Text = "HoTenGV";
-            dgvTeacher.DataSource = new List<Teacher>();
         }
         void SetCBB()
         {
@@ -109,7 +110,14 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvTeacher.DataSource = BLL_QLGV.Instance.GetListTeacher(cbbExpertise.Text, txtName.Text);
+            if(txtName.Text == "Nhập tên tìm kiếm")
+            {
+                return;
+            }   
+            else
+            {
+                dgvTeacher.DataSource = BLL_QLGV.Instance.GetListTeacher(cbbExpertise.Text, txtName.Text);
+            }    
         }
 
         private void btnSort_Click(object sender, EventArgs e)
@@ -162,6 +170,24 @@ namespace PBL3TrungTamDayThem.GUI
             cbbSort.Width = 117;
             cbbExpertise.Width = 120;
             btnSort.Width = 97;
+        }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")
+            {
+                txtName.Text = "Nhập tên tìm kiếm";
+                txtName.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+            if(txtName.Text == "Nhập tên tìm kiếm")
+            {
+                txtName.Text = null;
+            }
+            txtName.ForeColor = Color.Black;
         }
     }
 }
