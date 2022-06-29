@@ -93,7 +93,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         public void SizeMax()
         {
-            dgv_Class.Height = 120;
+            dgv_Class.Height = 130;
             pnlBottom.Height = 300;
             cbbSubject.Width = 200;
         }

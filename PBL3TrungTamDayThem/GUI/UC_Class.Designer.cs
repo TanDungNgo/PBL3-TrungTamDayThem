@@ -32,10 +32,12 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
+            this.dgv_Student = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dgv_Class = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.cbbMaLH = new System.Windows.Forms.ComboBox();
             this.btnSort = new System.Windows.Forms.Button();
@@ -55,16 +57,14 @@
             this.lblSubject = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dgv_Class = new System.Windows.Forms.DataGridView();
-            this.dgv_Student = new System.Windows.Forms.DataGridView();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -98,6 +98,23 @@
             this.pnlBottom.Name = "pnlBottom";
             this.pnlBottom.Size = new System.Drawing.Size(907, 203);
             this.pnlBottom.TabIndex = 37;
+            // 
+            // dgv_Student
+            // 
+            this.dgv_Student.AllowUserToAddRows = false;
+            this.dgv_Student.AllowUserToDeleteRows = false;
+            this.dgv_Student.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Student.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Student.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Student.Location = new System.Drawing.Point(0, 49);
+            this.dgv_Student.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_Student.Name = "dgv_Student";
+            this.dgv_Student.ReadOnly = true;
+            this.dgv_Student.RowHeadersWidth = 62;
+            this.dgv_Student.RowTemplate.Height = 28;
+            this.dgv_Student.Size = new System.Drawing.Size(907, 154);
+            this.dgv_Student.TabIndex = 2;
             // 
             // panel1
             // 
@@ -154,6 +171,23 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(907, 261);
             this.panel4.TabIndex = 1;
+            // 
+            // dgv_Class
+            // 
+            this.dgv_Class.AllowUserToAddRows = false;
+            this.dgv_Class.AllowUserToDeleteRows = false;
+            this.dgv_Class.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Class.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Class.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Class.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_Class.Location = new System.Drawing.Point(0, 144);
+            this.dgv_Class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_Class.Name = "dgv_Class";
+            this.dgv_Class.ReadOnly = true;
+            this.dgv_Class.RowHeadersWidth = 62;
+            this.dgv_Class.RowTemplate.Height = 28;
+            this.dgv_Class.Size = new System.Drawing.Size(907, 117);
+            this.dgv_Class.TabIndex = 34;
             // 
             // button1
             // 
@@ -396,40 +430,6 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dgv_Class
-            // 
-            this.dgv_Class.AllowUserToAddRows = false;
-            this.dgv_Class.AllowUserToDeleteRows = false;
-            this.dgv_Class.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Class.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Class.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Class.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_Class.Location = new System.Drawing.Point(0, 144);
-            this.dgv_Class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_Class.Name = "dgv_Class";
-            this.dgv_Class.ReadOnly = true;
-            this.dgv_Class.RowHeadersWidth = 62;
-            this.dgv_Class.RowTemplate.Height = 28;
-            this.dgv_Class.Size = new System.Drawing.Size(907, 117);
-            this.dgv_Class.TabIndex = 34;
-            // 
-            // dgv_Student
-            // 
-            this.dgv_Student.AllowUserToAddRows = false;
-            this.dgv_Student.AllowUserToDeleteRows = false;
-            this.dgv_Student.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Student.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Student.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Student.Location = new System.Drawing.Point(0, 49);
-            this.dgv_Student.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_Student.Name = "dgv_Student";
-            this.dgv_Student.ReadOnly = true;
-            this.dgv_Student.RowHeadersWidth = 62;
-            this.dgv_Student.RowTemplate.Height = 28;
-            this.dgv_Student.Size = new System.Drawing.Size(907, 154);
-            this.dgv_Student.TabIndex = 2;
-            // 
             // UC_Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -443,15 +443,15 @@
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlBottom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Class)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Student)).EndInit();
             this.ResumeLayout(false);
 
         }

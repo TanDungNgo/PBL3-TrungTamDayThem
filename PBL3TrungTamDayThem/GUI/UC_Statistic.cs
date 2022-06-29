@@ -54,16 +54,16 @@ namespace PBL3TrungTamDayThem.GUI
                 MessageBox.Show("Chọn năm muốn thống kê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            int ma = int.Parse(comboBox1.Text.Substring(2));
+            int malh = int.Parse(comboBox1.Text.Substring(2));
             chart1.Series.Clear();
             chart1.Series.Add("SoLuong");
             chart1.Titles.Clear();
             chart1.Titles.Add("Thống kê số lượng học viên của từng môn học năm " + comboBox1.Text);
-            List<string> list = new List<string>();
-            list.AddRange(BLL_QLLH.Instance.GetListCBB().Distinct().ToArray());
-            foreach (string monhoc in list.Distinct().ToList())
+            List<string> listMH = new List<string>();
+            listMH.AddRange(BLL_QLLH.Instance.GetSubjectInClass(malh.ToString()).Distinct().ToArray());
+            foreach (string monhoc in listMH.Distinct().ToList())
             {
-                int sum = BLL_QLLH.Instance.SoLuongHV(monhoc, ma.ToString());
+                int sum = BLL_QLLH.Instance.SoLuongHV(monhoc, malh.ToString());
                 chart1.Series["SoLuong"].Points.AddXY(monhoc, sum);
             }
             //Chuyển kiểu biểu đồ hình tròn

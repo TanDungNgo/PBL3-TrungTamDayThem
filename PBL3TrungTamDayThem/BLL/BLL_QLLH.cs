@@ -35,6 +35,15 @@ namespace PBL3TrungTamDayThem.BLL
             }
             return l;
         }
+        public List<string> GetSubjectInClass(string malh)
+        {
+            List<string> l = new List<string>();
+            foreach (DataRow i in DAL_QLLH.Instance.GetSubjectInClass(malh).Rows)
+            {
+                l.Add(i["TenMon"].ToString());
+            }
+            return l;
+        }
         public List<string> GetListMaMH()
         {
             List<string> l = new List<string>();

@@ -30,6 +30,12 @@ namespace PBL3TrungTamDayThem.DAL
             string query = "Select TenMon from MON_HOC";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetSubjectInClass(string malh)
+        {
+            string query = "select TenMon from MON_HOC mh inner join LOP_HOC lh on mh.MaMH = lh.MaMH" +
+                " where lh.MaLH like '"+malh+"%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable GetAllClass()
         {
             string query = "select gv.HoTenGV, lh.MaLH, lh.SoLuongHV, lh.ThoiGianHoc, lh.NgayBatDau, lh.NgayKetThuc, lh.HocPhi " +

@@ -90,7 +90,7 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public DataTable GetNoiDung(string MaLH)
         {
-            string query = "Select NoiDung from BIEN_LAI where MaLH like '" + MaLH + "%'";
+            string query = "Select NoiDung from BIEN_LAI where MaLH like '" + MaLH + "%' order by NoiDung";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable GetHocPhi(string noidung, string malh)
