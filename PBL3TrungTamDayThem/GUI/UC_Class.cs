@@ -86,6 +86,10 @@ namespace PBL3TrungTamDayThem.GUI
                     ShowDGV();
                 }
             }
+            else
+            {
+                MessageBox.Show("Chưa chọn lớp học muốn xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
         }
         public void SizeMax()
         {
@@ -113,7 +117,6 @@ namespace PBL3TrungTamDayThem.GUI
                 MessageBox.Show("Chưa chọn lớp học muốn xem danh sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         private void btnAddtoclass_Click(object sender, EventArgs e)
         {
             if (txtMaHV.Text == "")
@@ -121,6 +124,11 @@ namespace PBL3TrungTamDayThem.GUI
                 MessageBox.Show("Chưa nhập Mã học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            if (BLL_QLHV.Instance.CheckMaHV(txtMaHV.Text) == false)
+            {
+                MessageBox.Show("Học viên không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }    
             if (cbbMaLH.Text == "")
             {
                 MessageBox.Show("Chưa nhập Mã lớp học", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -202,6 +210,7 @@ namespace PBL3TrungTamDayThem.GUI
                     {
                         BLL_QLLH.Instance.RemoveFromClass(MaHV, MaLH);
                         dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(MaLH);
+                        dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(cbbSubject.Text);
                     }
                 }
                 catch (Exception ex)

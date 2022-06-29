@@ -152,5 +152,14 @@ namespace PBL3TrungTamDayThem.BLL
             else
                 return false;
         }
+        public bool CheckMaHV(string MaHV)
+        {
+            foreach(Student s in DAL_QLHV.Instance.GetAllStudent())
+            {
+                if(MaHV == s.MaHV)
+                    return true;
+            }
+            return false;
+        }
     }
 }
