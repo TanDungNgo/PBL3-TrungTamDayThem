@@ -35,7 +35,7 @@
             this.lblerIdGv = new System.Windows.Forms.Label();
             this.lblerFee = new System.Windows.Forms.Label();
             this.cbbIDSubject = new System.Windows.Forms.ComboBox();
-            this.cbbIDTeacher = new System.Windows.Forms.ComboBox();
+            this.cbbNameteacher = new System.Windows.Forms.ComboBox();
             this.txtFee = new System.Windows.Forms.TextBox();
             this.lblFee = new System.Windows.Forms.Label();
             this.txtTime = new System.Windows.Forms.TextBox();
@@ -71,7 +71,7 @@
             this.pnlFee.Controls.Add(this.lblerIdGv);
             this.pnlFee.Controls.Add(this.lblerFee);
             this.pnlFee.Controls.Add(this.cbbIDSubject);
-            this.pnlFee.Controls.Add(this.cbbIDTeacher);
+            this.pnlFee.Controls.Add(this.cbbNameteacher);
             this.pnlFee.Controls.Add(this.txtFee);
             this.pnlFee.Controls.Add(this.lblFee);
             this.pnlFee.Controls.Add(this.txtTime);
@@ -124,7 +124,7 @@
             // 
             this.lblerSb.AutoSize = true;
             this.lblerSb.ForeColor = System.Drawing.Color.Red;
-            this.lblerSb.Location = new System.Drawing.Point(375, 270);
+            this.lblerSb.Location = new System.Drawing.Point(375, 278);
             this.lblerSb.Name = "lblerSb";
             this.lblerSb.Size = new System.Drawing.Size(108, 20);
             this.lblerSb.TabIndex = 110;
@@ -137,9 +137,9 @@
             this.lblerIdGv.ForeColor = System.Drawing.Color.Red;
             this.lblerIdGv.Location = new System.Drawing.Point(375, 200);
             this.lblerIdGv.Name = "lblerIdGv";
-            this.lblerIdGv.Size = new System.Drawing.Size(139, 20);
+            this.lblerIdGv.Size = new System.Drawing.Size(113, 20);
             this.lblerIdGv.TabIndex = 109;
-            this.lblerIdGv.Text = "Chọn mã giáo viên";
+            this.lblerIdGv.Text = "Chọn giáo viên";
             this.lblerIdGv.Visible = false;
             // 
             // lblerFee
@@ -163,15 +163,15 @@
             this.cbbIDSubject.Size = new System.Drawing.Size(273, 28);
             this.cbbIDSubject.TabIndex = 12;
             // 
-            // cbbIDTeacher
+            // cbbNameteacher
             // 
-            this.cbbIDTeacher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbIDTeacher.FormattingEnabled = true;
-            this.cbbIDTeacher.Location = new System.Drawing.Point(375, 168);
-            this.cbbIDTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbbIDTeacher.Name = "cbbIDTeacher";
-            this.cbbIDTeacher.Size = new System.Drawing.Size(273, 28);
-            this.cbbIDTeacher.TabIndex = 11;
+            this.cbbNameteacher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbNameteacher.FormattingEnabled = true;
+            this.cbbNameteacher.Location = new System.Drawing.Point(375, 164);
+            this.cbbNameteacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbNameteacher.Name = "cbbNameteacher";
+            this.cbbNameteacher.Size = new System.Drawing.Size(273, 28);
+            this.cbbNameteacher.TabIndex = 11;
             // 
             // txtFee
             // 
@@ -315,11 +315,11 @@
             this.lblID_Tea.AutoSize = true;
             this.lblID_Tea.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID_Tea.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblID_Tea.Location = new System.Drawing.Point(207, 168);
+            this.lblID_Tea.Location = new System.Drawing.Point(207, 164);
             this.lblID_Tea.Name = "lblID_Tea";
-            this.lblID_Tea.Size = new System.Drawing.Size(152, 26);
+            this.lblID_Tea.Size = new System.Drawing.Size(156, 26);
             this.lblID_Tea.TabIndex = 90;
-            this.lblID_Tea.Text = "Mã giáo viên:";
+            this.lblID_Tea.Text = "Tên giáo viên:";
             // 
             // dtpEnd
             // 
@@ -447,7 +447,7 @@
         private System.Windows.Forms.Label lblFee;
         private System.Windows.Forms.TextBox txtTime;
         private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.ComboBox cbbIDTeacher;
+        private System.Windows.Forms.ComboBox cbbNameteacher;
         private System.Windows.Forms.ComboBox cbbIDSubject;
         private System.Windows.Forms.Label lblerFee;
         private System.Windows.Forms.Label lblerTime;

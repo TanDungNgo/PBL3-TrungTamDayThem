@@ -25,7 +25,8 @@ namespace PBL3TrungTamDayThem.GUI
                 GetCBB();
                 txtID.Text = lop.MaLH;
                 txtID.Enabled = false;
-                cbbIDTeacher.Text = lop.MaGV;
+                Teacher t = BLL_QLGV.Instance.GetGVByID(lop.MaGV);
+                cbbNameteacher.Text = t.HoTenGV;
                 cbbIDSubject.Text = lop.MaMH;
                 NUDSoLuong.Text = lop.SoLuongHV.ToString();
                 txtTime.Text = lop.ThoiGianHoc;
@@ -41,7 +42,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         public void GetCBB()
         {
-            cbbIDTeacher.Items.AddRange(BLL_QLGV.Instance.GetMaGV().ToArray());
+            cbbNameteacher.Items.AddRange(BLL_QLGV.Instance.GetHoTenGV().ToArray());
             cbbIDSubject.Items.AddRange(BLL_QLLH.Instance.GetListMaMH().ToArray());
         }
         private void btnExit_Click(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
                 lblerID.Visible = false;
-            if (cbbIDTeacher.Text == "")
+            if (cbbNameteacher.Text == "")
             {
                 lblerIdGv.Visible = true;
                 check = false;
@@ -96,7 +97,7 @@ namespace PBL3TrungTamDayThem.GUI
                 Class lop = new Class
                 {
                     MaLH = txtID.Text,
-                    MaGV = cbbIDTeacher.Text,
+                    MaGV = ((CBBItem)cbbNameteacher.SelectedItem).Value,
                     MaMH = cbbIDSubject.Text,
                     SoLuongHV = ((int)NUDSoLuong.Value),
                     ThoiGianHoc = txtTime.Text,
@@ -117,7 +118,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            cbbIDTeacher.Text = "";
+            cbbNameteacher.Text = "";
             cbbIDSubject.Text = "";
             NUDSoLuong.Value = 0;
             txtTime.Text = "";
@@ -132,5 +133,6 @@ namespace PBL3TrungTamDayThem.GUI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
     }
 }

@@ -138,17 +138,18 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Teacher> SortListTeacher(string sort, string search, string ex)
         {
             List<Teacher> data = new List<Teacher>();
-            string query = "Select * from GIAO_VIEN where HoTenGV like N'%" + search + "%' and ChuyenMon like N'"+ ex +"' and KiemTra = 'true' ORDER BY " + sort;
+            string query = "Select * from GIAO_VIEN where HoTenGV like N'%" + search + "%' and ChuyenMon like N'" + ex + "' and KiemTra = 'true' ORDER BY " + sort;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetTeacher(i));
             }
             return data;
         }
-        public DataTable GetMaGV()
+        public DataTable GetHoTen()
         {
-            string query = "Select MaGV from GIAO_VIEN where KiemTra = 'true'";
-            return DataProvider.Instance.ExecuteQuery(query);   
+            List<CBBItem> data = new List<CBBItem>();
+            string query = "Select MaGV, HoTenGV from GIAO_VIEN where KiemTra = 'true'";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable Count()
         {

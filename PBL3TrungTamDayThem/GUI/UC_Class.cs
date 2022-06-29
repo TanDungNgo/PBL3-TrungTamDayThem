@@ -136,7 +136,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         internal static bool isMark(string m)
         {
-            if (int.Parse(m) <= 10 && int.Parse(m) >= 0)
+            if (float.Parse(m) <= 10 && float.Parse(m) >= 0)
                 return true;
             return false;
         }
@@ -163,7 +163,7 @@ namespace PBL3TrungTamDayThem.GUI
                         MessageBox.Show("Chưa nhập điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
-                    else if (isDigit(txtKQH.Text) == false || isMark(txtKQH.Text) == false)
+                    else if (isMark(txtKQH.Text) == false)
                     {
                         MessageBox.Show("Điểm chỉ từ 0 đến 10", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
@@ -252,6 +252,8 @@ namespace PBL3TrungTamDayThem.GUI
                 {
                     bangdanhsach.PutValue(hangHienTai, 0, hangHienTai.ToString());//Cột STT
                     bangdanhsach.PutValue(hangHienTai, 1, i["HoTenHV"].ToString());//Cột Họ và tên
+                    if (i["KetQuaHoc"].ToString() != "0")
+                        bangdanhsach.PutValue(hangHienTai, 2, i["KetQuaHoc"].ToString());
                     hangHienTai++;
                 }    
 

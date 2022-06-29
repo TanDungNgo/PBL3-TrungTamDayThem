@@ -12,8 +12,8 @@ namespace PBL3TrungTamDayThem.GUI
         public UC_Student()
         {
             InitializeComponent();
-            dgvStudent.DataSource = new List<Student>();
             SetGUI();
+            dgvStudent.DataSource = new List<Student>();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {

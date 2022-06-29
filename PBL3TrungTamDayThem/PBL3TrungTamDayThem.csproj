@@ -64,6 +64,7 @@
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\DAL_QLGV.cs" />
     <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\Class.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Student.cs" />

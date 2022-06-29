@@ -123,13 +123,17 @@ namespace PBL3TrungTamDayThem.BLL
             
             return data;
         }
-        public List<string> GetMaGV()
+        public List<CBBItem> GetHoTenGV()
         {
-            List<string> list = new List<string>();
-            foreach(DataRow i in DAL_QLGV.Instance.GetMaGV().Rows)
+            List<CBBItem> list = new List<CBBItem>();
+            foreach (DataRow i in DAL_QLGV.Instance.GetHoTen().Rows)
             {
-                list.Add(i["MaGV"].ToString());
-            }    
+                list.Add(new CBBItem
+                {
+                    Value = i["MaGV"].ToString(),
+                    Text = i["HoTenGV"].ToString(),
+                });
+            }
             return list;
         }
         public bool CheckPhone(string MaGV, string Phone)
