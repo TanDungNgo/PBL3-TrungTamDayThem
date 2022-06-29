@@ -108,7 +108,11 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Staff> SortListStaff(string s)
         {
             List<Staff> data = new List<Staff>();
-            string query = "Select * from NHAN_VIEN where KiemTra = 'true' ORDER BY " + s;
+            string query = "";
+            if (s == "HoTenNV")
+                query = "Select * from NHAN_VIEN where KiemTra = 'true' ORDER BY REVERSE(left(reverse(HoTenNV),CharIndex(' ',reverse(HoTenNV),0)-1))";
+            else
+                query = "Select * from NHAN_VIEN where KiemTra = 'true' ORDER BY " + s;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStaff(i));
@@ -118,7 +122,11 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Staff> SortListStaffBySearch(string s, string search)
         {
             List<Staff> data = new List<Staff>();
-            string query = "Select * from NHAN_VIEN where HoTenNV like N'%"+search+"%'and KiemTra = 'true' ORDER BY " + s;
+            string query = "";
+            if (s == "HoTenNV")
+                query = "Select * from NHAN_VIEN where HoTenNV like N'%" + search + "%'and KiemTra = 'true' ORDER BY REVERSE(left(reverse(HoTenNV),CharIndex(' ',reverse(HoTenNV),0)-1))";
+            else
+                query = "Select * from NHAN_VIEN where HoTenNV like N'%" + search + "%'and KiemTra = 'true' ORDER BY " + s;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStaff(i));
@@ -128,7 +136,11 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Staff> SortListStaffByPosition(string s, string chucvu)
         {
             List<Staff> data = new List<Staff>();
-            string query = "Select * from NHAN_VIEN where ChucVu like N'%" + chucvu + "%'and KiemTra = 'true' ORDER BY " + s;
+            string query = "";
+            if (s == "HoTenNV")
+                query = "Select * from NHAN_VIEN where ChucVu like N'%" + chucvu + "%'and KiemTra = 'true' ORDER BY REVERSE(left(reverse(HoTenNV),CharIndex(' ',reverse(HoTenNV),0)-1))";
+            else
+                query = "Select * from NHAN_VIEN where ChucVu like N'%" + chucvu + "%'and KiemTra = 'true' ORDER BY " + s;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStaff(i));
@@ -138,7 +150,11 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Staff> SortListStaffByPositionSearch(string s, string chucvu, string search)
         {
             List<Staff> data = new List<Staff>();
-            string query = "Select * from NHAN_VIEN where ChucVu like N'%" + chucvu + "%'and HoTenNV like N'%" + search + "%' and KiemTra = 'true' ORDER BY " + s;
+            string query = "";
+            if (s == "HoTenNV")
+                query = "Select * from NHAN_VIEN where ChucVu like N'%" + chucvu + "%'and HoTenNV like N'%" + search + "%' and KiemTra = 'true' ORDER BY REVERSE(left(reverse(HoTenNV),CharIndex(' ',reverse(HoTenNV),0)-1)) ";
+            else
+                query = "Select * from NHAN_VIEN where ChucVu like N'%" + chucvu + "%'and HoTenNV like N'%" + search + "%' and KiemTra = 'true' ORDER BY " + s;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStaff(i));

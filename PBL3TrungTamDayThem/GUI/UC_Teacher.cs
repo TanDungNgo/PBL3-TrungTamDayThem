@@ -57,6 +57,9 @@ namespace PBL3TrungTamDayThem.GUI
         private void btnShow_Click(object sender, EventArgs e)
         {
             ShowDGV();
+            txtName.Clear();
+            txtName.Text = "Nhập tên tìm kiếm";
+            txtName.ForeColor = Color.DarkGray;
         }
 
         private void btnDel_Click(object sender, EventArgs e)

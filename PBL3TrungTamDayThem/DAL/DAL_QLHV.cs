@@ -121,7 +121,11 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> SortListStudent(string sort)
         {
             List<Student> data = new List<Student>();
-            string query = "Select * from HOC_VIEN where KiemTra = 'true' ORDER BY " + sort;
+            string query = "";
+            if (sort == "HoTenHV")
+                query = "Select * from HOC_VIEN where KiemTra = 'true' ORDER BY REVERSE(left(reverse(HoTenHV),CharIndex(' ',reverse(HoTenHV),0)-1))";
+            else
+                query = "Select * from HOC_VIEN where KiemTra = 'true' ORDER BY " + sort;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
@@ -131,7 +135,11 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> SortListStudentBySearch(string sort, string search)
         {
             List<Student> data = new List<Student>();
-            string query = "Select * from HOC_VIEN where HoTenHV like N'%"+search+"%'and KiemTra = 'true' ORDER BY " + sort;
+            string query = "";
+            if (sort == "HoTenHV")
+                query = "Select * from HOC_VIEN where HoTenHV like N'%" + search + "%'and KiemTra = 'true'  ORDER BY REVERSE(left(reverse(HoTenHV),CharIndex(' ',reverse(HoTenHV),0)-1))";
+            else
+                query = "Select * from HOC_VIEN where HoTenHV like N'%" + search + "%'and KiemTra = 'true' ORDER BY " + sort;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
@@ -141,9 +149,15 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> SortListStudentInClass(string s, string MaLH)
         {
             List<Student> data = new List<Student>();
-            string query = "Select HV.MaHV, HV.HoTenHV, HV.GioiTinh, HV.NgaySinh, HV.DiaChi, HV.Email, HV.SDT " +
+            string query = "";
+            if (s == "HoTenHV")
+                query = "Select HV.MaHV, HV.HoTenHV, HV.GioiTinh, HV.NgaySinh, HV.DiaChi, HV.Email, HV.SDT " +
                 "From HOC_VIEN HV INNER JOIN HOC_VIEN_TRONG_LOP HVTL ON HV.MaHV = HVTL.MaHV INNER JOIN LOP_HOC L " +
-                "ON HVTL.MaLH = L.MaLH WHERE HV.KiemTra = 'true' and HVTL.MaLH = '" + MaLH +"' ORDER BY HV." + s;
+                "ON HVTL.MaLH = L.MaLH WHERE HV.KiemTra = 'true' and HVTL.MaLH = '" + MaLH + "' ORDER BY REVERSE(left(reverse(HV.HoTenHV),CharIndex(' ',reverse(HV.HoTenHV),0)-1))";
+            else
+                query = "Select HV.MaHV, HV.HoTenHV, HV.GioiTinh, HV.NgaySinh, HV.DiaChi, HV.Email, HV.SDT " +
+                "From HOC_VIEN HV INNER JOIN HOC_VIEN_TRONG_LOP HVTL ON HV.MaHV = HVTL.MaHV INNER JOIN LOP_HOC L " +
+                "ON HVTL.MaLH = L.MaLH WHERE HV.KiemTra = 'true' and HVTL.MaLH = '" + MaLH + "' ORDER BY HV." + s;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));
@@ -153,9 +167,16 @@ namespace PBL3TrungTamDayThem.DAL
         public List<Student> SortListStudentInClassBySearch(string sort, string MaLH, string search)
         {
             List<Student> data = new List<Student>();
-            string query = "Select HV.MaHV, HV.HoTenHV, HV.GioiTinh, HV.NgaySinh, HV.DiaChi, HV.Email, HV.SDT " +
+            string query = "";
+            if (sort == "HoTenHV")
+                query = "Select HV.MaHV, HV.HoTenHV, HV.GioiTinh, HV.NgaySinh, HV.DiaChi, HV.Email, HV.SDT " +
                 "From HOC_VIEN HV INNER JOIN HOC_VIEN_TRONG_LOP HVTL ON HV.MaHV = HVTL.MaHV INNER JOIN LOP_HOC L " +
-                "ON HVTL.MaLH = L.MaLH WHERE HV.KiemTra = 'true' and HV.HoTenHV like N'%"+ search+"%' and HVTL.MaLH = '" + MaLH + "' ORDER BY HV." + sort;
+                "ON HVTL.MaLH = L.MaLH WHERE HV.KiemTra = 'true' and HV.HoTenHV like N'%" + search + "%' and HVTL.MaLH = '" + MaLH 
+                + "' ORDER BY REVERSE(left(reverse(HV.HoTenHV),CharIndex(' ',reverse(HV.HoTenHV),0)-1))";
+            else
+                query = "Select HV.MaHV, HV.HoTenHV, HV.GioiTinh, HV.NgaySinh, HV.DiaChi, HV.Email, HV.SDT " +
+                "From HOC_VIEN HV INNER JOIN HOC_VIEN_TRONG_LOP HVTL ON HV.MaHV = HVTL.MaHV INNER JOIN LOP_HOC L " +
+                "ON HVTL.MaLH = L.MaLH WHERE HV.KiemTra = 'true' and HV.HoTenHV like N'%" + search + "%' and HVTL.MaLH = '" + MaLH + "' ORDER BY HV." + sort;
             foreach (DataRow i in DataProvider.Instance.ExecuteQuery(query).Rows)
             {
                 data.Add(GetStudent(i));

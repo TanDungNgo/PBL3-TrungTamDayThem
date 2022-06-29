@@ -155,7 +155,7 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (dgv_Student.SelectedRows.Count > 0)
+            if (dgv_Student.SelectedRows.Count == 1)
             {
                 DataGridViewSelectedRowCollection data = dgv_Student.SelectedRows;
                 try
@@ -184,9 +184,13 @@ namespace PBL3TrungTamDayThem.GUI
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Điểm không được nhập chữ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
              }
+            else if (dgv_Student.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Chọn 1 học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             else
             {
                 MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -205,8 +209,9 @@ namespace PBL3TrungTamDayThem.GUI
                     if (MaHV == null)
                     {
                         MessageBox.Show("Chưa chọn học viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
                     }
-                    else
+                    if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                     {
                         BLL_QLLH.Instance.RemoveFromClass(MaHV, MaLH);
                         dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(MaLH);
