@@ -95,9 +95,9 @@
             this.btnTKMH.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTKMH.Image = global::PBL3TrungTamDayThem.Properties.Resources.statistical;
             this.btnTKMH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTKMH.Location = new System.Drawing.Point(554, 33);
+            this.btnTKMH.Location = new System.Drawing.Point(593, 33);
             this.btnTKMH.Name = "btnTKMH";
-            this.btnTKMH.Size = new System.Drawing.Size(194, 75);
+            this.btnTKMH.Size = new System.Drawing.Size(231, 75);
             this.btnTKMH.TabIndex = 2;
             this.btnTKMH.Text = "     Thống kê môn học";
             this.btnTKMH.UseVisualStyleBackColor = true;
@@ -118,9 +118,9 @@
             this.btnTKDT.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTKDT.Image = global::PBL3TrungTamDayThem.Properties.Resources.statistical;
             this.btnTKDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTKDT.Location = new System.Drawing.Point(289, 35);
+            this.btnTKDT.Location = new System.Drawing.Point(305, 33);
             this.btnTKDT.Name = "btnTKDT";
-            this.btnTKDT.Size = new System.Drawing.Size(206, 75);
+            this.btnTKDT.Size = new System.Drawing.Size(231, 75);
             this.btnTKDT.TabIndex = 0;
             this.btnTKDT.Text = "     Thống kê doanh thu";
             this.btnTKDT.UseVisualStyleBackColor = true;

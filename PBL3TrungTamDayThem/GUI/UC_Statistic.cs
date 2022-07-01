@@ -42,7 +42,7 @@ namespace PBL3TrungTamDayThem.GUI
             {
                 int sum = BLL_QLBL.Instance.GetHocPhi(noidung, malh.ToString());
                 chart1.Series["DoanhThu"].Points.Add(sum);
-                chart1.Series["DoanhThu"].Points[i].Label = sum.ToString();
+                chart1.Series["DoanhThu"].Points[i].Label = sum.ToString("##,#") + "VNĐ";
                 chart1.Series["DoanhThu"].Points[i].AxisLabel = noidung;
                 i = i + 1;
             }
