@@ -202,7 +202,7 @@ namespace PBL3TrungTamDayThem.GUI
                 DataGridViewSelectedRowCollection data = dgv_Student.SelectedRows;
                 try
                 {
-                    string MaHV = data[0].Cells["MaHV"].Value.ToString();
+                    string MaHV = data[0].Cells["MaHVien"].Value.ToString();
                     string MaLH = data[0].Cells["MaLH"].Value.ToString();
                     if (MaHV == null)
                     {
@@ -246,8 +246,8 @@ namespace PBL3TrungTamDayThem.GUI
             if (dgv_Class.SelectedRows.Count == 1)
             {
                 DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
-                string MaLH = data[0].Cells["MaLH"].Value.ToString();
-                string HoTenGV = data[0].Cells["HoTenGV"].Value.ToString();
+                string MaLH = data[0].Cells["MaLHoc"].Value.ToString();
+                string HoTenGV = data[0].Cells["HoTenGVien"].Value.ToString();
                 int SoLuongHV = int.Parse(data[0].Cells["SoLuongHV"].Value.ToString());
                 //Bước 1: Nạp file mẫu
                 Document danhsach = new Document("Template\\Mau_Danh_Sach.doc");

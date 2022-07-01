@@ -139,6 +139,8 @@ namespace PBL3TrungTamDayThem.BLL
             {
                 if (DAL_QLLH.Instance.AddToClass(MaHV, MaLH) > 0)
                     MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (DAL_QLLH.Instance.AddToClass(MaHV, MaLH) == -1)
+                    MessageBox.Show("Lớp học đã quá số lượng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                     MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

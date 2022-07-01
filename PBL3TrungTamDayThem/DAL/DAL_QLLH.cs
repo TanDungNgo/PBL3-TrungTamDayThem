@@ -138,6 +138,10 @@ namespace PBL3TrungTamDayThem.DAL
             {
                 SoLuongHV = int.Parse(row["SoLuongHV"].ToString());
             }
+            if(SoLuongHV == 40)
+            {
+                return -1;
+            }    
             SoLuongHV++;
             string query2 = "Update LOP_HOC set SoLuongHV = '" + SoLuongHV + "' where MaLH = '" + MaLH + "'";
             DataProvider.Instance.ExecuteQuery(query2);
