@@ -36,7 +36,11 @@ namespace PBL3TrungTamDayThem.GUI
             chart1.Series.Add("DoanhThu");
             chart1.Titles.Clear();
             chart1.Titles.Add("Doanh thu của trung tâm năm " + comboBox1.Text);
-            List<string> list = BLL_QLBL.Instance.GetNoiDung(malh.ToString());
+            List<string> list = new List<string>();
+            list.Add("T1 - T3");
+            list.Add("T4 - T6");
+            list.Add("T7 - T9");
+            list.Add("T10 - T12");
             int i= 0;
             foreach (string noidung in list.Distinct().ToList())
             {

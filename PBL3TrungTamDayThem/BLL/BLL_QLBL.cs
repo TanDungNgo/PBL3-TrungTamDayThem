@@ -88,15 +88,6 @@ namespace PBL3TrungTamDayThem.BLL
             else
                 MessageBox.Show("Thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        public List<string> GetNoiDung(string MaLH)
-        {
-            List<string> list = new List<string>();
-            foreach (DataRow i in DAL_QLBL.Instance.GetNoiDung(MaLH).Rows)
-            {
-                list.Add(i[0].ToString());
-            }
-            return list;
-        }
         public int GetHocPhi(string noidung, string malh)
         {
             int sum = 0;

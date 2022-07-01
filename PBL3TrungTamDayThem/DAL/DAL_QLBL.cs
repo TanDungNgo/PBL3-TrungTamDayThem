@@ -88,11 +88,6 @@ namespace PBL3TrungTamDayThem.DAL
           
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public DataTable GetNoiDung(string MaLH)
-        {
-            string query = "Select NoiDung from BIEN_LAI where MaLH like '" + MaLH + "%' order by NoiDung";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
         public DataTable GetHocPhi(string noidung, string malh)
         {
             string query = "Select HocPhi from BIEN_LAI where NoiDung = '" + noidung + "' and MaLH like '" + malh + "%'"; ;
