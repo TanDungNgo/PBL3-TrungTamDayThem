@@ -66,9 +66,9 @@ namespace PBL3TrungTamDayThem.GUI
         {
             string fileName = this._MaNV + DateTime.Now.Second + ".jpg";
             this.filePath = "Resources\\" + fileName;
-            MessageBox.Show(this.filePath.ToString());
             try
             {
+                MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.bmp.Save(filePath);
             }
             catch (Exception ex)

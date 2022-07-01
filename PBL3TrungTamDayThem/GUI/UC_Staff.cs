@@ -15,7 +15,6 @@ namespace PBL3TrungTamDayThem.GUI
         public UC_Staff()
         {
             InitializeComponent();
-            dgvStaff.DataSource = new List<Staff>();
             SetGUI();
         }
         private void ShowDGV()

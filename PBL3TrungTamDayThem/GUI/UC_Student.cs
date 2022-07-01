@@ -13,7 +13,6 @@ namespace PBL3TrungTamDayThem.GUI
         {
             InitializeComponent();
             SetGUI();
-            dgvStudent.DataSource = new List<Student>();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {

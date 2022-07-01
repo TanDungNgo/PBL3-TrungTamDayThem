@@ -114,6 +114,8 @@ namespace PBL3TrungTamDayThem.GUI
         }
         private void btnHelp_Click(object sender, EventArgs e)
         {
+            Information f = new Information();
+            f.ShowDialog();
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
@@ -171,7 +173,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void btn_Logout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có thật sự muốn đăng suất ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn có thật sự muốn đăng xuất ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                 this.Close();
         }
 

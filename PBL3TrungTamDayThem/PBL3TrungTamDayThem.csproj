@@ -118,6 +118,12 @@
     <Compile Include="GUI\FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UC_Bill.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UC_Bill.resx">
       <DependentUpon>UC_Bill.cs</DependentUpon>

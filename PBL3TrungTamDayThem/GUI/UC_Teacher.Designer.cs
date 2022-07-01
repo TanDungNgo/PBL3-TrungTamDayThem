@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTeacher = new System.Windows.Forms.DataGridView();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblHeader = new System.Windows.Forms.Label();
@@ -49,6 +51,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrinhDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChuyenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -65,10 +77,36 @@
             // 
             this.dgvTeacher.AllowUserToAddRows = false;
             this.dgvTeacher.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvTeacher.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTeacher.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTeacher.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTeacher.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTeacher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaGV,
+            this.HoTenGV,
+            this.NgaySinh,
+            this.GioiTinh,
+            this.SDT,
+            this.DiaChi,
+            this.Email,
+            this.TrinhDo,
+            this.ChuyenMon,
+            this.Luong});
             this.dgvTeacher.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTeacher.EnableHeadersVisualStyles = false;
             this.dgvTeacher.Location = new System.Drawing.Point(0, 0);
             this.dgvTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvTeacher.Name = "dgvTeacher";
@@ -328,6 +366,106 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // MaGV
+            // 
+            this.MaGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaGV.DataPropertyName = "MaGV";
+            this.MaGV.FillWeight = 65.50459F;
+            this.MaGV.HeaderText = "Mã GV";
+            this.MaGV.MinimumWidth = 8;
+            this.MaGV.Name = "MaGV";
+            this.MaGV.ReadOnly = true;
+            // 
+            // HoTenGV
+            // 
+            this.HoTenGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoTenGV.DataPropertyName = "HoTenGV";
+            this.HoTenGV.FillWeight = 142.0454F;
+            this.HoTenGV.HeaderText = "Họ tên GV";
+            this.HoTenGV.MinimumWidth = 8;
+            this.HoTenGV.Name = "HoTenGV";
+            this.HoTenGV.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.FillWeight = 85.1151F;
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.MinimumWidth = 8;
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.FillWeight = 58.26134F;
+            this.GioiTinh.HeaderText = "Giới Tính";
+            this.GioiTinh.MinimumWidth = 8;
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
+            // 
+            // SDT
+            // 
+            this.SDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.FillWeight = 100.8517F;
+            this.SDT.HeaderText = "SĐT";
+            this.SDT.MinimumWidth = 8;
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.FillWeight = 122.8642F;
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.MinimumWidth = 8;
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "Email";
+            this.Email.FillWeight = 157.7713F;
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 8;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // TrinhDo
+            // 
+            this.TrinhDo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TrinhDo.DataPropertyName = "TrinhDo";
+            this.TrinhDo.FillWeight = 79.61891F;
+            this.TrinhDo.HeaderText = "Trình Độ";
+            this.TrinhDo.MinimumWidth = 8;
+            this.TrinhDo.Name = "TrinhDo";
+            this.TrinhDo.ReadOnly = true;
+            // 
+            // ChuyenMon
+            // 
+            this.ChuyenMon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ChuyenMon.DataPropertyName = "ChuyenMon";
+            this.ChuyenMon.FillWeight = 100.8517F;
+            this.ChuyenMon.HeaderText = "Chuyên Môn";
+            this.ChuyenMon.MinimumWidth = 8;
+            this.ChuyenMon.Name = "ChuyenMon";
+            this.ChuyenMon.ReadOnly = true;
+            // 
+            // Luong
+            // 
+            this.Luong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Luong.DataPropertyName = "Luong";
+            this.Luong.FillWeight = 87.11559F;
+            this.Luong.HeaderText = "Lương";
+            this.Luong.MinimumWidth = 8;
+            this.Luong.Name = "Luong";
+            this.Luong.ReadOnly = true;
+            // 
             // UC_Teacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -379,5 +517,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTenGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrinhDo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ChuyenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Luong;
     }
 }

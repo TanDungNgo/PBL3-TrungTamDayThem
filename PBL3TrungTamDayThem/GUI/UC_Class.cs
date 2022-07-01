@@ -15,8 +15,6 @@ namespace PBL3TrungTamDayThem.GUI
         public UC_Class()
         {
             InitializeComponent();
-            dgv_Class.DataSource = BLL_QLLH.Instance.GetListClass(null);
-            dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(null);
             SetGUI();
         }
         public void SetCBB()
@@ -58,7 +56,7 @@ namespace PBL3TrungTamDayThem.GUI
             if (dgv_Class.SelectedRows.Count == 1)
             {
                 DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
-                string MaLH = data[0].Cells["MaLH"].Value.ToString();
+                string MaLH = data[0].Cells["MaLHoc"].Value.ToString();
                 FormClass frm = new FormClass(MaLH);
                 frm.d += new FormClass.MyDel(ShowDGV);
                 frm.ShowDialog();
@@ -77,7 +75,7 @@ namespace PBL3TrungTamDayThem.GUI
                 List<string> LMaLH = new List<string>();
                 foreach (DataGridViewRow row in dgv_Class.SelectedRows)
                 {
-                    LMaLH.Add(row.Cells["MaLH"].Value.ToString());
+                    LMaLH.Add(row.Cells["MaLHoc"].Value.ToString());
                 }
                 if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                 {
@@ -109,7 +107,7 @@ namespace PBL3TrungTamDayThem.GUI
             if (dgv_Class.SelectedRows.Count == 1)
             {
                 DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
-                string MaLH = data[0].Cells["MaLH"].Value.ToString();
+                string MaLH = data[0].Cells["MaLHoc"].Value.ToString();
                 dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(MaLH);
             }
             else
@@ -160,7 +158,7 @@ namespace PBL3TrungTamDayThem.GUI
                 DataGridViewSelectedRowCollection data = dgv_Student.SelectedRows;
                 try
                 {
-                    string MaHV = data[0].Cells["MaHV"].Value.ToString();
+                    string MaHV = data[0].Cells["MaHVien"].Value.ToString();
                     string MaLH = data[0].Cells["MaLH"].Value.ToString();
                     if (MaHV == null)
                     {
@@ -234,7 +232,7 @@ namespace PBL3TrungTamDayThem.GUI
             if (dgv_Class.SelectedRows.Count == 1)
             {
                 DataGridViewSelectedRowCollection data = dgv_Class.SelectedRows;
-                string MaLH = data[0].Cells["MaLH"].Value.ToString();
+                string MaLH = data[0].Cells["MaLHoc"].Value.ToString();
                 dgv_Student.DataSource = BLL_QLLH.Instance.SortListStudent(MaLH);
             }
             else

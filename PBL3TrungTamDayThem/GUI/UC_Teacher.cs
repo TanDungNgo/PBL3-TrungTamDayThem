@@ -15,7 +15,6 @@ namespace PBL3TrungTamDayThem.GUI
         {
             InitializeComponent();
             SetGUI();
-            dgvTeacher.DataSource = new List<Teacher>();
         }
         private Teacher teacher = new Teacher();
         private void btnAdd_Click(object sender, EventArgs e)
