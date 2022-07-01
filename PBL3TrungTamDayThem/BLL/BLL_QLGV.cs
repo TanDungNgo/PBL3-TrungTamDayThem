@@ -29,7 +29,7 @@ namespace PBL3TrungTamDayThem.BLL
         public int Count()
         {
             int count = 0;
-            foreach(DataRow i in DAL_QLGV.Instance.Count().Rows)
+            foreach (DataRow i in DAL_QLGV.Instance.Count().Rows)
                 count = int.Parse(i[0].ToString());
             return count;
         }
@@ -39,7 +39,7 @@ namespace PBL3TrungTamDayThem.BLL
             foreach (DataRow i in DAL_QLGV.Instance.GetAllExpertise().Rows)
             {
                 l.Add(i["ChuyenMon"].ToString());
-            } 
+            }
             return l;
         }
         public List<Teacher> GetListTeacher(string chuyenmon, string search)
@@ -47,11 +47,11 @@ namespace PBL3TrungTamDayThem.BLL
             List<Teacher> data = new List<Teacher>();
             if (chuyenmon == "All")
             {
-                    data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
+                data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
             }
             else
             {
-                    data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
+                data = DAL_QLGV.Instance.GetTeacherBySearch(chuyenmon, search);
             }
             return data;
         }
@@ -97,7 +97,7 @@ namespace PBL3TrungTamDayThem.BLL
                 {
                     MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
-                }         
+                }
             }
             if (count == length)
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,7 +109,11 @@ namespace PBL3TrungTamDayThem.BLL
             if (chuyenmon == "All")
             {
                 if (search == "Nhập tên tìm kiếm")
-                    data = DAL_QLGV.Instance.SortListAllTeacher(sort);
+                    if (sort == "Luong")
+                    {
+                        data = SortLuong();
+                    }
+                    else data = DAL_QLGV.Instance.SortListAllTeacher(sort);
                 else
                     data = DAL_QLGV.Instance.SortListTeacherBySearch(sort, search);
             }
@@ -120,7 +124,7 @@ namespace PBL3TrungTamDayThem.BLL
                 else
                     data = DAL_QLGV.Instance.SortListTeacher(sort, search, chuyenmon);
             }
-            
+
             return data;
         }
         public List<CBBItem> GetHoTenGV()
@@ -148,7 +152,7 @@ namespace PBL3TrungTamDayThem.BLL
                     {
                         k++;
                         break;
-                    }    
+                    }
                 }
                 if (k == 0)
                     return true;
@@ -157,6 +161,28 @@ namespace PBL3TrungTamDayThem.BLL
             }
             else
                 return false;
+        }
+        public void swap(List<Teacher> list, int i, int j)
+        {
+            Teacher temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+        }
+        public List<Teacher> SortLuong()
+        {
+            List<Teacher> list = DAL_QLGV.Instance.GetAllTeacher();
+            int n = list.Count;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (list[j - 1].Luong > list[j].Luong)
+                    {
+                        swap(list, j - 1, j);
+                    }
+                }
+            }
+            return list;
         }
     }
 }

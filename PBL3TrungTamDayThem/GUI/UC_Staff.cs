@@ -60,7 +60,7 @@ namespace PBL3TrungTamDayThem.GUI
                         {
                             MessageBox.Show("Không thể xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return;
-                        }    
+                        }
                         LMaNV.Add(row.Cells["MaNV"].Value.ToString());
                     }
                     if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
@@ -76,7 +76,7 @@ namespace PBL3TrungTamDayThem.GUI
             else
             {
                 MessageBox.Show("Bạn không có chức năng này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }    
+            }
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -107,15 +107,16 @@ namespace PBL3TrungTamDayThem.GUI
                     MessageBox.Show("Chỉ chọn 1 nhân viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show("Chưa chọn nhân viên muốn edit", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }    
+            }
             else
             {
                 MessageBox.Show("Bạn không có chức năng này !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }    
+            }
         }
         private void btnSort_Click(object sender, EventArgs e)
         {
             dgvStaff.DataSource = BLL_QLNV.Instance.SortListStaff(cbbSort.Text, txtName.Text, cbbPosition.Text);
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -123,7 +124,7 @@ namespace PBL3TrungTamDayThem.GUI
             if (txtName.Text == "Nhập tên tìm kiếm")
             {
                 return;
-            }    
+            }
             dgvStaff.DataSource = BLL_QLNV.Instance.GetListStaff(cbbPosition.Text, txtName.Text);
         }
         public void SizeMax()

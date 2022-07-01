@@ -77,7 +77,7 @@ namespace PBL3TrungTamDayThem.DAL
                 Email = i["Email"].ToString(),
                 TrinhDo = i["TrinhDo"].ToString(),
                 ChuyenMon = i["ChuyenMon"].ToString(),
-                Luong = i["Luong"].ToString()
+                Luong = int.Parse(i["Luong"].ToString())
             };
         }
         public int CheckTeacher(string MaGV)

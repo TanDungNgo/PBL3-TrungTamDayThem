@@ -20,6 +20,6 @@ namespace PBL3TrungTamDayThem.DTO
         public string Email { get ; set ; }
         public string TrinhDo { get ; set ; }
         public string ChuyenMon { get ; set ; }
-        public string Luong { get ; set ; }
+        public int Luong { get ; set ; }
     }
 }

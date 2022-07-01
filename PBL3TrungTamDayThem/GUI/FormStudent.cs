@@ -107,7 +107,7 @@ namespace PBL3TrungTamDayThem.GUI
                 else
                     lbleremail2.Visible = false;
             }
-            if (isDigit(txtPhone.Text) == false || txtPhone.Text.Length != 10)
+            if (isPhone(txtPhone.Text) == false || txtPhone.Text.Length != 10)
             {
                 lblerphone.Visible = true;
                 check = true;
@@ -174,6 +174,11 @@ namespace PBL3TrungTamDayThem.GUI
         internal static bool isMail(string mail)
         {
             bool match = Regex.IsMatch(mail, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
+            return match;
+        }
+        internal static bool isPhone(string phone)
+        {
+            bool match = Regex.IsMatch(phone, @"(84|0[3|5|7|8|9])+([\d]{8})\b");
             return match;
         }
         //Drag Form

@@ -41,7 +41,7 @@ namespace PBL3TrungTamDayThem.GUI
                     GioiTinh = rbMale.Checked.ToString(),
                     ChuyenMon = txtExpertise.Text,
                     TrinhDo = cbbLevel.Text,
-                    Luong = txtSalary.Text,
+                    Luong = int.Parse(txtSalary.Text),
                 };
                 BLL_QLGV.Instance.ExecuteDB(teacher);
                 d();
@@ -128,7 +128,7 @@ namespace PBL3TrungTamDayThem.GUI
                     lblersalary2.Visible = false;
             }
 
-            if (isDigit(txtPhone.Text) == false || txtPhone.Text.Length != 10)
+            if (isPhone(txtPhone.Text) == false || txtPhone.Text.Length != 10)
             {
                 lblerphone.Visible = true;
                 check = true;
@@ -181,7 +181,7 @@ namespace PBL3TrungTamDayThem.GUI
                 txtPhone.Text = teacher.SDT;
                 txtAddress.Text = teacher.DiaChi;
                 txtEmail.Text = teacher.Email;
-                txtSalary.Text = teacher.Luong;
+                txtSalary.Text = teacher.Luong.ToString();
                 txtExpertise.Text = teacher.ChuyenMon;
                 cbbLevel.Text = teacher.TrinhDo;
                 dtpBD.Text = teacher.NgaySinh.ToString();
@@ -215,13 +215,18 @@ namespace PBL3TrungTamDayThem.GUI
         }
         internal static bool isSalary(string m)
         {
-            if (int.Parse(m) <= 20000000 && int.Parse(m) >= 10000000)
+            if (int.Parse(m) <= 15000000 && int.Parse(m) >= 5000000)
                 return true;
             return false;
         }
         internal static bool isName(string name)
         {
             bool match = Regex.IsMatch(name, "^[^0-9]+[^0-9]$");
+            return match;
+        }
+        internal static bool isPhone(string phone)
+        {
+            bool match = Regex.IsMatch(phone, @"(84|0[3|5|7|8|9])+([\d]{8})\b");
             return match;
         }
         internal static bool isMail(string mail)

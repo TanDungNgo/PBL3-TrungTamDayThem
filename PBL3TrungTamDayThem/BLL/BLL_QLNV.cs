@@ -117,7 +117,14 @@ namespace PBL3TrungTamDayThem.BLL
             if (chucvu == "All")
             {
                 if(search == "Nhập tên tìm kiếm")
-                    data = DAL_QLNV.Instance.SortListStaff(sort);
+                {
+                    if (sort == "Luong")
+                    {
+                        data = SortLuong();
+                    }    
+                    else
+                        data = DAL_QLNV.Instance.SortListStaff(sort);
+                }    
                 else
                     data = DAL_QLNV.Instance.SortListStaffBySearch(sort, search);
             }
@@ -151,6 +158,32 @@ namespace PBL3TrungTamDayThem.BLL
             }
             else
                 return false;
+        }
+        public void swap(List<Staff> list, int i, int j)
+        {
+            Staff temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+        }
+        public List<Staff> SortLuong()
+        {
+            List<Staff> list = DAL_QLNV.Instance.GetAllStaff();
+            int n = list.Count;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (list[j - 1].Luong > list[j].Luong)
+                    {
+                        swap(list, j-1,j);
+                    }
+                }
+            }
+            //list.Sort(delegate (Staff a, Staff b)
+            //{
+            //    return a.Luong.CompareTo(b.Luong);
+            //});
+            return list;
         }
     }
 }
