@@ -94,16 +94,18 @@ namespace PBL3TrungTamDayThem.GUI
             chart1.Titles.Add("Số lớp của từng giáo viên trong năm " + comboBox1.Text);
             List<Teacher> list = BLL_QLGV.Instance.GetAllTeacher();
             int i = 0;
+            Random r = new Random();
             foreach (Teacher t in list.Distinct().ToList())
             {
                 int sum = BLL_QLBL.Instance.GetCountClass(t.MaGV, malh.ToString());
                 chart1.Series["Lớp"].Points.Add(sum);
                 chart1.Series["Lớp"].Points[i].Label = sum.ToString();
                 chart1.Series["Lớp"].Points[i].AxisLabel = t.HoTenGV;
-                if (i % 2 == 0)
-                    chart1.Series["Lớp"].Points[i].Color = Color.RoyalBlue;
-                else
-                    chart1.Series["Lớp"].Points[i].Color = Color.DodgerBlue;
+                //if (i % 2 == 0)
+                //    chart1.Series["Lớp"].Points[i].Color = Color.RoyalBlue;
+                //else
+                //    chart1.Series["Lớp"].Points[i].Color = Color.DodgerBlue;
+                chart1.Series["Lớp"].Points[i].Color = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256)); ;
                 i = i + 1;
             }
         }
