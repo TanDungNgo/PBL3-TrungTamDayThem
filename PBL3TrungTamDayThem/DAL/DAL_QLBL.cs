@@ -90,7 +90,12 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public DataTable GetHocPhi(string noidung, string malh)
         {
-            string query = "Select HocPhi from BIEN_LAI where NoiDung = '" + noidung + "' and MaLH like '" + malh + "%'"; ;
+            string query = "Select HocPhi from BIEN_LAI where NoiDung = '" + noidung + "' and MaLH like '" + malh + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable GetCountClass(string magv, string malh)
+        {
+            string query = "Select count(*) as count from LOP_HOC lh inner join GIAO_VIEN gv on lh.MaGV = gv.MaGV where gv.MaGV = '"+ magv+ "' and MaLH like '"+ malh+"%'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

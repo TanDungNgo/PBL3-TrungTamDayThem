@@ -1,5 +1,6 @@
 ﻿using PBL3TrungTamDayThem.BLL;
 using PBL3TrungTamDayThem.DAL;
+using PBL3TrungTamDayThem.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -33,7 +34,7 @@ namespace PBL3TrungTamDayThem.GUI
             }
             int malh = int.Parse(comboBox1.Text.Substring(2));
             chart1.Series.Clear();
-            chart1.Series.Add("DoanhThu");
+            chart1.Series.Add("Doanh Thu");
             chart1.Titles.Clear();
             chart1.Titles.Add("Doanh thu của trung tâm năm " + comboBox1.Text);
             List<string> list = new List<string>();
@@ -45,11 +46,12 @@ namespace PBL3TrungTamDayThem.GUI
             foreach (string noidung in list.Distinct().ToList())
             {
                 int sum = BLL_QLBL.Instance.GetHocPhi(noidung, malh.ToString());
-                chart1.Series["DoanhThu"].Points.Add(sum);
-                chart1.Series["DoanhThu"].Points[i].Label = sum.ToString("##,#") + "VNĐ";
-                chart1.Series["DoanhThu"].Points[i].AxisLabel = noidung;
+                chart1.Series["Doanh Thu"].Points.Add(sum);
+                chart1.Series["Doanh Thu"].Points[i].Label = sum.ToString("##,#") + "VNĐ";
+                chart1.Series["Doanh Thu"].Points[i].AxisLabel = noidung;
                 i = i + 1;
             }
+            chart1.Series[0].ChartType = SeriesChartType.SplineArea;
         }
         private void btnTKMH_Click(object sender, EventArgs e)
         {
@@ -72,6 +74,30 @@ namespace PBL3TrungTamDayThem.GUI
             }
             //Chuyển kiểu biểu đồ hình tròn
             chart1.Series[0].ChartType = SeriesChartType.Pie;
+        }
+
+        private void btn_TKGV_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("Chọn năm muốn thống kê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int malh = int.Parse(comboBox1.Text.Substring(2));
+            chart1.Series.Clear();
+            chart1.Series.Add("Lớp");
+            chart1.Titles.Clear();
+            chart1.Titles.Add("Số lớp của từng giáo viên trong năm " + comboBox1.Text);
+            List<Teacher> list = BLL_QLGV.Instance.GetAllTeacher();
+            int i = 0;
+            foreach (Teacher t in list.Distinct().ToList())
+            {
+                int sum = BLL_QLBL.Instance.GetCountClass(t.MaGV, malh.ToString());
+                chart1.Series["Lớp"].Points.Add(sum);
+                chart1.Series["Lớp"].Points[i].Label = sum.ToString();
+                chart1.Series["Lớp"].Points[i].AxisLabel = t.HoTenGV;
+                i = i + 1;
+            }
         }
     }
 }

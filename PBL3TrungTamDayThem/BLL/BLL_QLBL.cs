@@ -97,5 +97,14 @@ namespace PBL3TrungTamDayThem.BLL
             }
             return sum;
         }
+        public int GetCountClass(string magv, string malh)
+        {
+            int sum = 0;
+            foreach (DataRow row in DAL_QLBL.Instance.GetCountClass(magv, malh).Rows)
+            {
+                sum += int.Parse(row["count"].ToString());
+            }
+            return sum;
+        }
     }
 }

@@ -42,6 +42,10 @@ namespace PBL3TrungTamDayThem.BLL
             }
             return l;
         }
+        public List<Teacher> GetAllTeacher()
+        {
+            return DAL_QLGV.Instance.GetAllTeacher();
+        }
         public List<Teacher> GetListTeacher(string chuyenmon, string search)
         {
             List<Teacher> data = new List<Teacher>();
