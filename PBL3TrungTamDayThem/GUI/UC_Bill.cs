@@ -22,7 +22,7 @@ namespace PBL3TrungTamDayThem.GUI
             cbbClass.Text = "All";
             cbbStatus.Text = "All";
         }
-        void SetCBB()
+        public void SetCBB()
         {
             if (cbbClass != null)
             {
