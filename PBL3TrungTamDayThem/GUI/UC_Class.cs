@@ -7,6 +7,7 @@ using Aspose.Words;
 using PBL3TrungTamDayThem.Lib;
 using Aspose.Words.Tables;
 using System.Data;
+using PBL3TrungTamDayThem.DTO;
 
 namespace PBL3TrungTamDayThem.GUI
 {
@@ -134,9 +135,18 @@ namespace PBL3TrungTamDayThem.GUI
             }
             else
             {
-                BLL_QLLH.Instance.AddToClass(txtMaHV.Text, cbbMaLH.Text);
-                ShowDGV();
-                dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbMaLH.Text);
+                DateTime date = DateTime.Now;
+                Class l = BLL_QLLH.Instance.GetClassByMaLH(cbbMaLH.Text);
+                if(l.NgayKetThuc > date)
+                {
+                    BLL_QLLH.Instance.AddToClass(txtMaHV.Text, cbbMaLH.Text);
+                    ShowDGV();
+                    dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbMaLH.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Lớp học đã kết thúc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }    
             }    
         }
 
