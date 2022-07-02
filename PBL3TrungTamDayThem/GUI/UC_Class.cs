@@ -137,16 +137,27 @@ namespace PBL3TrungTamDayThem.GUI
             {
                 DateTime date = DateTime.Now;
                 Class l = BLL_QLLH.Instance.GetClassByMaLH(cbbMaLH.Text);
-                if(l.NgayKetThuc > date)
+                if (l.NgayKetThuc > date)
                 {
-                    BLL_QLLH.Instance.AddToClass(txtMaHV.Text, cbbMaLH.Text);
-                    ShowDGV();
-                    dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbMaLH.Text);
+                    DateTime d1 = l.NgayKetThuc;
+                    DateTime d2 = DateTime.Now;
+                    TimeSpan Time = d1 - d2;
+                    int TongSoNgay = Time.Days;
+                    if(TongSoNgay >= 60)
+                    {
+                        BLL_QLLH.Instance.AddToClass(txtMaHV.Text, cbbMaLH.Text);
+                        ShowDGV();
+                        dgv_Student.DataSource = BLL_QLLH.Instance.GetHVByClass(cbbMaLH.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lớp học đã quá lịch đăng kí", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }    
                 }
                 else
                 {
                     MessageBox.Show("Lớp học đã kết thúc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }    
+                }
             }    
         }
 
