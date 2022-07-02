@@ -33,7 +33,10 @@ namespace PBL3TrungTamDayThem.GUI
                     FormMain frmMain = new FormMain(user.MaNV);
                     this.Hide();
                     frmMain.ShowDialog();
-                    txt_Pass.Text = "";
+                    if (cbGNMK.Checked == false)
+                    {
+                        txt_Pass.Text = "";
+                    }    
                     this.Show();
                 }
                 else
@@ -141,7 +144,7 @@ namespace PBL3TrungTamDayThem.GUI
 
         private void forgotpass_MouseLeave(object sender, EventArgs e)
         {
-            forgotpass.ForeColor = Color.Black;
+            forgotpass.ForeColor = Color.White;
         }
 
         private void forgotpass_MouseMove(object sender, MouseEventArgs e)

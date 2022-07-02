@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -42,7 +43,7 @@ namespace PBL3TrungTamDayThem.GUI
             list.Add("T4 - T6");
             list.Add("T7 - T9");
             list.Add("T10 - T12");
-            int i= 0;
+            int i = 0;
             foreach (string noidung in list.Distinct().ToList())
             {
                 int sum = BLL_QLBL.Instance.GetHocPhi(noidung, malh.ToString());
@@ -51,6 +52,9 @@ namespace PBL3TrungTamDayThem.GUI
                 chart1.Series["Doanh Thu"].Points[i].AxisLabel = noidung;
                 i = i + 1;
             }
+            chart1.Series[0].BackGradientStyle = GradientStyle.LeftRight;
+            chart1.Series[0].BackSecondaryColor = Color.FromArgb(192,255,255);
+            chart1.Series[0].BorderColor = Color.FromArgb(255, 255, 128);
             chart1.Series[0].ChartType = SeriesChartType.SplineArea;
         }
         private void btnTKMH_Click(object sender, EventArgs e)
@@ -96,6 +100,10 @@ namespace PBL3TrungTamDayThem.GUI
                 chart1.Series["Lớp"].Points.Add(sum);
                 chart1.Series["Lớp"].Points[i].Label = sum.ToString();
                 chart1.Series["Lớp"].Points[i].AxisLabel = t.HoTenGV;
+                if (i % 2 == 0)
+                    chart1.Series["Lớp"].Points[i].Color = Color.RoyalBlue;
+                else
+                    chart1.Series["Lớp"].Points[i].Color = Color.DodgerBlue;
                 i = i + 1;
             }
         }

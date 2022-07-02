@@ -40,6 +40,8 @@
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Login = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbGNMK = new System.Windows.Forms.CheckBox();
+            this.lblgnmk = new System.Windows.Forms.Label();
             this.pnlCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,6 +52,8 @@
             // 
             this.pnlCenter.BackColor = System.Drawing.Color.Transparent;
             this.pnlCenter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlCenter.Controls.Add(this.lblgnmk);
+            this.pnlCenter.Controls.Add(this.cbGNMK);
             this.pnlCenter.Controls.Add(this.forgotpass);
             this.pnlCenter.Controls.Add(this.ckbpass);
             this.pnlCenter.Controls.Add(this.txt_Pass);
@@ -59,16 +63,18 @@
             this.pnlCenter.Location = new System.Drawing.Point(321, 238);
             this.pnlCenter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(588, 179);
+            this.pnlCenter.Size = new System.Drawing.Size(588, 195);
             this.pnlCenter.TabIndex = 0;
             // 
             // forgotpass
             // 
             this.forgotpass.AutoSize = true;
-            this.forgotpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotpass.Location = new System.Drawing.Point(74, 140);
+            this.forgotpass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.forgotpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotpass.ForeColor = System.Drawing.Color.White;
+            this.forgotpass.Location = new System.Drawing.Point(394, 139);
             this.forgotpass.Name = "forgotpass";
-            this.forgotpass.Size = new System.Drawing.Size(146, 25);
+            this.forgotpass.Size = new System.Drawing.Size(159, 25);
             this.forgotpass.TabIndex = 7;
             this.forgotpass.Text = "Quên mật khẩu";
             this.forgotpass.Click += new System.EventHandler(this.forgotpass_Click);
@@ -78,6 +84,7 @@
             // ckbpass
             // 
             this.ckbpass.AutoSize = true;
+            this.ckbpass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbpass.Location = new System.Drawing.Point(518, 100);
             this.ckbpass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ckbpass.Name = "ckbpass";
@@ -197,6 +204,28 @@
             this.panel1.Size = new System.Drawing.Size(538, 87);
             this.panel1.TabIndex = 4;
             // 
+            // cbGNMK
+            // 
+            this.cbGNMK.AutoSize = true;
+            this.cbGNMK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbGNMK.Location = new System.Drawing.Point(78, 144);
+            this.cbGNMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbGNMK.Name = "cbGNMK";
+            this.cbGNMK.Size = new System.Drawing.Size(22, 21);
+            this.cbGNMK.TabIndex = 8;
+            this.cbGNMK.UseVisualStyleBackColor = true;
+            // 
+            // lblgnmk
+            // 
+            this.lblgnmk.AutoSize = true;
+            this.lblgnmk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgnmk.ForeColor = System.Drawing.Color.White;
+            this.lblgnmk.Location = new System.Drawing.Point(106, 140);
+            this.lblgnmk.Name = "lblgnmk";
+            this.lblgnmk.Size = new System.Drawing.Size(181, 25);
+            this.lblgnmk.TabIndex = 9;
+            this.lblgnmk.Text = "Ghi nhớ mật khẩu";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -240,5 +269,7 @@
         private System.Windows.Forms.CheckBox ckbpass;
         private System.Windows.Forms.Label forgotpass;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblgnmk;
+        private System.Windows.Forms.CheckBox cbGNMK;
     }
 }
