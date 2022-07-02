@@ -81,7 +81,10 @@ namespace PBL3TrungTamDayThem.GUI
             }
             //Chuyển kiểu biểu đồ hình tròn
             chart1.Legends[0].Enabled = true;
-            chart1.Series[0].ChartType = SeriesChartType.Pie;
+            chart1.Series[0].ChartType = SeriesChartType.Doughnut;
+            chart1.Series[0].BorderWidth = 4;
+            chart1.Series[0].BorderColor = Color.White;
+            chart1.Series[0].LabelForeColor = Color.White;
         }
 
         private void btn_TKGV_Click(object sender, EventArgs e)
