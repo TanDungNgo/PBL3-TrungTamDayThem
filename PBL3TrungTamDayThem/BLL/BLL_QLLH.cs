@@ -166,5 +166,14 @@ namespace PBL3TrungTamDayThem.BLL
             }
             return sum;
         }
+        public Class CheckMaLH(string MaLh)
+        {
+            foreach (Class i in DAL_QLHV.Instance.GetAllClass())
+            {
+                if(i.MaLH == MaLh)
+                    return i;
+            }
+            return null;
+        }
     }
 }

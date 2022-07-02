@@ -15,11 +15,11 @@ namespace PBL3TrungTamDayThem.GUI
         {
             InitializeComponent();
             this._MaLH = MaLH;
-            SetGUI();
-        }
-        public void SetGUI()
-        {
             Class lop = BLL_QLLH.Instance.GetClassByMaLH(this._MaLH);
+            SetGUI(lop);
+        }
+        public void SetGUI(Class lop = null)
+        {
             if (lop != null)
             {
                 GetCBB();
@@ -133,6 +133,15 @@ namespace PBL3TrungTamDayThem.GUI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+            Class lop = new Class();
+            lop = BLL_QLLH.Instance.CheckMaLH(txtID.Text);
+            if (lop != null)
+            {
+                MessageBox.Show("Lớp học đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SetGUI(lop);
+            }
+        }
     }
 }

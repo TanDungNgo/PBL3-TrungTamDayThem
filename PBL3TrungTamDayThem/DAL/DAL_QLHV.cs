@@ -41,7 +41,14 @@ namespace PBL3TrungTamDayThem.DAL
         {
             return new Class
             {
-                MaLH = i["MaLH"].ToString()
+                MaLH = i["MaLH"].ToString(),
+                MaGV = i["MaGV"].ToString(),
+                MaMH = i["MaMH"].ToString(),
+                SoLuongHV = int.Parse(i["SoLuongHV"].ToString()),
+                ThoiGianHoc = i["ThoiGianHoc"].ToString(),
+                NgayBatDau = (DateTime)i["NgayBatDau"],
+                NgayKetThuc = (DateTime)i["NgayKetThuc"],
+                HocPhi = int.Parse(i["HocPhi"].ToString())
             };
         }
         public List<Student> GetAllStudent()
