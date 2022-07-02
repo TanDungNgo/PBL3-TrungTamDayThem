@@ -38,6 +38,7 @@ namespace PBL3TrungTamDayThem.GUI
             chart1.Series.Add("Doanh Thu");
             chart1.Titles.Clear();
             chart1.Titles.Add("Doanh thu của trung tâm năm " + comboBox1.Text);
+            chart1.Titles[0].Font = new Font("Times New Roman", 20, FontStyle.Bold);
             List<string> list = new List<string>();
             list.Add("T1 - T3");
             list.Add("T4 - T6");
@@ -52,6 +53,7 @@ namespace PBL3TrungTamDayThem.GUI
                 chart1.Series["Doanh Thu"].Points[i].AxisLabel = noidung;
                 i = i + 1;
             }
+            chart1.Legends[0].Enabled = true;
             chart1.Series[0].BackGradientStyle = GradientStyle.LeftRight;
             chart1.Series[0].BackSecondaryColor = Color.FromArgb(192,255,255);
             chart1.Series[0].BorderColor = Color.FromArgb(255, 255, 128);
@@ -69,6 +71,7 @@ namespace PBL3TrungTamDayThem.GUI
             chart1.Series.Add("SoLuong");
             chart1.Titles.Clear();
             chart1.Titles.Add("Thống kê số lượng học viên của từng môn học năm " + comboBox1.Text);
+            chart1.Titles[0].Font = new Font("Times New Roman", 20, FontStyle.Bold);
             List<string> listMH = new List<string>();
             listMH.AddRange(BLL_QLLH.Instance.GetSubjectInClass(malh.ToString()).Distinct().ToArray());
             foreach (string monhoc in listMH.Distinct().ToList())
@@ -77,6 +80,7 @@ namespace PBL3TrungTamDayThem.GUI
                 chart1.Series["SoLuong"].Points.AddXY(monhoc, sum);
             }
             //Chuyển kiểu biểu đồ hình tròn
+            chart1.Legends[0].Enabled = true;
             chart1.Series[0].ChartType = SeriesChartType.Pie;
         }
 
@@ -92,6 +96,7 @@ namespace PBL3TrungTamDayThem.GUI
             chart1.Series.Add("Lớp");
             chart1.Titles.Clear();
             chart1.Titles.Add("Số lớp của từng giáo viên trong năm " + comboBox1.Text);
+            chart1.Titles[0].Font = new Font("Times New Roman", 20, FontStyle.Bold);
             List<Teacher> list = BLL_QLGV.Instance.GetAllTeacher();
             int i = 0;
             Random r = new Random();
@@ -108,6 +113,7 @@ namespace PBL3TrungTamDayThem.GUI
                 chart1.Series["Lớp"].Points[i].Color = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256)); ;
                 i = i + 1;
             }
+            chart1.Legends[0].Enabled = false;
         }
     }
 }

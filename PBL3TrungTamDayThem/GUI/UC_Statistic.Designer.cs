@@ -157,6 +157,7 @@
             series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             series1.ChartArea = "ChartArea1";
             series1.Color = System.Drawing.Color.RoyalBlue;
+            series1.IsXValueIndexed = true;
             series1.Legend = "Legend1";
             series1.Name = "Doanh Thu";
             this.chart1.Series.Add(series1);

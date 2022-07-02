@@ -80,13 +80,19 @@ namespace PBL3TrungTamDayThem.BLL
         }
         public void PayFee(Bill bill)
         {
-            if (DAL_QLBL.Instance.AddBill(bill) > 0)
+            try
             {
-                MessageBox.Show("Thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DAL_QLBL.Instance.PayFee(bill.MaHV, bill.MaLH);
+                if (DAL_QLBL.Instance.AddBill(bill) > 0)
+                {
+                    MessageBox.Show("Thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DAL_QLBL.Instance.PayFee(bill.MaHV, bill.MaLH);
+                }
+                else
+                    MessageBox.Show("Thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                MessageBox.Show("Thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch(Exception e){
+                MessageBox.Show("Thất bại! Lỗi" + e, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public int GetHocPhi(string noidung, string malh)
         {
