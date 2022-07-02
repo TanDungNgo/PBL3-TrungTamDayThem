@@ -381,6 +381,7 @@
             // 
             // MaNVien
             // 
+            this.MaNVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MaNVien.DataPropertyName = "MaNV";
             this.MaNVien.HeaderText = "Mã NV";
             this.MaNVien.MinimumWidth = 8;

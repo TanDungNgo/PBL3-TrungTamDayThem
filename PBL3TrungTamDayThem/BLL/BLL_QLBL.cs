@@ -67,7 +67,7 @@ namespace PBL3TrungTamDayThem.BLL
                 bienlai.MailMerge.Execute(new[] { "Ma_Lop" }, new[] { bill.MaLH });
                 bienlai.MailMerge.Execute(new[] { "Ho_Ten_HV" }, new[] { bill.HoTenHV });
                 bienlai.MailMerge.Execute(new[] { "Noi_Dung" }, new[] { bill.NoiDung });
-                bienlai.MailMerge.Execute(new[] { "So_Tien" }, new[] { bill.HocPhi.ToString() });
+                bienlai.MailMerge.Execute(new[] { "So_Tien" }, new[] { bill.HocPhi.ToString("##,#") });
                 bienlai.MailMerge.Execute(new[] { "Ngay_Thu" }, new[] { string.Format("Đà Nẵng, ngày {0} tháng {1} năm {2}", today.Day, today.Month, today.Year) });
                 Staff staff = BLL_QLNV.Instance.GetNVByID(bill.MaNV);
                 bienlai.MailMerge.Execute(new[] { "Ho_Ten_NV" }, new[] { staff.HoTenNV });

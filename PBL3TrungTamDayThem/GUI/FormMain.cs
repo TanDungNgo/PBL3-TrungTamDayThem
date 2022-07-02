@@ -99,7 +99,7 @@ namespace PBL3TrungTamDayThem.GUI
             ResetColorButton();
             GetFromButton(btnBill);
             uC_Bill.MaNV = this._MaNV;
-            uC_Bill.SetCBB();
+            uC_Bill.SetGUI();
             OpenUC(uC_Bill);
         }
 

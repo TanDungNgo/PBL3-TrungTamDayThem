@@ -55,12 +55,12 @@ namespace PBL3TrungTamDayThem.GUI
                     List<string> LMaNV = new List<string>();
                     foreach (DataGridViewRow row in dgvStaff.SelectedRows)
                     {
-                        if (row.Cells["MaNV"].Value.ToString() == MaNV)
+                        if (row.Cells["MaNVien"].Value.ToString() == MaNV)
                         {
                             MessageBox.Show("Không thể xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return;
                         }
-                        LMaNV.Add(row.Cells["MaNV"].Value.ToString());
+                        LMaNV.Add(row.Cells["MaNVien"].Value.ToString());
                     }
                     if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                     {
@@ -97,7 +97,7 @@ namespace PBL3TrungTamDayThem.GUI
                 if (dgvStaff.SelectedRows.Count == 1)
                 {
                     DataGridViewSelectedRowCollection data = dgvStaff.SelectedRows;
-                    string MaNV = data[0].Cells["MaNV"].Value.ToString();
+                    string MaNV = data[0].Cells["MaNVien"].Value.ToString();
                     FormStaff frm = new FormStaff(MaNV);
                     frm.d += new FormStaff.MyDel(ShowDGV);
                     frm.ShowDialog();

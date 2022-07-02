@@ -16,7 +16,7 @@ namespace PBL3TrungTamDayThem.GUI
             InitializeComponent();
             SetGUI();
         }
-        void SetGUI()
+        public void SetGUI()
         {
             SetCBB();
             cbbClass.Text = "All";

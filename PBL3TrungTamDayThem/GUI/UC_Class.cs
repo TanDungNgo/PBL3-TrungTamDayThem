@@ -80,7 +80,7 @@ namespace PBL3TrungTamDayThem.GUI
                 if (MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                 {
                     BLL_QLLH.Instance.Delete(LMaLH);
-                    SetCBB();
+                    SetGUI();
                     ShowDGV();
                 }
             }

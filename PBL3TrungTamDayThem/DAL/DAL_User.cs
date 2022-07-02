@@ -32,7 +32,7 @@ namespace PBL3TrungTamDayThem.DAL
         }
         public int CheckUsernameMail(string username, string email)
         {
-            string query = "Select * from ACCOUNT ac inner join NHAN_VIEN nv on ac.MaNV = nv.MaNV where ac.TaiKhoan = @username and nv.Email = @email and KiemTra = 'True'";
+            string query = "Select * from ACCOUNT ac inner join NHAN_VIEN nv on ac.MaNV = nv.MaNV where ac.TaiKhoan = @username and nv.Email = @email and nv.KiemTra = 'True'";
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, email }) ;
             return result.Rows.Count;
         }

@@ -139,7 +139,6 @@ namespace PBL3TrungTamDayThem.GUI
             lop = BLL_QLLH.Instance.CheckMaLH(txtID.Text);
             if (lop != null)
             {
-                MessageBox.Show("Lớp học đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 SetGUI(lop);
             }
         }
